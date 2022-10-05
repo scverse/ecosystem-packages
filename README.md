@@ -13,20 +13,20 @@ use GitHub's "watch" functionality for this repository.
 For a package to be approved as ecosystem package we expect certain minimum
 requirements, in particular:
 
- * The package can be installed from a standard registry (e.g. PyPI or
-   conda-forge)
- * The package uses automated software tests and continuous integration
- * The package provides API documentation
- * The package uses scverse datastructures where appropriate (i.e.
-   anndata/mudata and their modality-specific extensions)
+-   The package can be installed from a standard registry (e.g. PyPI or
+    conda-forge)
+-   The package uses automated software tests and continuous integration
+-   The package provides API documentation
+-   The package uses scverse datastructures where appropriate (i.e.
+    anndata/mudata and their modality-specific extensions)
 
 There are additional requirements which we strongly recommend, but do not
 enforce:
 
- * The package should provide tutorials (or "vignettes") as part of the
-   documentation.
- * The package uses our [cookiecutter
-   template](https://github.com/scverse/cookiecutter-scverse).
+-   The package should provide tutorials (or "vignettes") as part of the
+    documentation.
+-   The package uses our [cookiecutter
+    template](https://github.com/scverse/cookiecutter-scverse).
 
 Note that the ecosystem packages are not necessarily constrained to Python
 software, as long as they fulfil the above requirements.
