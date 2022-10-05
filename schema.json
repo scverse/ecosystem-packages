@@ -10,8 +10,31 @@
             "name": {
                 "description": "The name of the package. Must be unique",
                 "type": "string"
+            },
+            "description": {
+                "description": "Summary of the purpose of the package (1-2 sentences).",
+                "type": "string"
+            },
+            "repo": {
+                "description": "Link to the VCS-repository of the project (e.g. GitHub)",
+                "type": "string",
+                "format": "uri"
+            },
+            "docs": {
+                "descripton": "Link to the documentation of the package (e.g. readthedocs)",
+                "type": "string",
+                "format": "uri"
+            },
+            "pypi": {
+                "description": "PyPI identifier",
+                "type": "string"
+            },
+            "conda": {
+                "description": "Conda identifier, including channel (e.g. conda-forge::scanpy)",
+                "type": "string",
+                "pattern": "(.*)::(.*)"
             }
         },
-        "required": ["name"]
+        "required": ["name", "description", "repo", "docs"]
     }
 }

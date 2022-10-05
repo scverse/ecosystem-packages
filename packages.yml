@@ -1,1 +1,6 @@
 - name: infercnvpy
+  description: |
+      Infer copy number variation (CNV) from scRNA-seq data. Plays nicely with Scanpy.
+  repo: https://github.com/icbi-lab/infercnvpy
+  docs: https://icbi-lab.github.io/infercnvpy
+  pypi: infercnvpy
