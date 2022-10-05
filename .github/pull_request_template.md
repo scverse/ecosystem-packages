@@ -1,3 +1,5 @@
+<!-- This template is for adding new packages. If you are suggesting a different change, feel free to delete it -->
+
 ## Add package <XXXXXX> to ecosystem
 
 To add a package to the scverse ecosystem registry, please add the package metadata to `packages.yml`.
