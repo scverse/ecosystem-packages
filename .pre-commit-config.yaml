@@ -14,4 +14,11 @@ repos:
       rev: 0.18.3
       hooks:
           - id: check-jsonschema
+            files: "schema.json"
             args: ["--check-metaschema"]
+    - repo: https://github.com/python-jsonschema/check-jsonschema
+      rev: 0.18.3
+      hooks:
+          - id: check-jsonschema
+            files: "packages.yml"
+            args: ["--schemafile", "schema.json"]

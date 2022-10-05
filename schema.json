@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/scverse/ecosystem-packages/main/schema.json",
+    "title": "Scverse Ecosystem Packages",
+    "description": "An approved scverse ecosystem package that fulfils some minimal requirements",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "description": "The name of the package. Must be unique",
+                "type": "string"
+            }
+        },
+        "required": ["name"]
+    }
+}
