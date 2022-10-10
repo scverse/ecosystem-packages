@@ -26,7 +26,7 @@ Submit a pull-request adding a `meta.yaml` file for your package to the `package
 For a package to become an approved ecosystem package, it must fulfill all mandatory requirements from the checklist
 below.
 
-Ecosystem packages are not necessarily constrained to Python software as long as they fulfil the above requirements.
+Ecosystem packages can be written in non-Python languages as long as they fulfill the above requirements.
 
 If you cannot or do not want to comply with these requirements, you are still
 free to make your package interoperable with scverse by using our datastructures,
