@@ -180,13 +180,22 @@
             ]
         },
         "tags": {
-            "descriptions": "Keywords that describe the package",
+            "description": "Keywords that describe the package",
             "type": "array",
             "items": {
                 "type": "string"
             },
             "minItems": 1,
             "uniqueItems": true
+        },
+        "publications": {
+            "description": "DOIs of publications describing the package",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "comment": "DOI regex from https://www.crossref.org/blog/dois-and-matching-regular-expressions/",
+                "pattern": "^10.\\d{4,9}/[-._;()/:A-Z0-9]+$"
+            }
         }
     },
     "required": [
