@@ -1,0 +1,13 @@
+name: decoupler
+description: |
+    Python package to infer biological activities from omics data using a collection of methods.
+project_home: https://github.com/saezlab/decoupler-py
+documentation_home: https://decoupler-py.readthedocs.io/en/latest/
+tutorials_home: https://decoupler-py.readthedocs.io/en/latest/
+install:
+    pypi: decoupler
+tags:
+    - TF
+    - GSEA
+    - Pathway
+license: GPL-3.0-only

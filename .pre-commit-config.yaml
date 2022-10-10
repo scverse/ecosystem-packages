@@ -20,5 +20,5 @@ repos:
       rev: 0.18.3
       hooks:
           - id: check-jsonschema
-            files: "packages.yml"
+            files: "packages/\\.*/meta\\.yaml"
             args: ["--schemafile", "schema.json"]
