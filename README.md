@@ -37,7 +37,9 @@ but we will not list your package on our ecosystem page.
 ### Mandatory
 
 Name of the tool: XXX
+
 Short description: XXX
+
 How does the package use scverse data structures (please describe in a few sentences): XXX
 
 -   [ ] The code is publicly available under an OSI-approved license
