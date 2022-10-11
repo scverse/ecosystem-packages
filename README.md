@@ -35,7 +35,7 @@ Short description: XXX
 
 How does the package use scverse data structures (please describe in a few sentences): XXX
 
--   [ ] The code is publicly available under an OSI-approved license
+-   [ ] The code is publicly available under an [OSI-approved](https://opensource.org/licenses/alphabetical) license
 -   [ ] The package provides versioned releases
 -   [ ] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
 -   [ ] The package uses automated software tests and continuous integration
