@@ -4,12 +4,10 @@ This repository contains the list of scverse ecosystem packages that are display
 The goal is to increase visibility of ecosystem packages and make it easier for users to find appropriate software.
 In the future, we may also test releases of core packages against the test suites of ecosystem packages.
 
-If a package is part of this list, it means it fulfils certain minimum requirements
-as outlined below. It **does not** mean we endorse the package or performed an in-depth
-review.
+If a package is part of this list, it means it fulfills certain minimum requirements as outlined below.
+It **does not** mean we endorse the package or performed an in-depth review.
 
-**Hint:** If you want to receive notifications about new ecosystem packages, simply
-use GitHub's "watch" functionality for this repository.
+**Hint:** If you want to receive notifications about new ecosystem packages, simply use GitHub's "watch" functionality for this repository.
 
 ## How can my package become part of the list?
 
@@ -21,14 +19,11 @@ Submit a pull-request adding a `meta.yaml` file for your package to the `package
 
 ## What are the requirements for an ecosystem package?
 
-For a package to become an approved ecosystem package, it must fulfill all mandatory requirements from the checklist
-below.
+For a package to become an approved ecosystem package, it must fulfill all mandatory requirements from the checklist below.
 
 Ecosystem packages can be written in non-Python languages as long as they fulfill the above requirements.
 
-If you cannot or do not want to comply with these requirements, you are still
-free to make your package interoperable with scverse by using our datastructures,
-but we will not list your package on our ecosystem page.
+If you cannot or do not want to comply with these requirements, you are still free to make your package interoperable with scverse by using our datastructures, but we will not list your package on our ecosystem page.
 
 ## Checklist for adding packages
 
