@@ -1,10 +1,8 @@
 # Scverse Ecosystem Packages
 
-This repository contains a list of approved software that works together with
-scverse core packages and are listed on our website. The goal is to increase
-visibility of ecosystem packages and make it easier for users to find
-appropriate software. In the future, we may also test releases of core packages against
-the test suites of ecosystem packages.
+This repository contains the list of scverse ecosystem packages that are displayed on scverse.org.
+The goal is to increase visibility of ecosystem packages and make it easier for users to find appropriate software. 
+In the future, we may also test releases of core packages against the test suites of ecosystem packages.
 
 If a package is part of this list, it means it fulfils certain minimum requirements
 as outlined below. It **does not** mean we endorse the package or performed an in-depth
