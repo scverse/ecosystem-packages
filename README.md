@@ -39,7 +39,7 @@ How does the package use scverse data structures (please describe in a few sente
 -   [ ] The package provides versioned releases
 -   [ ] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
 -   [ ] The package uses automated software tests and continuous integration
--   [ ] The package provides API documentation
+-   [ ] The package provides API documentation via a website or README
 -   [ ] The README/documentation provides a statement what level of support users can expect
 -   [ ] The package uses scverse datastructures where appropriate (i.e.anndata/mudata and their modality-specific extensions)
 -   [ ] I am the author or maintainer of the tool and agree on listing the package on the scverse website
