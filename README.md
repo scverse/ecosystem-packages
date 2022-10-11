@@ -37,7 +37,7 @@ How does the package use scverse data structures (please describe in a few sente
 
 -   [ ] The code is publicly available under an OSI-approved license
 -   [ ] The package provides versioned releases
--   [ ] The package can be installed from a standard registry (e.g. PyPI or conda-forge)
+-   [ ] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
 -   [ ] The package uses automated software tests and continuous integration
 -   [ ] The package provides API documentation
 -   [ ] The README/documentation provides a statement what level of support users can expect
