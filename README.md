@@ -1,7 +1,7 @@
 # Scverse Ecosystem Packages
 
 This repository contains the list of scverse ecosystem packages that are displayed on scverse.org.
-The goal is to increase visibility of ecosystem packages and make it easier for users to find appropriate software. 
+The goal is to increase visibility of ecosystem packages and make it easier for users to find appropriate software.
 In the future, we may also test releases of core packages against the test suites of ecosystem packages.
 
 If a package is part of this list, it means it fulfils certain minimum requirements
