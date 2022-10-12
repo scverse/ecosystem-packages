@@ -11,3 +11,10 @@ tags:
     - GSEA
     - Pathway
 license: GPL-3.0-only
+version: v1.2.0
+authors:
+    - PauBadiaM
+test_command: |
+    pip install wheel && \
+    pip install pytest-cov flake8 sklearn skranger omnipath scanpy adjustText . && \
+    pytest --cov --disable-warnings decoupler

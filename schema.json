@@ -196,6 +196,23 @@
                 "comment": "DOI regex from https://www.crossref.org/blog/dois-and-matching-regular-expressions/",
                 "pattern": "^10.\\d{4,9}/[-._;()/:A-Z0-9]+$"
             }
+        },
+        "version": {
+            "description": "The version of the package at the point when this entry was created or updated",
+            "type": "string"
+        },
+        "authors": {
+            "description": "List of authors/maintainers of the package. Entries must be Github user IDs.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "test_command": {
+            "description": "A shell command to install the package and execute the tests, assuming you are inside a freshly cloned copy of the package repository. Often this will be `pip install \".[test]\" && pytest`",
+            "type": "string"
         }
     },
     "required": [
@@ -205,6 +222,8 @@
         "documentation_home",
         "install",
         "license",
-        "tags"
+        "tags",
+        "version",
+        "authors"
     ]
 }
