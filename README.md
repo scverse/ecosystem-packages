@@ -2,10 +2,12 @@
 
 This repository contains the list of scverse ecosystem packages that are displayed on scverse.org.
 The goal is to increase visibility of ecosystem packages and make it easier for users to find appropriate software.
+Registered ecosystem packages can also get their own tag to use on the [scverse forum](https://discourse.scverse.org) for user discussion.
+Authors of these packages can be added the [scverse github organization](https://github.com/scverse).
 In the future, we may also test releases of core packages against the test suites of ecosystem packages.
 
 If a package is part of this list, it means it fulfills certain minimum requirements as outlined below.
-It **does not** mean we endorse the package or performed an in-depth review.
+It **does not** imply endorsement or that an in-depth review has been performed.
 
 **Hint:** If you want to receive notifications about new ecosystem packages, simply use GitHub's "watch" functionality for this repository.
 
