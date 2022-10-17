@@ -7,7 +7,7 @@ project_home: https://github.com/Teichlab/bbknn
 documentation_home: https://bbknn.readthedocs.io/en/latest/
 tutorials_home: https://bbknn.readthedocs.io/en/latest/
 publications:
-    - 10.1011/some_doi
+    - https://doi.org/10.1093/bioinformatics/btz625
 install:
     pypi: bbknn
 tags:
