@@ -22,3 +22,12 @@ repos:
           - id: check-jsonschema
             files: "packages/.*/meta.yaml"
             args: ["--schemafile", "schema.json"]
+    - repo: local
+      hooks:
+          - id: forbid-to-commit
+            name: Check files in `packages` directory
+            entry: |
+                Only files named `meta.yaml` are permitted in the packages directory
+            language: fail
+            files: "^packages/.*$"
+            exclude: "^packages/.*/meta.yaml$"
