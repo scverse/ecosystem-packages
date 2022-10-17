@@ -29,5 +29,5 @@ repos:
             entry: |
                 Only files named `meta.yaml` are permitted in the packages directory
             language: fail
-            files: '^packages/.*$'
-            exclude: '^packages/.*/meta.yaml$'
+            files: "^packages/.*$"
+            exclude: "^packages/.*/meta.yaml$"
