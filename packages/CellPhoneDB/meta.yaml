@@ -4,7 +4,7 @@ description: |
 project_home: https://github.com/ventolab/CellphoneDB
 documentation_home: https://github.com/Teichlab/cellphonedb/tree/master/Docs
 tutorials_home: https://github.com/Teichlab/cellphonedb/blob/master/Docs/RESULTS-DOCUMENTATION.md
-publications: 
+publications:
     - 10.1038/s41596-020-0292-x
 install:
     pypi: CellPhoneDB
