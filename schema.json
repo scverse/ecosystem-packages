@@ -194,7 +194,7 @@
             "items": {
                 "type": "string",
                 "comment": "DOI regex from https://www.crossref.org/blog/dois-and-matching-regular-expressions/",
-                "pattern": "^10.\\d{4,9}/[-._;()/:A-Z0-9]+$"
+                "pattern": "^10.\\d{4,9}\\/[-._;()\\/:A-Za-z0-9]+$"
             }
         },
         "version": {
@@ -212,7 +212,7 @@
         },
         "test_command": {
             "description": "A shell command to install the package and execute the tests, assuming you are inside a freshly cloned copy of the package repository. Often this will be `pip install \".[test]\" && pytest`",
-            "type": "string"
+            "type": ["string", "null"]
         }
     },
     "required": [
