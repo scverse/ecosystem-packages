@@ -1,8 +1,8 @@
 name: CellRank
 description: |
-CellRank is a toolkit to uncover cellular dynamics based on Markov state modeling of single-cell data. 
-It contains two main modules - kernels compute cell-cell transition probabilities and estimators generate 
-hypothesis based on these.    
+    CellRank is a toolkit to uncover cellular dynamics based on Markov state modeling of single-cell data. 
+    It contains two main modules - kernels compute cell-cell transition probabilities and estimators generate 
+    hypothesis based on these.    
 project_home: https://github.com/theislab/cellrank
 documentation_home: https://cellrank.readthedocs.io/en/stable/
 tutorials_home: https://cellrank.readthedocs.io/en/stable/
