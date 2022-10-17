@@ -25,7 +25,7 @@ repos:
     - repo: local
       hooks:
           - id: forbid-to-commit
-            name: meta files must have the `yaml` extension
+            name: Check files in `packages` directory
             entry: |
                 Only files named `meta.yaml` are permitted in the packages directory
             language: fail
