@@ -14,4 +14,4 @@ authors:
     - Krzysztof Polański 
     - Jongeun Park
 test_command: |
-    pip install wheel && \
+    pip install wheel
