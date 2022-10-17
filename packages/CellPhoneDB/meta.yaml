@@ -2,8 +2,8 @@ name: CellPhoneDB
 description: |
     CellPhoneDB is a publicly available repository of curated receptors, ligands and their interactions in HUMAN. 
 project_home: https://github.com/ventolab/CellphoneDB
-documentation_home: https://decoupler-py.readthedocs.io/en/latest/
-tutorials_home: https://decoupler-py.readthedocs.io/en/latest/
+documentation_home: https://github.com/Teichlab/cellphonedb/tree/master/Docs
+tutorials_home: https://github.com/Teichlab/cellphonedb/blob/master/Docs/RESULTS-DOCUMENTATION.md
 publications: 
     - 10.1038/s41596-020-0292-x
 install:
