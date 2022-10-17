@@ -1,6 +1,6 @@
 name: CellPhoneDB
 description: |
-    CellPhoneDB is a publicly available repository of curated receptors, ligands and their interactions in HUMAN. 
+    CellPhoneDB is a publicly available repository of curated receptors, ligands and their interactions in HUMAN.
 project_home: https://github.com/ventolab/CellphoneDB
 documentation_home: https://github.com/Teichlab/cellphonedb/tree/master/Docs
 tutorials_home: https://github.com/Teichlab/cellphonedb/blob/master/Docs/RESULTS-DOCUMENTATION.md
@@ -9,10 +9,10 @@ publications:
 install:
     pypi: CellPhoneDB
 tags:
-    - UniProt 
-    - Ensembl 
-    - PDB 
-    - IMEx consortium 
+    - UniProt
+    - Ensembl
+    - PDB
+    - IMEx consortium
     - IUPHAR
 license: MIT
 version: v3.1.0
@@ -30,4 +30,3 @@ authors:
     - kant
     - rvento
 test_command: null
-    
