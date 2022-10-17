@@ -1,0 +1,18 @@
+name: CellBender
+description: |
+    A deep generative model for noise-contaminated data that is structured to reflect the phenomenology 
+    of background noise generation in droplet-based single-cell assays.
+project_home: https://github.com/broadinstitute/CellBender
+documentation_home: https://cellbender.readthedocs.io/en/latest/
+tutorials_home: https://cellbender.readthedocs.io/en/latest/
+publications: 10.1101/791699
+install:
+    pypi: cellbender
+tags:
+    - droplet-based
+license: BSD-3-Clause
+version: v0.2.0
+authors:
+    - sjfleming
+    - mbabadi
+test_command: null
