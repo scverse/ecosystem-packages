@@ -1,0 +1,20 @@
+name: CellOracle
+description: |
+    A computational tool that integrates single-cell transcriptome and epigenome profiles 
+    to infer gene regulatory networks (GRNs), critical regulators of cell identity.
+project_home: https://github.com/morris-lab/CellOracle
+documentation_home: https://morris-lab.github.io/CellOracle.documentation/
+tutorials_home: https://morris-lab.github.io/CellOracle.documentation/
+publications: 10.1101/2020.02.17.947416
+install:
+    pypi: celloracle
+tags:
+    - GRN
+    - TF
+license: Apache-2.0
+version: v0.10.12
+authors:
+    - KenjiKamimoto-wustl122
+    - sam-morris
+    - cmhct7
+test_command: null
