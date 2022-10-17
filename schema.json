@@ -194,7 +194,7 @@
             "items": {
                 "type": "string",
                 "comment": "DOI regex from https://www.crossref.org/blog/dois-and-matching-regular-expressions/",
-                "pattern": "^10.\\d{4,9}/[-._;()/:A-Z0-9]+$"
+                "pattern": "^10.\\d{4,9}\\/[-._;()\\/:A-Za-z0-9]+$"
             }
         },
         "version": {
