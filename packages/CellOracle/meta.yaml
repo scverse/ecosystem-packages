@@ -5,7 +5,8 @@ description: |
 project_home: https://github.com/morris-lab/CellOracle
 documentation_home: https://morris-lab.github.io/CellOracle.documentation/
 tutorials_home: https://morris-lab.github.io/CellOracle.documentation/
-publications: 10.1101/2020.02.17.947416
+publications: 
+    - 0.1101/2020.02.17.947416
 install:
     pypi: celloracle
 tags:
