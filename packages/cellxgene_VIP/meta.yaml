@@ -1,0 +1,24 @@
+name: cellxgene_VIP
+description: |
+    Cellxgene VIP (Visualization In Plugin) is a frontend interactive visualization plugin of cellxgene 
+    framework, which greatly expanded capabilities of the base tool in the following aspects.
+project_home: https://github.com/interactivereport/cellxgene_VIP
+documentation_home: https://interactivereport.github.io/cellxgene_VIP/tutorial/docs/
+tutorials_home: https://interactivereport.github.io/cellxgene_VIP/tutorial/docs/
+install:
+    pypi: null
+    git: https://github.com/interactivereport/cellxgene_VIP.git
+tags:
+    - visualization
+    - svg
+license: MIT
+version: v2.6
+authors:
+    - z5ouyang
+    - interactivereport
+    - onionpork
+    - biogen-clarivate
+    - likejie
+    - baohongz
+test_command: |
+    pip install ".[testVIP]" && pytest
