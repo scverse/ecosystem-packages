@@ -5,6 +5,8 @@ description: |
 project_home: https://github.com/interactivereport/cellxgene_VIP
 documentation_home: https://interactivereport.github.io/cellxgene_VIP/tutorial/docs/
 tutorials_home: https://interactivereport.github.io/cellxgene_VIP/tutorial/docs/
+publications:
+    - 10.1101/2020.08.28.270652
 install:
     pypi: null
     git: https://github.com/interactivereport/cellxgene_VIP.git
