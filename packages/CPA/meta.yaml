@@ -1,0 +1,22 @@
+name: CPA
+description: |
+    The Compositional Perturbation Autoencoder (CPA) is a deep generative framework to learn effects 
+    of perturbations at the single-cell level.
+project_home: https://github.com/facebookresearch/CPA
+documentation_home: https://github.com/facebookresearch/CPA/blob/main/README.md
+publications:
+    - 10.1101/2021.04.14.439903
+install:
+    pypi: cpa
+tags:
+    - perturbation
+    - autoencoder
+license: MIT
+version: v0.4.1
+authors:
+    - cdedonno
+    - M0hammadL
+    - scottgigante-immunai
+    - klanita
+test_command: |
+    pip install ".[test]" && pytest
