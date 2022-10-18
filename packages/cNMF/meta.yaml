@@ -4,6 +4,8 @@ description: |
 project_home: https://github.com/dylkot/cNMF
 documentation_home: http://docs.mesmerizelab.org/en/v0.6.1/user_guides/viewer/modules/cnmf.html
 tutorials_home: https://github.com/dylkot/cNMF/tree/master/Tutorials
+publications:
+    - 10.7554/eLife.43803
 install:
     pypi: cnmf
 tags:
