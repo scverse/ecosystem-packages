@@ -1,0 +1,20 @@
+name: Cirrocumulus
+description: |
+    Cirrocumulus is an interactive visualization tool for large-scale single-cell genomics data.
+project_home: https://github.com/lilab-bcb/cirrocumulus
+documentation_home: https://cirrocumulus.readthedocs.io/en/latest/
+tutorials_home: https://cirrocumulus.readthedocs.io/en/latest/
+publications:
+    - 10.1038/s41592-020-0905-x
+install:
+    pypi: cirrocumulus
+tags:
+    - visualization
+license:  BSD-3-Clause
+version: v1.1.41
+authors:
+    - joshua-gould
+    - yihming
+    - gouwens
+test_command: |
+    pip install ".[test]" && pytest
