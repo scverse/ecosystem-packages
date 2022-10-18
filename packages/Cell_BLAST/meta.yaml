@@ -1,0 +1,17 @@
+name: Cell_BLAST
+description: |
+    Cell BLAST is a cell querying tool for single-cell transcriptomics data.
+project_home: https://github.com/gao-lab/Cell_BLAST
+documentation_home: https://cblast.gao-lab.org/doc/index.html
+publications:
+    - 10.1038/s41467-020-17281-7
+install:
+    pypi: Cell-BLAST
+tags:
+    - BLAST
+license: MIT
+version: v0.3.8
+authors:
+    - Jeff1995
+test_command: |
+    pip install ".[test]" && pytest
