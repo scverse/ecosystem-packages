@@ -1,0 +1,18 @@
+name: MARS
+description: |
+    PyTorch implementation of MARS, a meta-learning approach for cell type discovery in 
+    heterogenous single-cell data. MARS annotates known and new cell types by transferring 
+    latent cell representations across multiple datasets.
+project_home: http://snap.stanford.edu/mars/
+documentation_home: http://snap.stanford.edu/mars/
+publications:
+    - 10.1038/s41592-020-00979-3
+install:
+    git: https://github.com/snap-stanford/mars
+tags:
+    - pytorch
+license: MIT
+version: N/A
+authors:
+    - mbrbic
+test_command: null
