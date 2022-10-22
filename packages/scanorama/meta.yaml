@@ -1,0 +1,23 @@
+name: scanorama
+description: |
+    Scanorama enables batch-correction and integration of heterogeneous scRNA-seq datasets.
+project_home: http://cb.csail.mit.edu/cb/scanorama/
+documentation_home: https://github.com/brianhie/scanorama
+tutorials_home: https://github.com/brianhie/scanorama#full-tutorial
+publications:
+    - 10.1038/s41587-019-0113-3
+install:
+    pypi: scanorama
+tags:
+    - batch-correction
+    - integration
+license: MIT
+version: v1.7.2
+authors:
+    - brianhie
+    - LisaSikkema
+    - tariqdaouda
+    - falexwolf
+    - ivirshup
+test_command: |
+    pip install ".[test]" && pytest
