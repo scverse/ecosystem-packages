@@ -25,9 +25,6 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v3
-            - name: Setup Pages
-              if: github.ref == 'refs/heads/main'
-              uses: actions/configure-pages@v2
             - name: setup-yq
               run: |
                   sudo curl https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64 > /usr/local/bin/yq
@@ -35,12 +32,10 @@ jobs:
             - name: convert to json
               run: |
                   mkdir build
+                  touch build/.nojekyll
                   yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v1
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  path: "build"
-            - name: Deploy to GitHub Pages
-              if: github.ref == 'refs/heads/main'
-              id: deployment
-              uses: actions/deploy-pages@v1
+                  folder: build # The folder the action should deploy.
+
