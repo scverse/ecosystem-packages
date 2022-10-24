@@ -24,6 +24,7 @@ jobs:
               run: |
                   mkdir build
                   touch build/.nojekyll
+                  cat packages/**/meta.yaml
                   yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
