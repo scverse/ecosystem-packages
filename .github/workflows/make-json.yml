@@ -10,12 +10,23 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+            - name: Setup Pages
+              uses: actions/configure-pages@v2
             - name: setup-yq
               run: |
                   sudo curl https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64 > /usr/local/bin/yq
                   sudo chmod +x /usr/local/bin/yq
             - name: convert to json
               run: |
-                  yq -o=json packages/**/meta.yaml | jq -s . > ecosystem.json
-            - name: Debugging with tmate
-              uses: mxschmitt/action-tmate@v3.13
+                  mkdir build
+                  yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: "build"
+            - name: Deploy to GitHub Pages
+              #   if: github.ref == 'refs/heads/main'
+              id: deployment
+              uses: actions/deploy-pages@v1
