@@ -11,7 +11,9 @@ jobs:
 
         steps:
             - name: setup-yq
-              uses: chrisdickinson/setup-yq@v1.0.0
+              run: |
+                  sudo curl https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64 > /usr/local/bin/yq
+                  sudo chmod +x /usr/local/bin/yq
             - name: convert to json
               run: |
                   yq -o=json packages/**/meta.yaml | jq -s . > ecosystem.json
