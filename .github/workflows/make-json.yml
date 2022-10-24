@@ -10,9 +10,10 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: yq - portable yaml processor
-              uses: mikefarah/yq@v4.28.2
-              with:
-                  cmd: yq -o=json **/*.yaml | jq -s . > ecosystem.json
+            - name: setup-yq
+              uses: chrisdickinson/setup-yq@v1.0.0
+            - name: convert to json
+              run: |
+                  yq -o=json packages/**/meta.yaml | jq -s . > ecosystem.json
             - name: Debugging with tmate
               uses: mxschmitt/action-tmate@v3.13
