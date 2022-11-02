@@ -1,0 +1,19 @@
+name: cell2location
+description: |
+    Comprehensive mapping of tissue cell architecture via integrated single cell and spatial transcriptomics.
+project_home: https://github.com/BayraktarLab/cell2location
+documentation_home: https://cell2location.readthedocs.io/en/latest/
+tutorials_home: https://cell2location.readthedocs.io/en/latest/
+publications:
+    - 10.1038/s41587-021-01139-4
+install:
+    pypi: cell2location
+tags:
+    - spatial decomposition
+    - spatial mapping
+license: Apache-2.0
+version: v0.1.0
+authors:
+    - vitkl
+    - yozhikoff
+test_command: pip install "." && pytest
