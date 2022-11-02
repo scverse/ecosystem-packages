@@ -1,22 +1,22 @@
 name: tangram
 description: |
-  Spatial alignment and gene expression mapping of single cell transcriptomic data.
+    Spatial alignment and gene expression mapping of single cell transcriptomic data.
 project_home: https://github.com/broadinstitute/Tangram
 documentation_home: https://tangram-sc.readthedocs.io/en/latest/index.html
 tutorials_home: https://tangram-sc.readthedocs.io/en/latest/tutorials.html
 publications:
-  - 10.1038/s41592-021-01264-7
+    - 10.1038/s41592-021-01264-7
 install:
-  pypi: tangram-sc
+    pypi: tangram-sc
 tags:
-  - spatial decomposition
-  - spatial mapping
+    - spatial decomposition
+    - spatial mapping
 license: BSD-3-Clause
 version: v1.0.3
 authors:
-  - ziqlu0722
-  - lewlin
-  - gscalia
-  - gaddamshreya
-  - hejinhuang
+    - ziqlu0722
+    - lewlin
+    - gscalia
+    - gaddamshreya
+    - hejinhuang
 test_command: pip install "." && pytest
