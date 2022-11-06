@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "name": "decoupler",
+    "description": "Python package to infer biological activities from omics data using a collection of methods.\n",
+    "project_home": "https://github.com/saezlab/decoupler-py",
+    "documentation_home": "https://decoupler-py.readthedocs.io/en/latest/",
+    "tutorials_home": "https://decoupler-py.readthedocs.io/en/latest/",
+    "install": {
+      "pypi": "decoupler"
+    },
+    "tags": [
+      "TF",
+      "GSEA",
+      "Pathway"
+    ],
+    "license": "GPL-3.0-only",
+    "version": "v1.2.0",
+    "authors": [
+      "PauBadiaM"
+    ],
+    "test_command": "pip install wheel && \\\npip install pytest-cov flake8 sklearn skranger omnipath scanpy adjustText . && \\\npytest --cov --disable-warnings decoupler\n"
+  },
+  {
+    "name": "infercnvpy",
+    "description": "Infer copy number variation (CNV) from scRNA-seq data. Plays nicely with Scanpy.\n",
+    "project_home": "https://github.com/icbi-lab/infercnvpy",
+    "documentation_home": "https://icbi-lab.github.io/infercnvpy",
+    "install": {
+      "pypi": "infercnvpy"
+    },
+    "tags": [
+      "CNV"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v0.3.0",
+    "authors": [
+      "grst"
+    ],
+    "test_command": "pip install \".[test]\" && pytest\n"
+  }
+]
