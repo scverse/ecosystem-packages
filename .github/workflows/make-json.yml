@@ -18,7 +18,7 @@ jobs:
               uses: actions/checkout@v3
             - name: setup-yq
               run: |
-                  sudo curl https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64 > /usr/local/bin/yq
+                  sudo curl -L "https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64" > /usr/local/bin/yq
                   sudo chmod +x /usr/local/bin/yq
             - name: convert to json
               run: |
@@ -26,8 +26,6 @@ jobs:
                   touch build/.nojekyll
                   cat packages/**/meta.yaml
                   yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
-            - name: Setup tmate session
-              uses: mxschmitt/action-tmate@v3
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@v4
               with:
