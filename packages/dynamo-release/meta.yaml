@@ -1,0 +1,21 @@
+name: dynamo-release
+description: |
+    Inclusive model of expression dynamics with metabolic labeling based scRNA-seq / multiomics, 
+    vector field reconstruction, potential landscape mapping, differential geometry analyses, 
+    and most probably paths / in silico perturbation predictions.
+project_home: https://github.com/aristoteleo/dynamo-release
+documentation_home: https://dynamo-release.readthedocs.io/en/latest/
+tutorials_home: https://dynamo-release.readthedocs.io/en/latest/
+publications:
+    - 10.1016/j.cell.2021.12.045
+install:
+    pypi: dynamo-release
+tags:
+    - vector
+license: BSD-3-Clause
+version: v1.1.0
+authors:
+    - Xiaojieqiu
+    - dummyindex
+    - yaz62
+test_command: pip install ".[test]" && pytest
