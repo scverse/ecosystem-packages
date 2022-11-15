@@ -22,4 +22,4 @@ authors:
     - emdann
     - Alexander Aivazidis
 test_command: |
-    pip install ".[test]" && pytest
+    pip install ".[dev]" && pytest
