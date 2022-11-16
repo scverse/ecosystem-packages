@@ -1,0 +1,17 @@
+name: scrublet
+description: |
+    Python code for identifying doublets in single-cell RNA-seq data. 
+project_home: https://github.com/swolock/scrublet
+documentation_home: https://github.com/swolock/scrublet
+tutorials_home: https://github.com/swolock/scrublet/tree/master/examples
+publications:
+    - 10.1016/j.cels.2018.11.005
+install:
+    pypi: scrublet
+tags:
+    - doublets
+license: MIT
+version: v0.2.3
+authors:
+    - swolock
+test_command: null
