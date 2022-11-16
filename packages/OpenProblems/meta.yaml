@@ -3,7 +3,6 @@ description: |
     Formalizing and benchmarking open problems in single-cell genomics.
 project_home: https://github.com/openproblems-bio/openproblems
 documentation_home: https://openproblems.bio/
-publications: null
 install:
     docker: build -f docker/openproblems/Dockerfile -t singlecellopenproblems/openproblems .
 tags:
