@@ -1,0 +1,25 @@
+name: CellRank
+description: |
+    CellRank is a toolkit to uncover cellular dynamics based on Markov state modeling of single-cell data. 
+    It contains two main modules - kernels compute cell-cell transition probabilities and estimators generate 
+    hypothesis based on these.
+project_home: https://github.com/theislab/cellrank
+documentation_home: https://cellrank.readthedocs.io/en/stable/
+tutorials_home: https://cellrank.readthedocs.io/en/stable/
+publications:
+    - 10.1038/s41592-021-01346-6
+install:
+    pypi: cellrank
+tags:
+    - ML
+    - cell-fate
+    - rna-velocity
+    - trajectory-generation
+license: BSD-3-Clause
+version: v1.5.1
+authors:
+    - Marius1311
+    - michalk8
+    - WeilerP
+test_command: |
+    pip install ".[test]" && pytest
