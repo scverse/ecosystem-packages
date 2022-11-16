@@ -1,0 +1,41 @@
+name: OpenProblems
+description: |
+    Formalizing and benchmarking open problems in single-cell genomics.
+project_home: https://github.com/openproblems-bio/openproblems
+documentation_home: https://openproblems.bio/
+publications: null
+install:
+    docker: build -f docker/openproblems/Dockerfile -t singlecellopenproblems/openproblems .
+tags:
+    - benchamrking
+    - open problems
+license: MIT
+version: null
+authors:
+    - scottgigante
+    - scottgigante-immunai
+    - dburkhardt
+    - LuckyMD
+    - mvinyard
+    - rcannood
+    - wes-lewis
+    - qinqian
+    - danielStrobl
+    - qinqian1989cn
+    - lazappi
+    - mxposed
+    - michalk8
+    - giovp
+    - olgabot
+    - bendemeo
+    - dbdimitrov
+    - adamgayoso
+    - vals
+    - Munfred
+    - atchen
+    - vitkl
+    - almaan
+    - hiraksarkar
+    - atong01
+    - M0hammadL
+test_command: null
