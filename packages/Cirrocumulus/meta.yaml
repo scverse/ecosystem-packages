@@ -17,4 +17,4 @@ authors:
     - yihming
     - gouwens
 test_command: |
-    pip install ".[test]" && pytest
+    SETUPTOOLS_SCM_PRETEND_VERSION=0.0.1 pip install .[test,parquet] && pytest
