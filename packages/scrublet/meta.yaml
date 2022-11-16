@@ -1,6 +1,6 @@
 name: scrublet
 description: |
-    Python code for identifying doublets in single-cell RNA-seq data. 
+    Python code for identifying doublets in single-cell RNA-seq data.
 project_home: https://github.com/swolock/scrublet
 documentation_home: https://github.com/swolock/scrublet
 tutorials_home: https://github.com/swolock/scrublet/tree/master/examples
