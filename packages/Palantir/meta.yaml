@@ -1,0 +1,27 @@
+name: Palantir
+description: |
+    Palantir is an algorithm to align cells along differentiation trajectories.
+project_home: https://github.com/dpeerlab/Palantir
+documentation_home: https://nbviewer.org/github/dpeerlab/Palantir/blob/master/notebooks/Palantir_sample_notebook.ipynb
+tutorials_home: https://nbviewer.org/github/dpeerlab/Palantir/blob/master/notebooks/Palantir_sample_notebook.ipynb
+publications:
+    - 10.1038/s41587-019-0068-4
+install:
+    pypi: palantir
+tags:
+    - markov-chain
+    - diffusion-maps
+license: GPL-2.0-only
+version: v1.1.0
+authors:
+    - ManuSetty
+    - awnimo
+    - katosh
+    - christinedien
+    - mbuttner
+    - andrewmoorman
+    - mrland99
+    - flying-sheep
+    - ivirshup
+    - LisaSikkema
+test_command: null
