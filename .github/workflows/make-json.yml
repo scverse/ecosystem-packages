@@ -1,0 +1,33 @@
+name: Make JSON
+on:
+    pull_request:
+        branches: [main]
+    push:
+        branches: [main]
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: true
+
+jobs:
+    mkjson:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+            - name: setup-yq
+              run: |
+                  sudo curl -L "https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64" > /usr/local/bin/yq
+                  sudo chmod +x /usr/local/bin/yq
+            - name: convert to json
+              run: |
+                  mkdir build
+                  touch build/.nojekyll
+                  cat packages/**/meta.yaml
+                  yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
+            - name: Deploy 🚀
+              if: github.ref == 'refs/heads/main'
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  folder: build
