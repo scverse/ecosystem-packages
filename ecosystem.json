@@ -341,6 +341,28 @@
     "test_command": "pip install \".\" && pytest"
   },
   {
+    "name": "scVelo",
+    "description": "scVelo is a scalable toolkit for RNA velocity analysis in single cells, based on Bergen et al. [(Nature Biotech, 2020)](https://doi.org/10.1038/s41587-020-0591-3).\n",
+    "project_home": "https://github.com/theislab/scvelo",
+    "documentation_home": "https://scvelo.readthedocs.io",
+    "publications": [
+      "10.1038/s41587-020-0591-3"
+    ],
+    "install": {
+      "pypi": "scvelo"
+    },
+    "tags": [
+      "rna velocity"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v0.2.5",
+    "authors": [
+      "WeilerP",
+      "VolkerBergen"
+    ],
+    "test_command": "pip install -e '.[dev]' && pytest"
+  },
+  {
     "name": "spatial-eggplant",
     "description": "Python package designed to transfer information from multiple spatial-transcriptomics data sets to a single reference representing a Common Coordinate Framework (CCF).\n",
     "project_home": "https://github.com/almaan/eggplant",
