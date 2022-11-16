@@ -1,4 +1,4 @@
-name: pegasuspy
+name: pegasus
 description: |
     Pegasus is a tool for analyzing transcriptomes of millions of single cells. 
 project_home: https://github.com/lilab-bcb/pegasus
