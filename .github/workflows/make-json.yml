@@ -27,7 +27,8 @@ jobs:
                   cat packages/**/meta.yaml
                   yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
             - name: Deploy 🚀
+              if: github.ref == 'refs/heads/main'
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  folder: build # The folder the action should deploy.
+                  folder: build 
 
