@@ -1,7 +1,7 @@
 name: wot
 description: |
     Waddington-OT is designed to infer the temporal couplings of a developmental 
-    stochastic process from samples collected independently at various time-points. 
+    stochastic process from samples collected independently at various time-points.
 project_home: https://github.com/broadinstitute/wot
 documentation_home: https://broadinstitute.github.io/wot/
 tutorials_home: https://broadinstitute.github.io/wot/tutorial/
