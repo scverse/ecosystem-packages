@@ -10,7 +10,7 @@ install:
     pypi: pathml
 tags:
     - pathology
-license: GPL-2.0
+license: GPL-2.0-only
 version: v2.1.0
 authors:
     - jacob-rosenthal
