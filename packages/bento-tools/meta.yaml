@@ -1,4 +1,4 @@
-name: cell2location
+name: bento-tools
 description: |
     A Python toolkit for subcellular analysis of spatial transcriptomics data
 project_home: https://github.com/ckmah/bento-tools
