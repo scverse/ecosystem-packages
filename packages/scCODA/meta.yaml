@@ -1,0 +1,22 @@
+name: scCODA
+description: |
+    scCODA allows for identification of compositional changes in high-throughput 
+    sequencing count data, especially cell compositions from scRNA-seq.
+project_home: https://github.com/theislab/scCODA
+documentation_home: https://sccoda.readthedocs.io/en/latest/
+tutorials_home: https://sccoda.readthedocs.io/en/latest/getting_started.html
+publications:
+    - 10.1038/s41467-021-27150-6
+install:
+    pypi: sccoda
+tags:
+    - bayesian
+    - compositional analysis
+license: BSD-3-Clause
+version: v0.18.0
+authors:
+    - johannesostner
+    - b-schubert
+    - mbuttner
+    - redst4r
+test_command: pip install "." && pytest
