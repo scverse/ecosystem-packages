@@ -1,4 +1,4 @@
-name: scvelo
+name: scVelo
 description: |
     scVelo is a scalable toolkit for RNA velocity analysis in single cells, based on Bergen et al. [(Nature Biotech, 2020)](https://doi.org/10.1038/s41587-020-0591-3).
 project_home: https://github.com/theislab/scvelo
