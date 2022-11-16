@@ -1,0 +1,23 @@
+name: PASTE
+description: |
+    PASTE is a computational method that leverages both gene expression 
+    similarity and spatial distances between spots to align and integrate 
+    spatial transcriptomics data.
+project_home: https://github.com/raphael-group/paste
+documentation_home: https://paste-bio.readthedocs.io/en/latest/
+tutorials_home: https://paste-bio.readthedocs.io/en/latest/tutorial.html
+publications:
+    - 10.1038/s41592-022-01459-6
+install:
+    pypi: paste-bio
+tags:
+    - alignment
+    - spatial transcriptomics
+license: BSD-3-Clause
+version: v1.3.0
+authors:
+    - mrland99
+    - RonZeira
+    - leoguignard
+    - astrzalk
+test_command: null
