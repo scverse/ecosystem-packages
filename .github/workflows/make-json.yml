@@ -30,5 +30,4 @@ jobs:
               if: github.ref == 'refs/heads/main'
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  folder: build 
-
+                  folder: build
