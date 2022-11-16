@@ -1,0 +1,21 @@
+name: vitessce
+description: |
+    
+project_home: https://github.com/vitessce/vitessce
+documentation_home: 
+tutorials_home: 
+publications:
+    - 
+install:
+    pypi: 
+tags:
+    - 
+license: BSD-3-Clause
+version: v
+authors:
+    - 
+    - 
+    - 
+    - 
+    - 
+test_command: pip install "." && pytest
