@@ -1,5 +1,231 @@
 [
   {
+    "name": "CellOracle",
+    "description": "A computational tool that integrates single-cell transcriptome and epigenome profiles \nto infer gene regulatory networks (GRNs), critical regulators of cell identity.\n",
+    "project_home": "https://github.com/morris-lab/CellOracle",
+    "documentation_home": "https://morris-lab.github.io/CellOracle.documentation/",
+    "tutorials_home": "https://morris-lab.github.io/CellOracle.documentation/",
+    "publications": [
+      "10.1101/2020.02.17.947416"
+    ],
+    "install": {
+      "pypi": "celloracle"
+    },
+    "tags": [
+      "GRN",
+      "TF"
+    ],
+    "license": "Apache-2.0",
+    "version": "v0.10.12",
+    "authors": [
+      "KenjiKamimoto-wustl122",
+      "sam-morris",
+      "cmhct7"
+    ],
+    "test_command": "sudo apt-get update\nsudo apt-get install -y bedtools\nwget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh\nbash miniconda.sh -b -p $HOME/miniconda\nsource \"$HOME/miniconda/etc/profile.d/conda.sh\"\nhash -r\nconda config --set always_yes yes --set changeps1 no\n#conda update -q conda\n# Useful for debugging any issues with conda\nconda info -a\n# Create env\nconda create -q -n test-environment python=3.8\n# command to install dependencies\nconda activate test-environment\nconda install cython numpy pytest\n\n# Check pip\necho pip_path\nwhich pip\n\npip install .\n# command to run tests\npytest -v\n"
+  },
+  {
+    "name": "CellRank",
+    "description": "CellRank is a toolkit to uncover cellular dynamics based on Markov state modeling of single-cell data. \nIt contains two main modules - kernels compute cell-cell transition probabilities and estimators generate \nhypothesis based on these.\n",
+    "project_home": "https://github.com/theislab/cellrank",
+    "documentation_home": "https://cellrank.readthedocs.io/en/stable/",
+    "tutorials_home": "https://cellrank.readthedocs.io/en/stable/",
+    "publications": [
+      "10.1038/s41592-021-01346-6"
+    ],
+    "install": {
+      "pypi": "cellrank"
+    },
+    "tags": [
+      "ML",
+      "cell-fate",
+      "rna-velocity",
+      "trajectory-generation"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v1.5.1",
+    "authors": [
+      "Marius1311",
+      "michalk8",
+      "WeilerP"
+    ],
+    "test_command": "pip install \".[test]\" && pytest\n"
+  },
+  {
+    "name": "Cell_BLAST",
+    "description": "Cell BLAST is a cell querying tool for single-cell transcriptomics data.\n",
+    "project_home": "https://github.com/gao-lab/Cell_BLAST",
+    "documentation_home": "https://cblast.gao-lab.org/doc/index.html",
+    "publications": [
+      "10.1038/s41467-020-17281-7"
+    ],
+    "install": {
+      "pypi": "Cell-BLAST"
+    },
+    "tags": [
+      "BLAST"
+    ],
+    "license": "MIT",
+    "version": "v0.3.8",
+    "authors": [
+      "Jeff1995"
+    ],
+    "test_command": "pip install --upgrade pip flit\nflit install -s\ncd test && python test.py\n"
+  },
+  {
+    "name": "Cirrocumulus",
+    "description": "Cirrocumulus is an interactive visualization tool for large-scale single-cell genomics data.\n",
+    "project_home": "https://github.com/lilab-bcb/cirrocumulus",
+    "documentation_home": "https://cirrocumulus.readthedocs.io/en/latest/",
+    "tutorials_home": "https://cirrocumulus.readthedocs.io/en/latest/",
+    "publications": [
+      "10.1038/s41592-020-0905-x"
+    ],
+    "install": {
+      "pypi": "cirrocumulus"
+    },
+    "tags": [
+      "visualization"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v1.1.41",
+    "authors": [
+      "joshua-gould",
+      "yihming",
+      "gouwens"
+    ],
+    "test_command": "SETUPTOOLS_SCM_PRETEND_VERSION=0.0.1 pip install .[test,parquet] && pytest\n"
+  },
+  {
+    "name": "DoubletDetection",
+    "description": "DoubletDetection is a Python3 package to detect doublets (technical errors) in single-cell \nRNA-seq count matrices.\n",
+    "project_home": "https://github.com/JonathanShor/DoubletDetection",
+    "documentation_home": "https://doubletdetection.readthedocs.io/en/stable/",
+    "tutorials_home": "https://doubletdetection.readthedocs.io/en/stable/",
+    "publications": [
+      "10.1016/j.cels.2019.03.003"
+    ],
+    "install": {
+      "pypi": "doubletdetection"
+    },
+    "tags": [
+      "doublet"
+    ],
+    "license": "MIT",
+    "version": "v4.2",
+    "authors": [
+      "adamgayoso",
+      "JonathanShor",
+      "ambrosejcarr"
+    ],
+    "test_command": "pip install \".[test]\" && pytest"
+  },
+  {
+    "name": "SnapATAC2",
+    "description": "SnapATAC2 is the successor of the SnapATAC R package, featuring:\n- Faster and less memory usage, scale to >1M cells.\n- Improved dimension reduction and sampling algorithm.\n",
+    "project_home": "https://github.com/kaizhang/SnapATAC2",
+    "documentation_home": "https://kzhang.org/SnapATAC2/",
+    "tutorials_home": "https://kzhang.org/SnapATAC2/",
+    "publications": [
+      "10.1038/s41467-021-21583-9",
+      "10.1016/j.cell.2021.10.024"
+    ],
+    "install": {
+      "pypi": "snapatac2"
+    },
+    "tags": [
+      "SnapATAC"
+    ],
+    "license": "MIT",
+    "version": "v2.1.2",
+    "authors": [
+      "kaizhang",
+      "yingyuan830"
+    ],
+    "test_command": null
+  },
+  {
+    "name": "bento-tools",
+    "description": "A Python toolkit for subcellular analysis of spatial transcriptomics data\n",
+    "project_home": "https://github.com/ckmah/bento-tools",
+    "documentation_home": "https://bento-tools.readthedocs.io/en/latest/",
+    "tutorials_home": "https://bento-tools.readthedocs.io/en/latest/tutorials.html",
+    "publications": [
+      "10.1101/2022.06.10.495510"
+    ],
+    "install": {
+      "pypi": "bento-tools"
+    },
+    "tags": [
+      "spatial analysis"
+    ],
+    "license": "BSD-2-Clause",
+    "version": "v1.0.1",
+    "authors": [
+      "ckmah",
+      "noor01"
+    ],
+    "test_command": "pip install \".\" && pytest"
+  },
+  {
+    "name": "cell2location",
+    "description": "Cell2location is a Bayesian model that can resolve fine-grained cell types in spatial transcriptomic data \nand create comprehensive cellular maps of diverse tissues. Cell2location accounts for technical sources \nof variation and borrows statistical strength across locations, thereby enabling the integration of single-cell \nand spatial transcriptomics with higher sensitivity and resolution than existing tools.\n",
+    "project_home": "https://github.com/BayraktarLab/cell2location",
+    "documentation_home": "https://cell2location.readthedocs.io/en/latest/",
+    "tutorials_home": "https://cell2location.readthedocs.io/en/latest/",
+    "publications": [
+      "10.1038/s41587-021-01139-4"
+    ],
+    "install": {
+      "pypi": "cell2location"
+    },
+    "tags": [
+      "Bayesian"
+    ],
+    "license": "Apache-2.0",
+    "version": "v0.1",
+    "authors": [
+      "vitkl",
+      "yozhikoff",
+      "mayerdev",
+      "emdann",
+      "Alexander Aivazidis"
+    ],
+    "test_command": "pip install \".[dev]\" && pytest\n"
+  },
+  {
+    "name": "cellxgene",
+    "description": "CZ CELLxGENE Annotate (pronounced \"cell-by-gene\") is an interactive data explorer for single-cell datasets, \nsuch as those coming from the Human Cell Atlas.\n",
+    "project_home": "https://github.com/chanzuckerberg/cellxgene",
+    "documentation_home": "https://docs.cellxgene.cziscience.com/",
+    "publications": [
+      "10.1101/2021.04.05.438318"
+    ],
+    "install": {
+      "pypi": "cellxgene"
+    },
+    "tags": [
+      "HCA"
+    ],
+    "license": "MIT",
+    "version": "1.1.1",
+    "authors": [
+      "csweaver",
+      "bkmartinjr",
+      "seve",
+      "maniarathi",
+      "atolopko-czi",
+      "mckinsel",
+      "MDunitz",
+      "colinmegill",
+      "blrnw3",
+      "freeman-lab",
+      "bmccandless",
+      "mweiden"
+    ],
+    "test_command": "pip install \".[test]\" && pytest\n"
+  },
+  {
     "name": "decoupler",
     "description": "Python package to infer biological activities from omics data using a collection of methods.\n",
     "project_home": "https://github.com/saezlab/decoupler-py",
@@ -21,6 +247,60 @@
     "test_command": "pip install wheel && \\\npip install pytest-cov flake8 sklearn skranger omnipath scanpy adjustText . && \\\npytest --cov --disable-warnings decoupler\n"
   },
   {
+    "name": "dynamo-release",
+    "description": "Inclusive model of expression dynamics with metabolic labeling based scRNA-seq / multiomics, \nvector field reconstruction, potential landscape mapping, differential geometry analyses, \nand most probably paths / in silico perturbation predictions.\n",
+    "project_home": "https://github.com/aristoteleo/dynamo-release",
+    "documentation_home": "https://dynamo-release.readthedocs.io/en/latest/",
+    "tutorials_home": "https://dynamo-release.readthedocs.io/en/latest/",
+    "publications": [
+      "10.1016/j.cell.2021.12.045"
+    ],
+    "install": {
+      "pypi": "dynamo-release"
+    },
+    "tags": [
+      "vector"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v1.1.0",
+    "authors": [
+      "Xiaojieqiu",
+      "dummyindex",
+      "yaz62"
+    ],
+    "test_command": "pip install \".[test]\" && pytest"
+  },
+  {
+    "name": "epiScanpy",
+    "description": "EpiScanpy is a toolkit to analyse single-cell open chromatin (scATAC-seq) and single-cell \nDNA methylation (for example scBS-seq) data.\n",
+    "project_home": "https://github.com/colomemaria/epiScanpy",
+    "documentation_home": "https://episcanpy.readthedocs.io/en/latest/",
+    "tutorials_home": "https://episcanpy.readthedocs.io/en/latest/",
+    "publications": [
+      "10.1038/s41467-021-25131-3"
+    ],
+    "install": {
+      "pypi": "episcanpy"
+    },
+    "tags": [
+      "scanpy",
+      "epigenomics"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v0.3.2",
+    "authors": [
+      "DaneseAnna",
+      "mrichter23",
+      "kridsadakorn",
+      "rLannes",
+      "le-ander",
+      "HAL9032",
+      "michalk8",
+      "mvinyard"
+    ],
+    "test_command": "pip install \".[test]\" && pytest"
+  },
+  {
     "name": "infercnvpy",
     "description": "Infer copy number variation (CNV) from scRNA-seq data. Plays nicely with Scanpy.\n",
     "project_home": "https://github.com/icbi-lab/infercnvpy",
@@ -37,5 +317,77 @@
       "grst"
     ],
     "test_command": "pip install \".[test]\" && pytest\n"
+  },
+  {
+    "name": "scTriangulate",
+    "description": "Python package to mix-and-match conflicting clustering results in single cell analysis and generate reconciled clustering solutions\n",
+    "project_home": "https://github.com/frankligy/scTriangulate",
+    "documentation_home": "https://sctriangulate.readthedocs.io/en/latest/get_started.html",
+    "tutorials_home": "https://sctriangulate.readthedocs.io/en/latest/tutorial.html",
+    "publications": [
+      "10.1101/2021.10.16.464640"
+    ],
+    "install": {
+      "pypi": "sctriangulate"
+    },
+    "tags": [
+      "clustering"
+    ],
+    "license": "MIT",
+    "version": "v0.12.0",
+    "authors": [
+      "frankligy"
+    ],
+    "test_command": "pip install \".\" && pytest"
+  },
+  {
+    "name": "spatial-eggplant",
+    "description": "Python package designed to transfer information from multiple spatial-transcriptomics data sets to a single reference representing a Common Coordinate Framework (CCF).\n",
+    "project_home": "https://github.com/almaan/eggplant",
+    "documentation_home": "https://spatial-eggplant.readthedocs.io/en/latest/index.html",
+    "tutorials_home": "https://spatial-eggplant.readthedocs.io/en/latest/index.html",
+    "publications": [
+      "10.1101/2021.11.11.468178"
+    ],
+    "install": {
+      "pypi": "spatial-eggplant"
+    },
+    "tags": [
+      "spatial alignment",
+      "spatial registration"
+    ],
+    "license": "MIT",
+    "version": "v0.2.3",
+    "authors": [
+      "almaan"
+    ],
+    "test_command": "pip install \".\" && pytest"
+  },
+  {
+    "name": "tangram",
+    "description": "Spatial alignment and gene expression mapping of single cell transcriptomic data.\n",
+    "project_home": "https://github.com/broadinstitute/Tangram",
+    "documentation_home": "https://tangram-sc.readthedocs.io/en/latest/index.html",
+    "tutorials_home": "https://tangram-sc.readthedocs.io/en/latest/tutorials.html",
+    "publications": [
+      "10.1038/s41592-021-01264-7"
+    ],
+    "install": {
+      "pypi": "tangram-sc"
+    },
+    "tags": [
+      "spatial decomposition",
+      "spatial mapping"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v1.0.3",
+    "authors": [
+      "ziqlu0722",
+      "lewlin",
+      "gscalia",
+      "gaddamshreya",
+      "hejinhuang"
+    ],
+    "test_command": "pip install \".\" && pytest"
   }
 ]
