@@ -1,0 +1,19 @@
+name: SpaGCN
+description: |
+    SpaGCN is a graph convolutional network to integrate gene expression and 
+    histology to identify spatial domains and spatially variable genes. 
+project_home: https://github.com/jianhuupenn/SpaGCN
+documentation_home: 
+tutorials_home: https://github.com/jianhuupenn/SpaGCN/tree/master/tutorial
+publications:
+    - 10.1038/s41592-021-01255-8
+install:
+    pypi: SpaGCN
+tags:
+    - graph convolutional network
+    - spatial transcriptomics
+license: MIT
+version: v1.2.5
+authors:
+    - jianhuupenn
+test_command: null
