@@ -1,0 +1,27 @@
+name: PathML
+description: |
+    An open-source toolkit for computational pathology and machine learning.
+project_home: https://pathml.org/
+documentation_home: https://pathml.readthedocs.io/en/latest/
+tutorials_home: https://pathml.readthedocs.io/en/latest/
+publications:
+    - 10.1158/1541-7786.MCR-21-0665
+install:
+    pypi: pathml
+tags:
+    - pathology
+license: GPL-2.0
+version: v2.1.0
+authors:
+    - jacob-rosenthal
+    - ryanccarelli
+    - BeeGass
+    - MohamedOmar2020
+    - Dana-Farber
+    - Karenxzr
+    - ella-dfci
+    - surya-narayanan
+    - dmbrundage
+    - Yu-AnChen
+    - jzhang1031
+test_command: pip install "." && pytest
