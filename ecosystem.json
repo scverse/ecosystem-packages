@@ -145,6 +145,23 @@
     "test_command": null
   },
   {
+    "name": "anndata for R",
+    "description": "A 'reticulate' wrapper for the Python package 'anndata'. Provides a scalable way of keeping track of data and learned annotations. Used to read from and write to the h5ad file format.\n",
+    "project_home": "https://github.com/dynverse/anndata",
+    "documentation_home": "https://anndata.dynverse.org",
+    "install": {
+      "cran": "anndata"
+    },
+    "tags": [
+      "R package"
+    ],
+    "license": "MIT",
+    "version": "0.7.5.5",
+    "authors": [
+      "rcannood"
+    ]
+  },
+  {
     "name": "bento-tools",
     "description": "A Python toolkit for subcellular analysis of spatial transcriptomics data\n",
     "project_home": "https://github.com/ckmah/bento-tools",
