@@ -40,6 +40,10 @@
                         "description": "Conda identifier, including channel (e.g. conda-forge::scanpy)",
                         "type": "string",
                         "pattern": "(.*)::(.*)"
+                    },
+                    "cran": {
+                        "description": "CRAN identifier",
+                        "type": "string"
                     }
                 }
             },
