@@ -243,6 +243,34 @@
     "test_command": "pip install \".[test]\" && pytest\n"
   },
   {
+    "name": "dandelion",
+    "description": "dandelion - A single cell BCR/TCR V(D)J-seq analysis package for 10X Chromium 5' data.\nIt streamlines the pre-processing, leveraging some tools from immcantation suite, and\nintegrates with scanpy/anndata for single-cell BCR/TCR analysis. It also includes a\ncouple of functions for visualization.\n",
+    "project_home": "https://github.com/zktuong/dandelion",
+    "documentation_home": "https://sc-dandelion.readthedocs.io/en/latest/",
+    "tutorials_home": "https://sc-dandelion.readthedocs.io/en/latest/",
+    "publications": [
+      "10.1038/s41591-021-01329-2",
+      "10.1101/2022.11.18.517068"
+    ],
+    "install": {
+      "pypi": "sc-dandelion"
+    },
+    "tags": [
+      "dandelion",
+      "bcr",
+      "tcr"
+    ],
+    "license": "AGPL-3.0-or-later",
+    "version": "v0.3.0",
+    "authors": [
+      "zktuong",
+      "ktpolanski",
+      "suochenqu",
+      "grst"
+    ],
+    "test_command": "pip install \".\" && pytest\n"
+  },
+  {
     "name": "decoupler",
     "description": "Python package to infer biological activities from omics data using a collection of methods.\n",
     "project_home": "https://github.com/saezlab/decoupler-py",
