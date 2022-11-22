@@ -1,0 +1,27 @@
+name: dandelion
+description: |
+    dandelion - A single cell BCR/TCR V(D)J-seq analysis package for 10X Chromium 5' data.
+    It streamlines the pre-processing, leveraging some tools from immcantation suite, and
+    integrates with scanpy/anndata for single-cell BCR/TCR analysis. It also includes a
+    couple of functions for visualization.
+project_home: https://github.com/zktuong/dandelion
+documentation_home: https://sc-dandelion.readthedocs.io/en/latest/
+tutorials_home: https://sc-dandelion.readthedocs.io/en/latest/
+publications:
+    - 10.1038/s41591-021-01329-2
+    - 10.1101/2022.11.18.517068
+install:
+    pypi: sc-dandelion
+tags:
+    - dandelion
+    - bcr
+    - tcr
+license: GNU Affero General Public License v3 or later (AGPLv3+)
+version: v0.3.0
+authors:
+    - zktuong
+    - ktpolanski
+    - suochenqu
+    - grst
+test_command: |
+    pip install "." && pytest
