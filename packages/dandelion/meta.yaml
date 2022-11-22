@@ -16,7 +16,7 @@ tags:
     - dandelion
     - bcr
     - tcr
-license: GNU Affero General Public License v3 or later (AGPLv3+)
+license: AGPL-3.0-or-later
 version: v0.3.0
 authors:
     - zktuong
