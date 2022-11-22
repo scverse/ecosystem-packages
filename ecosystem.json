@@ -408,6 +408,40 @@
     "test_command": "pip install -e '.[dev]' && pytest"
   },
   {
+    "name": "sfaira",
+    "description": "sfaira is a model and a data repository in a single python package.\n",
+    "project_home": "https://github.com/theislab/sfaira",
+    "documentation_home": "https://sfaira.readthedocs.io/en/latest/",
+    "tutorials_home": "https://sfaira.readthedocs.io/en/latest/tutorials.html",
+    "publications": [
+      "10.1186/s13059-021-02452-6"
+    ],
+    "install": {
+      "pypi": "sfaira"
+    },
+    "tags": [
+      "data repository"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v0.3.12",
+    "authors": [
+      "davidsebfischer",
+      "le-ander",
+      "Zethson",
+      "felix0097",
+      "Abdul-Moeed",
+      "lauradmartens",
+      "mk017",
+      "Hrovatin",
+      "m4rtinkoenig",
+      "soerenab",
+      "xlancelottx",
+      "giovp",
+      "Wang-Cankun"
+    ],
+    "test_command": null
+  },
+  {
     "name": "spatial-eggplant",
     "description": "Python package designed to transfer information from multiple spatial-transcriptomics data sets to a single reference representing a Common Coordinate Framework (CCF).\n",
     "project_home": "https://github.com/almaan/eggplant",
