@@ -1,0 +1,28 @@
+name: scGen
+description: |
+    scGen is a generative model to predict single-cell perturbation response 
+    across cell types, studies and species.
+project_home: https://github.com/theislab/scgen
+documentation_home: https://scgen.readthedocs.io/en/stable/
+tutorials_home: https://scgen.readthedocs.io/en/stable/tutorials/index.html
+publications:
+    - 10.1038/s41592-019-0494-8
+install:
+    pypi: scgen
+tags:
+    - perturbation
+license: GPL-3.0-only
+version: v2.1.0
+authors:
+    - mn7697np
+    - M0hammadL
+    - adamgayoso
+    - Cottoneyejoe95
+    - watiss
+    - ktpolanski
+    - Naghipourfar
+    - k4ngyh
+    - Zethson
+    - alirezaomidi
+    - mumichae
+test_command: pip install "." && pytest
