@@ -11,13 +11,13 @@ repos:
       hooks:
           - id: prettier
     - repo: https://github.com/python-jsonschema/check-jsonschema
-      rev: 0.19.2
+      rev: 0.20.0
       hooks:
           - id: check-jsonschema
             files: "schema.json"
             args: ["--check-metaschema"]
     - repo: https://github.com/python-jsonschema/check-jsonschema
-      rev: 0.19.2
+      rev: 0.20.0
       hooks:
           - id: check-jsonschema
             files: "packages/.*/meta.yaml"
