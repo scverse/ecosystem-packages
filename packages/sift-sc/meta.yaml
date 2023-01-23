@@ -1,0 +1,15 @@
+name: sift-sc
+description: |
+    SiFT is a computational framework which aims to uncover the underlying structure by filtering out previously exposed biological signals.
+    SiFT can be applied to a wide range of tasks, from (i) the removal of unwanted variation as a pre-processing step, through (ii) revealing hidden biological structure by utilizing prior knowledge with respect to existing signal, to (iii) uncovering trajectories of interest using reference data to remove unwanted variation.
+project_home: https://github.com/nitzanlab/sift-sc
+documentation_home: https://sift-sc.readthedocs.io
+tutorials_home: https://sift-sc.readthedocs.io
+install:
+    pypi: sift-sc
+license: BSD-3-Clause
+version: v0.1.0
+authors:
+    - zoepiran
+test_command: |
+    pip install ".[test]" && pytest
