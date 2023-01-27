@@ -31,3 +31,12 @@ jobs:
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   folder: build
+            - name: Trigger website build
+              #   if: github.ref == 'refs/heads/main'
+              run: |
+                  curl -XPOST \
+                  -u "scverse-bot:${{ secrets.BOT_GH_TOKEN }}" \
+                  -H "Accept: application/vnd.github.everest-preview+json" \
+                  -H "Content-Type: application/json" \
+                  https://api.github.com/repos/scverse/scverse.github.io/actions/workflows/gh-pages.yml/dispatches \
+                  --data '{"ref": "main"}'
