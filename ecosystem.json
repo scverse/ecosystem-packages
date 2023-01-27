@@ -460,6 +460,30 @@
     "test_command": "pip install \".\" && pytest"
   },
   {
+    "name": "scFates",
+    "description": "A scalable python package for tree inference and advanced pseudotime analysis from scRNAseq data.\n",
+    "project_home": "https://github.com/LouisFaure/scFates",
+    "documentation_home": "https://scfates.readthedocs.io/en/latest/",
+    "tutorials_home": "https://scfates.readthedocs.io/en/latest/Tree_Analysis_Bone_marrow_fates.html",
+    "publications": [
+      "10.1093/bioinformatics/btac746"
+    ],
+    "install": {
+      "pypi": "scFates"
+    },
+    "tags": [
+      "pseudotime",
+      "cell-fate",
+      "trajectory-generation"
+    ],
+    "license": "BSD-3-Clause",
+    "version": "v1.0.0",
+    "authors": [
+      "LouisFaure"
+    ],
+    "test_command": "sudo apt-get clean && sudo apt-get update\nsudo apt-get install -y r-base r-cran-mgcv\npip install wheel\npip install coverage cmake pytest mock\npip install rpy2==3.4.2\npip install .\npytest scFates/tests/test_w_plots.py\n"
+  },
+  {
     "name": "scGen",
     "description": "scGen is a generative model to predict single-cell perturbation response \nacross cell types, studies and species.\n",
     "project_home": "https://github.com/theislab/scgen",
