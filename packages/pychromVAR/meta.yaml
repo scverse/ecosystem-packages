@@ -9,7 +9,7 @@ install:
 tags:
     - TF
     - scATAC-seq
-license: MIT License (MIT)
+license: MIT
 version: v0.0.3
 authors:
     - Zhijian Li
