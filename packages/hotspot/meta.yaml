@@ -16,5 +16,4 @@ authors:
     - deto
     - adamgayoso
 test_command: |
-    pip install ".[test]"
-    pytest
+    pip install ".[test]" && pytest
