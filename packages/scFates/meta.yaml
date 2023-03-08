@@ -1,0 +1,26 @@
+name: scFates
+description: |
+    A scalable python package for tree inference and advanced pseudotime analysis from scRNAseq data.
+project_home: https://github.com/LouisFaure/scFates
+documentation_home: https://scfates.readthedocs.io/en/latest/
+tutorials_home: https://scfates.readthedocs.io/en/latest/Tree_Analysis_Bone_marrow_fates.html
+publications:
+    - 10.1093/bioinformatics/btac746
+install:
+    pypi: scFates
+tags:
+    - pseudotime
+    - cell-fate
+    - trajectory-generation
+license: BSD-3-Clause
+version: v1.0.0
+authors:
+    - LouisFaure
+test_command: |
+    sudo apt-get clean && sudo apt-get update
+    sudo apt-get install -y r-base r-cran-mgcv
+    pip install wheel
+    pip install coverage cmake pytest mock
+    pip install rpy2==3.4.2
+    pip install .
+    pytest scFates/tests/test_w_plots.py
