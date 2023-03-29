@@ -1,0 +1,20 @@
+name: Mowgli
+description: |
+    Paired single-cell multi-omics data integration with Optimal Transport-flavored Nonnegative Matrix Factorization
+project_home: https://github.com/cantinilab/mowgli
+documentation_home: https://mowgli.readthedocs.io
+publications:
+    - 10.1101/2023.02.02.526825
+install:
+    pypi: mowgli
+tags:
+    - single cell
+    - optimal transport
+    - multi omics
+    - data integration
+    - NMF
+license: GPL-3.0-only
+version: v0.2.0
+authors:
+    - gjhuizing
+test_command: pip install . && pytest
