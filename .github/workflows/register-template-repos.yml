@@ -30,7 +30,7 @@ jobs:
           add: ./template-repos.yml
           author_name: scverse-bot
           author_email: core-team@scverse.org
-          message: 'Updated template-repos.yml'
+          message: "Updated template-repos.yml"
           push: ${{ github.event_name == 'release' }}
       - name: Show diff
         run: git diff HEAD~1
