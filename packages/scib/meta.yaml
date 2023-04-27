@@ -1,21 +1,21 @@
 name: scib
 description: |
-    Evaluating single-cell data integration methods
+  Evaluating single-cell data integration methods
 project_home: https://github.com/theislab/scib
 documentation_home: https://scib.readthedocs.io
 publications:
-    - 10.1038/s41592-021-01336-8
+  - 10.1038/s41592-021-01336-8
 install:
-    pypi: scib
+  pypi: scib
 tags:
-    - benchmarking
-    - single cell
-    - data integration
+  - benchmarking
+  - single cell
+  - data integration
 license: MIT
 version: v1.0.5
 authors:
-    - mumichae
-    - LuckyMD
-    - danielStrobl
-    - mbuttner
+  - mumichae
+  - LuckyMD
+  - danielStrobl
+  - mbuttner
 test_command: pip install ".[test,rpy2,harmony,scvi,scanorama]" && pytest
