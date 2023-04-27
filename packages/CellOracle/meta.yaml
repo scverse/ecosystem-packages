@@ -1,6 +1,6 @@
 name: CellOracle
 description: |
-  A computational tool that integrates single-cell transcriptome and epigenome profiles 
+  A computational tool that integrates single-cell transcriptome and epigenome profiles
   to infer gene regulatory networks (GRNs), critical regulators of cell identity.
 project_home: https://github.com/morris-lab/CellOracle
 documentation_home: https://morris-lab.github.io/CellOracle.documentation/

@@ -1,7 +1,7 @@
 name: dynamo-release
 description: |
-  Inclusive model of expression dynamics with metabolic labeling based scRNA-seq / multiomics, 
-  vector field reconstruction, potential landscape mapping, differential geometry analyses, 
+  Inclusive model of expression dynamics with metabolic labeling based scRNA-seq / multiomics,
+  vector field reconstruction, potential landscape mapping, differential geometry analyses,
   and most probably paths / in silico perturbation predictions.
 project_home: https://github.com/aristoteleo/dynamo-release
 documentation_home: https://dynamo-release.readthedocs.io/en/latest/

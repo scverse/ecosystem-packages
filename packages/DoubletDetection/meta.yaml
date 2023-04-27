@@ -1,6 +1,6 @@
 name: DoubletDetection
 description: |
-  DoubletDetection is a Python3 package to detect doublets (technical errors) in single-cell 
+  DoubletDetection is a Python3 package to detect doublets (technical errors) in single-cell
   RNA-seq count matrices.
 project_home: https://github.com/JonathanShor/DoubletDetection
 documentation_home: https://doubletdetection.readthedocs.io/en/stable/

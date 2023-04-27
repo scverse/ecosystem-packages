@@ -1,8 +1,8 @@
 name: cell2location
 description: |
-  Cell2location is a Bayesian model that can resolve fine-grained cell types in spatial transcriptomic data 
-  and create comprehensive cellular maps of diverse tissues. Cell2location accounts for technical sources 
-  of variation and borrows statistical strength across locations, thereby enabling the integration of single-cell 
+  Cell2location is a Bayesian model that can resolve fine-grained cell types in spatial transcriptomic data
+  and create comprehensive cellular maps of diverse tissues. Cell2location accounts for technical sources
+  of variation and borrows statistical strength across locations, thereby enabling the integration of single-cell
   and spatial transcriptomics with higher sensitivity and resolution than existing tools.
 project_home: https://github.com/BayraktarLab/cell2location
 documentation_home: https://cell2location.readthedocs.io/en/latest/

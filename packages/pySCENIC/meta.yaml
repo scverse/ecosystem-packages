@@ -1,8 +1,8 @@
 name: pySCENIC
 description: |
-  pySCENIC is a lightning-fast python implementation of the SCENIC pipeline 
-  (Single-Cell rEgulatory Network Inference and Clustering) which enables 
-  biologists to infer transcription factors, gene regulatory networks and 
+  pySCENIC is a lightning-fast python implementation of the SCENIC pipeline
+  (Single-Cell rEgulatory Network Inference and Clustering) which enables
+  biologists to infer transcription factors, gene regulatory networks and
   cell types from single-cell RNA-seq data.
 project_home: https://github.com/aertslab/pySCENIC
 documentation_home: https://pyscenic.readthedocs.io/en/latest/
