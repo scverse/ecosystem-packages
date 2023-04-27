@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import os
-from pathlib import Path
-from collections.abc import Iterable
 import sys
+from collections.abc import Iterable
+from pathlib import Path
 
 from github import Github
-from yaml import safe_load, safe_dump
+from yaml import safe_dump, safe_load
 
 
 def parse_repos(path: Path) -> set[str]:
@@ -18,9 +18,7 @@ def parse_repos(path: Path) -> set[str]:
 
 def search_repos(github_token: str | None) -> set[str]:
     g = Github(github_token)
-    files = g.search_code(
-        "filename:.cruft.json 'https://github.com/scverse/cookiecutter-scverse'"
-    )
+    files = g.search_code("filename:.cruft.json 'https://github.com/scverse/cookiecutter-scverse'")
     repos = {file.repository for file in files}
     return {r.url for r in repos}
 
