@@ -1,6 +1,6 @@
 name: epiScanpy
 description: |
-  EpiScanpy is a toolkit to analyse single-cell open chromatin (scATAC-seq) and single-cell 
+  EpiScanpy is a toolkit to analyse single-cell open chromatin (scATAC-seq) and single-cell
   DNA methylation (for example scBS-seq) data.
 project_home: https://github.com/colomemaria/epiScanpy
 documentation_home: https://episcanpy.readthedocs.io/en/latest/
