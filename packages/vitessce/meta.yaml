@@ -1,7 +1,7 @@
 name: vitessce
 description: |
-  Vitessce consists of reusable interactive views including a scatterplot, 
-  spatial+imaging plot, genome browser tracks, statistical plots, and control 
+  Vitessce consists of reusable interactive views including a scatterplot,
+  spatial+imaging plot, genome browser tracks, statistical plots, and control
   views, built on web technologies such as WebGL.
 project_home: https://github.com/vitessce/vitessce
 documentation_home: https://vitessce.github.io/vitessce-python/

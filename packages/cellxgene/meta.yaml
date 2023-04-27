@@ -1,6 +1,6 @@
 name: cellxgene
 description: |
-  CZ CELLxGENE Annotate (pronounced "cell-by-gene") is an interactive data explorer for single-cell datasets, 
+  CZ CELLxGENE Annotate (pronounced "cell-by-gene") is an interactive data explorer for single-cell datasets,
   such as those coming from the Human Cell Atlas.
 project_home: https://github.com/chanzuckerberg/cellxgene
 documentation_home: https://docs.cellxgene.cziscience.com/
