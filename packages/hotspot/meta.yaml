@@ -1,0 +1,19 @@
+name: hotspot
+description: |
+  Hotspot is a tool for identifying informative genes (and gene modules) in a single-cell dataset.
+project_home: https://github.com/yoseflab/hotspot
+documentation_home: https://hotspot.readthedocs.io/en/latest/
+tutorials_home: https://hotspot.readthedocs.io/en/latest/
+publications:
+  - 10.1016/j.cels.2021.04.005
+install:
+  pypi: hotspotsc
+tags:
+  - gene-signatures
+license: BSD-3-Clause
+version: v1.1.1
+authors:
+  - deto
+  - adamgayoso
+test_command: |
+  pip install ".[test]" && pytest

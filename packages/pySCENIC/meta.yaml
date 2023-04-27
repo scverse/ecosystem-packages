@@ -1,0 +1,31 @@
+name: pySCENIC
+description: |
+  pySCENIC is a lightning-fast python implementation of the SCENIC pipeline 
+  (Single-Cell rEgulatory Network Inference and Clustering) which enables 
+  biologists to infer transcription factors, gene regulatory networks and 
+  cell types from single-cell RNA-seq data.
+project_home: https://github.com/aertslab/pySCENIC
+documentation_home: https://pyscenic.readthedocs.io/en/latest/
+tutorials_home: https://pyscenic.readthedocs.io/en/latest/tutorial.html
+publications:
+  - 10.1038/nmeth.4463
+  - 10.1371/journal.pone.0012776
+  - 10.1038/s41596-020-0336-2
+install:
+  pypi: pyscenic
+tags:
+  - regulatory networks
+  - clustering
+license: GPL-3.0-only
+version: v0.12.0
+authors:
+  - bramvds
+  - cflerin
+  - ghuls
+  - dweemx
+  - s-aibar
+  - cbravo93
+  - pascal-git
+  - simonvh
+  - loremendez
+test_command: pip install "." && pytest

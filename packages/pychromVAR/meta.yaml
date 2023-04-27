@@ -1,0 +1,17 @@
+name: pychromVAR
+description: |
+  A python pacakge for chromVAR.
+project_home: https://github.com/lzj1769/pychromVAR
+documentation_home: https://pychromvar.readthedocs.io/en/latest/
+tutorials_home: https://pychromvar.readthedocs.io/en/latest/
+install:
+  pypi: pychromvar
+tags:
+  - TF
+  - scATAC-seq
+license: MIT
+version: v0.0.3
+authors:
+  - Zhijian Li
+test_command: |
+  test_command: pip install ".[test]" && pytest
