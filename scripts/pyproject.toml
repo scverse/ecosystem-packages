@@ -7,8 +7,8 @@ name = "ecosystem-scripts"
 dynamic = ["version"]
 description = "scripts for ecosystem package data"
 readme = "../README.md"
-requires-python = ">=3.10"
-license = "GPL"
+requires-python = ">=3.9"
+license = "GPL-3.0"
 authors = [
     { name = "Philipp A.", email = "flying-sheep@web.de" },
 ]
@@ -19,15 +19,19 @@ dependencies = [
     "PyGitHub",
 ]
 
+[project.scripts]
+register-template-repos = "ecosystem_scripts.template_repo_registry:main"
+
 [tool.hatch.version]
 source = "vcs"
+fallback-version = "0.0"
 
 [tool.black]
-target-version = ["py310"]
+target-version = ["py39"]
 line-length = 120
 
 [tool.ruff]
-target-version = "py310"
+target-version = "py39"
 line-length = 120
 select = [
     "A",

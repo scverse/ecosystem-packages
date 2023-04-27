@@ -9,10 +9,18 @@ jobs:
   register-template-repos:
     runs-on: ubuntu-latest
     steps:
-      - uses: octokit/request-action@v2.x
-        id: get_repos
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
         with:
-          route: GET /search/code?q=filename:.cruft.json+'https://github.com/scverse/cookiecutter-scverse'
+          python-version: "3.10"
+          cache: "pip"
+          cache-dependency-path: "**/pyproject.toml"
+      - name: Install build dependencies
+        run: python -m pip install --upgrade pip wheel
+      - name: Install package
+        run: pip install ./scripts
+      - name: Update template repo registry
+        run: register-template-repos
         env:
-          GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
-      - run: "echo repos found: '${{ steps.get_repos.outputs.data }}'"
+          GITHUB_TOKEN: "${{ secrets.BOT_GH_TOKEN }}"
