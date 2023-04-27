@@ -17,6 +17,7 @@ urls.Issues = "https://github.com/scverse/ecosystem-packages/issues"
 urls.Source = "https://github.com/scverse/ecosystem-packages"
 dependencies = [
     "PyGitHub",
+    "PyYAML",
 ]
 
 [project.scripts]
