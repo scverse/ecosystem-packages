@@ -3,17 +3,29 @@ from __future__ import annotations
 import os
 import sys
 from collections.abc import Iterable
+from logging import basicConfig, getLogger
 from pathlib import Path
+from typing import NotRequired, TypedDict
 
 from github import Github
 from yaml import safe_dump, safe_load
 
+log = getLogger(__name__)
 
-def parse_repos(path: Path) -> set[str]:
+
+class Repo(TypedDict):
+    url: str
+    skip: NotRequired[bool]
+
+
+def parse_repos(path: Path) -> list[Repo]:
     if not path.is_file():
-        return set()
+        log.info(f"No existing file found at: {path}")
+        return []
     with path.open() as f:
-        return set(safe_load(f))
+        repos = safe_load(f)
+        log.info(f"Found {len(repos)} known repos in: {path}")
+        return repos
 
 
 def search_repos(github_token: str | None) -> set[str]:
@@ -23,13 +35,36 @@ def search_repos(github_token: str | None) -> set[str]:
     return {r.url for r in repos}
 
 
+def merge_repos(known: Iterable[Repo], new: Iterable[str]) -> list[Repo]:
+    repos = list(known)
+    n_known = len(repos)
+    known_urls = {repo["url"] for repo in repos}
+    for repo_url in new:
+        if repo_url not in known_urls:
+            repos.append(Repo(url=repo_url))
+    log.info(f"Found {len(repos) - n_known} new repos in search")
+    return repos
+
+
+def setup():
+    from rich.logging import RichHandler
+    from rich.traceback import install
+
+    basicConfig(level="INFO", handlers=[RichHandler()])
+    install(show_locals=True)
+
+
 def main(args: Iterable[str] | None = None) -> None:
+    setup()
     if args is None:
         args = sys.argv[1:]
     if len(args) != 1:
         sys.exit("Usage: register-template-repos template-repos.yml")
     path = Path(args[0])
-    repos = parse_repos(path) | search_repos(os.environ["GITHUB_TOKEN"])
+    repos = merge_repos(
+        parse_repos(path),
+        search_repos(os.environ["GITHUB_TOKEN"]),
+    )
     if repos:
         with path.open("w") as f:
             safe_dump(sorted(repos), f)
