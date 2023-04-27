@@ -1,0 +1,18 @@
+name: Register template repos
+
+on:
+  release:
+    types:
+    - published
+
+jobs:
+  register-template-repos:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: octokit/request-action@v2.x
+      id: get_repos
+      with:
+        route: GET /search/code?q=filename:.cruft.json+'https://github.com/scverse/cookiecutter-scverse'
+      env:
+        GITHUB_TOKEN: ${{ secrets.BOT_GH_TOKEN }}
+    - run: "echo repos found: '${{ steps.get_repos.outputs.data }}'"

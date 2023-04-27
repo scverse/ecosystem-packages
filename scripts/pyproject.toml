@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ecosystem-scripts"
+dynamic = ["version"]
+description = "scripts for ecosystem package data"
+readme = "../README.md"
+requires-python = ">=3.10"
+license = "GPL"
+authors = [
+    { name = "Philipp A.", email = "flying-sheep@web.de" },
+]
+urls.Documentation = "https://github.com/scverse/ecosystem-packages#readme"
+urls.Issues = "https://github.com/scverse/ecosystem-packages/issues"
+urls.Source = "https://github.com/scverse/ecosystem-packages"
+dependencies = [
+    "PyGitHub",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.black]
+target-version = ["py310"]
+line-length = 120
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+select = [
+    "A",
+    "ARG",
+    "B",
+    "C",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FBT",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "Q",
+    "RUF",
+    "S",
+    "T",
+    "TID",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = []
