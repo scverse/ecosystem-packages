@@ -4,6 +4,7 @@ on:
   release:
     types:
       - published
+  workflow_dispatch:
 
 jobs:
   register-template-repos:
@@ -24,3 +25,12 @@ jobs:
         run: register-template-repos template-repos.yml
         env:
           GITHUB_TOKEN: "${{ secrets.BOT_GH_TOKEN }}"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: ./template-repos.yml
+          author_name: scverse-bot
+          author_email: core-team@scverse.org
+          message: 'Updated template-repos.yml'
+          push: ${{ github.event_name == 'release' }}
+      - name: Show diff
+        run: git diff HEAD~1
