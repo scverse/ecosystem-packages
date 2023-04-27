@@ -1,3 +1,12 @@
+"""Maintenance script for template-repos.yml.
+
+After installing this via `pip install ./scripts` from the repo root,
+It is available as `register-template-repos`.
+
+Call `register-template-repos template-repos.yml` to update the file.
+Each entry marked with `skip: true` will not be served PRs.
+"""
+
 from __future__ import annotations
 
 import os
