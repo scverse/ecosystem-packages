@@ -1,9 +1,9 @@
 name: Register template repos
 
 on:
-  release:
-    types:
-      - published
+  schedule:
+    # Twice a month: https://crontab.guru/#0_5_1,15_*_*
+    - cron: "0 5 1,15 * *"
   workflow_dispatch:
 
 jobs:
