@@ -30,9 +30,9 @@ def parse_repos(path: Path) -> list[Repo]:
 
 def search_repos(github_token: str | None) -> set[str]:
     g = Github(github_token)
-    files = g.search_code("filename:.cruft.json 'https://github.com/scverse/cookiecutter-scverse'")
+    files = g.search_code('filename:.cruft.json "https://github.com/scverse/cookiecutter-scverse"')
     repos = {file.repository for file in files}
-    return {r.url for r in repos}
+    return {r.html_url for r in repos}
 
 
 def merge_repos(known: Iterable[Repo], new: Iterable[str]) -> list[Repo]:
@@ -67,7 +67,7 @@ def main(args: Iterable[str] | None = None) -> None:
     )
     if repos:
         with path.open("w") as f:
-            safe_dump(sorted(repos), f)
+            safe_dump(sorted(repos, key=lambda r: r["url"]), f, sort_keys=False)
 
 
 if __name__ == "__main__":
