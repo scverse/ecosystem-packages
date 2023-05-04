@@ -6,10 +6,12 @@ project_home: https://github.com/welch-lab/MultiVelo
 documentation_home: https://multivelo.readthedocs.io/en/latest/api.html
 tutorials_home: https://multivelo.readthedocs.io/en/latest/MultiVelo_Demo.html
 publications:
-  - https://doi.org/10.1038/s41587-022-01476-y
+  - 10.1038/s41587-022-01476-y
 install:
   pypi: multivelo
-license: BSD-3-Clause license
+tags:
+  - rna velocity
+license: BSD-3-Clause
 version: 0.1.2
 authors:
   - jw156605
