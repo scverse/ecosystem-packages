@@ -1,0 +1,17 @@
+name: Symphonypy
+description: |
+  Symphonypy is a pure Python port of Symphony label transfer algorithm for reference-based cell type
+  annotation.
+project_home: https://github.com/potulabe/symphonypy
+documentation_home: https://github.com/potulabe/symphonypy
+install:
+  pypi: symphonypy
+tags:
+  - label-transfer
+license: GPL-3.0-only
+version: v0.2.1
+authors:
+  - serjisa
+  - potulabe
+test_command: |
+  pip install . && pytest
