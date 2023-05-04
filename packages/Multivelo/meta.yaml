@@ -1,4 +1,4 @@
-name: multivelo
+name: Multivelo
 description: |
   A mechanistic model of gene expression that extends the popular RNA velocity
   framework by incorporating epigenomic data.
