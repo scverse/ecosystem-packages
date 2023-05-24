@@ -31,6 +31,6 @@ jobs:
           author_name: scverse-bot
           author_email: core-team@scverse.org
           message: "Updated template-repos.yml"
-          push: ${{ github.event_name == 'release' }}
+          push: true
       - name: Show diff
         run: git diff HEAD~1
