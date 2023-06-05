@@ -10,11 +10,14 @@
 - url: https://github.com/icbi-lab/infercnvpy
 - url: https://github.com/immunitastx/monkeybread
 - url: https://github.com/jlause/scverse-tutorials
+- url: https://github.com/nitzanlab/biolord
 - url: https://github.com/pinellolab/perturbvelo
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
+- url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
 - url: https://github.com/scverse/spatialdata-plot
+- url: https://github.com/theislab/geome
 - url: https://github.com/theislab/gpu-spatial-graph-pipeline
 - url: https://github.com/vitkl/cell2module
