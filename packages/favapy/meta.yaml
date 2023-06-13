@@ -1,7 +1,7 @@
 name: fava
 description: |
-   FAVA uses Variational Autoencoders to infer functional associations from 
-   large-scale scRNA-seq (and proteomics) data.
+  FAVA uses Variational Autoencoders to infer functional associations from
+  large-scale scRNA-seq (and proteomics) data.
 project_home: https://github.com/mikelkou/fava
 documentation_home: https://github.com/mikelkou/fava/blob/main/README.md
 tutorials_home: https://github.com/mikelkou/fava/blob/main/How_to_use_favapy_in_a_notebook.ipynb
