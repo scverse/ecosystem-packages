@@ -17,6 +17,7 @@
 - url: https://github.com/pinellolab/perturbvelo
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
+- url: https://github.com/scverse/genomic-features
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
