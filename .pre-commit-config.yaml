@@ -23,13 +23,13 @@ repos:
       - id: prettier
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.23.2
+    rev: 0.23.3
     hooks:
       - id: check-jsonschema
         files: "schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.23.2
+    rev: 0.23.3
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
@@ -45,11 +45,11 @@ repos:
         exclude: "^packages/.*/meta.yaml$"
   # template repo registry
   - repo: https://github.com/psf/black
-    rev: "23.3.0"
+    rev: "23.7.0"
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.0.277
+    rev: v0.0.278
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
