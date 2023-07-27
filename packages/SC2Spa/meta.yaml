@@ -7,8 +7,6 @@ description: |
   of single cells can be further used to study the communication of the single cells.
 project_home: https://github.com/linbuliao/SC2Spa
 documentation_home: https://sc2spa.readthedocs.io/
-publications:
-  -
 install:
   pypi: SC2Spa
 tags:
@@ -17,7 +15,7 @@ tags:
   - spatial transcriptomics
   - deep learning
   - cell communication
-license: BSD 3-Clause
+license: BSD-3-Clause
 version: v1.2
 authors:
   - Linbu Liao
