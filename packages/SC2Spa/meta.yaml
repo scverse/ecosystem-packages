@@ -1,0 +1,23 @@
+name: SC2Spa
+description: |
+  SC2Spa is a deep learning-based tool for predicting the spatial coordinates of single cells based on transcriptome.
+  Two paired single cell and spatial transcriptomic datasets are required to run SC2Spa. SC2Spa is trained on a ST reference
+  dataset to learn the relationship of gene expression and spatial coordinates. The trained fully-connected neural network
+  can be used to predict the locations of a single cell with only the transcriptomic profile as input. The predicted locations
+  of single cells can be further used to study the communication of the single cells.
+project_home: https://github.com/linbuliao/SC2Spa
+documentation_home: https://sc2spa.readthedocs.io/
+install:
+  pypi: SC2Spa
+tags:
+  - spatial inference
+  - scRNA-seq
+  - spatial transcriptomics
+  - deep learning
+  - cell communication
+license: BSD-3-Clause
+version: v1.2
+authors:
+  - Linbu Liao
+  - Kyoung Jae Won
+test_command: pip install "." && pytest
