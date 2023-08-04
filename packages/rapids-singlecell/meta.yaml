@@ -14,5 +14,4 @@ license: MIT
 version: v0.7.5
 authors:
   - Severin Dicks
-test_command:
-  pytest
+test_command: pytest
