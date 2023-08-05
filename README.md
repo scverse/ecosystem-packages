@@ -43,12 +43,12 @@ How does the package use scverse data structures (please describe in a few sente
 -   [ ] The package uses automated software tests and runs them via continuous integration (CI)
 -   [ ] The package provides API documentation via a website or README
 -   [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
--   [ ] I am the author or maintainer of the tool and agree on listing the package on the scverse website
+-   [ ] I am a author or maintainer of the tool and agree on listing the package on the scverse website
 
 ### Recommended
 
--   [ ] I would like this package to be announced on scverse channels (zulip, discourse, twitter)
--   [ ] I would like to be tagged in those announcements. My handles (e.g. `@scverse_team`) are:
+-   [ ] Please announce this package on scverse communication channels (zulip, discourse, twitter)
+-   [ ] Please tag the author(s) these announcements. Handles (e.g. `@scverse_team`) to include are:
     -   Twitter:
     -   Zulip:
     -   Discourse:
