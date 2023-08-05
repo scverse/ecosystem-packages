@@ -47,6 +47,10 @@ How does the package use scverse data structures (please describe in a few sente
 
 ### Recommended
 
--   [ ] I would like this package to be announced on scverse channels (zulip, discourse, twitter) [Include twitter handles you want us to tag]
+-   [ ] I would like this package to be announced on scverse channels (zulip, discourse, twitter)
+-   [ ] I would like to be tagged in those announcements. My handles (e.g. `@scverse_team`) are:
+  -   Twitter:
+  -   Zulip:
+  -   Discourse:
 -   [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
 -   [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
