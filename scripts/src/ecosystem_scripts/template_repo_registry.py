@@ -1,4 +1,5 @@
-"""Maintenance script for template-repos.yml.
+"""Maintenance script for updating list of repositories that use the 
+scverse template in template-repos.yml.
 
 After installing this via `pip install ./scripts` from the repo root,
 It is available as `register-template-repos`.
