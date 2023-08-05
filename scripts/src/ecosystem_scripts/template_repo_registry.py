@@ -1,4 +1,4 @@
-"""Maintenance script for updating list of repositories that use the 
+"""Maintenance script for updating list of repositories that use the
 scverse template in template-repos.yml.
 
 After installing this via `pip install ./scripts` from the repo root,
