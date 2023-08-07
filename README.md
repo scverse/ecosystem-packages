@@ -52,6 +52,6 @@ How does the package use scverse data structures (please describe in a few sente
     -   Twitter:
     -   Zulip:
     -   Discourse:
-    -   Mastodon: 
+    -   Mastodon:
 -   [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
 -   [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
