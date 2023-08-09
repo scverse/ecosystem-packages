@@ -4,11 +4,11 @@
 - url: https://github.com/YosefLab/scvi-census
 - url: https://github.com/YosefLab/scvi-criticism
   skip: true
-  reason: "Repository archived as readonly"
+  reason: Repository archived as readonly
 - url: https://github.com/YosefLab/scvi-hub-models
 - url: https://github.com/YosefLab/scvi-tools-docker
   skip: true
-  reason: "Cruft fails for unclear reasons" 
+  reason: Cruft fails for unclear reasons
 - url: https://github.com/YosefLab/visionpy
 - url: https://github.com/adamgayoso/figmasvg
 - url: https://github.com/cameronraysmith/perturbvelo
@@ -22,7 +22,7 @@
 - url: https://github.com/pinellolab/perturbvelo
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
-  reason: "Instance repo gets updated by the bot via the template"
+  reason: Instance repo gets updated by the bot via the template
 - url: https://github.com/scverse/genomic-features
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
