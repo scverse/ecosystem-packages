@@ -1,7 +1,5 @@
 name: schist
-description: |
-  schist is a convenient wrapper for graph-tool applied to single cell data.
-  It addresses the problem of clustering single cell data, by using Stochastic Block Models, a Bayesian approach to the identification of communities in graphs.
+description: schist applies Stochastic Block Models to many task in analysis of single cell data. The main goal is to implement a robust way to identify cell clusters.
 project_home: https://github.com/dawe/schist
 documentation_home: https://schist.readthedocs.io
 tutorials_home: https://schist.readthedocs.io/en/latest/tutorials.html
