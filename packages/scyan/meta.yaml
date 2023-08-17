@@ -1,0 +1,22 @@
+name: scyan
+description: |
+  Biology-driven deep generative model for cell-type annotation in cytometry.
+  Scyan is an interpretable model that also corrects batch-effect and
+  can be used for debarcoding or population discovery.
+project_home: https://github.com/MICS-Lab/scyan
+documentation_home: https://mics-lab.github.io/scyan/
+tutorials_home: https://mics-lab.github.io/scyan/tutorials/usage/
+publications:
+  - 10.1093/bib/bbad260
+install:
+  pypi: scyan
+tags:
+  - cytometry
+  - annotation
+  - batch-effect correction
+  - debarcoding
+license: BSD-3-Clause
+version: v1.5.0
+authors:
+  - quentinblampey
+test_command: pip install ".[dev]" && pytest

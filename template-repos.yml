@@ -1,20 +1,34 @@
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/YosefLab/scib-metrics
+- url: https://github.com/YosefLab/scvi-census
 - url: https://github.com/YosefLab/scvi-criticism
+  skip: true
+  reason: Repository archived as readonly
+- url: https://github.com/YosefLab/scvi-hub-models
+- url: https://github.com/YosefLab/scvi-tools-docker
+  skip: true
+  reason: Cruft fails for unclear reasons
 - url: https://github.com/YosefLab/visionpy
 - url: https://github.com/adamgayoso/figmasvg
 - url: https://github.com/cameronraysmith/perturbvelo
 - url: https://github.com/cameronraysmith/test-scvc
 - url: https://github.com/grst/spatialdata-plot
+- url: https://github.com/icbi-lab/atlas_protocol
 - url: https://github.com/icbi-lab/infercnvpy
 - url: https://github.com/immunitastx/monkeybread
 - url: https://github.com/jlause/scverse-tutorials
+- url: https://github.com/nitzanlab/biolord
 - url: https://github.com/pinellolab/perturbvelo
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
+  reason: Instance repo gets updated by the bot via the template
+- url: https://github.com/scverse/genomic-features
+- url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
 - url: https://github.com/scverse/spatialdata-plot
-- url: https://github.com/theislab/gpu-spatial-graph-pipeline
+- url: https://github.com/theislab/geome
+- url: https://github.com/theislab/transcription_factor_activity
+- url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module

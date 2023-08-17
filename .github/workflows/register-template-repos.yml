@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.BOT_GH_TOKEN }}
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
@@ -31,6 +33,6 @@ jobs:
           author_name: scverse-bot
           author_email: core-team@scverse.org
           message: "Updated template-repos.yml"
-          push: ${{ github.event_name == 'release' }}
+          push: true
       - name: Show diff
         run: git diff HEAD~1
