@@ -18,6 +18,7 @@
 - url: https://github.com/blengerich/auto_ehr
 - url: https://github.com/cameronraysmith/perturbvelo
 - url: https://github.com/cameronraysmith/test-scvc
+- url: https://github.com/dertrotl/geneGATer
 - url: https://github.com/grst/spatialdata-plot
 - url: https://github.com/icbi-lab/atlas_protocol
 - url: https://github.com/icbi-lab/infercnvpy
@@ -26,6 +27,7 @@
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/pinellolab/perturbvelo
+- url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
   reason: Instance repo gets updated by the bot via the template
@@ -34,6 +36,8 @@
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
 - url: https://github.com/scverse/spatialdata-plot
+- url: https://github.com/scverse/squidpy
+- url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/timtreis/gefslim
