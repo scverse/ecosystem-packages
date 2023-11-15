@@ -27,6 +27,7 @@
 - url: https://github.com/ivirshup/binsparse-python
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/nitzanlab/biolord
+- url: https://github.com/nrclaudio/spVIPES
 - url: https://github.com/pinellolab/perturbvelo
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
@@ -39,6 +40,7 @@
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
 - url: https://github.com/smgoggin10/ESCHR
+- url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/timtreis/gefslim
