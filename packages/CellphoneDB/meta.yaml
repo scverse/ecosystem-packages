@@ -5,7 +5,10 @@ project_home: https://github.com/ventolab/CellphoneDB
 documentation_home: https://cellphonedb.readthedocs.io/en/latest/
 tutorials_home: https://github.com/ventolab/CellphoneDB/tree/master/notebooks
 publications:
-  - 10.1038/s41586-018-0698-6, 10.1038/s41596-020-0292-x, 10.1038/s41588-021-00972-2, 10.1038/s41586-022-04918-4
+  - 10.1038/s41586-018-0698-6
+  - 10.1038/s41596-020-0292-x
+  - 10.1038/s41588-021-00972-2
+  - 10.1038/s41586-022-04918-4
 install:
   pypi: cellphonedb
 tags:
