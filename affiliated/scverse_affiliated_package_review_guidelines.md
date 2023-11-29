@@ -11,6 +11,7 @@ The review focuses on several key areas as detailed below. You are expected to b
 ### **Traffic Light Rating System**
 
 td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Indicates major issues or shortcomings. Affiliated packages must resolve any red scores to be accepted or remain listed.
+
 <td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> Acceptable but with notable deficiencies. This serves as both a caution to users and a motivator for developers to improve.
 <td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Represents the ideal standard. All-green packages may be featured prominently within the scverse ecosystem.
 
@@ -101,7 +102,7 @@ Determine the package's development status:
 <td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> The package does not provide versioned releases.
 <td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> The package provides versioned releases.
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Submission by an individual who is neither an author nor a maintainer of the tool or/and does not agree on listing the package on the scverse website. 
+<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Submission by an individual who is neither an author nor a maintainer of the tool or/and does not agree on listing the package on the scverse website.
 <td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Submission by an author or maintainer of the tool who agrees on listing the package on the scverse website.
 
 ### **Python 3 compatibility ('python3')**
@@ -116,4 +117,3 @@ Check Python 3 compatibility:
 <td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> The package does not provide tutorials (or "vignettes") that help getting users started quickly
 
 <td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> The package does not use the scverse cookiecutter template.
-
