@@ -10,9 +10,9 @@ The review focuses on several key areas as detailed below. You are expected to b
 
 ### **Traffic Light Rating System**
 
-- **Red**: <td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Indicates major issues or shortcomings. Affiliated packages must resolve any red scores to be accepted or remain listed.
-- **Orange**: <td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> Acceptable but with notable deficiencies. This serves as both a caution to users and a motivator for developers to improve.
-- **Green**: <td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Represents the ideal standard. All-green packages may be featured prominently within the scverse ecosystem.
+td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Indicates major issues or shortcomings. Affiliated packages must resolve any red scores to be accepted or remain listed.
+<td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> Acceptable but with notable deficiencies. This serves as both a caution to users and a motivator for developers to improve.
+<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Represents the ideal standard. All-green packages may be featured prominently within the scverse ecosystem.
 
 The review categories are as follows, with specific keywords in **`monospaced text`** for use in the scverse registry:
 
@@ -110,4 +110,10 @@ Check Python 3 compatibility:
 
 <td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Not compatible with Python 3.
 <td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Fully compatible with Python 3.
+
+### **Recommended (`'recommended'`)**
+
+<td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> The package does not provide tutorials (or "vignettes") that help getting users started quickly
+
+<td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> The package does not use the scverse cookiecutter template.
 
