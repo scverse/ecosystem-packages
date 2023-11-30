@@ -10,10 +10,11 @@ The review focuses on several key areas as detailed below. You are expected to b
 
 ### **Traffic Light Rating System**
 
-td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Indicates major issues or shortcomings. Affiliated packages must resolve any red scores to be accepted or remain listed.
-
-<td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> Acceptable but with notable deficiencies. This serves as both a caution to users and a motivator for developers to improve.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Represents the ideal standard. All-green packages may be featured prominently within the scverse ecosystem.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Indicates major issues or shortcomings. Affiliated packages must resolve any red scores to be accepted or remain listed.
+<tr><td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"><td>Acceptable but with notable deficiencies. This serves as both a caution to users and a motivator for developers to improve.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>Represents the ideal standard. All-green packages may be featured prominently within the scverse ecosystem.
+</table>
 
 The review categories are as follows, with specific keywords in **`monospaced text`** for use in the scverse registry:
 
@@ -57,63 +58,85 @@ Verify that the package is compatible with Python 3.
 
 Evaluate the scope of the package:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Not relevant to the scverse community.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Broadly useful across the scverse community.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Not relevant to the scverse community.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>Broadly useful across the scverse community.
+</table>
 
 ### **Integration with scverse ('ecointegration')**
 
 Assess integration with scverse:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Little to no use of scverse structures where applicable.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions).
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Little to no use of scverse structures where applicable.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions).
+</table>
 
 ### **License ('license')**
 
 Verify OSI-approved license:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Code is not OSI-approved licensed.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Code is OSI-approved licensed.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Code is not OSI-approved licensed.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>Code is OSI-approved licensed.
+</table>
 
 ### **Distribution ('distribution')**
 
 Evaluate the package's documentation:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> The package cannot be installed from a standard registry.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda).
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>The package cannot be installed from a standard registry.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda).
+</table>
 
 ### **Documentation ('documentation')**
 
 Evaluate the package's documentation:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Inadequate or significantly lacking.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> The package provides API documentation via a website or README.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Inadequate or significantly lacking.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>The package provides API documentation via a website or README.
+</table>
 
 ### **Testing ('testing')**
 
 Assess the package's testing practices:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Insufficient test coverage or poorly implemented tests.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> The package uses automated software tests and runs them via continuous integration (CI).
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Insufficient test coverage or poorly implemented tests.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>The package uses automated software tests and runs them via continuous integration (CI).
+</table>
 
 ### **Development status ('devstatus')**
 
 Determine the package's development status:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> The package does not provide versioned releases.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> The package provides versioned releases.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>The package does not provide versioned releases.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>The package provides versioned releases.
+</table>
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Submission by an individual who is neither an author nor a maintainer of the tool or/and does not agree on listing the package on the scverse website.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Submission by an author or maintainer of the tool who agrees on listing the package on the scverse website.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Submission by an individual who is neither an author nor a maintainer of the tool or/and does not agree on listing the package on the scverse website.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>Submission by an author or maintainer of the tool who agrees on listing the package on the scverse website.
+</table>
 
 ### **Python 3 compatibility ('python3')**
 
 Check Python 3 compatibility:
 
-<td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"></td> Not compatible with Python 3.
-<td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"></td> Fully compatible with Python 3.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Red-red.svg" alt="Red"><td>Not compatible with Python 3.
+<tr><td><img src="https://img.shields.io/badge/Green-brightgreen.svg" alt="Green"><td>Fully compatible with Python 3.
+</table>
 
 ### **Recommended (`'recommended'`)**
 
-<td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> The package does not provide tutorials (or "vignettes") that help getting users started quickly
+<table>
+<tr><td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"><td>The package does not provide tutorials (or "vignettes") that help getting users started quickly
+</table>
 
-<td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"></td> The package does not use the scverse cookiecutter template.
+<table>
+<tr><td><img src="https://img.shields.io/badge/Orange-orange.svg" alt="Orange"><td>The package does not use the scverse cookiecutter template.
+</table>
