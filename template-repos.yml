@@ -1,5 +1,6 @@
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/CSOgroup/cellcharter
+- url: https://github.com/ChanghaoGong/STutils
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/embedding-scvi
@@ -26,6 +27,7 @@
 - url: https://github.com/immunitastx/monkeybread
 - url: https://github.com/ivirshup/binsparse-python
 - url: https://github.com/jlause/scverse-tutorials
+- url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/nrclaudio/spVIPES
 - url: https://github.com/pinellolab/perturbvelo
@@ -34,6 +36,7 @@
   skip: true
   reason: Instance repo gets updated by the bot via the template
 - url: https://github.com/scverse/genomic-features
+- url: https://github.com/scverse/multi-condition-comparisions
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
