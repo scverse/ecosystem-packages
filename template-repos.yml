@@ -3,6 +3,7 @@
 - url: https://github.com/ChanghaoGong/STutils
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/Teichlab/multi-view-atlas
+- url: https://github.com/YosefLab/PopV
 - url: https://github.com/YosefLab/embedding-scvi
 - url: https://github.com/YosefLab/reproducibility-template
 - url: https://github.com/YosefLab/scib-metrics
@@ -21,6 +22,7 @@
 - url: https://github.com/cameronraysmith/perturbvelo
 - url: https://github.com/cameronraysmith/test-scvc
 - url: https://github.com/dertrotl/geneGATer
+- url: https://github.com/ergonyc/lblator
 - url: https://github.com/grst/spatialdata-plot
 - url: https://github.com/icbi-lab/atlas_protocol
 - url: https://github.com/icbi-lab/infercnvpy
@@ -48,3 +50,4 @@
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module
+- url: https://github.com/zunderlab/eschr
