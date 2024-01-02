@@ -6,7 +6,7 @@ description: |
 project_home: https://github.com/gustaveroussy/sopa
 documentation_home: https://gustaveroussy.github.io/sopa/
 publications:
-  - https://www.biorxiv.org/content/10.1101/2023.12.22.571863v1
+  - 10.1101/2023.12.22.571863
 install:
   pypi: sopa
 tags:
