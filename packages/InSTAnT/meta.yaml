@@ -11,7 +11,7 @@ publications:
 install:
   pypi: sc-instant
 license: MIT
-version: 1.1
+version: v1.1
 authors:
   - bhavaygg
   - anurendra
