@@ -15,8 +15,10 @@
 - url: https://github.com/YosefLab/scvi-tools-docker
   skip: true
   reason: Cruft fails for unclear reasons
+- url: https://github.com/YosefLab/treedata
 - url: https://github.com/YosefLab/visionpy
 - url: https://github.com/adamgayoso/figmasvg
+- url: https://github.com/aertslab/EnhancerAI
 - url: https://github.com/angelolab/Nimbus-Inference
 - url: https://github.com/angelolab/ark-spatial
 - url: https://github.com/blengerich/auto_ehr
