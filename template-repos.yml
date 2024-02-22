@@ -5,9 +5,7 @@
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/PopV
 - url: https://github.com/YosefLab/embedding-scvi
-- url: https://github.com/YosefLab/reproducibility-template
 - url: https://github.com/YosefLab/scib-metrics
-- url: https://github.com/YosefLab/scvi-census
 - url: https://github.com/YosefLab/scvi-criticism
   skip: true
   reason: Repository archived as readonly
@@ -23,7 +21,6 @@
 - url: https://github.com/angelolab/ark-spatial
 - url: https://github.com/blengerich/auto_ehr
 - url: https://github.com/cameronraysmith/perturbvelo
-- url: https://github.com/cameronraysmith/test-scvc
 - url: https://github.com/cobioda/scispy
 - url: https://github.com/d-j-k/donorpy
 - url: https://github.com/dertrotl/geneGATer
@@ -37,8 +34,6 @@
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/nitzanlab/biolord
-- url: https://github.com/nrclaudio/spVIPES
-- url: https://github.com/pinellolab/perturbvelo
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
