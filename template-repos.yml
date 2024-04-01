@@ -1,6 +1,7 @@
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/ChanghaoGong/STutils
+- url: https://github.com/ComputationalBiomedicineGroup/Rectangle
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/PopV
@@ -29,9 +30,11 @@
 - url: https://github.com/grst/spatialdata-plot
 - url: https://github.com/icbi-lab/atlas_protocol
 - url: https://github.com/icbi-lab/infercnvpy
+- url: https://github.com/ilia-kats/PolarbearPlus
 - url: https://github.com/immunitastx/monkeybread
 - url: https://github.com/ivirshup/binsparse-python
 - url: https://github.com/jlause/scverse-tutorials
+- url: https://github.com/lhqing/scmallet
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/nitzanlab/biolord
