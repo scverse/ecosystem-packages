@@ -5,7 +5,7 @@ project_home: https://github.com/dpeerlab/ENVI
 documentation_home: https://github.com/dpeerlab/ENVI/blob/main/README.md
 tutorials_home: https://github.com/dpeerlab/ENVI/blob/main/MOp_MERFISH_tutorial.ipynb
 publications:
-  - https://doi.org/10.1038/s41587-024-02193-4
+  - 10.1038/s41587-024-02193-4
 install:
   pypi: scenvi
 tags:
