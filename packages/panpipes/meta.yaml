@@ -24,6 +24,7 @@ authors:
   - kevinrue
   - deevdevil88
   - Lilly-May
+  - tomthomas3000
   - Zethson
   - wlason
 test_command: pip install -e '.[dev]' && pytest
