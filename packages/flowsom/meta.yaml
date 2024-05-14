@@ -1,0 +1,27 @@
+name: flowsom
+description: |
+  The complete FlowSOM package known from R, now available in Python!
+  Analyze high-dimensional cytometry data using FlowSOM,
+  a clustering and visualization algorithm based on a self-organizing map (SOM).
+  FlowSOM is used to distinguish cell populations from cytometry data in an unsupervised way and
+  can help to gain deeper insights in fields such as immunology and oncology.
+project_home: https://github.com/saeyslab/FlowSOM_Python
+documentation_home: https://flowsom.readthedocs.io/en/latest/
+tutorials_home: https://flowsom.readthedocs.io/en/latest/notebooks/example.html
+publications:
+  - 10.1093/bioinformatics/btae179
+  - 10.1002/cyto.a.22625
+  - 10.1038/s41596-021-00550-0
+install:
+  conda: conda-forge::flowsom
+tags:
+  - clustering
+  - flowcytometry
+license: GPL-3.0-only
+version: v0.0.1
+authors:
+  - artuurC
+  - berombau
+  - ysaeys
+  - SofieVG
+test_command: pip install "." && pytest
