@@ -1,0 +1,33 @@
+name: Palantir
+description: |
+  Palantir is an algorithm to align cells along differentiation trajectories.
+  Palantir models differentiation as a stochastic process where stem cells
+  differentiate to terminally differentiated cells by a series of steps through
+  a low dimensional phenotypic manifold. Palantir effectively captures the
+  continuity in cell states and the stochasticity in cell fate determination.
+  Palantir has been designed to work with multidimensional single cell data from
+  diverse technologies such as Mass cytometry and single cell RNA-seq.
+project_home: https://github.com/dpeerlab/Palantir
+documentation_home: https://palantir.readthedocs.io
+publications:
+  - 10.1038/s41587-019-0068-4
+install:
+  pypi: palantir
+tags:
+  - markov-chain
+  - dimensionality-reduction
+  - scrna-seq
+  - trajectory-generation
+  - diffusion-maps
+  - differentiation
+  - manifold-learning
+  - single-cell-genomics
+  - cell-fate-transitions
+  - scrna-seq-analysis
+license: GPL-2.0-or-later
+version: v1.3.3
+authors:
+  - ManuSetty
+  - dpeerlab
+  - katosh
+test_command: pip install -e '.' && pip install flake8 pytest coverage typing-extensions && pytest
