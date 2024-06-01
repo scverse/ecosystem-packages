@@ -16,5 +16,5 @@ authors:
   - maltekuehl
 test_command: |
   pip install flit poetry && \
-	flit install --deps all && \
+  flit install --deps all && \
   coverage run -m pytest
