@@ -46,6 +46,7 @@
   reason: Instance repo gets updated by the bot via the template
 - url: https://github.com/scverse/genomic-features
 - url: https://github.com/scverse/multi-condition-comparisions
+- url: https://github.com/scverse/pytometry
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
