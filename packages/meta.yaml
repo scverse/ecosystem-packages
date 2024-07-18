@@ -7,7 +7,7 @@ tutorials_home: https://pilot.readthedocs.io/en/latest/
 publications:
   - 10.1038/s44320-023-00003-8
 install:
-   conda_instructions: |
+  conda_instructions: |
     # Create a new conda environment with the required Python version and R base
     conda create --name PILOT python=3.11.5 r-base
     
@@ -17,15 +17,14 @@ install:
     # Install the PILOT package from PyPI
     pip install pilotpy
     
+
   pypi: pilotpy
-    
 tags:
-  - multi-scale
+  - multi-omics
   - single-cell
   - trajectory
-  - pathomics-data
+  - pathomics
   - ot
-  - disease-progression
   - patient-level
 license: MIT
 version: v2.0.6
