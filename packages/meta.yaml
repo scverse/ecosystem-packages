@@ -10,13 +10,12 @@ install:
   conda_instructions: |
     # Create a new conda environment with the required Python version and R base
     conda create --name PILOT python=3.11.5 r-base
-    
+
     # Activate the new environment
     conda activate PILOT
-    
+
     # Install the PILOT package from PyPI
     pip install pilotpy
-    
 
   pypi: pilotpy
 tags:
@@ -29,22 +28,22 @@ tags:
 license: MIT
 version: v2.0.6
 authors:
-  - Mehdi Joodaki 
-  - Mina Shaigan 
+  - Mehdi Joodaki
+  - Mina Shaigan
   - Victor Parra
-  - Roman D. Bülow 
-  - Christoph Kuppe 
-  - David L. Hölscher 
-  - Mingbo Cheng 
-  - James S. Nagai 
-  - Michaël Goedertier 
-  - Nassim Bouteldja 
-  - Vladimir Tesar 
-  - Jonathan Barratt 
-  - Ian S.D. Roberts 
-  - Rosanna Coppo 
-  - Rafael Kramann 
-  - Peter Boor 
+  - Roman D. Bülow
+  - Christoph Kuppe
+  - David L. Hölscher
+  - Mingbo Cheng
+  - James S. Nagai
+  - Michaël Goedertier
+  - Nassim Bouteldja
+  - Vladimir Tesar
+  - Jonathan Barratt
+  - Ian S.D. Roberts
+  - Rosanna Coppo
+  - Rafael Kramann
+  - Peter Boor
   - Ivan G. Costa
 test_command: |
   conda create --name PILOT python=3.11.5 r-base
