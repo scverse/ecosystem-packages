@@ -40,7 +40,7 @@ How does the package use scverse data structures (please describe in a few sente
 -   [ ] The code is publicly available under an [OSI-approved](https://opensource.org/licenses/alphabetical) license
 -   [ ] The package provides versioned releases
 -   [ ] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
--   [ ] Automated tests cover essential functions of the package and a reasonable range of inputs and conditions [^1] 
+-   [ ] Automated tests cover essential functions of the package and a reasonable range of inputs and conditions [^1]
 -   [ ] Continuous integration (CI) automatically executes these tests on each push or pull request [^2]
 -   [ ] The package provides API documentation via a website or README[^3]
 -   [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
