@@ -40,9 +40,8 @@ How does the package use scverse data structures (please describe in a few sente
 -   [ ] The code is publicly available under an [OSI-approved](https://opensource.org/licenses/alphabetical) license
 -   [ ] The package provides versioned releases
 -   [ ] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
--   [ ] Automated tests cover essential functions of the package and a reasonable range of inputs and conditions [^1]
--   [ ] Continuous integration (CI) automatically executes these tests on each push or pull request [^2]
--   [ ] The package provides API documentation via a website or README[^3]
+-   [ ] The package uses automated software tests and runs them via continuous integration (CI)
+-   [ ] The package provides API documentation via a website or README
 -   [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
 -   [ ] I am an author or maintainer of the tool and agree on listing the package on the scverse website
 
@@ -56,9 +55,3 @@ How does the package use scverse data structures (please describe in a few sente
     -   Mastodon:
 -   [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
 -   [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
-
-[^1]: We recommend thtat tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
-
-[^2]: Continuous integration means that software tests are automatically executed on every push to the git repository. This guarantees they are always run and that they are run in a clean environment. Scverse ecosystem packages most commonly use [GitHub Actions](https://github.com/features/actions) for CI. For an example, check out our [cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
-
-[^3]: By API documentation, we mean an overview of _all_ public functions provided a package, with documentation of their parameters. For an example, see the [Scanpy documentation](https://scanpy.readthedocs.io/en/stable/api/preprocessing.html). In simple cases, this can be done manually in a README file. For anything more complex, we recommend the [Sphinx Autodoc plugin](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html)
