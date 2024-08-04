@@ -1,0 +1,18 @@
+name: GPTBioInsightor
+description: |
+  GPTBioInsightor is a tool designed for single-cell data analysis, particularly beneficial for newcomers to a biological field or those in interdisciplinary areas who may lack sufficient biological background knowledge.
+  GPTBioInsightor utilizes the powerful capabilities of large language models to help people quickly gain knowledge and insight, enhancing their work efficiency.
+project_home: https://github.com/huang-sh/GPTBioInsightor
+documentation_home: https://gptbioinsightor.readthedocs.io/
+install:
+  pypi: gptbioinsightor
+tags:
+  - single-cell
+  - bioinformatics
+  - LLM
+  - AI
+license: BSD-3-Clause
+version: v0.3.0
+authors:
+  - huangsh
+test_command: pip install "." && pytest
