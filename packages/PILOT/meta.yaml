@@ -1,0 +1,50 @@
+name: PILOT
+description: |
+  PILOT is a Python library for Detection of PatIent-Level distances from single cell genomics and pathomics data with Optimal Transport.
+project_home: https://github.com/CostaLab/PILOT
+documentation_home: https://pilot.readthedocs.io/en/latest/api.html
+tutorials_home: https://pilot.readthedocs.io/en/latest/
+publications:
+  - 10.1038/s44320-023-00003-8
+install:
+  conda_instructions: |
+    # Create a new conda environment with the required Python version and R base
+    conda create --name PILOT python=3.11.5 r-base
+    # Activate the new environment
+    conda activate PILOT
+    # Install the PILOT package from PyPI
+    pip install pilotpy
+  pypi: pilotpy
+tags:
+  - multi-omics
+  - single-cell
+  - trajectory
+  - pathomics-data
+  - ot
+  - patient-level
+license: MIT
+version: v2.0.6
+authors:
+  - Mehdi Joodaki
+  - Mina Shaigan
+  - Victor Parra
+  - Roman D. Bülow
+  - Christoph Kuppe
+  - David L. Hölscher
+  - Mingbo Cheng
+  - James S. Nagai
+  - Michaël Goedertier
+  - Nassim Bouteldja
+  - Vladimir Tesar
+  - Jonathan Barratt
+  - Ian S.D. Roberts
+  - Rosanna Coppo
+  - Rafael Kramann
+  - Peter Boor
+  - Ivan G. Costa
+test_command: |
+  conda create --name PILOT python=3.11.5 r-base
+  conda activate PILOT
+  pip install pilotpy
+  conda install pytest
+  cd test && pytest test_pilot.py
