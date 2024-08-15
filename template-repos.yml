@@ -1,3 +1,4 @@
+- url: https://github.com/Bendemeurichy/flowSOM
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/ChanghaoGong/STutils
@@ -19,6 +20,7 @@
 - url: https://github.com/YosefLab/visionpy
 - url: https://github.com/Zethson/fknni
 - url: https://github.com/adamgayoso/figmasvg
+- url: https://github.com/aertslab/CREsted
 - url: https://github.com/aertslab/EnhancerAI
 - url: https://github.com/angelolab/Nimbus-Inference
 - url: https://github.com/angelolab/ark-spatial
@@ -36,9 +38,11 @@
 - url: https://github.com/icbi-lab/infercnvpy
 - url: https://github.com/ilia-kats/PolarbearPlus
 - url: https://github.com/immunitastx/monkeybread
+- url: https://github.com/imsb-uke/nichepca
 - url: https://github.com/ivirshup/binsparse-python
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/karadavis-lab/anndata-utils
+- url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
