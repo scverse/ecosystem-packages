@@ -1,6 +1,6 @@
 name: CellCharter
 description: |
-  CellCharter is a framework to identify, characterize and compare spatial domains from spatial omics and multi-omics data. 
+  CellCharter is a framework to identify, characterize and compare spatial domains from spatial omics and multi-omics data.
 project_home: https://github.com/CSOgroup/cellcharter
 documentation_home: https://cellcharter.readthedocs.io/
 tutorials_home: https://cellcharter.readthedocs.io/
