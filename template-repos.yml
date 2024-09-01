@@ -1,13 +1,17 @@
+- url: https://github.com/Bendemeurichy/FlowSOM_parallel
 - url: https://github.com/Bendemeurichy/flowSOM
+- url: https://github.com/Boehringer-Ingelheim/dso
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/ChanghaoGong/STutils
 - url: https://github.com/CompCy-lab/scHub
 - url: https://github.com/ComputationalBiomedicineGroup/Rectangle
+- url: https://github.com/Gabriellvl/FlowSOM
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/PopV
 - url: https://github.com/YosefLab/embedding-scvi
+- url: https://github.com/YosefLab/pycea
 - url: https://github.com/YosefLab/scib-metrics
 - url: https://github.com/YosefLab/scvi-criticism
   skip: true
@@ -60,6 +64,7 @@
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
 - url: https://github.com/smgoggin10/ESCHR
+- url: https://github.com/srivarra/anatomize
 - url: https://github.com/tansey-lab/nf-rnaseq
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/ehrdata
