@@ -1,0 +1,21 @@
+name: CellCharter
+description: |
+  CellCharter is a framework to identify, characterize and compare spatial domains from spatial omics and multi-omics data.
+project_home: https://github.com/CSOgroup/cellcharter
+documentation_home: https://cellcharter.readthedocs.io/
+tutorials_home: https://cellcharter.readthedocs.io/
+publications:
+  - 10.1038/s41588-023-01588-4
+install:
+  pypi: cellcharter
+tags:
+  - spatial omics
+  - spatial clustering
+  - spatial domains
+  - gaussian mixture model
+license: BSD-3-Clause
+version: v0.3.1
+authors:
+  - marcovarrone
+test_command: |
+  pip install ".[test]" && pytest
