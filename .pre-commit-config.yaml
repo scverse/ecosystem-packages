@@ -23,13 +23,13 @@ repos:
       - id: prettier
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.3
+    rev: 0.29.4
     hooks:
       - id: check-jsonschema
         files: "schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.3
+    rev: 0.29.4
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
