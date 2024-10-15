@@ -38,6 +38,7 @@
 - url: https://github.com/data-intuitive/dummy-anndata
 - url: https://github.com/dertrotl/geneGATer
 - url: https://github.com/ergonyc/lblator
+- url: https://github.com/eroell/mypackage-cruft-oct
 - url: https://github.com/greenelab/single_translator_VAE
 - url: https://github.com/grst/spatialdata-plot
 - url: https://github.com/icbi-lab/atlas_protocol
@@ -52,6 +53,7 @@
 - url: https://github.com/lhqing/scmallet
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
+- url: https://github.com/mengerj/mmcontext
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
@@ -72,6 +74,7 @@
 - url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/multimil
+- url: https://github.com/theislab/spatialdata-db
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module
