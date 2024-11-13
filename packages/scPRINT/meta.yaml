@@ -2,7 +2,7 @@ name: scPRINT
 description: |
   A single cell foundation model for Gene network inference and more...
 project_home: https://github.com/cantinilab/scPRINT
-documentation_home: https://jkobject.com/scPRINT
+documentation_home: https://cantinilab.github.io/scPRINT/
 publications:
   - 10.1101/2024.07.29.605556
 install:
@@ -20,7 +20,7 @@ tags:
   - pytorch
   - lightning
 license: MIT
-version: v1.0.12
+version: v1.6.2
 authors:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test
