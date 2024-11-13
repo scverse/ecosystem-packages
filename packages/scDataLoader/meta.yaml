@@ -4,7 +4,7 @@ description: |
   Does weighted random sampling, downloading and preprocessing.
   works with anndata, zarr, and h5ad files.
 project_home: https://github.com/jkobject/scDataLoader
-documentation_home: https://jkobject.com/scDataLoader
+documentation_home: https://www.jkobject.com/scDataLoader/
 publications:
   - 10.1101/2024.07.29.605556
 install:
@@ -18,7 +18,7 @@ tags:
   - cellxgene
   - preprocessing
 license: MIT
-version: v1.0.1
+version: v1.2.2
 authors:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test
