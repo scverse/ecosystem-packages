@@ -3,7 +3,7 @@ description: |
   An onverload of anndata to more easily work with gene networks.
   Allows easy conversion between anndata and grnndata and provide loads of usefull utilities functions.
 project_home: https://github.com/cantinilab/GRnnData
-documentation_home: https://jkobject.com/GRnnData
+documentation_home: https://cantinilab.github.io/GRnnData/
 publications:
   - 10.1101/2024.07.29.605556
 install:
@@ -15,7 +15,7 @@ tags:
   - format
   - utilities
 license: MIT
-version: v1.0.0
+version: v1.1.4
 authors:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test
