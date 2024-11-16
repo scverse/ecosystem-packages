@@ -1,6 +1,7 @@
 - url: https://github.com/Bendemeurichy/FlowSOM_parallel
 - url: https://github.com/Bendemeurichy/flowSOM
 - url: https://github.com/Boehringer-Ingelheim/dso
+- url: https://github.com/Boehringer-Ingelheim/dso-mgr
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/CSOgroup/torchgmm
@@ -33,6 +34,7 @@
 - url: https://github.com/bartuschimschek/mmil-refactored
 - url: https://github.com/blengerich/auto_ehr
 - url: https://github.com/cameronraysmith/perturbvelo
+- url: https://github.com/clinicalomx/napari-prism
 - url: https://github.com/cobioda/scispy
 - url: https://github.com/const-ae/pyLemur
 - url: https://github.com/d-j-k/donorpy
@@ -56,6 +58,7 @@
 - url: https://github.com/lueckenlab/patpy
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/mengerj/mmcontext
+- url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
@@ -71,6 +74,7 @@
 - url: https://github.com/scverse/squidpy
 - url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/srivarra/anatomize
+- url: https://github.com/srivarra/annsel
 - url: https://github.com/tansey-lab/nf-rnaseq
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/ehrdata
