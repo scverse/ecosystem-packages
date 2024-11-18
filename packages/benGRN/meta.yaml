@@ -1,0 +1,20 @@
+name: benGRN
+description: |
+  Benchmarking tool for gene network inference from single cell RNAseq methods.
+  It uses the grnndata/anndata modality and only contains biological ground truth networks
+project_home: https://github.com/jkobject/benGRN
+documentation_home: https://www.jkobject.com/benGRN
+publications:
+  - 10.1101/2024.07.29.605556
+install:
+  pypi: bengrn
+tags:
+  - single cell
+  - RNAseq
+  - gene network inference
+  - benchmark
+license: MIT
+version: v1.2.1
+authors:
+  - jkobject (jeremie kalfon)
+test_command: pip install . && make test
