@@ -8,6 +8,7 @@
 - url: https://github.com/ChanghaoGong/STutils
 - url: https://github.com/CompCy-lab/scHub
 - url: https://github.com/ComputationalBiomedicineGroup/Rectangle
+- url: https://github.com/FroeseLab/bulkpy
 - url: https://github.com/Gabriellvl/FlowSOM
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/Teichlab/multi-view-atlas
@@ -30,6 +31,7 @@
 - url: https://github.com/aertslab/EnhancerAI
 - url: https://github.com/angelolab/Nimbus-Inference
 - url: https://github.com/angelolab/ark-spatial
+- url: https://github.com/angelolab/pici-vitessce
 - url: https://github.com/angelolab/tonic-vitessce
 - url: https://github.com/bartuschimschek/mmil-refactored
 - url: https://github.com/blengerich/auto_ehr
@@ -64,6 +66,7 @@
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
   reason: Instance repo gets updated by the bot via the template
+- url: https://github.com/scverse/formulaic-contrasts
 - url: https://github.com/scverse/genomic-features
 - url: https://github.com/scverse/multi-condition-comparisions
 - url: https://github.com/scverse/pytometry
@@ -79,6 +82,7 @@
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/geome
+- url: https://github.com/theislab/multigrate
 - url: https://github.com/theislab/multimil
 - url: https://github.com/theislab/spatialdata-db
 - url: https://github.com/theislab/transcription_factor_activity
