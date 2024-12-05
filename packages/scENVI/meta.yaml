@@ -1,0 +1,18 @@
+name: ENVI
+description: |
+  Integration of scRNA-seq and spatial transcriptomics data
+project_home: https://github.com/dpeerlab/ENVI
+documentation_home: https://github.com/dpeerlab/ENVI/blob/main/README.md
+tutorials_home: https://github.com/dpeerlab/ENVI/blob/main/MOp_MERFISH_tutorial.ipynb
+publications:
+  - 10.1038/s41587-024-02193-4
+install:
+  pypi: scenvi
+tags:
+  - spatial transcriptomics , deep learning, variational inference , gene expression
+license: MIT
+version: 0.2.13
+authors:
+  - DoronHav
+test_command: |
+  pip install "." && pytest
