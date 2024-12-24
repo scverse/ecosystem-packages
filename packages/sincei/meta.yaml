@@ -1,0 +1,20 @@
+name: sincei
+description: |
+  A user-friendly toolkit for QC, counting, clustering and plotting of single-cell (epi)genomics data
+project_home: https://github.com/bhardwaj-lab/sincei
+documentation_home: https://sincei.readthedocs.io/en/latest/
+publications:
+  - 10.5281/zenodo.8105536
+install:
+  pypi: sincei
+tags:
+  - epigenomics
+  - clustering
+  - BAM
+license: MIT
+version: 0.3.1
+authors:
+  - vivekbhr
+  - saroudant
+test_command: |
+  pip install ."[dev]" && pytest
