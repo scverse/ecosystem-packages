@@ -6,7 +6,7 @@ description: |
 project_home: https://github.com/gustaveroussy/sopa
 documentation_home: https://gustaveroussy.github.io/sopa/
 publications:
-  - 10.1101/2023.12.22.571863
+  - 10.1038/s41467-024-48981-z
 install:
   pypi: sopa
 tags:
