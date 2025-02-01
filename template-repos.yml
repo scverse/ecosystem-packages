@@ -62,12 +62,14 @@
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
+- url: https://github.com/lucas-diedrich/dvp-io
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/lueckenlab/patpy
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/mengerj/mmcontext
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/nitzanlab/biolord
+- url: https://github.com/quadbio/cell-annotator
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
