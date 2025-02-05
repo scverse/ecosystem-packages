@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: setup-yq
         run: |
           sudo curl -L "https://github.com/mikefarah/yq/releases/download/v4.28.2/yq_linux_amd64" > /usr/local/bin/yq
@@ -27,7 +27,7 @@ jobs:
           cat packages/**/meta.yaml
           yq -o=json packages/**/meta.yaml | jq -s . > build/ecosystem.json
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "build"
 
@@ -48,7 +48,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
       - name: Trigger website build
         run: |
           curl -XPOST \
