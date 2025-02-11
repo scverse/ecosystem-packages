@@ -1,6 +1,6 @@
 name: eschr
 description: |
-  ESCHR is an ensemble clustering method that provides hard clustering along with 
+  ESCHR is an ensemble clustering method that provides hard clustering along with
   uncertainty scores and soft clustering outputs for enhanced interpretability.
 project_home: https://github.com/zunderlab/eschr
 documentation_home: https://eschr.readthedocs.io/en/latest/
