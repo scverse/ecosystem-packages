@@ -18,4 +18,3 @@ tags:
   - utilities
 test_command: |
   uv pip install .[test] && uv run pytest -n auto
-
