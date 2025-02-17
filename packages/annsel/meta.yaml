@@ -17,4 +17,4 @@ tags:
   - accessor
   - utilities
 test_command: |
-  uv pip install .[test] && uv run pytest -n auto
+  pip install ".[test]" && pytest
