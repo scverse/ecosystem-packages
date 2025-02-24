@@ -7,6 +7,7 @@
 - url: https://github.com/CSOgroup/torchgmm
 - url: https://github.com/ChanghaoGong/STutils
 - url: https://github.com/CompCy-lab/scHub
+- url: https://github.com/Computational-Morphogenomics-Group/Ladder
 - url: https://github.com/ComputationalBiomedicineGroup/Rectangle
 - url: https://github.com/FroeseLab/bulkpy
 - url: https://github.com/Gabriellvl/FlowSOM
@@ -14,6 +15,7 @@
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/PopV
 - url: https://github.com/YosefLab/embedding-scvi
+- url: https://github.com/YosefLab/popV
 - url: https://github.com/YosefLab/pycea
 - url: https://github.com/YosefLab/scib-metrics
 - url: https://github.com/YosefLab/scvi-criticism
@@ -41,7 +43,9 @@
 - url: https://github.com/const-ae/pyLemur
 - url: https://github.com/d-j-k/donorpy
 - url: https://github.com/data-intuitive/dummy-anndata
+- url: https://github.com/decomverse/scmetric
 - url: https://github.com/dertrotl/geneGATer
+- url: https://github.com/edbiomedai/scmorph
 - url: https://github.com/ergonyc/lblator
 - url: https://github.com/eroell/mypackage-cruft-oct
 - url: https://github.com/greenelab/single_translator_VAE
@@ -52,16 +56,21 @@
 - url: https://github.com/immunitastx/monkeybread
 - url: https://github.com/imsb-uke/nichepca
 - url: https://github.com/ivirshup/binsparse-python
+- url: https://github.com/jkobject/hierarchical_classifier
+- url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
+- url: https://github.com/lucas-diedrich/dvp-io
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/lueckenlab/patpy
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
+- url: https://github.com/mengerj/adata_hf_datasets
 - url: https://github.com/mengerj/mmcontext
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/nitzanlab/biolord
+- url: https://github.com/quadbio/cell-annotator
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
@@ -86,6 +95,7 @@
 - url: https://github.com/theislab/multimil
 - url: https://github.com/theislab/spatialdata-db
 - url: https://github.com/theislab/transcription_factor_activity
+- url: https://github.com/theislab/troutpy
 - url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module
 - url: https://github.com/zunderlab/eschr
