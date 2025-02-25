@@ -1,0 +1,20 @@
+name: eschr
+description: |
+  ESCHR is an ensemble clustering method that provides hard clustering along with
+  uncertainty scores and soft clustering outputs for enhanced interpretability.
+project_home: https://github.com/zunderlab/eschr
+documentation_home: https://eschr.readthedocs.io/en/latest/
+tutorials_home: https://eschr.readthedocs.io/en/latest/notebooks/paul15_mouse_hematopoiesis.html
+publications:
+  - 10.1186/s13059-024-03386-5
+install:
+  pypi: eschr
+tags:
+  - clustering
+  - uncertainty
+  - ensemble
+license: "MIT"
+version: v1.0.1
+authors:
+  - smgoggin10
+test_command: pip install ".[test]" && pytest
