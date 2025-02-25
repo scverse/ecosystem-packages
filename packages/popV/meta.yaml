@@ -1,4 +1,4 @@
-me: popV
+name: popV
 description: |
   p(opular)V(oting) is a consensus tool for transfering labels from an annotated reference dataset to an unannotated query dataset. Consensus calling allows interpretable scores that quantify certainty.
 project_home: https://github.com/YosefLab/popV
