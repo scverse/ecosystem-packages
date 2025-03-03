@@ -1,6 +1,6 @@
 # Scverse Ecosystem Packages
 
-This repository contains the list of scverse ecosystem packages that are displayed on scverse.org and are part of 
+This repository contains the list of scverse ecosystem packages that are displayed on scverse.org and are part of
 the scverse® project.
 The goal is to increase visibility of ecosystem packages and make it easier for users to find appropriate software.
 Registered ecosystem packages can also get their own tag to use on the [scverse forum](https://discourse.scverse.org) for user discussion.
