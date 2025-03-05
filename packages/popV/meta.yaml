@@ -1,0 +1,16 @@
+name: popV
+description: |
+  p(opular)V(oting) is a consensus tool for transfering labels from an annotated reference dataset to an unannotated query dataset. Consensus calling allows interpretable scores that quantify certainty.
+project_home: https://github.com/YosefLab/popV
+documentation_home: https://popv.readthedocs.io/en/latest/
+install:
+  pypi: popv
+tags:
+  - cell type labels
+  - batch integration
+  - automatic annotation
+license: MIT
+version: v0.5.2
+authors:
+  - canergen
+test_command: pip install -e '.[test]' && pytest
