@@ -1,0 +1,16 @@
+name: scanpy-mcp
+description: An MCP server for scRNA-Seq analysis software Scanpy with natural language.
+project_home: https://github.com/huang-sh/scanpy-mcp
+documentation_home: https://github.com/huang-sh/scanpy-mcp
+install:
+  pypi: scanpy-mcp
+tags:
+  - single-cell
+  - bioinformatics
+  - LLM
+  - AI
+license: BSD 3-Clause
+version: v0.1.1
+authors:
+  - huangsh
+test_command: uv run --no-sync pytest
