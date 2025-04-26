@@ -1,7 +1,7 @@
 name: spatialproteomics
 description: |
-  Spatialproteomics is an interoperable toolbox for analyzing highly multiplexed fluorescence image data. 
-  This analysis involves a sequence of steps, including segmentation, image processing, 
+  Spatialproteomics is an interoperable toolbox for analyzing highly multiplexed fluorescence image data.
+  This analysis involves a sequence of steps, including segmentation, image processing,
   marker quantification, cell type classification, and neighborhood analysis.
 project_home: https://github.com/sagar87/spatialproteomics
 documentation_home: https://sagar87.github.io/spatialproteomics
