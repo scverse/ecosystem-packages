@@ -79,6 +79,7 @@
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/quadbio/cell-annotator
+- url: https://github.com/quadbio/cellmapper
 - url: https://github.com/quadbio/slurm_sweep
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/anndata-plot
@@ -99,6 +100,8 @@
 - url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/srivarra/anatomize
 - url: https://github.com/srivarra/annsel
+- url: https://github.com/srivarra/mbt
+- url: https://github.com/srivarra/spatial-collection
 - url: https://github.com/tansey-lab/nf-rnaseq
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/CellFlow
