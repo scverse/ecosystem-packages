@@ -1,0 +1,17 @@
+name: PEAKQC
+description: periodicity evaluation in scATAC-seq data for quality assessment
+project_home: https://github.com/loosolab/PEAKQC
+documentation_home: https://loosolab.pages.gwdg.de/software/peakqc/
+publications:
+  - 10.1101/2025.02.20.639146
+install:
+  pypi: peakqc
+tags:
+  - single cell
+  - ATAC-seq
+  - quality control
+license: MIT
+version: 0.1.3
+authors:
+  - loosolab
+test_command: pip install . && pytest
