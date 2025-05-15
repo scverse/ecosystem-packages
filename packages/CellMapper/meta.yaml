@@ -1,0 +1,17 @@
+name: CellMapper
+description: |
+  CellMapper is a leightweight tool to transfer labels, expression values and embeddings from reference to query datasets using k-NN mapping. It's fast and versatile, applicable to mapping scenarios in space, across modalities, or from an atlas to a new query dataset.
+project_home: https://github.com/quadbio/cellmapper
+documentation_home: https://cellmapper.readthedocs.io/en/latest/
+install:
+  pypi: cellmapper
+tags:
+  - k-NN based mapping
+  - rapids
+  - faiss
+  - query-to-reference
+license: MIT
+version: v0.1.2
+authors:
+  - Marius1311
+test_command: pip install -e '.[test]' && pytest
