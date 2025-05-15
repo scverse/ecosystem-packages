@@ -3,6 +3,7 @@
 - url: https://github.com/Boehringer-Ingelheim/dso
 - url: https://github.com/Boehringer-Ingelheim/dso-mgr
 - url: https://github.com/BoevaLab/infercnvpy
+- url: https://github.com/COMBINE-lab/QCatch
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/CSOgroup/torchgmm
 - url: https://github.com/ChanghaoGong/STutils
@@ -67,6 +68,7 @@
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/joechanlab/scDeBussy
+- url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
