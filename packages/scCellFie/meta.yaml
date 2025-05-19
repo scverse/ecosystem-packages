@@ -1,6 +1,6 @@
 name: scCellFie
 description: |
- scCellFie infers metabolic activities from single-cell and spatial transcriptomics and offers a variety of downstream analyses.
+  scCellFie infers metabolic activities from single-cell and spatial transcriptomics and offers a variety of downstream analyses.
 project_home: https://github.com/earmingol/scCellFie
 documentation_home: https://sccellfie.readthedocs.io
 tutorials_home: https://sccellfie.readthedocs.io
