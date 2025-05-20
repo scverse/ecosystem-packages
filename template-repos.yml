@@ -3,6 +3,7 @@
 - url: https://github.com/Boehringer-Ingelheim/dso
 - url: https://github.com/Boehringer-Ingelheim/dso-mgr
 - url: https://github.com/BoevaLab/infercnvpy
+- url: https://github.com/COMBINE-lab/QCatch
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/CSOgroup/torchgmm
 - url: https://github.com/ChanghaoGong/STutils
@@ -67,6 +68,7 @@
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/joechanlab/scDeBussy
+- url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
@@ -79,6 +81,7 @@
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/quadbio/cell-annotator
+- url: https://github.com/quadbio/cellmapper
 - url: https://github.com/quadbio/slurm_sweep
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/anndata-plot
@@ -99,6 +102,8 @@
 - url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/srivarra/anatomize
 - url: https://github.com/srivarra/annsel
+- url: https://github.com/srivarra/mbt
+- url: https://github.com/srivarra/spatial-collection
 - url: https://github.com/tansey-lab/nf-rnaseq
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/CellFlow
