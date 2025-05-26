@@ -3,6 +3,7 @@
 - url: https://github.com/Boehringer-Ingelheim/dso
 - url: https://github.com/Boehringer-Ingelheim/dso-mgr
 - url: https://github.com/BoevaLab/infercnvpy
+- url: https://github.com/COMBINE-lab/QCatch
 - url: https://github.com/CSOgroup/cellcharter
 - url: https://github.com/CSOgroup/torchgmm
 - url: https://github.com/ChanghaoGong/STutils
@@ -38,7 +39,9 @@
 - url: https://github.com/angelolab/pici-vitessce
 - url: https://github.com/angelolab/tonic-vitessce
 - url: https://github.com/bartuschimschek/mmil-refactored
+- url: https://github.com/bioFAM/mofaflex
 - url: https://github.com/bioFAM/prismo
+- url: https://github.com/bioFAM/scDoRI
 - url: https://github.com/blengerich/auto_ehr
 - url: https://github.com/cameronraysmith/perturbvelo
 - url: https://github.com/clinicalomx/napari-prism
@@ -48,6 +51,7 @@
 - url: https://github.com/data-intuitive/dummy-anndata
 - url: https://github.com/decomverse/scmetric
 - url: https://github.com/dertrotl/geneGATer
+- url: https://github.com/devsystemslab/HNOCA-tools
 - url: https://github.com/edbiomedai/scmorph
 - url: https://github.com/ergonyc/lblator
 - url: https://github.com/eroell/mypackage-cruft-oct
@@ -64,6 +68,7 @@
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/joechanlab/scDeBussy
+- url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
@@ -76,6 +81,8 @@
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/quadbio/cell-annotator
+- url: https://github.com/quadbio/cellmapper
+- url: https://github.com/quadbio/slurm_sweep
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/scverse/anndata-plot
 - url: https://github.com/scverse/cookiecutter-scverse-instance
@@ -95,10 +102,13 @@
 - url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/srivarra/anatomize
 - url: https://github.com/srivarra/annsel
+- url: https://github.com/srivarra/mbt
+- url: https://github.com/srivarra/spatial-collection
 - url: https://github.com/tansey-lab/nf-rnaseq
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/CellFlow
 - url: https://github.com/theislab/cell_flow_perturbation
+- url: https://github.com/theislab/cellflow_reproducibility
 - url: https://github.com/theislab/devVI
 - url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/geome
