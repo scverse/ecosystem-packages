@@ -1,0 +1,23 @@
+name: scCellFie
+description: |
+  scCellFie infers metabolic activities from single-cell and spatial transcriptomics and offers a variety of downstream analyses.
+project_home: https://github.com/earmingol/scCellFie
+documentation_home: https://sccellfie.readthedocs.io
+tutorials_home: https://sccellfie.readthedocs.io
+install:
+  pypi: sccellfie
+tags:
+  - single-cell
+  - spatial
+  - metabolism
+  - metabolic activities
+  - cell-cell communication
+license: MIT
+version: v0.4.5
+authors:
+  - earmingol
+test_command: |
+  python -m pip install --upgrade pip
+  python -m pip install -r requirements.txt
+  python -m pip install -e .
+  pytest -vv --cov --cov-report xml
