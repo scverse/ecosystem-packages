@@ -70,6 +70,7 @@
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/joechanlab/scDeBussy
+- url: https://github.com/joschif/delnx
 - url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
@@ -84,7 +85,9 @@
 - url: https://github.com/mengerj/adata_hf_datasets
 - url: https://github.com/mengerj/mmcontext
 - url: https://github.com/mostafavilabuw/drum
+- url: https://github.com/mumichae/scAtlasTb-utils
 - url: https://github.com/nitzanlab/biolord
+- url: https://github.com/quadbio/atac_mapper
 - url: https://github.com/quadbio/cell-annotator
 - url: https://github.com/quadbio/cellmapper
 - url: https://github.com/quadbio/slurm_sweep
@@ -94,6 +97,7 @@
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
   reason: Instance repo gets updated by the bot via the template
+- url: https://github.com/scverse/decoupler
 - url: https://github.com/scverse/deres
 - url: https://github.com/scverse/formulaic-contrasts
 - url: https://github.com/scverse/genomic-features
@@ -111,6 +115,7 @@
 - url: https://github.com/srivarra/mbt
 - url: https://github.com/srivarra/spatial-collection
 - url: https://github.com/srivarra/xrdantic
+- url: https://github.com/sueoglu/myeditdistance
 - url: https://github.com/tansey-lab/nf-rnaseq
 - url: https://github.com/tddough98/airgradient
 - url: https://github.com/theislab/CellFlow
