@@ -1,0 +1,17 @@
+name: STMiner
+description: |
+  Gene-centric spatial transcriptomics for deciphering complex spatial omics data
+project_home: https://github.com/xjtu-omics/STMiner
+documentation_home: https://stminerdoc.readthedocs.io/en/latest
+install:
+  pypi: stminer
+tags:
+  - spatial variable genes
+  - spatial patterns
+  - optimal transport
+  - mechine learning
+license: GPL
+version: v3.0
+authors:
+  - Peisen Sun
+test_command: pip install -e '.[test]' && pytest
