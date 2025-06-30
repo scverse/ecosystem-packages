@@ -6,7 +6,7 @@ project_home: https://github.com/bionetslab/scxmatch
 documentation_home: https://github.com/bionetslab/scxmatch
 tutorials_home: https://github.com/bionetslab/scxmatch
 publications:
-  - https://doi.org/10.1101/2025.06.25.661473
+  - 10.1101/2025.06.25.661473
 install:
   conda: bioconda::scxmatch
 tags:
