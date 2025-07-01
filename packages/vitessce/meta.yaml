@@ -1,19 +1,18 @@
 name: vitessce
 description: |
-  Vitessce consists of reusable interactive views including a scatterplot,
-  spatial+imaging plot, genome browser tracks, statistical plots, and control
-  views, built on web technologies such as WebGL.
+  Vitessce is an integrative visualization framework for multimodal and 2D/3D spatially resolved single-cell data. It consists of reusable, interactive linked views including scatterplot embedding views,
+  2D/3D spatial image views, genome browser tracks, statistical plots, and control views, built on web technologies such as WebGL and WebXR.
 project_home: https://github.com/vitessce/vitessce
 documentation_home: https://vitessce.github.io/vitessce-python/
 tutorials_home: https://github.com/vitessce/vitessce/tree/main/examples
 publications:
-  - 10.31219/osf.io/y8thv
+  - 10.1038/s41592-024-02436-x
 install:
   pypi: vitessce
 tags:
   - imaging
 license: MIT
-version: v1.1.20
+version: v3.5.7
 authors:
   - keller-mark
   - mccalluc

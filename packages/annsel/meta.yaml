@@ -1,0 +1,20 @@
+name: annsel
+description: |
+  Annsel is a user-friendly library that brings familiar dataframe-style operations to AnnData objects such as
+  selection, filtering and group by's.
+project_home: https://github.com/srivarra/annsel
+documentation_home: https://annsel.readthedocs.io/en/latest/
+tutorials_home: https://annsel.readthedocs.io/en/latest/notebooks/all_of_annsel.html
+install:
+  pypi: annsel
+license: MIT
+version: v0.0.8
+authors:
+  - srivarra
+tags:
+  - narwhals
+  - dataframe
+  - accessor
+  - utilities
+test_command: |
+  pip install ".[test]" && pytest

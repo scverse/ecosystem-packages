@@ -1,0 +1,26 @@
+name: scPRINT
+description: |
+  A single cell foundation model for Gene network inference and more...
+project_home: https://github.com/cantinilab/scPRINT
+documentation_home: https://cantinilab.github.io/scPRINT/
+publications:
+  - 10.1101/2024.07.29.605556
+install:
+  pypi: scprint
+tags:
+  - foundation model
+  - single cell
+  - RNAseq
+  - gene network inference
+  - denoising
+  - zero imputation
+  - label prediction
+  - zero shot
+  - embedding
+  - pytorch
+  - lightning
+license: MIT
+version: v1.6.2
+authors:
+  - jkobject (jeremie kalfon)
+test_command: pip install . && make test
