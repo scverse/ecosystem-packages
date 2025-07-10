@@ -18,6 +18,8 @@ from pathlib import Path
 from typing import NotRequired, TypedDict
 
 from github import Github
+from rich.logging import RichHandler
+from rich.traceback import install
 from yaml import safe_dump, safe_load
 
 log = getLogger(__name__)
@@ -56,10 +58,7 @@ def merge_repos(known: Iterable[Repo], new: Iterable[str]) -> list[Repo]:
     return repos
 
 
-def setup():
-    from rich.logging import RichHandler
-    from rich.traceback import install
-
+def setup() -> None:
     basicConfig(level="INFO", handlers=[RichHandler()])
     install(show_locals=True)
 
