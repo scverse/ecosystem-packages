@@ -1,0 +1,20 @@
+name: delnx
+description: |
+  delnx is a python package for differential expression analysis of (single-cell) genomics data. It enables scalable analyses of atlas-level datasets through GPU-accelerated regression models and statistical tests implemented in JAX and provides a consistent interface to perform DE analysis with other methods, such as statsmodels and PyDESeq2.
+project_home: https://github.com/joschif/delnx
+documentation_home: https://delnx.readthedocs.io/en/latest/
+tutorials_home: https://delnx.readthedocs.io/en/latest/
+install:
+  pypi: delnx
+tags:
+  - differential expression
+  - regression models
+  - dispersion estimation
+  - JAX
+license: MIT
+version: v0.2.3
+authors:
+  - joschif
+  - adaml9
+test_command: |
+  pip install ".[test]" && pytest
