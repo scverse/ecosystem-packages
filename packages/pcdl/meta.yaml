@@ -1,0 +1,29 @@
+name: pcdl
+description: physicell data output loader for downstream data analysis in python3.
+project_home: https://github.com/elmbeech/physicelldataloader
+documentation_home: https://github.com/elmbeech/physicelldataloader/blob/master/README.md
+tutorials_home: https://github.com/elmbeech/physicelldataloader/blob/master/man/TUTORIAL_python3_scverse.md
+install:
+    pypi: pcdl
+license: BSD-3-Clause
+tags:
+    - python3
+    - downstream data analysis
+    - physicell
+    - multicellular system
+    - agent-based modeling
+    - diffusion transport solver
+    - newtonian physics
+#publications:
+version: v4.0.4
+authors:
+    - ASundus
+    - elmbeech
+    - engjen
+    - furkankurtoglu
+    - godzilla-but-nice
+    - heberlr
+    - johnmetzcar
+    - MathCancer
+    - rheiland
+test_command: pip install . && pytest test/
