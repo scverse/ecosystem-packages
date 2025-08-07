@@ -1,0 +1,20 @@
+name: spatiomic
+description: |
+  spatiomic is a computational library for the analysis of spatial proteomics, mainly via pixel-based clustering, differential cluster abundance analysis and spatial statistics.
+project_home: https://github.com/complextissue/spatiomic
+documentation_home: https://spatiomic.org
+tutorials_home: https://spatiomic.org/latest/tutorials/full_example.html
+install:
+  pypi: spatiomic
+tags:
+  - spatial biology
+  - spatial proteomics
+  - spatial omics
+  - multiplexed protein imaging
+  - PathoPlex
+  - subcellular analysis
+license: GPL-3.0-only
+version: v0.5.0
+authors:
+  - maltekuehl
+test_command: uv run pytest -m "not gpu"
