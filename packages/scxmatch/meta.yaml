@@ -1,0 +1,26 @@
+name: scxmatch
+description: |
+  Single-cell Cross Match (scxmatch) is a is a Python package that implements Rosenbaum's cross-match test using distance-based matching to assess distribution shifts between two groups of high-dimensional data.
+  This is particularly useful in analyzing multivariate distributions in structured data, such as single-cell RNA-seq or ATAC-seq.
+project_home: https://github.com/bionetslab/scxmatch
+documentation_home: https://github.com/bionetslab/scxmatch
+tutorials_home: https://github.com/bionetslab/scxmatch
+publications:
+  - 10.1101/2025.06.25.661473
+install:
+  conda: bioconda::scxmatch
+tags:
+  - scRNA-seq
+  - single-cell
+  - python
+  - statistical testing
+  - distance-based matching
+  - perturbation
+  - condition
+license: MIT
+version: v0.1.0
+authors:
+  - annmoel
+  - dbblumenthal
+test_command: |
+  conda install scxmatch -c conda-forge -c bioconda && git clone https://github.com/bionetslab/scxmatch.git && cd scxmatch/tests/ && python test_mwe.py
