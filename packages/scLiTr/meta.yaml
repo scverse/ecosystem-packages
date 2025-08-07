@@ -1,0 +1,19 @@
+name: scLiTr
+description: |
+  scLiTr (single-cell Lineage Tracing) is a python package for exploratory analysis of
+  barcoding-based scRNA-Seq lineage tracing experiments
+project_home: https://github.com/kharchenkolab/scLiTr
+documentation_home: https://sclitr.readthedocs.io/
+tutorials_home: https://sclitr.readthedocs.io/
+install:
+  pypi: sclitr
+tags:
+  - label-transfer
+license: MIT
+publications:
+  - 10.1101/2024.11.15.623687
+version: v1.0.1
+authors:
+  - serjisa
+test_command: |
+  pip install . && pytest

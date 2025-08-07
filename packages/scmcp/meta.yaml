@@ -1,0 +1,16 @@
+name: scmcp
+description: A MCP server hub for scRNA-Seq analysis software.
+project_home: https://github.com/scmcphub
+documentation_home: https://docs.scmcphub.org
+install:
+  pypi: scmcp
+tags:
+  - scRNA-seq
+  - bioinformatics
+  - LLM
+  - AI
+license: BSD-3-Clause
+version: v0.2.2
+authors:
+  - huangsh
+test_command: uv run --no-sync pytest
