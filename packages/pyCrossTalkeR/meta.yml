@@ -1,0 +1,20 @@
+name: pyCrossTalkeR
+description: |
+  pyCrossTalkeR is a framework for network analysis and visualisation of LR networks. pyCrossTalkeR identifies relevant ligands, receptors and cell types contributing to changes in cell communication when contrasting two biological states: disease vs. homeostasis.
+project_home: https://github.com/CostaLab/pyCrossTalkeR
+documentation_home: https://pycrosstalker.readthedocs.io/en/stable/
+tutorials_home: https://pycrosstalker.readthedocs.io/en/stable/
+install:
+  pypi: pycrosstalker
+tags:
+  - CCI
+  - scRNAseq
+  - Node Importance
+license: MIT
+version: v2.0.0
+authors:
+  - jsnagai
+  - ruthvik07
+test_command: |
+  pip install pycrosstalker
+  cd pycrosstalker && pytest
