@@ -8,7 +8,7 @@ minimum_pre_commit_version: 2.16.0
 repos:
   # all files
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: detect-private-key
       - id: check-ast
@@ -45,7 +45,7 @@ repos:
         exclude: "^packages/.*/meta.yaml$"
   # template repo registry
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.12.4
+    rev: v0.12.8
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
