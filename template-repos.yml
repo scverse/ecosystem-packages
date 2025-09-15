@@ -19,6 +19,7 @@
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/PopV
+- url: https://github.com/YosefLab/cytovi-reference-implementation
 - url: https://github.com/YosefLab/embedding-scvi
 - url: https://github.com/YosefLab/popV
 - url: https://github.com/YosefLab/pycea
@@ -79,6 +80,7 @@
 - url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/anndata-utils
 - url: https://github.com/karadavis-lab/nbl
+- url: https://github.com/laminlabs/arrayloaders
 - url: https://github.com/lhqing/scmallet
 - url: https://github.com/lucas-diedrich/dvp-io
 - url: https://github.com/lucas-diedrich/sccoral
