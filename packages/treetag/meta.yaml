@@ -17,4 +17,4 @@ version: v0.1.1
 authors:
   - valleyofdawn
 test_command: |
-  pip install . && pytest -q
+  pip install '.[test]' && pytest -q
