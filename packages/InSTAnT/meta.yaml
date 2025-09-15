@@ -1,0 +1,19 @@
+name: InSTAnT
+description: |
+  InSTAnT is a toolkit to identify gene pairs which are d-colocalized from single molecule measurement data e.g. MERFISH or SeqFISH.
+  A gene pair is d-colocalized when their transcripts are within distance d across many cells.
+project_home: https://github.com/bhavaygg/InSTAnT
+documentation_home: https://github.com/bhavaygg/InSTAnT/blob/main/README.md
+tags:
+  - subcellular spatial analysis
+publications:
+  - 10.21203/rs.3.rs-2481749/v1
+install:
+  pypi: sc-instant
+license: MIT
+version: v1.1
+authors:
+  - bhavaygg
+  - anurendra
+test_command: |
+  pip install sc-instant
