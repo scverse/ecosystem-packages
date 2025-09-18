@@ -18,6 +18,8 @@ tags:
   - differential-abundance
   - mahalanobis-distance
   - gaussian-process
+  - phenotypic manifold
+  - continuous representation
   - jax
   - anndata
 license: GPL-3.0-or-later
