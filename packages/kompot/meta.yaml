@@ -25,6 +25,7 @@ tags:
 license: GPL-3.0-or-later
 version: v0.4.3
 authors:
-  - dotto
+  - katosh
+  - ManuSetty
 test_command: |
   pip install ".[dev]" && pytest
