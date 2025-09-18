@@ -2,13 +2,13 @@ fail_fast: false
 default_language_version:
   python: python3
 default_stages:
-  - commit
-  - push
+  - pre-commit
+  - pre-push
 minimum_pre_commit_version: 2.16.0
 repos:
   # all files
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: detect-private-key
       - id: check-ast
@@ -23,13 +23,13 @@ repos:
       - id: prettier
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.28.2
+    rev: 0.33.3
     hooks:
       - id: check-jsonschema
         files: "schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.28.2
+    rev: 0.33.3
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
@@ -45,7 +45,7 @@ repos:
         exclude: "^packages/.*/meta.yaml$"
   # template repo registry
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.3
+    rev: v0.13.0
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
