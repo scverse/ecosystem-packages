@@ -1,0 +1,25 @@
+name: scXpand
+description: |
+  scXpand is a machine learning framework for pan-cancer detection of T-cell clonal expansion
+  directly from single-cell RNA sequencing (scRNA-seq), without paired T-cell receptor (TCR) sequencing.
+project_home: https://github.com/yizhak-lab-ccg/scXpand
+documentation_home: https://scxpand.readthedocs.io/en/latest/
+tutorials_home: https://scxpand.readthedocs.io/en/latest/
+publications:
+  - 10.1101/2025.09.14.676069
+install:
+  pypi: scxpand, scxpand-cuda (GPU-supported version)
+tags:
+  - cancer
+  - scRNA-seq
+  - scTCR-seq
+  - T-cell clonal expansion
+  - machine learning
+license: MIT
+version: v0.4.1
+authors:
+  - ronamit
+  - ofirshorer
+  - yizhak-lab-ccg
+test_command: |
+  pip install ".[dev]" && pytest
