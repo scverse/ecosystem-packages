@@ -22,4 +22,4 @@ authors:
   - ofirshorer
   - yizhak-lab-ccg
 test_command: |
-  pip install ".[dev]" && pytest
+  pip install -e ".[dev]" && pytest --cov=src/scxpand  -n auto
