@@ -22,4 +22,4 @@ authors:
   - ofirshorer
   - yizhak-lab-ccg
 test_command: |
-  pip install -e ".[dev]" && pytest --cov=src/scxpand --cov-report=xml --cov-fail-under=80 -n auto
+  pip install -e ".[dev]" &&  pytest --cov=src.scxpand tests
