@@ -29,7 +29,7 @@ source = "vcs"
 fallback-version = "0.0"
 
 [tool.hatch.envs.default]
-python = "3.11"
+python = "3.13"
 
 [tool.ruff]
 line-length = 120
