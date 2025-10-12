@@ -118,6 +118,7 @@
 - url: https://github.com/scverse/spatial-sample-aggregation
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
+- url: https://github.com/scverse/pertpy
 - url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/srivarra/anatomize
 - url: https://github.com/srivarra/annsel
@@ -132,6 +133,7 @@
 - url: https://github.com/theislab/cellflow_reproducibility
 - url: https://github.com/theislab/devVI
 - url: https://github.com/theislab/ehrdata
+- url: https://github.com/theislab/ehrapy
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/mapqc
 - url: https://github.com/theislab/multigrate
