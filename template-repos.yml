@@ -50,6 +50,7 @@
 - url: https://github.com/bioFAM/scDoRI
 - url: https://github.com/blengerich/auto_ehr
 - url: https://github.com/cameronraysmith/perturbvelo
+- url: https://github.com/carmonalab/pyucell
 - url: https://github.com/clinicalomx/napari-prism
 - url: https://github.com/cobioda/scispy
 - url: https://github.com/const-ae/pyLemur
@@ -95,6 +96,8 @@
 - url: https://github.com/mumichae/scAtlasTb-utils
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/peng-lab/hescape
+- url: https://github.com/pinellolab/PerTurbo
+- url: https://github.com/pinellolab/cell2net
 - url: https://github.com/quadbio/atac_mapper
 - url: https://github.com/quadbio/cell-annotator
 - url: https://github.com/quadbio/cellmapper
@@ -102,6 +105,7 @@
 - url: https://github.com/quadbio/slurm_sweep
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/decoupler-py
+- url: https://github.com/scverse/annbatch
 - url: https://github.com/scverse/anndata-plot
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
@@ -111,6 +115,7 @@
 - url: https://github.com/scverse/formulaic-contrasts
 - url: https://github.com/scverse/genomic-features
 - url: https://github.com/scverse/multi-condition-comparisions
+- url: https://github.com/scverse/pertpy
 - url: https://github.com/scverse/pytometry
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
@@ -118,7 +123,6 @@
 - url: https://github.com/scverse/spatial-sample-aggregation
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
-- url: https://github.com/scverse/pertpy
 - url: https://github.com/smgoggin10/ESCHR
 - url: https://github.com/srivarra/anatomize
 - url: https://github.com/srivarra/annsel
@@ -132,8 +136,8 @@
 - url: https://github.com/theislab/cell_flow_perturbation
 - url: https://github.com/theislab/cellflow_reproducibility
 - url: https://github.com/theislab/devVI
-- url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/ehrapy
+- url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/mapqc
 - url: https://github.com/theislab/multigrate
@@ -143,4 +147,5 @@
 - url: https://github.com/theislab/troutpy
 - url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module
+- url: https://github.com/yizhak-lab-ccg/scXpand
 - url: https://github.com/zunderlab/eschr
