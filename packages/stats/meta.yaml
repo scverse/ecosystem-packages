@@ -1,0 +1,15 @@
+name: stats
+description: |
+  Statistics for the scverse.
+project_home: https://github.com/scverse/stats
+documentation_home: https://scverse.org/stats/
+install: {}
+tags:
+  - statistics
+  - metrics
+  - infrastructure
+license: MIT
+version: 1.0.0
+authors:
+  - scverse
+category: core-infrastructure
