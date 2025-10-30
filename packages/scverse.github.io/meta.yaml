@@ -1,0 +1,15 @@
+name: scverse.github.io
+description: |
+  scverse.org website
+project_home: https://github.com/scverse/scverse.github.io
+documentation_home: https://scverse.org
+install: {}
+tags:
+  - website
+  - documentation
+  - infrastructure
+license: BSD-3-Clause
+version: 1.0.0
+authors:
+  - scverse
+category: core-infrastructure

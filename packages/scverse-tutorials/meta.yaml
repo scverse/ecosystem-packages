@@ -1,0 +1,17 @@
+name: scverse-tutorials
+description: |
+  Tutorials for learning scverse
+project_home: https://github.com/scverse/scverse-tutorials
+documentation_home: https://scverse-tutorials.readthedocs.io/en/latest/
+tutorials_home: https://scverse-tutorials.readthedocs.io/en/latest/
+install: {}
+tags:
+  - tutorials
+  - education
+  - documentation
+  - infrastructure
+license: BSD-3-Clause
+version: 1.0.0
+authors:
+  - scverse
+category: core-infrastructure
