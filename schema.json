@@ -220,7 +220,12 @@
         },
         "category": {
             "type": "string",
-            "enum": ["core-framework", "core-datastructure", "core-infrastructure", "ecosystem"],
+            "enum": [
+                "core-framework",
+                "core-datastructure",
+                "core-infrastructure",
+                "ecosystem"
+            ],
             "description": "Package category for the website and statistics."
         }
     },
