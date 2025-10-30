@@ -19,3 +19,4 @@ test_command: |
   pip install poetry && \
   poetry install --extras "full" && \
   poetry run pytest --disable-warnings .
+category: ecosystem

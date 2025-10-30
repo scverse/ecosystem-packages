@@ -31,3 +31,4 @@ authors:
   - dpeerlab
   - katosh
 test_command: pip install -e '.' && pip install flake8 pytest coverage typing-extensions && pytest
+category: ecosystem

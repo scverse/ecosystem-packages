@@ -23,3 +23,4 @@ authors:
   - WeilerP
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

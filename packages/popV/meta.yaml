@@ -14,3 +14,4 @@ version: v0.5.2
 authors:
   - canergen
 test_command: pip install -e '.[test]' && pytest
+category: ecosystem

@@ -24,3 +24,4 @@ test_command: |
   pip install rpy2==3.4.2
   pip install .
   pytest scFates/tests/test_w_plots.py
+category: ecosystem

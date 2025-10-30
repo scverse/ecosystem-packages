@@ -28,3 +28,4 @@ authors:
   - Zethson
   - wlason
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

@@ -21,3 +21,4 @@ test_command: |
   python -m pip install -r requirements.txt
   python -m pip install -e .
   pytest -vv --cov --cov-report xml
+category: ecosystem

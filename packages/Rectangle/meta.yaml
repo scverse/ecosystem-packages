@@ -16,3 +16,4 @@ authors:
   - bernheder
 test_command: |
   pip install ."[dev,test]" && pytest
+category: ecosystem

@@ -15,3 +15,4 @@ authors:
   - WeilerP
   - VolkerBergen
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

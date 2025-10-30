@@ -25,3 +25,4 @@ authors:
   - ysaeys
   - SofieVG
 test_command: pip install "." && pytest
+category: ecosystem

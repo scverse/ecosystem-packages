@@ -15,3 +15,4 @@ version: v0.1.2
 authors:
   - Marius1311
 test_command: pip install -e '.[test]' && pytest
+category: ecosystem

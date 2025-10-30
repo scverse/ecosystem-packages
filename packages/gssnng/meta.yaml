@@ -21,3 +21,4 @@ authors:
   - redst4r
 test_command: |
   git clone git@github.com:IlyaLab/gssnng.git && pip install gssnng && pip install pytest && cd gssnng/ && pytest
+category: ecosystem

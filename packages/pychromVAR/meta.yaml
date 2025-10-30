@@ -15,3 +15,4 @@ authors:
   - Zhijian Li
 test_command: |
   test_command: pip install ".[test]" && pytest
+category: ecosystem

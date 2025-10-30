@@ -24,3 +24,4 @@ authors:
   - michalk8
   - mvinyard
 test_command: pip install ".[test]" && pytest
+category: ecosystem

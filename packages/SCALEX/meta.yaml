@@ -17,3 +17,4 @@ version: v1.0.3
 authors:
   - Lei Xiong
 test_command: pip install ".[test]" && pytest
+category: ecosystem

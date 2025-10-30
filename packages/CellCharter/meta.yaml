@@ -19,3 +19,4 @@ authors:
   - marcovarrone
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem
