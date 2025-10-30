@@ -1,0 +1,20 @@
+name: rapids-singlecell
+description: |
+  rapids-singlecell is a GPU-accelerated single-cell analysis library that serves as a
+  drop-in replacement for scanpy, squidpy, and decoupler.
+project_home: https://github.com/scverse/rapids_singlecell
+documentation_home: https://rapids-singlecell.readthedocs.io/en/latest/
+tutorials_home: https://rapids-singlecell.readthedocs.io/en/latest/tutorials.html
+install:
+  pypi: rapids-singlecell
+tags:
+  - GPU acceleration
+  - single-cell
+  - RAPIDS
+  - CUDA
+license: MIT
+version: 0.13.3
+authors:
+  - Intron7
+test_command: pip install ".[test]" && pytest
+category: core-framework

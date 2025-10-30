@@ -1,0 +1,25 @@
+name: Squidpy
+description: |
+  Squidpy is a tool for the analysis and visualization of spatial molecular data. It builds
+  on top of scanpy and anndata, from which it inherits modularity and scalability. It provides
+  analysis tools that leverages the spatial coordinates of the data, as well as tissue images
+  if available.
+project_home: https://github.com/scverse/squidpy
+documentation_home: https://squidpy.readthedocs.io/
+tutorials_home: https://squidpy.readthedocs.io/en/latest/notebooks/tutorials/index.html
+publications:
+  - 10.1038/s41592-021-01358-2
+install:
+  pypi: squidpy
+tags:
+  - spatial omics
+  - spatial transcriptomics
+  - image analysis
+license: BSD-3-Clause
+version: 1.6.5
+authors:
+  - giovp
+  - michalk8
+  - LucaMarconato
+test_command: pip install ".[test]" && pytest
+category: core-framework

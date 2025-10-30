@@ -1,0 +1,23 @@
+name: decoupler
+description: |
+  decoupler is a framework containing different enrichment statistical methods to extract
+  biologically driven scores from omics data within a unified framework.
+project_home: https://github.com/scverse/decoupler
+documentation_home: https://decoupler-py.readthedocs.io/en/latest/
+tutorials_home: https://decoupler-py.readthedocs.io/en/latest/notebooks/101_getting_started.html
+publications:
+  - 10.1093/bioadv/vbac016
+install:
+  pypi: decoupler
+  conda: conda-forge::decoupler-py
+tags:
+  - enrichment analysis
+  - pathway analysis
+  - gene sets
+  - functional annotation
+license: BSD-3-Clause
+version: 2.1.1
+authors:
+  - PauBadiaM
+test_command: pip install ".[test]" && pytest
+category: core-framework
