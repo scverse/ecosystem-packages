@@ -1,0 +1,15 @@
+name: governance
+description: |
+  Governance docs for scverse
+project_home: https://github.com/scverse/governance
+documentation_home: https://scverse.org/about
+install: {}
+tags:
+  - governance
+  - documentation
+  - infrastructure
+license: BSD-3-Clause
+version: 1.0.0
+authors:
+  - scverse
+category: core-infrastructure
