@@ -26,14 +26,14 @@ repos:
     rev: 0.34.1
     hooks:
       - id: check-jsonschema
-        files: "schema.json"
+        files: "scripts/src/ecosystem_scripts/schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.34.1
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
-        args: ["--schemafile", "schema.json"]
+        args: ["--schemafile", "scripts/src/ecosystem_scripts/schema.json"]
   - repo: local
     hooks:
       - id: forbid-to-commit

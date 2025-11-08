@@ -15,6 +15,6 @@ tags:
   - benchmark
 license: MIT
 version: v1.2.1
-authors:
+contact:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test

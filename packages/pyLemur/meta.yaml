@@ -14,6 +14,6 @@ tags:
   - multi-condition
 license: MIT
 version: v0.1.0
-authors:
+contact:
   - Constantin Ahlmann-Eltze
 test_command: pip install -e '.[dev]' && pytest

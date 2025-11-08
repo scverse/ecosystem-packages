@@ -16,6 +16,6 @@ tags:
   - utilities
 license: MIT
 version: v1.1.4
-authors:
+contact:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test

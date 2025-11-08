@@ -26,7 +26,7 @@ tags:
   - scrna-seq-analysis
 license: GPL-2.0-or-later
 version: v1.3.3
-authors:
+contact:
   - ManuSetty
   - dpeerlab
   - katosh

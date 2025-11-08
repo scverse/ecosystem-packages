@@ -9,9 +9,7 @@ description = "scripts for ecosystem package data"
 readme = "../README.md"
 requires-python = ">=3.11"
 license = "GPL-3.0"
-authors = [
-    { name = "Philipp A.", email = "flying-sheep@web.de" },
-]
+authors = [{ name = "Philipp A.", email = "flying-sheep@web.de" }]
 urls.Documentation = "https://github.com/scverse/ecosystem-packages#readme"
 urls.Issues = "https://github.com/scverse/ecosystem-packages/issues"
 urls.Source = "https://github.com/scverse/ecosystem-packages"
@@ -19,10 +17,14 @@ dependencies = [
     "rich",
     "PyGitHub",
     "PyYAML",
+    "httpx",
+    "pillow>=12.0.0",
+    "jsonschema>=4.25.1",
 ]
 
 [project.scripts]
 register-template-repos = "ecosystem_scripts.template_repo_registry:main"
+validate-registry = "ecosystem_scripts.validate_registry:main"
 
 [tool.hatch.version]
 source = "vcs"

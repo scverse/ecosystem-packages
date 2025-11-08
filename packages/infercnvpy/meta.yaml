@@ -9,7 +9,7 @@ tags:
   - CNV
 license: BSD-3-Clause
 version: v0.3.0
-authors:
+contact:
   - grst
 test_command: |
   pip install ".[test]" && pytest

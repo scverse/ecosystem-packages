@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/scverse/ecosystem-packages/main/schema.json",
+    "$id": "https://raw.githubusercontent.com/scverse/ecosystem-packages/main/scripts/src/ecosystem_scripts/schema.json",
     "title": "Scverse Ecosystem Packages",
     "description": "An approved scverse ecosystem package that fulfils some minimal requirements",
     "type": "object",
@@ -205,14 +205,19 @@
             "description": "The version of the package at the point when this entry was created or updated",
             "type": "string"
         },
-        "authors": {
-            "description": "List of authors/maintainers of the package. Entries must be Github user IDs.",
+        "contact": {
+            "description": "Point of contact for this package. This does not need to be the full list of maintainers, but whoever feels responsible for this metadata entry and serves as a point of contact for scverse. Entries must be Github user IDs.",
             "type": "array",
             "items": {
                 "type": "string"
             },
             "minItems": 1,
             "uniqueItems": true
+        },
+        "logo": {
+            "description": "Path to the logo (relative to meta.yaml). Should be either logo.png, logo.webp, or logo.svg. In case of a PNG image, it must fit in a bounding box of 512x512px and one dimention must be exactly 512px.",
+            "type": "string",
+            "pattern": "logo\\.(svg|png|webp)"
         },
         "test_command": {
             "description": "A shell command to install the package and execute the tests, assuming you are inside a freshly cloned copy of the package repository. Often this will be `pip install \".[test]\" && pytest`",
@@ -228,6 +233,6 @@
         "license",
         "tags",
         "version",
-        "authors"
+        "contact"
     ]
 }

@@ -16,7 +16,7 @@ tags:
   - scrnaseq
 license: MIT
 version: 1.0.0
-authors:
+contact:
   - saroudant
 test_command: |
   pip install ."[dev]" && pytest

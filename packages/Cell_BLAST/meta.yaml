@@ -11,7 +11,7 @@ tags:
   - BLAST
 license: MIT
 version: v0.3.8
-authors:
+contact:
   - Jeff1995
 test_command: |
   pip install --upgrade pip flit
