@@ -12,6 +12,6 @@ tags:
 license: MIT
 version: v0.0.3
 contact:
-  - Zhijian Li
+  - lzj1769
 test_command: |
   test_command: pip install ".[test]" && pytest

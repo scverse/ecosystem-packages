@@ -13,5 +13,5 @@ tags:
 license: GPL-3.0-or-later
 version: v1.1.0
 contact:
-  - Peisen Sun
+  - PSSUN
 test_command: pip install "." && pytest

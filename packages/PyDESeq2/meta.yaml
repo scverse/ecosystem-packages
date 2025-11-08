@@ -18,6 +18,5 @@ contact:
   - BorisMuzellec
   - maikia
   - vcabeli
-  - mandreux-owkin
 test_command: |
   pip install ."[dev]" && pytest

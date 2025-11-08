@@ -20,6 +20,5 @@ contact:
   - yozhikoff
   - mayerdev
   - emdann
-  - Alexander Aivazidis
 test_command: |
   pip install ".[dev]" && pytest

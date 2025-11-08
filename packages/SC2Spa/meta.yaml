@@ -18,6 +18,5 @@ tags:
 license: BSD-3-Clause
 version: v1.2
 contact:
-  - Linbu Liao
-  - Kyoung Jae Won
+  - linbuliao
 test_command: pip install "." && pytest

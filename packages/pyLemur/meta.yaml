@@ -15,5 +15,5 @@ tags:
 license: MIT
 version: v0.1.0
 contact:
-  - Constantin Ahlmann-Eltze
+  - const-ae
 test_command: pip install -e '.[dev]' && pytest

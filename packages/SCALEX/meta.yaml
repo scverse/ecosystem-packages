@@ -15,5 +15,5 @@ tags:
 license: MIT
 version: v1.0.3
 contact:
-  - Lei Xiong
+  - jsxlei
 test_command: pip install ".[test]" && pytest

@@ -8,7 +8,7 @@ tutorials_home: https://scxpand.readthedocs.io/en/latest/
 publications:
   - 10.1101/2025.09.14.676069
 install:
-  pypi: scxpand, scxpand-cuda (GPU-supported version)
+  pypi: scxpand
 tags:
   - cancer
   - scRNA-seq

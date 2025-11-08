@@ -16,5 +16,5 @@ tags:
 license: MIT
 version: v1.2.1
 contact:
-  - jkobject (jeremie kalfon)
+  - jkobject
 test_command: pip install . && make test
