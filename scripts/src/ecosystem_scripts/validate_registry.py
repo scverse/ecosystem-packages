@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Valididate packages' meta.yaml and generate an output directory with json/images to be uploaded on github pages"""
+"""Validate packages' meta.yaml and generate an output directory with json/images to be uploaded on Github Pages"""
 
 from __future__ import annotations
 
@@ -63,7 +63,7 @@ class LinkChecker:
 
 
 class GitHubUserValidator:
-    """Validate GitHub usernames against the GitHub API."""
+    """Validate GitHub usernames using the GitHub API."""
 
     def __init__(self, github_token: str | None = None):
         self.github_token = github_token
@@ -79,7 +79,6 @@ class GitHubUserValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        # Skip if already validated
         if username in self.validated_users:
             return
 
@@ -116,7 +115,6 @@ class PyPIValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        # Skip if already validated
         if package_name in self.validated_packages:
             return
 
@@ -134,7 +132,7 @@ class PyPIValidator:
 
 
 class CondaValidator:
-    """Validate Conda package identifiers against the Anaconda API."""
+    """Validate Conda package identifiers using the Anaconda API."""
 
     def __init__(self):
         self.validated_packages: set[str] = set()
@@ -149,7 +147,6 @@ class CondaValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        # Skip if already validated
         if package_spec in self.validated_packages:
             return
 
@@ -178,7 +175,7 @@ class CondaValidator:
 
 
 class CRANValidator:
-    """Validate CRAN package names against the CRAN API."""
+    """Validate CRAN package names using the CRAN API."""
 
     def __init__(self):
         self.validated_packages: set[str] = set()
@@ -193,7 +190,6 @@ class CRANValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        # Skip if already validated
         if package_name in self.validated_packages:
             return
 
@@ -215,7 +211,7 @@ class CRANValidator:
 
 
 def _check_image(img_path: Path) -> None:
-    """Check that the image exists and that it is either SVG or fits into the 512x512 bounding box."""
+    """Validates that the image exists and that it is either a SVG or fits into the 512x512 bounding box."""
     if not img_path.exists():
         msg = f"Image does not exist: {img_path}"
         raise ValueError(msg)

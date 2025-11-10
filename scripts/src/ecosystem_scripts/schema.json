@@ -207,7 +207,7 @@
             "type": "string"
         },
         "contact": {
-            "description": "Point of contact for this package. This does not need to be the full list of maintainers, but whoever feels responsible for this metadata entry and serves as a point of contact for scverse. Entries must be Github user IDs.",
+            "description": "Point of contact for this package. Does not need to be the full list of maintainers. Entries must be Github user IDs.",
             "type": "array",
             "items": {
                 "type": "string"
@@ -216,7 +216,7 @@
             "uniqueItems": true
         },
         "logo": {
-            "description": "Path to the logo (relative to meta.yaml). Should be either logo.png, logo.webp, or logo.svg. In case of a PNG image, it must fit in a bounding box of 512x512px and one dimention must be exactly 512px.",
+            "description": "Path to the logo (relative to meta.yaml). Should be either logo.png, logo.webp, or logo.svg. In case of a PNG image, it must fit in a bounding box of 512x512px and one dimension must be exactly 512px.",
             "type": "string",
             "pattern": "logo\\.(svg|png|webp)"
         },

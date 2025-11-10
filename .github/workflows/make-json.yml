@@ -20,7 +20,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
         with:
           cache-dependency-glob: scripts/pyproject.toml
-      - name: Excecute validation script and create output directory
+      - name: Execute validation script and create output directory
         run: |
           uvx --from ./scripts validate-registry --registry-dir packages --outdir=build
         env:
