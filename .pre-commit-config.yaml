@@ -21,6 +21,10 @@ repos:
     rev: v3.6.2
     hooks:
       - id: prettier
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.6.0
+    hooks:
+      - id: pyproject-fmt
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.34.1
