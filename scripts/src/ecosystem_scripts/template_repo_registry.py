@@ -12,15 +12,17 @@ from __future__ import annotations
 
 import os
 import sys
-from collections.abc import Iterable
 from logging import basicConfig, getLogger
 from pathlib import Path
-from typing import NotRequired, TypedDict
+from typing import TYPE_CHECKING, NotRequired, TypedDict
 
 from github import Github
 from rich.logging import RichHandler
 from rich.traceback import install
 from yaml import safe_dump, safe_load
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Sequence
 
 log = getLogger(__name__)
 
@@ -63,7 +65,7 @@ def setup() -> None:
     install(show_locals=True)
 
 
-def main(args: Iterable[str] | None = None) -> None:
+def main(args: Sequence[str] | None = None) -> None:
     setup()
     if args is None:
         args = sys.argv[1:]

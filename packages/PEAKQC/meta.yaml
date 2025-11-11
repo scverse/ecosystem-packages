@@ -13,5 +13,6 @@ tags:
 license: MIT
 version: 0.1.3
 contact:
-  - loosolab
+  - jan1034
+  - mlooso
 test_command: pip install . && pytest
