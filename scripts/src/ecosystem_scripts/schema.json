@@ -31,24 +31,22 @@
         },
         "install": {
             "type": "object",
-            "items": {
-                "properties": {
-                    "pypi": {
-                        "description": "PyPI identifier",
-                        "type": "string"
-                    },
-                    "conda": {
-                        "description": "Conda identifier, including channel (e.g. conda-forge::scanpy)",
-                        "type": "string",
-                        "pattern": "(.*)::(.*)"
-                    },
-                    "cran": {
-                        "description": "CRAN identifier",
-                        "type": "string"
-                    }
+            "properties": {
+                "pypi": {
+                    "description": "PyPI identifier",
+                    "type": "string"
+                },
+                "conda": {
+                    "description": "Conda identifier, including channel (e.g. conda-forge::scanpy)",
+                    "type": "string",
+                    "pattern": "(.*)::(.*)"
+                },
+                "cran": {
+                    "description": "CRAN identifier",
+                    "type": "string"
                 }
             },
-            "minItems": 1
+            "minProperties": 1
         },
         "license": {
             "description": "The license of the code. Must be a OSI-approved SPDX license identifier (see https://spdx.org/licenses/)",
