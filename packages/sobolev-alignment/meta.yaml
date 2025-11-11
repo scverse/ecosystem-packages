@@ -20,3 +20,4 @@ authors:
   - saroudant
 test_command: |
   pip install ."[dev]" && pytest
+category: ecosystem

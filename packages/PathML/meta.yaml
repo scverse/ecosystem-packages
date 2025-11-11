@@ -25,3 +25,4 @@ authors:
   - Yu-AnChen
   - jzhang1031
 test_command: pip install "." && pytest
+category: ecosystem

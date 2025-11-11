@@ -19,3 +19,4 @@ version: v1.1.4
 authors:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test
+category: ecosystem

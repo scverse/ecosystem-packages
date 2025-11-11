@@ -1,0 +1,21 @@
+name: Muon
+description: |
+  muon is a Python framework for multimodal omics analysis. It provides functionality
+  for working with multimodal data, including preprocessing, integration, and visualization.
+project_home: https://github.com/scverse/muon
+documentation_home: https://muon.readthedocs.io/en/latest/
+tutorials_home: https://muon-tutorials.readthedocs.io/en/latest/
+publications:
+  - 10.1186/s13059-021-02577-8
+install:
+  pypi: muon
+tags:
+  - multimodal
+  - multi-omics
+  - integration
+license: BSD-3-Clause
+version: 0.1.7
+authors:
+  - gtca
+test_command: pip install ".[test]" && pytest
+category: core-framework

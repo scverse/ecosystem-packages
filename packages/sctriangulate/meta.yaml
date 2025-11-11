@@ -15,3 +15,4 @@ version: v0.12.0
 authors:
   - frankligy
 test_command: pip install "." && pytest
+category: ecosystem

@@ -18,3 +18,4 @@ version: v1.2.1
 authors:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test
+category: ecosystem

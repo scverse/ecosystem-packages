@@ -21,3 +21,4 @@ authors:
   - Linbu Liao
   - Kyoung Jae Won
 test_command: pip install "." && pytest
+category: ecosystem

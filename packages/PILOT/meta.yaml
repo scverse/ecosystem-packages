@@ -48,3 +48,4 @@ test_command: |
   pip install pilotpy
   conda install pytest
   cd test && pytest test_pilot.py
+category: ecosystem

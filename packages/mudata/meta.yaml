@@ -1,0 +1,23 @@
+name: MuData
+description: |
+  MuData is a format for annotated multimodal datasets where each modality is represented
+  by an AnnData object. MuData's reference implementation is in Python, and the cross-language
+  functionality is achieved via HDF5-based .h5mu files with libraries in R and Julia.
+project_home: https://github.com/scverse/mudata
+documentation_home: https://mudata.readthedocs.io/en/latest/
+tutorials_home: https://mudata.readthedocs.io/en/latest/notebooks/quickstart.html
+publications:
+  - 10.1186/s13059-021-02577-8
+install:
+  pypi: mudata
+  conda: conda-forge::mudata
+tags:
+  - data structure
+  - multimodal
+  - multi-omics
+license: BSD-3-Clause
+version: 0.3.2
+authors:
+  - gtca
+  - ilia-kats
+category: core-datastructure

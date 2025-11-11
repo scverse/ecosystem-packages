@@ -16,3 +16,4 @@ version: v0.2.3
 authors:
   - almaan
 test_command: pip install "." && pytest
+category: ecosystem

@@ -21,3 +21,4 @@ authors:
   - mandreux-owkin
 test_command: |
   pip install ."[dev]" && pytest
+category: ecosystem

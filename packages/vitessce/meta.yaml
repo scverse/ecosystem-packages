@@ -32,3 +32,4 @@ authors:
   - romanhaa
   - will-moore
 test_command: pip install "." && pytest
+category: ecosystem

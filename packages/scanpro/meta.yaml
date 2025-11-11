@@ -16,3 +16,4 @@ version: 0.2.0
 authors:
   - loosolab
 test_command: pip install . && pytest
+category: ecosystem

@@ -42,3 +42,4 @@ test_command: |
   pip install .
   # command to run tests
   pytest -v
+category: ecosystem

@@ -17,3 +17,4 @@ test_command: |
   pip install --upgrade pip flit
   flit install -s
   cd test && python test.py
+category: ecosystem
