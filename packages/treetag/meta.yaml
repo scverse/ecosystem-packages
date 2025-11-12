@@ -1,0 +1,20 @@
+name: TreeTag
+description: |
+  Fast hierarchical cell-type tagging for single-cell data using YAML ontologies and marker dictionaries.
+  Works with AnnData/Scanpy. Includes marker pruning, KNN-based smoothing, and optional doublet detection.
+project_home: https://github.com/valleyofdawn/TreeTag
+documentation_home: https://github.com/valleyofdawn/TreeTag#readme
+tutorials_home: https://github.com/valleyofdawn/TreeTag#readme
+install:
+  pypi: treetag
+tags:
+  - annotation
+  - cell-type
+  - scanpy
+  - markers
+license: MIT
+version: v0.1.1
+authors:
+  - valleyofdawn
+test_command: |
+  pip install '.[test]' && pytest -q
