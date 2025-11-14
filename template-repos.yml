@@ -107,6 +107,7 @@
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/decoupler-py
 - url: https://github.com/scverse/annbatch
+- url: https://github.com/scverse/anndata
 - url: https://github.com/scverse/anndata-plot
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
@@ -118,6 +119,7 @@
 - url: https://github.com/scverse/multi-condition-comparisions
 - url: https://github.com/scverse/pertpy
 - url: https://github.com/scverse/pytometry
+- url: https://github.com/scverse/scanpy
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
 - url: https://github.com/scverse/simple-scvi
