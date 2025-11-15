@@ -20,7 +20,7 @@ import jsonschema
 import yaml
 from PIL import Image
 
-from ._logging import log
+from ._logging import log, setup_logging
 
 if TYPE_CHECKING:
     from collections.abc import Iterable, Mapping, Sequence
@@ -37,6 +37,16 @@ IMAGE_SIZE = 512
 @dataclass
 class ValidationError:
     msg: str
+
+
+class ErrorList(list):
+    """List of error messages. Ignores None objects, and logs an error when one gets added."""
+
+    def append(self, object):  # noqa A002
+        if object is None:
+            return
+        log.error(f"Validation error: {object}")
+        return super().append(object)
 
 
 class LinkChecker:
@@ -257,7 +267,7 @@ def validate_packages(
     conda_validator = CondaValidator()
     cran_validator = CRANValidator()
 
-    errors: dict[str, str] = defaultdict(list)
+    errors: dict[str, str] = defaultdict(ErrorList)
     package_metadata = []
 
     for tmp_meta_file in sorted(registry_dir.rglob("meta.yaml"), key=lambda x: x.parent.name):
@@ -344,6 +354,7 @@ class Args(argparse.Namespace):
 
 def main(args: Sequence[str] | None = None) -> None:
     """Main entry point for the validate-registry command."""
+    setup_logging()
     if args is None:
         args = sys.argv[1:]
 
@@ -377,9 +388,6 @@ def main(args: Sequence[str] | None = None) -> None:
     errors, packages = validate_packages(schema_file, parsed_args.registry_dir, github_token)
 
     if any(errors.values()):
-        for pkg_id, pkg_errors in errors.items():
-            for tmp_err in pkg_errors:
-                log.error(f"Validation error in {pkg_id}: {tmp_err}")
         log.error("Validation error occured in at least one package. Exiting.")
         sys.exit(1)
     else:

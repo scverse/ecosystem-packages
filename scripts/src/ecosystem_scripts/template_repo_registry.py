@@ -18,7 +18,7 @@ from typing import TYPE_CHECKING, NotRequired, TypedDict
 from github import Github
 from yaml import safe_dump, safe_load
 
-from ._logging import log
+from ._logging import log, setup_logging
 
 if TYPE_CHECKING:
     from collections.abc import Iterable, Sequence
@@ -58,6 +58,7 @@ def merge_repos(known: Iterable[Repo], new: Iterable[str]) -> list[Repo]:
 
 
 def main(args: Sequence[str] | None = None) -> None:
+    setup_logging()
     if args is None:
         args = sys.argv[1:]
     if len(args) != 1:
