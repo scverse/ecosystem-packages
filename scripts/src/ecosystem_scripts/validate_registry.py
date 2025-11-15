@@ -8,8 +8,9 @@ import json
 import os
 import shutil
 import sys
+from collections import defaultdict
+from dataclasses import dataclass
 from importlib.resources import files
-from logging import basicConfig, getLogger
 from pathlib import Path
 from textwrap import dedent
 from typing import TYPE_CHECKING, cast
@@ -18,20 +19,24 @@ import httpx
 import jsonschema
 import yaml
 from PIL import Image
-from rich.logging import RichHandler
-from rich.traceback import install
+
+from ._logging import log
 
 if TYPE_CHECKING:
-    from collections.abc import Generator, Iterable, Mapping, Sequence
+    from collections.abc import Iterable, Mapping, Sequence
     from importlib.resources.abc import Traversable
 
     from .schema import ScverseEcosystemPackages  # pyright: ignore[reportMissingModuleSource]
 
-log = getLogger(__name__)
 
 # Constants
 HERE = Path(__file__).parent
 IMAGE_SIZE = 512
+
+
+@dataclass
+class ValidationError:
+    msg: str
 
 
 class LinkChecker:
@@ -40,7 +45,7 @@ class LinkChecker:
     def __init__(self) -> None:
         self.known_links: set[str] = set()
 
-    def check_and_register(self, url: str, context: str) -> None:
+    def check_and_register(self, url: str, context: str) -> None | ValidationError:
         """Check if URL is duplicate, validate it exists, and register it.
 
         Parameters
@@ -52,12 +57,12 @@ class LinkChecker:
         """
         if url in self.known_links:
             msg = f"{context}: Duplicate link: {url}"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         response = httpx.head(url, follow_redirects=True)
         if response.status_code != httpx.codes.OK:
             msg = f"URL {url} is not reachable (error {response.status_code}). "
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         self.known_links.add(url)
 
@@ -69,7 +74,7 @@ class GitHubUserValidator:
         self.github_token = github_token
         self.validated_users: set[str] = set()
 
-    def validate_usernames(self, usernames: Sequence[str], context: str) -> None:
+    def validate_usernames(self, usernames: Sequence[str], context: str) -> None | ValidationError:
         """Validate that a GitHub username exists.
 
         Parameters
@@ -92,13 +97,13 @@ class GitHubUserValidator:
 
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r} (error {response.status_code})"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         gql_response = response.json()
         if errors := gql_response.get("errors"):
             error_msgs = "\n".join(f"- {error['message']}" for error in errors)
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r}:\n{error_msgs}"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         self.validated_users |= set(unvalidated)
         log.info(f"Validated GitHub users: {unvalidated!r}")
@@ -110,7 +115,7 @@ class PyPIValidator:
     def __init__(self) -> None:
         self.validated_packages: set[str] = set()
 
-    def validate_package(self, package_name: str, context: str) -> None:
+    def validate_package(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a PyPI package exists.
 
         Parameters
@@ -127,10 +132,10 @@ class PyPIValidator:
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: PyPI package {package_name!r} does not exist"
-            raise ValueError(msg)
+            return ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate PyPI package {package_name!r} (error {response.status_code})"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         self.validated_packages.add(package_name)
         log.info(f"Validated PyPI package: {package_name}")
@@ -142,7 +147,7 @@ class CondaValidator:
     def __init__(self) -> None:
         self.validated_packages: set[str] = set()
 
-    def validate_package(self, package_spec: str, context: str) -> None:
+    def validate_package(self, package_spec: str, context: str) -> None | ValidationError:
         """Validate that a Conda package exists.
 
         Parameters
@@ -158,7 +163,7 @@ class CondaValidator:
         # Parse channel and package name
         if "::" not in package_spec:
             msg = f"{context}: Invalid Conda package spec {package_spec!r} (expected format: channel::package)"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         channel, package_name = package_spec.split("::", 1)
 
@@ -170,10 +175,10 @@ class CondaValidator:
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: Conda package '{package_spec}' does not exist"
-            raise ValueError(msg)
+            return ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate Conda package '{package_spec}' (error {response.status_code})"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         self.validated_packages.add(package_spec)
         log.info(f"Validated Conda package: {package_spec}")
@@ -185,7 +190,7 @@ class CRANValidator:
     def __init__(self) -> None:
         self.validated_packages: set[str] = set()
 
-    def validate_package(self, package_name: str, context: str) -> None:
+    def validate_package(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a CRAN package exists.
 
         Parameters
@@ -206,20 +211,20 @@ class CRANValidator:
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: CRAN package '{package_name}' does not exist"
-            raise ValueError(msg)
+            return ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate CRAN package '{package_name}' (error {response.status_code})"
-            raise ValueError(msg)
+            return ValidationError(msg)
 
         self.validated_packages.add(package_name)
         log.info(f"Validated CRAN package: {package_name}")
 
 
-def _check_image(img_path: Path) -> None:
+def check_image(img_path: Path) -> None | ValidationError:
     """Validates that the image exists and that it is either a SVG or fits into the 512x512 bounding box."""
     if not img_path.exists():
         msg = f"Image does not exist: {img_path}"
-        raise ValueError(msg)
+        return ValidationError(msg)
     if img_path.suffix == ".svg":
         return
     with Image.open(img_path) as img:
@@ -232,58 +237,69 @@ def _check_image(img_path: Path) -> None:
             Actual dimensions (width, height): ({width}, ({height}))."
             """
         )
-        raise ValueError(msg)
+        return ValidationError(msg)
 
 
 def validate_packages(
     schema_file: Traversable, registry_dir: Path, github_token: str | None = None
-) -> Generator[dict, None, None]:
+) -> tuple[dict, list]:
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
     schema = json.loads(schema_file.read_bytes())
 
-    # using different checkers, because each of them may point to the same URL and this wouldn't qualify as duplicate
+    # using different link checkers,
+    # because each of them may point to the same URL and this wouldn't qualify as duplicate
     link_checker_home = LinkChecker()
     link_checker_docs = LinkChecker()
     link_checker_tutorials = LinkChecker()
+
     github_validator = GitHubUserValidator(github_token)
     pypi_validator = PyPIValidator()
     conda_validator = CondaValidator()
     cran_validator = CRANValidator()
 
+    errors: dict[str, str] = defaultdict(list)
+    package_metadata = []
+
     for tmp_meta_file in sorted(registry_dir.rglob("meta.yaml"), key=lambda x: x.parent.name):
         pkg_id = tmp_meta_file.parent.name
+        pkg_errors = errors[pkg_id]
         log.info(f"Validating {pkg_id}")
         with tmp_meta_file.open() as f:
             tmp_meta = cast("ScverseEcosystemPackages", yaml.load(f, yaml.SafeLoader))
 
-        jsonschema.validate(tmp_meta, schema)
+        try:
+            jsonschema.validate(tmp_meta, schema)
+        except jsonschema.ValidationError as e:
+            pkg_errors.append(str(e))
 
         # Check and register all links
-        link_checker_home.check_and_register(tmp_meta["project_home"], pkg_id)
-        link_checker_docs.check_and_register(tmp_meta["documentation_home"], pkg_id)
+        pkg_errors.append(link_checker_home.check_and_register(tmp_meta["project_home"], pkg_id))
+        pkg_errors.append(link_checker_docs.check_and_register(tmp_meta["documentation_home"], pkg_id))
         if url := tmp_meta.get("tutorials_home"):
-            link_checker_tutorials.check_and_register(url, pkg_id)
+            pkg_errors.append(link_checker_tutorials.check_and_register(url, pkg_id))
 
         # Validate GitHub usernames in contact field
         if usernames := tmp_meta.get("contact"):
-            github_validator.validate_usernames(usernames, pkg_id)
+            pkg_errors.append(github_validator.validate_usernames(usernames, pkg_id))
 
         # Validate install packages
         if install_info := tmp_meta.get("install"):
             if pypi_name := install_info.get("pypi"):
-                pypi_validator.validate_package(pypi_name, pkg_id)
+                pkg_errors.append(pypi_validator.validate_package(pypi_name, pkg_id))
             if conda_name := install_info.get("conda"):
-                conda_validator.validate_package(conda_name, pkg_id)
+                pkg_errors.append(conda_validator.validate_package(conda_name, pkg_id))
             if cran_name := install_info.get("cran"):
-                cran_validator.validate_package(cran_name, pkg_id)
+                pkg_errors.append(cran_validator.validate_package(cran_name, pkg_id))
 
         # Check logo (if available) and make path relative to root of registry
         if "logo" in tmp_meta:
             img_path = registry_dir / pkg_id / tmp_meta["logo"]
-            _check_image(img_path)
+            pkg_errors.append(check_image(img_path))
             tmp_meta["logo"] = str(img_path)
 
-        yield tmp_meta
+        package_metadata.append(tmp_meta)
+
+    return errors, package_metadata
 
 
 def make_output(
@@ -321,15 +337,6 @@ def make_output(
         json.dump(packages_rel, sys.stdout, indent=2)
 
 
-def setup() -> None:
-    """Set up logging and rich traceback."""
-    basicConfig(level="INFO", handlers=[RichHandler()])
-    install(show_locals=True)
-
-    # Suppress httpx INFO logs to reduce verbosity
-    getLogger("httpx").setLevel("WARNING")
-
-
 class Args(argparse.Namespace):
     registry_dir: Path
     outdir: Path | None
@@ -337,7 +344,6 @@ class Args(argparse.Namespace):
 
 def main(args: Sequence[str] | None = None) -> None:
     """Main entry point for the validate-registry command."""
-    setup()
     if args is None:
         args = sys.argv[1:]
 
@@ -367,8 +373,17 @@ def main(args: Sequence[str] | None = None) -> None:
     if parsed_args.outdir is not None:
         parsed_args.outdir.mkdir(parents=True)
 
-    packages = list(validate_packages(schema_file, parsed_args.registry_dir, github_token))
-    make_output(packages, outdir=parsed_args.outdir)
+    log.info("Starting validation")
+    errors, packages = validate_packages(schema_file, parsed_args.registry_dir, github_token)
+
+    if any(errors.values()):
+        for pkg_id, pkg_errors in errors.items():
+            for tmp_err in pkg_errors:
+                log.error(f"Validation error in {pkg_id}: {tmp_err}")
+        log.error("Validation error occured in at least one package. Exiting.")
+        sys.exit(1)
+    else:
+        make_output(packages, outdir=parsed_args.outdir)
 
 
 if __name__ == "__main__":
