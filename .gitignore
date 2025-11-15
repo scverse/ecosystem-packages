@@ -3,3 +3,5 @@ __pycache__/
 .*cache/
 
 /.vscode/
+.venv
+schema.pyi

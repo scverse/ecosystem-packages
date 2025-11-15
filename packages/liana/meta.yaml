@@ -13,7 +13,7 @@ tags:
   - cell-cell communication
 license: GPL-3.0-only
 version: v1.0.0a1
-authors:
+contact:
   - dbdimitrov
 test_command: |
   pip install poetry && \

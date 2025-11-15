@@ -12,6 +12,6 @@ tags:
   - query-to-reference
 license: MIT
 version: v0.1.2
-authors:
+contact:
   - Marius1311
 test_command: pip install -e '.[test]' && pytest

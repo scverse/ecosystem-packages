@@ -15,6 +15,6 @@ tags:
   - deep learning
 license: BSD-3-Clause
 version: v0.2.1
-authors:
+contact:
   - quentinblampey
 test_command: pip install ".[dev]" && pytest

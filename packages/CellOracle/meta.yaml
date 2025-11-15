@@ -14,8 +14,8 @@ tags:
   - TF
 license: Apache-2.0
 version: v0.10.12
-authors:
-  - KenjiKamimoto-wustl122
+contact:
+  - KenjiKamimoto-ac
   - sam-morris
   - cmhct7
 test_command: |

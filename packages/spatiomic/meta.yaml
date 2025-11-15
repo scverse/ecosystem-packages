@@ -15,6 +15,6 @@ tags:
   - subcellular analysis
 license: GPL-3.0-only
 version: v0.5.0
-authors:
+contact:
   - maltekuehl
 test_command: uv run pytest -m "not gpu"

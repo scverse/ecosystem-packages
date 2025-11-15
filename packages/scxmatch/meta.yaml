@@ -19,7 +19,7 @@ tags:
   - condition
 license: MIT
 version: v0.1.0
-authors:
+contact:
   - annmoel
   - dbblumenthal
 test_command: |

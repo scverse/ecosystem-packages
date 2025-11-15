@@ -24,24 +24,9 @@ tags:
   - patient-level
 license: MIT
 version: v2.0.6
-authors:
-  - Mehdi Joodaki
-  - Mina Shaigan
-  - Victor Parra
-  - Roman D. Bülow
-  - Christoph Kuppe
-  - David L. Hölscher
-  - Mingbo Cheng
-  - James S. Nagai
-  - Michaël Goedertier
-  - Nassim Bouteldja
-  - Vladimir Tesar
-  - Jonathan Barratt
-  - Ian S.D. Roberts
-  - Rosanna Coppo
-  - Rafael Kramann
-  - Peter Boor
-  - Ivan G. Costa
+contact:
+  - mehdijoodaki
+  - minashaigan
 test_command: |
   conda create --name PILOT python=3.11.5 r-base
   conda activate PILOT
