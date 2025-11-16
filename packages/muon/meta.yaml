@@ -9,6 +9,7 @@ publications:
   - 10.1186/s13059-021-02577-8
 install:
   pypi: muon
+  conda: conda-forge::muon
 tags:
   - multimodal
   - multi-omics
