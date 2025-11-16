@@ -18,8 +18,8 @@ tags:
   - AIRR
 license: BSD-3-Clause
 version: 0.22.3
-authors:
+contact:
   - grst
-  - szabogtamas
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

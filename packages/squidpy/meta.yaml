@@ -17,9 +17,9 @@ tags:
   - image analysis
 license: BSD-3-Clause
 version: 1.6.5
-authors:
+contact:
   - giovp
-  - michalk8
-  - LucaMarconato
+  - timtreis
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

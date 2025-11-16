@@ -20,10 +20,9 @@ tags:
   - differential expression
 license: BSD-3-Clause
 version: 1.11.5
-authors:
-  - falexwolf
-  - ivirshup
+contact:
   - flying-sheep
-  - gokceneraslan
+  - ilan-gold
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

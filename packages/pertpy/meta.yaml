@@ -16,7 +16,8 @@ tags:
   - genetic perturbation
 license: MIT
 version: 1.0.3
-authors:
+contact:
   - Zethson
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

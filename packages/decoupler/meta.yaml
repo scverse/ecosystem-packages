@@ -17,7 +17,8 @@ tags:
   - functional annotation
 license: BSD-3-Clause
 version: 2.1.1
-authors:
+contact:
   - PauBadiaM
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

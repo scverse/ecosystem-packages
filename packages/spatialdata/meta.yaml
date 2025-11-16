@@ -16,9 +16,8 @@ tags:
   - FAIR
 license: BSD-3-Clause
 version: 0.5.0
-authors:
+contact:
   - LucaMarconato
-  - timtreis
-  - giovp
   - melonora
+logo: logo.svg
 category: core-datastructure

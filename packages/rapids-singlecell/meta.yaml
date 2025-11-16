@@ -14,7 +14,8 @@ tags:
   - CUDA
 license: MIT
 version: 0.13.3
-authors:
+contact:
   - Intron7
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

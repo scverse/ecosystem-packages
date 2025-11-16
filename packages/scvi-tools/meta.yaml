@@ -19,10 +19,9 @@ tags:
   - deep learning
 license: BSD-3-Clause
 version: 1.4.0.post1
-authors:
-  - romain-lopez
-  - adamgayoso
-  - galen-xing
-  - martinkim0
+contact:
+  - ori-kron-wis
+  - canergen
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

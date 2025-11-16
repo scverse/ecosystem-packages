@@ -43,10 +43,10 @@ repos:
       - id: forbid-to-commit
         name: Check files in `packages` directory
         entry: |
-          Only files named `meta.yaml` are permitted in the packages directory
+          Only `meta.yaml` and logo files are permitted in the packages directory
         language: fail
         files: "^packages/.*$"
-        exclude: "^packages/.*/meta.yaml$"
+        exclude: "^packages/.*/(meta.yaml|logo\\..*)$"
   # template repo registry
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.4

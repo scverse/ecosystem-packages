@@ -17,9 +17,8 @@ tags:
   - sparse data
 license: BSD-3-Clause
 version: 0.12.4
-authors:
-  - falexwolf
-  - ivirshup
+contact:
   - flying-sheep
-  - gokceneraslan
+  - ilan-gold
+logo: logo.svg
 category: core-datastructure

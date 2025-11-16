@@ -15,7 +15,8 @@ tags:
   - integration
 license: BSD-3-Clause
 version: 0.1.7
-authors:
+contact:
   - gtca
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework

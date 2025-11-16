@@ -17,7 +17,8 @@ tags:
   - multi-omics
 license: BSD-3-Clause
 version: 0.3.2
-authors:
+contact:
   - gtca
   - ilia-kats
+logo: logo.svg
 category: core-datastructure
