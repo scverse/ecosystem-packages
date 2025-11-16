@@ -15,7 +15,7 @@ tags:
   - ensemble
 license: "MIT"
 version: v1.0.1
-authors:
+contact:
   - smgoggin10
 test_command: pip install ".[test]" && pytest
 category: ecosystem

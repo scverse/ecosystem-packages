@@ -12,7 +12,8 @@ tags:
   - quality control
 license: MIT
 version: 0.1.3
-authors:
-  - loosolab
+contact:
+  - jan1034
+  - mlooso
 test_command: pip install . && pytest
 category: ecosystem

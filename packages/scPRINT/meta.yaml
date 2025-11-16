@@ -21,7 +21,7 @@ tags:
   - lightning
 license: MIT
 version: v1.6.2
-authors:
-  - jkobject (jeremie kalfon)
+contact:
+  - jkobject
 test_command: pip install . && make test
 category: ecosystem

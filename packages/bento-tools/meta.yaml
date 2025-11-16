@@ -12,7 +12,7 @@ tags:
   - spatial analysis
 license: BSD-2-Clause
 version: v1.0.1
-authors:
+contact:
   - ckmah
   - noor01
 test_command: pip install "." && pytest

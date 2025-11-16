@@ -10,7 +10,7 @@ tags:
   - label-transfer
 license: GPL-3.0-only
 version: v0.2.1
-authors:
+contact:
   - serjisa
   - potulabe
 test_command: |

@@ -13,7 +13,7 @@ tags:
   - AI
 license: BSD-3-Clause
 version: v0.3.0
-authors:
+contact:
   - huangsh
 test_command: pip install "." && pytest
 category: ecosystem

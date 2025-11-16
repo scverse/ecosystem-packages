@@ -16,7 +16,7 @@ tags:
   - utilities
 license: MIT
 version: v1.1.4
-authors:
-  - jkobject (jeremie kalfon)
+contact:
+  - jkobject
 test_command: pip install . && make test
 category: ecosystem

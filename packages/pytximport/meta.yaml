@@ -12,7 +12,7 @@ tags:
   - differential-expression
 license: GPL-3.0-only
 version: v0.2.0
-authors:
+contact:
   - maltekuehl
 test_command: |
   pip install flit poetry && \

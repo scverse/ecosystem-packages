@@ -19,7 +19,7 @@ tags:
   - module scoring
 license: MIT
 version: v0.3.0
-authors:
+contact:
   - mass-a
   - sjcarmona
 test_command: pip install "." && pytest
