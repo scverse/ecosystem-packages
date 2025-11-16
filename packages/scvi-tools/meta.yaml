@@ -12,6 +12,7 @@ publications:
   - 10.1038/s41587-021-01206-w
 install:
   pypi: scvi-tools
+  conda: conda-forge::scvi-tools
 tags:
   - machine learning
   - probabilistic models

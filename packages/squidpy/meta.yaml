@@ -11,6 +11,7 @@ publications:
   - 10.1038/s41592-021-01358-2
 install:
   pypi: squidpy
+  conda: conda-forge::squidpy
 tags:
   - spatial omics
   - spatial transcriptomics

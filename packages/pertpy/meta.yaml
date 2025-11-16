@@ -6,6 +6,8 @@ description: |
 project_home: https://github.com/scverse/pertpy
 documentation_home: https://pertpy.readthedocs.io/en/stable/
 tutorials_home: https://pertpy.readthedocs.io/en/stable/tutorials/index.html
+publications:
+  - 10.1101/2024.08.04.606516
 install:
   pypi: pertpy
   conda: conda-forge::pertpy
