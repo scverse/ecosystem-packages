@@ -17,7 +17,8 @@ tags:
   - epigenomics
 license: MIT
 version: 2.5.0
-authors:
+contact:
   - kaizhang
+logo: logo.svg
 test_command: pip install ".[test]" && pytest
 category: core-framework
