@@ -17,23 +17,27 @@ repos:
         args: [--fix=lf]
       - id: trailing-whitespace
       - id: check-case-conflict
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.8
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.6.2
     hooks:
       - id: prettier
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.6.0
+    hooks:
+      - id: pyproject-fmt
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 0.35.0
     hooks:
       - id: check-jsonschema
-        files: "schema.json"
+        files: "scripts/src/ecosystem_scripts/schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.34.0
+    rev: 0.35.0
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
-        args: ["--schemafile", "schema.json"]
+        args: ["--schemafile", "scripts/src/ecosystem_scripts/schema.json"]
   - repo: local
     hooks:
       - id: forbid-to-commit
@@ -45,8 +49,8 @@ repos:
         exclude: "^packages/.*/meta.yaml$"
   # template repo registry
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.13.2
+    rev: v0.14.5
     hooks:
-      - id: ruff
+      - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format

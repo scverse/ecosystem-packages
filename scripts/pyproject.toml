@@ -1,62 +1,75 @@
 [build-system]
-requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+requires = [ "hatch-vcs", "hatchling" ]
 
 [project]
 name = "ecosystem-scripts"
-dynamic = ["version"]
 description = "scripts for ecosystem package data"
 readme = "../README.md"
-requires-python = ">=3.11"
 license = "GPL-3.0"
 authors = [
-    { name = "Philipp A.", email = "flying-sheep@web.de" },
+  { name = "Philipp A.", email = "flying-sheep@web.de" },
+  { name = "Gregor Sturm", email = "gregor.sturm@scverse.org" },
 ]
+requires-python = ">=3.11"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dynamic = [ "version" ]
+dependencies = [
+  "httpx",
+  "jsonschema>=4.25.1",
+  "pillow>=12",
+  "pygithub",
+  "pyyaml",
+  "rich",
+]
+
 urls.Documentation = "https://github.com/scverse/ecosystem-packages#readme"
 urls.Issues = "https://github.com/scverse/ecosystem-packages/issues"
 urls.Source = "https://github.com/scverse/ecosystem-packages"
-dependencies = [
-    "rich",
-    "PyGitHub",
-    "PyYAML",
-]
-
-[project.scripts]
-register-template-repos = "ecosystem_scripts.template_repo_registry:main"
+scripts.register-template-repos = "ecosystem_scripts.template_repo_registry:main"
+scripts.validate-registry = "ecosystem_scripts.validate_registry:main"
 
 [tool.hatch.version]
 source = "vcs"
 fallback-version = "0.0"
 
 [tool.hatch.envs.default]
-python = "3.11"
+python = "3.13"
+scripts.gentypes = "cd src/ecosystem_scripts; uvx jsonschema-gentypes --json-schema=schema.json --python=schema.pyi"
 
 [tool.ruff]
 line-length = 120
 select = [
-    "A",
-    "ARG",
-    "B",
-    "C",
-    "DTZ",
-    "E",
-    "EM",
-    "F",
-    "FBT",
-    "I",
-    "ICN",
-    "ISC",
-    "N",
-    "PLC",
-    "PLE",
-    "PLR",
-    "PLW",
-    "RUF",
-    "S",
-    "T",
-    "TID",
-    "UP",
-    "W",
-    "YTT",
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "RUF",
+  "S",
+  "T",
+  "TC",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
 ]
-ignore = []
+ignore = [  ]
