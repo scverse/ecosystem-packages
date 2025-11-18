@@ -11,8 +11,7 @@ tags:
   - visualisation
   - analysis
 license: MIT
-version: v1.0.0
+version: v0.0.2
 authors:
   - davidrm-bio
-test_command: |
-  pip install "." && pytest
+test_command: pip install "." && pytest
