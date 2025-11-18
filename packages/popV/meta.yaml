@@ -11,6 +11,6 @@ tags:
   - automatic annotation
 license: MIT
 version: v0.5.2
-authors:
+contact:
   - canergen
 test_command: pip install -e '.[test]' && pytest

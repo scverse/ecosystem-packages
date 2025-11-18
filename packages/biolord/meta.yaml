@@ -12,7 +12,7 @@ tags:
   - generative framework
 license: BSD-3-Clause
 version: v0.0.1
-authors:
+contact:
   - zoepiran
 test_command: |
   pip install ".[dev,test]" && pytest
