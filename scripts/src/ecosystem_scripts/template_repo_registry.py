@@ -12,17 +12,16 @@ from __future__ import annotations
 
 import os
 import sys
-from collections.abc import Iterable
-from logging import basicConfig, getLogger
 from pathlib import Path
-from typing import NotRequired, TypedDict
+from typing import TYPE_CHECKING, NotRequired, TypedDict
 
 from github import Github
-from rich.logging import RichHandler
-from rich.traceback import install
 from yaml import safe_dump, safe_load
 
-log = getLogger(__name__)
+from ._logging import log, setup_logging
+
+if TYPE_CHECKING:
+    from collections.abc import Iterable, Sequence
 
 
 class Repo(TypedDict):
@@ -58,13 +57,8 @@ def merge_repos(known: Iterable[Repo], new: Iterable[str]) -> list[Repo]:
     return repos
 
 
-def setup() -> None:
-    basicConfig(level="INFO", handlers=[RichHandler()])
-    install(show_locals=True)
-
-
-def main(args: Iterable[str] | None = None) -> None:
-    setup()
+def main(args: Sequence[str] | None = None) -> None:
+    setup_logging()
     if args is None:
         args = sys.argv[1:]
     if len(args) != 1:
