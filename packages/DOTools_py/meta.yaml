@@ -12,6 +12,6 @@ tags:
   - analysis
 license: MIT
 version: v0.0.2
-authors:
+contact:
   - davidrm-bio
 test_command: pip install "." && pytest
