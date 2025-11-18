@@ -21,19 +21,23 @@ repos:
     rev: v3.6.2
     hooks:
       - id: prettier
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.6.0
+    hooks:
+      - id: pyproject-fmt
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.35.0
     hooks:
       - id: check-jsonschema
-        files: "schema.json"
+        files: "scripts/src/ecosystem_scripts/schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.35.0
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
-        args: ["--schemafile", "schema.json"]
+        args: ["--schemafile", "scripts/src/ecosystem_scripts/schema.json"]
   - repo: local
     hooks:
       - id: forbid-to-commit

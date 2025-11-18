@@ -13,6 +13,7 @@ tags:
   - multi omics
 license: MIT
 version: 0.2.0
-authors:
-  - loosolab
+contact:
+  - yalayoubi
+  - mlooso
 test_command: pip install . && pytest
