@@ -13,6 +13,6 @@ tags:
   - spatial autocorrelation
 license: MIT
 version: v0.1.1
-authors:
+contact:
   - dcjones
 test_command: pip install "." && pytest

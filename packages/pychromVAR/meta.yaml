@@ -11,7 +11,7 @@ tags:
   - scATAC-seq
 license: MIT
 version: v0.0.3
-authors:
-  - Zhijian Li
+contact:
+  - lzj1769
 test_command: |
   test_command: pip install ".[test]" && pytest
