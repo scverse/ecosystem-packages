@@ -1,5 +1,5 @@
 name: DOTools_py
-description: Convenient and user-friendly package to streamline common workflows in single-cell RNA sequencing data analysis with improved visualisation.
+description: Convenient and user-friendly package to streamline common workflows in single-cell RNA sequencing data analysis with improved visualisation
 project_home: https://github.com/davidrm-bio/DOTools_py
 documentation_home: https://dotools-py.readthedocs.io/
 tutorials_home: https://dotools-py.readthedocs.io/
