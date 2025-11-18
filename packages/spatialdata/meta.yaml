@@ -5,7 +5,7 @@ description: |
   spatial omics datasets.
 project_home: https://github.com/scverse/spatialdata
 documentation_home: https://spatialdata.scverse.org/en/latest/
-tutorials_home: https://spatialdata.scverse.org/en/latest/tutorials/index.html
+tutorials_home: https://spatialdata.scverse.org/en/latest/tutorials/notebooks/notebooks.html
 publications:
   - 10.1038/s41592-024-02212-x
 install:
