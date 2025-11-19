@@ -32,12 +32,12 @@ repos:
         args: [--config-file=scripts/pyproject.toml, scripts]
         pass_filenames: false
         additional_dependencies:
-        - httpx
-        - types-jsonschema
-        - pillow
-        - pygithub
-        - types-PyYAML
-        - rich
+          - httpx
+          - types-jsonschema
+          - pillow
+          - pygithub
+          - types-PyYAML
+          - rich
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.35.0

@@ -9,7 +9,6 @@ import os
 import shutil
 import sys
 from collections import defaultdict
-from dataclasses import dataclass
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
