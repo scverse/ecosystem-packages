@@ -3,7 +3,7 @@ description: |
   An R implementation of the AnnData object including native reading and writing
   of H5AD files and conversion to common R data structures.
 project_home: https://github.com/scverse/anndataR
-documentation_home:  	https://bioconductor.org/packages/anndataR/
+documentation_home: https://bioconductor.org/packages/anndataR/
 tutorials_home: https://anndatar.data-intuitive.com/
 install:
   bioconductor: anndataR
