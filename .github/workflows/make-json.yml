@@ -12,7 +12,6 @@ concurrency:
 jobs:
   mkjson:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v7
@@ -33,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v7
-      - run: uvx hatch run gentypes
+      - run: cd scripts && uvx hatch run gentypes
       - uses: j178/prek-action@v1
         with:
           extra-args: "--all-files mypy"
