@@ -1,0 +1,20 @@
+name: zellkonverter
+description: |
+  An Bioconductor R package that enables reading and writing of H5AD files
+  and conversion between AnnData and SingleCellExperiment objects by wrapping
+  the Python anndata package.
+project_home: https://github.com/theislab/zellkonverter
+documentation_home: https://bioconductor.org/packages/zellkonverter/
+tutorials_home: https://theislab.github.io/zellkonverter/
+install:
+  bioconductor: zellkonverter
+license: MIT
+tags:
+  - data structures
+  - interoperability
+  - R
+  - Bioconductor
+version: 1.20.0
+contact:
+  - lazappi
+logo: logo.svg
