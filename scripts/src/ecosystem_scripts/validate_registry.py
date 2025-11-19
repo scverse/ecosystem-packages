@@ -34,14 +34,7 @@ IMAGE_SIZE = 512
 
 
 class ValidationError(Exception):
-    args: tuple[str]
-
-    def __init__(self, msg: str) -> None:
-        super().__init__(msg)
-
-    @property
-    def msg(self) -> str:
-        return self.args[0]
+    pass
 
 
 class ErrorList(list[Exception]):
@@ -406,4 +399,7 @@ def main(args: Sequence[str] | None = None) -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(1)
