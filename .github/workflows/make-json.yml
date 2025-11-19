@@ -25,6 +25,8 @@ jobs:
           uvx --from ./scripts validate-registry --registry-dir packages --outdir=build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_COLOR: "1"
+          COLUMNS: "150"
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -12,7 +12,7 @@ authors = [
   { name = "Philipp A.", email = "flying-sheep@web.de" },
   { name = "Gregor Sturm", email = "gregor.sturm@scverse.org" },
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.11",
@@ -73,3 +73,8 @@ select = [
   "YTT",
 ]
 ignore = [  ]
+
+[tool.mypy]
+strict = true
+explicit_package_bases = true
+mypy_path = [ "$MYPY_CONFIG_FILE_DIR/typings", "$MYPY_CONFIG_FILE_DIR/src" ]
