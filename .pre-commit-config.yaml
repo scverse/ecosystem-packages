@@ -1,5 +1,5 @@
 ci:
-  skip: [mypy]  # needs a build step for the schema types
+  skip: [mypy] # needs a build step for the schema types
 fail_fast: false
 default_language_version:
   python: python3

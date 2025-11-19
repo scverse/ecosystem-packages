@@ -36,7 +36,7 @@ jobs:
       - run: uvx hatch run gentypes
       - uses: j178/prek-action@v1
         with:
-          extra-args: '--all-files mypy'
+          extra-args: "--all-files mypy"
 
   deploy:
     runs-on: ubuntu-latest
