@@ -10,13 +10,11 @@ jobs:
   register-template-repos:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.BOT_GH_TOKEN }}
       - name: Install uv
         uses: astral-sh/setup-uv@v7
-        with:
-          cache-dependency-glob: scripts/pyproject.toml
       - name: Update template repo registry
         run: uvx --from ./scripts register-template-repos template-repos.yml
         env:

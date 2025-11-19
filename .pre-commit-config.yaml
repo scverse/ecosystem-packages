@@ -1,3 +1,5 @@
+ci:
+  skip: [mypy] # needs a build step for the schema types
 fail_fast: false
 default_language_version:
   python: python3
@@ -22,9 +24,22 @@ repos:
     hooks:
       - id: prettier
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: v2.6.0
+    rev: v2.11.1
     hooks:
       - id: pyproject-fmt
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.18.2
+    hooks:
+      - id: mypy
+        args: [--config-file=scripts/pyproject.toml, scripts]
+        pass_filenames: false
+        additional_dependencies:
+          - httpx
+          - types-jsonschema
+          - pillow
+          - pygithub
+          - types-PyYAML
+          - rich
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.35.0
@@ -43,10 +58,10 @@ repos:
       - id: forbid-to-commit
         name: Check files in `packages` directory
         entry: |
-          Only files named `meta.yaml` are permitted in the packages directory
+          Only `meta.yaml` and logo files are permitted in the packages directory
         language: fail
         files: "^packages/.*$"
-        exclude: "^packages/.*/meta.yaml$"
+        exclude: "^packages/.*/(meta.yaml|logo\\..*)$"
   # template repo registry
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.14.5
