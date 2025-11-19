@@ -1,0 +1,23 @@
+name: anndataR
+description: |
+  An R implementation of the AnnData object including native reading and writing
+  of H5AD files and conversion to common R data structures.
+project_home: https://github.com/scverse/anndataR
+documentation_home: https://bioconductor.org/packages/anndataR/
+tutorials_home: https://anndatar.data-intuitive.com/
+install:
+  bioconductor: anndataR
+license: MIT
+tags:
+  - data structures
+  - interoperability
+  - R
+  - Bioconductor
+publications:
+  - 10.1101/2025.08.18.669052 # bioRxiv preprint
+version: 1.0.0
+contact:
+  - lazappi
+  - rcannood
+  - LouiseDck
+logo: logo.svg
