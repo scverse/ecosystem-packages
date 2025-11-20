@@ -14,3 +14,4 @@ contact:
   - grst
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

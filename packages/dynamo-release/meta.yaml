@@ -19,3 +19,4 @@ contact:
   - dummyindex
   - yaz62
 test_command: pip install ".[test]" && pytest
+category: ecosystem
