@@ -14,3 +14,4 @@ version: v0.2.2
 contact:
   - colganwi
 test_command: pip install ".[test]" && pytest
+category: ecosystem
