@@ -11,6 +11,6 @@ tags:
   - lineage-tracing
 license: BSD-3-Clause
 version: v0.2.2
-authors:
+contact:
   - colganwi
 test_command: pip install ".[test]" && pytest
