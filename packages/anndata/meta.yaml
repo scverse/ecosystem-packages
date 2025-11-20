@@ -1,0 +1,24 @@
+name: AnnData
+description: |
+  anndata is a Python package for handling annotated data matrices in memory and on disk,
+  positioned between pandas and xarray. anndata offers a broad range of computationally
+  efficient features including, among others, sparse data support, lazy operations, and GPU support.
+project_home: https://github.com/scverse/anndata
+documentation_home: https://anndata.readthedocs.io/en/latest/
+tutorials_home: https://anndata.readthedocs.io/en/latest/tutorials/index.html
+publications:
+  - 10.1101/2021.12.16.473007
+install:
+  pypi: anndata
+  conda: conda-forge::anndata
+tags:
+  - data structure
+  - annotated data
+  - sparse data
+license: BSD-3-Clause
+version: 0.12.4
+contact:
+  - flying-sheep
+  - ilan-gold
+logo: logo.svg
+category: core-datastructure
