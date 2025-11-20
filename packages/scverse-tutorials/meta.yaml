@@ -4,7 +4,6 @@ description: |
 project_home: https://github.com/scverse/scverse-tutorials
 documentation_home: https://scverse-tutorials.readthedocs.io/en/latest/
 tutorials_home: https://scverse-tutorials.readthedocs.io/en/latest/
-install: {}
 tags:
   - tutorials
   - education

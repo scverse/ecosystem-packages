@@ -242,11 +242,19 @@
         "description",
         "project_home",
         "documentation_home",
-        "install",
         "license",
         "tags",
         "version",
-        "category",
-        "contact"
-    ]
+        "category"
+    ],
+    "if": {
+        "not": {
+            "properties": {
+                "category": { "const": "core-infrastructure" }
+            }
+        }
+    },
+    "then": {
+        "required": ["install", "contact"]
+    }
 }

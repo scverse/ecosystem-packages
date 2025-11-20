@@ -3,7 +3,6 @@ description: |
   Registry for scverse ecosystem packages (https://scverse.org/packages/#ecosystem)
 project_home: https://github.com/scverse/ecosystem-packages
 documentation_home: https://github.com/scverse/ecosystem-packages
-install: {}
 tags:
   - registry
   - ecosystem
