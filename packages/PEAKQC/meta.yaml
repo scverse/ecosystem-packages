@@ -16,3 +16,4 @@ contact:
   - jan1034
   - mlooso
 test_command: pip install . && pytest
+category: ecosystem

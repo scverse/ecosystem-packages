@@ -20,3 +20,4 @@ contact:
   - MeyerBender
   - sagar87
 test_command: pip install ".[all,dev]" && pytest
+category: ecosystem

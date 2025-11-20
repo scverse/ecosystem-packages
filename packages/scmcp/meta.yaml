@@ -14,3 +14,4 @@ version: v0.2.2
 contact:
   - huangsh
 test_command: uv run --no-sync pytest
+category: ecosystem

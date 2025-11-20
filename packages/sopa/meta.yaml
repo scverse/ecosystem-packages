@@ -20,3 +20,4 @@ version: v1.0.0
 contact:
   - quentinblampey
 test_command: pip install ".[dev,cellpose]" && pytest
+category: ecosystem

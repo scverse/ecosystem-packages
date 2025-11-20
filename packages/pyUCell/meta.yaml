@@ -23,3 +23,4 @@ contact:
   - mass-a
   - sjcarmona
 test_command: pip install "." && pytest
+category: ecosystem

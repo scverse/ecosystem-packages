@@ -15,3 +15,4 @@ contact:
   - lzj1769
 test_command: |
   test_command: pip install ".[test]" && pytest
+category: ecosystem
