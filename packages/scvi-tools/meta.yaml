@@ -9,7 +9,23 @@ project_home: https://github.com/scverse/scvi-tools
 documentation_home: https://docs.scvi-tools.org/en/stable/
 tutorials_home: https://docs.scvi-tools.org/en/stable/tutorials/index.html
 publications:
-  - 10.1038/s41587-021-01206-w
+  - 10.1038/s41587-021-01206-w # Scvi-tools library paper, NBT 2022
+  - 10.1038/s41587-022-01272-8 # DestVI
+  - 10.1038/s41592-020-01050-x # totalVI
+  - 10.15252/msb.20209620 # scANVI
+  - 10.48550/arXiv.1905.02269 # gimVI
+  - 10.1101/794289 # scvi-tools DE analysis
+  - 10.1093/bioinformatics/btaa169 # Interpretable factor models, Bioinformatics 2020
+  - 10.1101/794875 # AutoZI
+  - 10.1038/s41592-018-0229-2 # scVI
+  - 10.1038/s41592-023-01909-9 # multiVI
+  - 10.1016/j.crmeth.2022.100182 # peakVI
+  - 10.1038/s41592-025-02808-x # MrVI
+  - 10.1038/s41592-025-02799-9 # scVI hub
+  - 10.1101/2025.01.20.634005 # resolVI
+  - 10.1038/s41592-023-01994-w # VeloVI
+  - 10.1101/2025.09.07.674699 # CytoVI
+  - 10.1101/2025.06.01.657182 # ScVIVA
 install:
   pypi: scvi-tools
   conda: conda-forge::scvi-tools
