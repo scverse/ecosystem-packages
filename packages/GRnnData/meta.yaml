@@ -19,3 +19,4 @@ version: v1.1.4
 contact:
   - jkobject
 test_command: pip install . && make test
+category: ecosystem

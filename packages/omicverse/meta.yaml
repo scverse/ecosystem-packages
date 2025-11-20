@@ -21,3 +21,4 @@ contact:
   - DBinary
   - JuliaMYQ
 test_command: pip install "." && pytest
+category: ecosystem

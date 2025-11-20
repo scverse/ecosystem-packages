@@ -17,3 +17,4 @@ contact:
   - leomorelli
 test_command: |
   pytest conftest.py
+category: ecosystem
