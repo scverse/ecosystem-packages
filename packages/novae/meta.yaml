@@ -18,3 +18,4 @@ version: v0.2.1
 contact:
   - quentinblampey
 test_command: pip install ".[dev]" && pytest
+category: ecosystem

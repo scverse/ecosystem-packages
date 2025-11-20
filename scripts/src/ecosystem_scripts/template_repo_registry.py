@@ -13,7 +13,7 @@ from __future__ import annotations
 import os
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, NotRequired, TypedDict
+from typing import TYPE_CHECKING, NotRequired, TypedDict, cast
 
 from github import Github
 from yaml import safe_dump, safe_load
@@ -34,7 +34,7 @@ def parse_repos(path: Path) -> list[Repo]:
         log.info(f"No existing file found at: {path}")
         return []
     with path.open() as f:
-        repos = safe_load(f)
+        repos = cast("list[Repo]", safe_load(f))
         log.info(f"Found {len(repos)} known repos in: {path}")
         return repos
 

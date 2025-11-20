@@ -16,3 +16,4 @@ version: v0.1.1
 contact:
   - dcjones
 test_command: pip install "." && pytest
+category: ecosystem

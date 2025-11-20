@@ -16,3 +16,4 @@ contact:
   - ckmah
   - noor01
 test_command: pip install "." && pytest
+category: ecosystem

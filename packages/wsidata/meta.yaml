@@ -15,3 +15,4 @@ contact:
   - eabila
   - afrendeiro
 test_command: uv run task test
+category: ecosystem

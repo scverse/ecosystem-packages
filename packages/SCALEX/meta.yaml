@@ -17,3 +17,4 @@ version: v1.0.3
 contact:
   - jsxlei
 test_command: pip install ".[test]" && pytest
+category: ecosystem

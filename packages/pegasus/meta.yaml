@@ -24,3 +24,4 @@ contact:
   - slowkow
   - jlchang
 test_command: pip install "." && pytest
+category: ecosystem
