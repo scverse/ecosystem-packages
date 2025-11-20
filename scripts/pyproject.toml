@@ -41,11 +41,10 @@ fallback-version = "0.0"
 
 [tool.hatch.envs.default]
 python = "3.13"
-scripts.gentypes = "cd src/ecosystem_scripts; uvx jsonschema-gentypes --json-schema=schema.json --python=schema.pyi"
 
 [tool.ruff]
 line-length = 120
-select = [
+lint.select = [
   "A",
   "ARG",
   "B",
@@ -72,7 +71,7 @@ select = [
   "W",
   "YTT",
 ]
-ignore = [  ]
+lint.ignore = [  ]
 
 [tool.mypy]
 strict = true
