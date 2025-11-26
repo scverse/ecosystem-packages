@@ -2,7 +2,7 @@ name: anndata for R
 description: |
   **⚠️ DEPRECATED: This package is deprecated in favor of anndataR. Please use
   anndataR for new projects.**
-  
+
   A 'reticulate' wrapper for the Python package 'anndata'. Provides a scalable way
   of keeping track of data and learned annotations. Used to read from and write to
   the h5ad file format.
