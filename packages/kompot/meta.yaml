@@ -31,3 +31,4 @@ contact:
 logo: logo.png
 test_command: |
   pip install ".[dev]" && pytest
+category: ecosystem
