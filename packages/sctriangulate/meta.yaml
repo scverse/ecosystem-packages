@@ -12,6 +12,7 @@ tags:
   - clustering
 license: MIT
 version: v0.12.0
-authors:
+contact:
   - frankligy
 test_command: pip install "." && pytest
+category: ecosystem

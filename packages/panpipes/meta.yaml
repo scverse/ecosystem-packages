@@ -16,7 +16,7 @@ tags:
   - bioinformatics
 license: BSD-3-Clause
 version: v0.5.0
-authors:
+contact:
   - bio-la
   - crichgriffin
   - SarahOuologuem
@@ -28,3 +28,4 @@ authors:
   - Zethson
   - wlason
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

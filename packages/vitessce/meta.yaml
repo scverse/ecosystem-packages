@@ -13,7 +13,7 @@ tags:
   - imaging
 license: MIT
 version: v3.5.7
-authors:
+contact:
   - keller-mark
   - mccalluc
   - ilan-gold
@@ -32,3 +32,4 @@ authors:
   - romanhaa
   - will-moore
 test_command: pip install "." && pytest
+category: ecosystem

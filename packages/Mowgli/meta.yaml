@@ -15,6 +15,7 @@ tags:
   - NMF
 license: GPL-3.0-only
 version: v0.2.0
-authors:
+contact:
   - gjhuizing
 test_command: pip install . && pytest
+category: ecosystem

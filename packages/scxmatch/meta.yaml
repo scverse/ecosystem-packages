@@ -19,8 +19,9 @@ tags:
   - condition
 license: MIT
 version: v0.1.0
-authors:
+contact:
   - annmoel
   - dbblumenthal
 test_command: |
   conda install scxmatch -c conda-forge -c bioconda && git clone https://github.com/bionetslab/scxmatch.git && cd scxmatch/tests/ && python test_mwe.py
+category: ecosystem

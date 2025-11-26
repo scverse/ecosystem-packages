@@ -9,7 +9,7 @@ install:
   pypi: annsel
 license: MIT
 version: v0.0.8
-authors:
+contact:
   - srivarra
 tags:
   - narwhals
@@ -18,3 +18,4 @@ tags:
   - utilities
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

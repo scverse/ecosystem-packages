@@ -12,7 +12,7 @@ tags:
   - HCA
 license: MIT
 version: 1.1.1
-authors:
+contact:
   - csweaver
   - bkmartinjr
   - seve
@@ -27,3 +27,4 @@ authors:
   - mweiden
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

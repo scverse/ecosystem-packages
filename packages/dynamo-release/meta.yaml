@@ -14,8 +14,9 @@ tags:
   - vector
 license: BSD-3-Clause
 version: v1.1.0
-authors:
+contact:
   - Xiaojieqiu
   - dummyindex
   - yaz62
 test_command: pip install ".[test]" && pytest
+category: ecosystem

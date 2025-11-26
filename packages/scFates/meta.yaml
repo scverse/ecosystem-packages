@@ -14,7 +14,7 @@ tags:
   - trajectory-generation
 license: BSD-3-Clause
 version: v1.0.0
-authors:
+contact:
   - LouisFaure
 test_command: |
   sudo apt-get clean && sudo apt-get update
@@ -24,3 +24,4 @@ test_command: |
   pip install rpy2==3.4.2
   pip install .
   pytest scFates/tests/test_w_plots.py
+category: ecosystem
