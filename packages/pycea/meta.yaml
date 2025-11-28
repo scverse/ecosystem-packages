@@ -1,0 +1,17 @@
+name: pycea
+description: |
+  Pycea is a Python toolkit for single-cell lineage tracing analysis and visualization.
+project_home: https://github.com/YosefLab/pycea
+documentation_home: https://pycea.readthedocs.io/en/latest/
+tutorials_home: https://pycea.readthedocs.io/en/latest/
+install:
+  pypi: pycea-lineage
+tags:
+  - lineage-tracing
+  - TreeData
+license: BSD-3-Clause
+version: v0.1.0
+contact:
+  - colganwi
+test_command: pip install ".[test]" && pytest
+category: ecosystem
