@@ -1,0 +1,28 @@
+name: Scanpy
+description: |
+  Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly
+  with anndata. It includes preprocessing, visualization, clustering, trajectory inference
+  and differential expression testing. The Python-based implementation efficiently deals
+  with datasets of more than one million cells.
+project_home: https://github.com/scverse/scanpy
+documentation_home: https://scanpy.readthedocs.io/en/latest/
+tutorials_home: https://scanpy.readthedocs.io/en/latest/tutorials.html
+publications:
+  - 10.1186/s13059-017-1382-0
+install:
+  pypi: scanpy
+  conda: conda-forge::scanpy
+tags:
+  - single-cell
+  - preprocessing
+  - clustering
+  - visualization
+  - differential expression
+license: BSD-3-Clause
+version: 1.11.5
+contact:
+  - flying-sheep
+  - ilan-gold
+logo: logo.svg
+test_command: pip install ".[test]" && pytest
+category: core-framework
