@@ -1,0 +1,34 @@
+name: kompot
+description: |
+  Statistical framework for holistic comparison of multi-condition single-cell datasets over continuous phenotypic manifolds.
+  Kompot performs differential abundance and expression analysis agnostically to cell-type annotation or clustering,
+  detecting differences that span the continuous manifold even when effects go in opposite directions across cell states.
+  It models cell distributions and gene expression as continuous functions over cell state representations of arbitrary
+  dimension (typically ~50 dimensions), enabling single-cell resolution
+  inference with calibrated uncertainty estimates and capturing both global and cell-state-specific effects of perturbation.
+project_home: https://github.com/settylab/kompot
+documentation_home: https://kompot.readthedocs.io/
+tutorials_home: https://kompot.readthedocs.io/en/latest/notebooks/01_getting_started.html
+publications:
+  - 10.1101/2025.06.03.657769
+install:
+  pypi: kompot
+  conda: bioconda::kompot
+tags:
+  - differential-expression
+  - differential-abundance
+  - mahalanobis-distance
+  - gaussian-process
+  - phenotypic manifold
+  - continuous representation
+  - jax
+  - anndata
+license: GPL-3.0-or-later
+version: v0.6.1
+contact:
+  - katosh
+  - ManuSetty
+logo: logo.png
+test_command: |
+  pip install ".[dev]" && pytest
+category: ecosystem
