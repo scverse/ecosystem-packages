@@ -129,6 +129,8 @@
 - url: https://github.com/scverse/scanpy
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-tutorials
+- url: https://github.com/scverse/scvi-tools
+- url: https://github.com/scverse/scvi-tutorials
 - url: https://github.com/scverse/simple-scvi
 - url: https://github.com/scverse/spatial-sample-aggregation
 - url: https://github.com/scverse/spatialdata-plot
