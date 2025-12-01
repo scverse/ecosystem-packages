@@ -19,9 +19,10 @@ tags:
   - flowcytometry
 license: GPL-3.0-only
 version: v0.0.1
-authors:
+contact:
   - artuurC
   - berombau
   - ysaeys
   - SofieVG
 test_command: pip install "." && pytest
+category: ecosystem

@@ -11,8 +11,9 @@ tags:
   - PyTorch
 license: MIT
 version: v0.3.0
-authors:
+contact:
   - Mr-Milk
   - eabila
   - afrendeiro
 test_command: uv run task test
+category: ecosystem

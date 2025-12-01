@@ -15,7 +15,8 @@ tags:
   - gaussian mixture model
 license: BSD-3-Clause
 version: v0.3.1
-authors:
+contact:
   - marcovarrone
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

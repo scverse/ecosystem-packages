@@ -17,7 +17,7 @@ tags:
   - cell communication
 license: BSD-3-Clause
 version: v1.2
-authors:
-  - Linbu Liao
-  - Kyoung Jae Won
+contact:
+  - linbuliao
 test_command: pip install "." && pytest
+category: ecosystem

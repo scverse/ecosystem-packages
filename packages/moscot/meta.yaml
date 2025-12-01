@@ -14,10 +14,11 @@ tags:
   - spatial
 license: BSD-3-Clause
 version: v0.4.0
-authors:
+contact:
   - MUCDK
   - giovp
   - michalk8
   - Marius1311
   - zoepiran
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

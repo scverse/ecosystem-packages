@@ -12,9 +12,10 @@ tags:
   - visualization
 license: BSD-3-Clause
 version: v1.1.41
-authors:
+contact:
   - joshua-gould
   - yihming
   - gouwens
 test_command: |
   SETUPTOOLS_SCM_PRETEND_VERSION=0.0.1 pip install .[test,parquet] && pytest
+category: ecosystem

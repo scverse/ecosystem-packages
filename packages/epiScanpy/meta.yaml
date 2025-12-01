@@ -14,7 +14,7 @@ tags:
   - epigenomics
 license: BSD-3-Clause
 version: v0.3.2
-authors:
+contact:
   - DaneseAnna
   - mrichter23
   - kridsadakorn
@@ -24,3 +24,4 @@ authors:
   - michalk8
   - mvinyard
 test_command: pip install ".[test]" && pytest
+category: ecosystem

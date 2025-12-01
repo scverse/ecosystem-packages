@@ -13,9 +13,10 @@ tags:
   - data integration
 license: MIT
 version: v1.0.5
-authors:
+contact:
   - mumichae
   - LuckyMD
   - danielStrobl
   - mbuttner
 test_command: pip install ".[test,rpy2,harmony,scvi,scanorama]" && pytest
+category: ecosystem
