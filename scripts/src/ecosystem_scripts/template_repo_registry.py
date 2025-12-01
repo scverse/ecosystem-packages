@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 from typing import TYPE_CHECKING, NotRequired, TypedDict, cast
 
-from github import Github
+from github import Github, GithubException, UnknownObjectException
 from yaml import safe_dump, safe_load
 
 from ._logging import log, setup_logging
@@ -57,6 +57,65 @@ def merge_repos(known: Iterable[Repo], new: Iterable[str]) -> list[Repo]:
     return repos
 
 
+def filter_repos(repos: list[Repo], github_token: str | None) -> list[Repo]:
+    """Filter repositories based on their GitHub status.
+
+    Removes archived repositories, non-existent repositories, and repositories
+    that no longer have .cruft.json in their root. Updates URLs for moved repositories.
+
+    Parameters
+    ----------
+    repos
+        List of repositories to filter
+    github_token
+        GitHub API token for authentication
+
+    Returns
+    -------
+        Filtered list of repositories
+    """
+    g = Github(github_token)
+    filtered_repos = []
+    known_urls = {repo["url"] for repo in repos}
+
+    for repo in repos:
+        url = repo["url"]
+        github_url_prefix = "https://github.com/"
+        if not url.startswith(github_url_prefix):
+            raise AssertionError
+        repo_name = url.replace(github_url_prefix, "")
+        log.info(f"Checking repo {repo_name}")
+
+        try:
+            gh_repo = g.get_repo(repo_name)
+
+            # Check if repo is archived
+            if gh_repo.archived:
+                log.info(f"Removing archived repo: {repo_name}")
+                continue
+
+            # Check if repo has been moved/renamed
+            if gh_repo.html_url != url:
+                log.info(f"Repo moved: {url} -> {gh_repo.html_url}")
+                if gh_repo.html_url in known_urls:
+                    # duplicate already exists
+                    continue
+                repo["url"] = gh_repo.html_url
+
+            # Check if .cruft.json exists in root
+            try:
+                gh_repo.get_contents(".cruft.json")
+                filtered_repos.append(repo)
+            except UnknownObjectException:
+                log.info(f"Removing repo without .cruft.json: {repo_name}")
+
+        except (GithubException, UnknownObjectException) as e:
+            # Repo doesn't exist or other error
+            log.info(f"Removing non-existent or inaccessible repo: {repo_name} ({e})")
+
+    return filtered_repos
+
+
 def main(args: Sequence[str] | None = None) -> None:
     setup_logging()
     if args is None:
@@ -64,10 +123,12 @@ def main(args: Sequence[str] | None = None) -> None:
     if len(args) != 1:
         sys.exit("Usage: register-template-repos template-repos.yml")
     path = Path(args[0])
+    github_token = os.environ["GITHUB_TOKEN"]
     repos = merge_repos(
         parse_repos(path),
-        search_repos(os.environ["GITHUB_TOKEN"]),
+        search_repos(github_token),
     )
+    repos = filter_repos(repos, github_token)
     if repos:
         with path.open("w") as f:
             safe_dump(sorted(repos, key=lambda r: r["url"]), f, sort_keys=False)
