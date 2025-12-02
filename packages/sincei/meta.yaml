@@ -1,20 +1,33 @@
 name: sincei
 description: |
-  A user-friendly toolkit for QC, counting, clustering and plotting of single-cell (epi)genomics data
+  sincei provides a flexible, easy-to-use command-line interface and python API to work with single-cell epigenomics data directly from BAM files. It can:
+  - Aggregate signal in bins, genes or any feature of interest from single-cells.
+  - Perform read-level and count-level quality control.
+  - Perform dimensionality reduction and clustering of various types of single-cell data (open chromatin, histone marks, methylation etc..).
+  - Create coverage files (bigwigs) for visualization.
 project_home: https://github.com/bhardwaj-lab/sincei
 documentation_home: https://sincei.readthedocs.io/en/latest/
 publications:
-  - 10.5281/zenodo.8105536
+  - 10.1101/2024.07.27.605424
 install:
   pypi: sincei
 tags:
-  - epigenomics
+  - single-cell
+  - preprocessing
+  - quality control
   - clustering
+  - visualization
+  - epigenomics
+  - multi omics
   - BAM
 license: MIT
-version: 0.3.1
+version: 0.5
 authors:
   - vivekbhr
   - saroudant
+contact:
+  - vivekbhr
+  - fsanchogomez
+category: ecosystem
 test_command: |
   pip install ."[dev]" && pytest
