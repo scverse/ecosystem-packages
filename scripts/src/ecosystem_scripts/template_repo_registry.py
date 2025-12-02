@@ -88,30 +88,33 @@ def filter_repos(repos: list[Repo], github_token: str | None) -> list[Repo]:
 
         try:
             gh_repo = g.get_repo(repo_name)
-
-            # Check if repo is archived
-            if gh_repo.archived:
-                log.info(f"Removing archived repo: {repo_name}")
-                continue
-
-            # Check if repo has been moved/renamed
-            if gh_repo.html_url != url:
-                log.info(f"Repo moved: {url} -> {gh_repo.html_url}")
-                if gh_repo.html_url in known_urls:
-                    # duplicate already exists
-                    continue
-                repo["url"] = gh_repo.html_url
-
-            # Check if .cruft.json exists in root
-            try:
-                gh_repo.get_contents(".cruft.json")
-                filtered_repos.append(repo)
-            except UnknownObjectException:
-                log.info(f"Removing repo without .cruft.json: {repo_name}")
-
         except (GithubException, UnknownObjectException) as e:
             # Repo doesn't exist or other error
             log.info(f"Removing non-existent or inaccessible repo: {repo_name} ({e})")
+            continue
+
+        # Check if repo is archived
+        if gh_repo.archived:
+            log.info(f"Removing archived repo: {repo_name}")
+            continue
+
+        # Check if repo has been moved/renamed
+        if gh_repo.html_url != url:
+            log.info(f"Repo moved: {url} -> {gh_repo.html_url}")
+            if gh_repo.html_url in known_urls:
+                # duplicate already exists
+                continue
+            repo["url"] = gh_repo.html_url
+
+        # Check if .cruft.json exists in root
+        try:
+            gh_repo.get_contents(".cruft.json")
+        except UnknownObjectException:
+            log.info(f"Removing repo without .cruft.json: {repo_name}")
+            continue
+
+        filtered_repos.append(repo)
+
 
     return filtered_repos
 
