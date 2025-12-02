@@ -15,11 +15,11 @@ tags:
   - Bayesian
 license: Apache-2.0
 version: v0.1
-authors:
+contact:
   - vitkl
   - yozhikoff
   - mayerdev
   - emdann
-  - Alexander Aivazidis
 test_command: |
   pip install ".[dev]" && pytest
+category: ecosystem

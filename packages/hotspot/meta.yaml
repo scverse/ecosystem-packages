@@ -12,8 +12,9 @@ tags:
   - gene-signatures
 license: BSD-3-Clause
 version: v1.1.1
-authors:
+contact:
   - deto
   - adamgayoso
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

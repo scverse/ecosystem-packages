@@ -12,7 +12,8 @@ tags:
   - rna-seq
   - deconvolution
 version: v0.1.6
-authors:
+contact:
   - bernheder
 test_command: |
   pip install ."[dev,test]" && pytest
+category: ecosystem

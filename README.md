@@ -16,9 +16,10 @@ It **does not** imply endorsement or that an in-depth review has been performed.
 
 Submit a pull-request adding a `meta.yaml` file for your package to the `packages` directory.
 
-- Please refer to other entries for examples
-- The full definition of available fields is available in [`schema.json`](schema.json)
 - Please copy the checklist from below into the pull request description and answer all questions.
+- Please refer to other entries for examples
+- The full definition of available fields is available in [`schema.json`](scripts/src/ecosystem_scripts/schema.json)
+- You can add a logo in svg/png/webp format if you like. Currently it is not used on our website, though.
 
 ## What are the requirements for an ecosystem package?
 
@@ -51,7 +52,6 @@ How does the package use scverse data structures (please describe in a few sente
 
 - [ ] Please announce this package on scverse communication channels (zulip, discourse, twitter)
 - [ ] Please tag the author(s) these announcements. Handles (e.g. `@scverse_team`) to include are:
-
     - Zulip:
     - Discourse:
     - Mastodon:

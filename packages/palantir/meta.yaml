@@ -26,8 +26,8 @@ tags:
   - scrna-seq-analysis
 license: GPL-2.0-or-later
 version: v1.3.3
-authors:
+contact:
   - ManuSetty
-  - dpeerlab
   - katosh
 test_command: pip install -e '.' && pip install flake8 pytest coverage typing-extensions && pytest
+category: ecosystem

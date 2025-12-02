@@ -11,7 +11,8 @@ tags:
   - rna velocity
 license: BSD-3-Clause
 version: v0.2.5
-authors:
+contact:
   - WeilerP
   - VolkerBergen
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

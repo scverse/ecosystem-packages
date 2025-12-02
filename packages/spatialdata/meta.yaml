@@ -1,0 +1,23 @@
+name: SpatialData
+description: |
+  SpatialData is a data framework that comprises a FAIR storage format and a collection of
+  python libraries for performant access, alignment, and processing of uni- and multi-modal
+  spatial omics datasets.
+project_home: https://github.com/scverse/spatialdata
+documentation_home: https://spatialdata.scverse.org/en/latest/
+tutorials_home: https://spatialdata.scverse.org/en/latest/tutorials/notebooks/notebooks.html
+publications:
+  - 10.1038/s41592-024-02212-x
+install:
+  pypi: spatialdata
+tags:
+  - data structure
+  - spatial omics
+  - FAIR
+license: BSD-3-Clause
+version: 0.5.0
+contact:
+  - LucaMarconato
+  - melonora
+logo: logo.svg
+category: core-datastructure

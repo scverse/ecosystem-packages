@@ -12,7 +12,7 @@ tags:
   - transcriptome analysis
 license: BSD-3-Clause
 version: v1.7.1
-authors:
+contact:
   - yihming
   - bli25
   - YanayRosen
@@ -24,3 +24,4 @@ authors:
   - slowkow
   - jlchang
 test_command: pip install "." && pytest
+category: ecosystem
