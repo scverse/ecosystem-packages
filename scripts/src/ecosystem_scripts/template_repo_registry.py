@@ -115,7 +115,6 @@ def filter_repos(repos: list[Repo], github_token: str | None) -> list[Repo]:
 
         filtered_repos.append(repo)
 
-
     return filtered_repos
 
 
