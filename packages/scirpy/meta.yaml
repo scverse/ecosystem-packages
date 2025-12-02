@@ -1,0 +1,25 @@
+name: Scirpy
+description: |
+  Scirpy is a scalable toolkit to analyse T-cell receptor or B-cell receptor repertoires
+  from single-cell RNA sequencing data. It seamlessly integrates with scanpy and provides
+  various modules for data import, analysis and visualization.
+project_home: https://github.com/scverse/scirpy
+documentation_home: https://scirpy.scverse.org/
+tutorials_home: https://scirpy.scverse.org/en/latest/tutorials.html
+publications:
+  - 10.1093/bioinformatics/btaa611
+install:
+  pypi: scirpy
+  conda: bioconda::scirpy
+tags:
+  - immune receptor
+  - TCR
+  - BCR
+  - AIRR
+license: BSD-3-Clause
+version: 0.22.3
+contact:
+  - grst
+logo: logo.svg
+test_command: pip install ".[test]" && pytest
+category: core-framework
