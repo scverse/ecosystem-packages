@@ -1,0 +1,26 @@
+name: DRVI
+description: |
+  DRVI is a tool for the unsupervised disentanglement and integration of single-cell omics. 
+  By providing interpretable latent dimensions, it allows users to identify cellular 
+  heterogeneity and biological processes beyond traditional cell types, identify rare cell types, 
+  and highlight developmental stages. DRVI is implemented using scvi-tools and includes a 
+  set of utility functions for interacting with latent dimensions.
+project_home: https://github.com/theislab/DRVI
+documentation_home: https://drvi.readthedocs.io/latest/
+tutorials_home: https://drvi.readthedocs.io/latest/tutorials/index.html
+publications:
+  - 10.1101/2024.11.06.622266
+install:
+  pypi: drvi-py
+tags:
+  - disentanglement
+  - interpretability
+  - data integration
+  - variational inference
+  - deep learning
+license: BSD-3-Clause
+version: 0.2.0
+contact:
+  - moinfar
+test_command: uvx hatch run pytest
+category: ecosystem
