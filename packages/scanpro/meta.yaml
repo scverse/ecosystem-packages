@@ -17,3 +17,4 @@ contact:
   - yalayoubi
   - mlooso
 test_command: pip install . && pytest
+category: ecosystem

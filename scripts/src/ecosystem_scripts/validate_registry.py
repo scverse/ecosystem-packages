@@ -9,7 +9,6 @@ import os
 import shutil
 import sys
 from collections import defaultdict
-from dataclasses import dataclass
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
@@ -34,19 +33,18 @@ HERE = Path(__file__).parent
 IMAGE_SIZE = 512
 
 
-@dataclass
-class ValidationError:
-    msg: str
+class ValidationError(Exception):
+    pass
 
 
-class ErrorList(list):
+class ErrorList(list[Exception]):
     """List of error messages. Ignores None objects, and logs an error when one gets added."""
 
-    def append(self, object):  # noqa A002
-        if object is None:
+    def append(self, obj: Exception | None) -> None:
+        if obj is None:
             return
-        log.error(f"Validation error: {object}")
-        return super().append(object)
+        log.error(f"Validation error: {obj}")
+        return super().append(obj)
 
 
 class LinkChecker:
@@ -75,6 +73,7 @@ class LinkChecker:
             return ValidationError(msg)
 
         self.known_links.add(url)
+        return None
 
 
 class GitHubUserValidator:
@@ -96,7 +95,7 @@ class GitHubUserValidator:
         """
 
         if not (unvalidated := list(set(usernames) - self.validated_users)):
-            return
+            return None
 
         headers = {}
         if self.github_token:
@@ -117,6 +116,7 @@ class GitHubUserValidator:
 
         self.validated_users |= set(unvalidated)
         log.info(f"Validated GitHub users: {unvalidated!r}")
+        return None
 
 
 class PyPIValidator:
@@ -136,7 +136,7 @@ class PyPIValidator:
             Context information for error messages (e.g., file being validated)
         """
         if package_name in self.validated_packages:
-            return
+            return None
 
         response = httpx.head(f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True)
 
@@ -149,6 +149,7 @@ class PyPIValidator:
 
         self.validated_packages.add(package_name)
         log.info(f"Validated PyPI package: {package_name}")
+        return None
 
 
 class CondaValidator:
@@ -168,7 +169,7 @@ class CondaValidator:
             Context information for error messages (e.g., file being validated)
         """
         if package_spec in self.validated_packages:
-            return
+            return None
 
         # Parse channel and package name
         if "::" not in package_spec:
@@ -192,6 +193,7 @@ class CondaValidator:
 
         self.validated_packages.add(package_spec)
         log.info(f"Validated Conda package: {package_spec}")
+        return None
 
 
 class CRANValidator:
@@ -211,7 +213,7 @@ class CRANValidator:
             Context information for error messages (e.g., file being validated)
         """
         if package_name in self.validated_packages:
-            return
+            return None
 
         # CRAN packages can be checked via the packages database
         response = httpx.head(
@@ -228,6 +230,7 @@ class CRANValidator:
 
         self.validated_packages.add(package_name)
         log.info(f"Validated CRAN package: {package_name}")
+        return None
 
 
 def check_image(img_path: Path) -> None | ValidationError:
@@ -236,7 +239,7 @@ def check_image(img_path: Path) -> None | ValidationError:
         msg = f"Image does not exist: {img_path}"
         return ValidationError(msg)
     if img_path.suffix == ".svg":
-        return
+        return None
     with Image.open(img_path) as img:
         width, height = img.size
     if not ((width == IMAGE_SIZE and height <= IMAGE_SIZE) or (width <= IMAGE_SIZE and height == IMAGE_SIZE)):
@@ -248,11 +251,12 @@ def check_image(img_path: Path) -> None | ValidationError:
             """
         )
         return ValidationError(msg)
+    return None
 
 
 def validate_packages(
     schema_file: Traversable, registry_dir: Path, github_token: str | None = None
-) -> tuple[dict, list]:
+) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
     schema = json.loads(schema_file.read_bytes())
 
@@ -267,8 +271,8 @@ def validate_packages(
     conda_validator = CondaValidator()
     cran_validator = CRANValidator()
 
-    errors: dict[str, str] = defaultdict(ErrorList)
-    package_metadata = []
+    errors: defaultdict[str, ErrorList] = defaultdict(ErrorList)
+    package_metadata: list[ScverseEcosystemPackages] = []
 
     for tmp_meta_file in sorted(registry_dir.rglob("meta.yaml"), key=lambda x: x.parent.name):
         pkg_id = tmp_meta_file.parent.name
@@ -280,7 +284,7 @@ def validate_packages(
         try:
             jsonschema.validate(tmp_meta, schema)
         except jsonschema.ValidationError as e:
-            pkg_errors.append(str(e))
+            pkg_errors.append(e)
 
         # Check and register all links
         pkg_errors.append(link_checker_home.check_and_register(tmp_meta["project_home"], pkg_id))
@@ -313,7 +317,7 @@ def validate_packages(
 
 
 def make_output(
-    packages: Iterable[Mapping[str, str | Iterable[str]]],
+    packages: Iterable[ScverseEcosystemPackages],
     *,
     outdir: Path | None = None,
 ) -> None:
@@ -327,11 +331,11 @@ def make_output(
        - packagexxx/icon.svg  # original icon filenames under a folder for each package.
        - packageyyy/icon.png
     """
-    packages_rel = []
+    packages_rel: list[ScverseEcosystemPackages] = []
     for pkg in packages:
-        pkg_rel = dict(pkg)
-        if "logo" in pkg:
-            img_srcpath = Path(pkg["logo"])
+        pkg_rel = pkg.copy()
+        if logo := pkg.get("logo"):
+            img_srcpath = Path(logo)
             img_localpath = Path(img_srcpath.parent.name) / img_srcpath.name
             pkg_rel["logo"] = str(img_localpath)
             if outdir:
@@ -395,4 +399,7 @@ def main(args: Sequence[str] | None = None) -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(1)

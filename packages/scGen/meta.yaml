@@ -24,3 +24,4 @@ contact:
   - alirezaomidi
   - mumichae
 test_command: pip install "." && pytest
+category: ecosystem

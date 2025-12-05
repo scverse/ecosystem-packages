@@ -44,6 +44,10 @@
                 "cran": {
                     "description": "CRAN identifier",
                     "type": "string"
+                },
+                "bioconductor": {
+                    "description": "Bioconductor identifier",
+                    "type": "string"
                 }
             },
             "minProperties": 1
@@ -221,6 +225,16 @@
         "test_command": {
             "description": "A shell command to install the package and execute the tests, assuming you are inside a freshly cloned copy of the package repository. Often this will be `pip install \".[test]\" && pytest`",
             "type": ["string", "null"]
+        },
+        "category": {
+            "type": "string",
+            "enum": [
+                "core-framework",
+                "core-datastructure",
+                "core-infrastructure",
+                "ecosystem"
+            ],
+            "description": "Package category for the website and statistics."
         }
     },
     "required": [
@@ -232,6 +246,7 @@
         "license",
         "tags",
         "version",
+        "category",
         "contact"
     ]
 }

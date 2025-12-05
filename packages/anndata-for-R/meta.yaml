@@ -1,13 +1,21 @@
 name: anndata for R
 description: |
-  A 'reticulate' wrapper for the Python package 'anndata'. Provides a scalable way of keeping track of data and learned annotations. Used to read from and write to the h5ad file format.
+  **⚠️ DEPRECATED: This package is deprecated in favor of anndataR. Please use
+  anndataR for new projects.**
+
+  A 'reticulate' wrapper for the Python package 'anndata'. Provides a scalable way
+  of keeping track of data and learned annotations. Used to read from and write to
+  the h5ad file format.
 project_home: https://github.com/dynverse/anndata
 documentation_home: https://anndata.dynverse.org
 install:
   cran: anndata
 tags:
-  - R package
+  - data structures
+  - interoperability
+  - R
 license: MIT
 version: 0.7.5.5
 contact:
   - rcannood
+category: ecosystem

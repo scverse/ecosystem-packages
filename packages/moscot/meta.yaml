@@ -21,3 +21,4 @@ contact:
   - Marius1311
   - zoepiran
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem
