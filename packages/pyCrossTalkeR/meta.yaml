@@ -12,9 +12,10 @@ tags:
   - Node Importance
 license: MIT
 version: v2.1.0
-authors:
+contact:
   - jsnagai
   - ruthvik07
+category: ecosystem
 test_command: |
   pip install pycrosstalker
   cd pycrosstalker && pytest
