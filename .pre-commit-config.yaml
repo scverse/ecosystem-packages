@@ -45,7 +45,7 @@ repos:
         exclude: "^packages/.*/(meta.yaml|logo\\..*)$"
   # scripts
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.8
+    rev: v0.14.9
     hooks:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
@@ -65,7 +65,7 @@ repos:
           - --python=scripts/src/ecosystem_scripts/schema.pyi
         files: ^scripts/.*/schema.json$
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.0
+    rev: v1.19.1
     hooks:
       - id: mypy
         args: [--config-file=scripts/pyproject.toml, scripts]
