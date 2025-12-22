@@ -2,7 +2,7 @@ name: cookiecutter-scverse
 description: |
   Cookiecutter template for scverse packages offering automated template sync
 project_home: https://github.com/scverse/cookiecutter-scverse
-documentation_home: https://cookiecutter-scverse-instance.readthedocs.io/en/latest/
+documentation_home: https://cookiecutter-scverse-instance.readthedocs.io/en/latest/template_usage.html
 tags:
   - template
   - cookiecutter
