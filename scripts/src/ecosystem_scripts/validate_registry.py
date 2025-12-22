@@ -227,6 +227,11 @@ class CondaValidator:
         if package_spec in self.validated_packages:
             return None
 
+        # Parse channel and package name
+        if "::" not in package_spec:
+            msg = f"{context}: Invalid Conda package spec {package_spec!r} (expected format: channel::package)"
+            return ValidationError(msg)
+
         channel, package_name = package_spec.split("::", 1)
 
         # Check package exists on the channel
