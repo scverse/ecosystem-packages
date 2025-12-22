@@ -244,7 +244,6 @@
         "documentation_home",
         "license",
         "tags",
-        "version",
         "category"
     ],
     "if": {
@@ -257,6 +256,6 @@
         }
     },
     "then": {
-        "required": ["install"]
+        "required": ["install", "version"]
     }
 }
