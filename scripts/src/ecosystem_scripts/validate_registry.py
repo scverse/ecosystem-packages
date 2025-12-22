@@ -8,22 +8,22 @@ import json
 import os
 import shutil
 import sys
-import time
 from collections import defaultdict
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
-from typing import TYPE_CHECKING, Any, cast
+from typing import TYPE_CHECKING, cast
 
 import httpx
 import jsonschema
 import yaml
+from httpx_retries import Retry, RetryTransport
 from PIL import Image
 
 from ._logging import log, setup_logging
 
 if TYPE_CHECKING:
-    from collections.abc import Callable, Iterable, Mapping, Sequence
+    from collections.abc import Iterable, Mapping, Sequence
     from importlib.resources.abc import Traversable
 
     from .schema import ScverseEcosystemPackages  # pyright: ignore[reportMissingModuleSource]
@@ -32,39 +32,6 @@ if TYPE_CHECKING:
 # Constants
 HERE = Path(__file__).parent
 IMAGE_SIZE = 512
-
-
-def _retry_with_backoff(
-    function: Callable[..., httpx.Response], *, wait_time: int = 5, attempts: int = 3, **kwargs: Any
-) -> httpx.Response:
-    """
-    Attempt a http request `attempts` times with exponential backoff
-
-    Use `function` to make the request. `kwargs` are passed to `function`.
-    Wait time is multiplied by 2 after every attempt.
-    """
-    httpx_exception = None
-    try:
-        response = function(**kwargs)
-
-        # Success - return immediately
-        # Don't retry on client errors (4xx) as they won't resolve with retries
-        if response.status_code == httpx.codes.OK or 400 <= response.status_code < 500:  # noqa: PLR2004 (allow numeric ocnstants in condition)
-            return response
-
-    except (httpx.TimeoutException, httpx.NetworkError, httpx.ConnectError) as e:
-        httpx_exception = e
-
-    remaining_attempts = attempts - 1
-    if remaining_attempts > 0:
-        log.info(f"Retry after {wait_time}s. Remainint attempts: {remaining_attempts}")
-        time.sleep(wait_time)
-        return _retry_with_backoff(function, wait_time=wait_time * 2, n=remaining_attempts, **kwargs)
-
-    if httpx_exception is not None:
-        raise httpx_exception
-    else:
-        return response
 
 
 class ValidationError(Exception):
@@ -84,8 +51,9 @@ class ErrorList(list[Exception]):
 class LinkChecker:
     """Track known links and validate URLs."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
         self.known_links: set[str] = set()
+        self.client = client
 
     def check_and_register(self, url: str, context: str) -> None | ValidationError:
         """Check if URL is duplicate, validate it exists, and register it.
@@ -102,7 +70,7 @@ class LinkChecker:
             return ValidationError(msg)
 
         try:
-            response = _retry_with_backoff(httpx.head, url=url, follow_redirects=True, timeout=30.0)
+            response = self.client.head(url, follow_redirects=True, timeout=30.0)
         except Exception as e:
             msg = f"URL {url} is not reachable: {e}"
             return ValidationError(msg)
@@ -118,7 +86,8 @@ class LinkChecker:
 class GitHubUserValidator:
     """Validate GitHub usernames using the GitHub API."""
 
-    def __init__(self, github_token: str | None = None) -> None:
+    def __init__(self, client: httpx.Client, github_token: str | None = None) -> None:
+        self.client = client
         self.github_token = github_token
         self.validated_users: set[str] = set()
 
@@ -143,9 +112,8 @@ class GitHubUserValidator:
         q = "\n".join(f"user{i}: user(login: {json.dumps(name)}) {{ login }}" for i, name in enumerate(unvalidated))
 
         try:
-            response = _retry_with_backoff(
-                httpx.post,
-                url="https://api.github.com/graphql",
+            response = self.client.post(
+                "https://api.github.com/graphql",
                 headers=headers,
                 json={"query": f"query {{ {q} }}"},
                 timeout=30.0,
@@ -172,7 +140,8 @@ class GitHubUserValidator:
 class PyPIValidator:
     """Validate PyPI package names against the PyPI API."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
         self.validated_packages: set[str] = set()
 
     def validate_package(self, package_name: str, context: str) -> None | ValidationError:
@@ -189,8 +158,8 @@ class PyPIValidator:
             return None
 
         try:
-            response = _retry_with_backoff(
-                httpx.head, url=f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True, timeout=30.0
+            response = self.client.head(
+                f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True, timeout=30.0
             )
         except Exception as e:
             msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
@@ -211,7 +180,8 @@ class PyPIValidator:
 class CondaValidator:
     """Validate Conda package identifiers using the Anaconda API."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
         self.validated_packages: set[str] = set()
 
     def validate_package(self, package_spec: str, context: str) -> None | ValidationError:
@@ -236,9 +206,8 @@ class CondaValidator:
 
         # Check package exists on the channel
         try:
-            response = _retry_with_backoff(
-                httpx.head,
-                url=f"https://api.anaconda.org/package/{channel}/{package_name}",
+            response = self.client.head(
+                f"https://api.anaconda.org/package/{channel}/{package_name}",
                 follow_redirects=True,
                 timeout=30.0,
             )
@@ -261,7 +230,8 @@ class CondaValidator:
 class CRANValidator:
     """Validate CRAN package names using the CRAN API."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
         self.validated_packages: set[str] = set()
 
     def validate_package(self, package_name: str, context: str) -> None | ValidationError:
@@ -279,9 +249,7 @@ class CRANValidator:
 
         # CRAN packages can be checked via the packages database
         try:
-            response = _retry_with_backoff(
-                httpx.head, url=f"https://crandb.r-pkg.org/{package_name}", follow_redirects=True, timeout=30.0
-            )
+            response = self.client.head(f"https://crandb.r-pkg.org/{package_name}", follow_redirects=True, timeout=30.0)
         except Exception as e:
             msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
             return ValidationError(msg)
@@ -325,16 +293,20 @@ def validate_packages(
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
     schema = json.loads(schema_file.read_bytes())
 
+    # Create HTTP client with retry configuration using httpx_retries transport
+    retry_transport = RetryTransport(retry=Retry(total=3, backoff_factor=2))
+    retry_client = httpx.Client(transport=retry_transport)
+
     # using different link checkers,
     # because each of them may point to the same URL and this wouldn't qualify as duplicate
-    link_checker_home = LinkChecker()
-    link_checker_docs = LinkChecker()
-    link_checker_tutorials = LinkChecker()
+    link_checker_home = LinkChecker(retry_client)
+    link_checker_docs = LinkChecker(retry_client)
+    link_checker_tutorials = LinkChecker(retry_client)
 
-    github_validator = GitHubUserValidator(github_token)
-    pypi_validator = PyPIValidator()
-    conda_validator = CondaValidator()
-    cran_validator = CRANValidator()
+    github_validator = GitHubUserValidator(retry_client, github_token)
+    pypi_validator = PyPIValidator(retry_client)
+    conda_validator = CondaValidator(retry_client)
+    cran_validator = CRANValidator(retry_client)
 
     errors: defaultdict[str, ErrorList] = defaultdict(ErrorList)
     package_metadata: list[ScverseEcosystemPackages] = []
