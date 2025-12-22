@@ -8,11 +8,12 @@ import json
 import os
 import shutil
 import sys
+import time
 from collections import defaultdict
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
-from typing import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, Any, cast
 
 import httpx
 import jsonschema
@@ -22,7 +23,7 @@ from PIL import Image
 from ._logging import log, setup_logging
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Mapping, Sequence
+    from collections.abc import Callable, Iterable, Mapping, Sequence
     from importlib.resources.abc import Traversable
 
     from .schema import ScverseEcosystemPackages  # pyright: ignore[reportMissingModuleSource]
@@ -31,6 +32,39 @@ if TYPE_CHECKING:
 # Constants
 HERE = Path(__file__).parent
 IMAGE_SIZE = 512
+
+
+def _retry_with_backoff(
+    function: Callable[..., httpx.Response], *, wait_time: int = 5, attempts: int = 3, **kwargs: Any
+) -> httpx.Response:
+    """
+    Attempt a http request `attempts` times with exponential backoff
+
+    Use `function` to make the request. `kwargs` are passed to `function`.
+    Wait time is multiplied by 2 after every attempt.
+    """
+    httpx_exception = None
+    try:
+        response = function(**kwargs)
+
+        # Success - return immediately
+        # Don't retry on client errors (4xx) as they won't resolve with retries
+        if response.status_code == httpx.codes.OK or 400 <= response.status_code < 500:  # noqa: PLR2004 (allow numeric ocnstants in condition)
+            return response
+
+    except (httpx.TimeoutException, httpx.NetworkError, httpx.ConnectError) as e:
+        httpx_exception = e
+
+    remaining_attempts = attempts - 1
+    if remaining_attempts > 0:
+        log.info(f"Retry after {wait_time}s. Remainint attempts: {remaining_attempts}")
+        time.sleep(wait_time)
+        return _retry_with_backoff(function, wait_time=wait_time * 2, n=remaining_attempts, **kwargs)
+
+    if httpx_exception is not None:
+        raise httpx_exception
+    else:
+        return response
 
 
 class ValidationError(Exception):
@@ -67,7 +101,12 @@ class LinkChecker:
             msg = f"{context}: Duplicate link: {url}"
             return ValidationError(msg)
 
-        response = httpx.head(url, follow_redirects=True)
+        try:
+            response = _retry_with_backoff(httpx.head, url=url, follow_redirects=True, timeout=30.0)
+        except Exception as e:
+            msg = f"URL {url} is not reachable: {e}"
+            return ValidationError(msg)
+
         if response.status_code != httpx.codes.OK:
             msg = f"URL {url} is not reachable (error {response.status_code}). "
             return ValidationError(msg)
@@ -102,7 +141,18 @@ class GitHubUserValidator:
             headers["Authorization"] = f"token {self.github_token}"
 
         q = "\n".join(f"user{i}: user(login: {json.dumps(name)}) {{ login }}" for i, name in enumerate(unvalidated))
-        response = httpx.post("https://api.github.com/graphql", headers=headers, json={"query": f"query {{ {q} }}"})
+
+        try:
+            response = _retry_with_backoff(
+                httpx.post,
+                url="https://api.github.com/graphql",
+                headers=headers,
+                json={"query": f"query {{ {q} }}"},
+                timeout=30.0,
+            )
+        except Exception as e:
+            msg = f"{context}: Failed to validate GitHub users {unvalidated!r}: {e}"
+            return ValidationError(msg)
 
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r} (error {response.status_code})"
@@ -138,7 +188,13 @@ class PyPIValidator:
         if package_name in self.validated_packages:
             return None
 
-        response = httpx.head(f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True)
+        try:
+            response = _retry_with_backoff(
+                httpx.head, url=f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True, timeout=30.0
+            )
+        except Exception as e:
+            msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
+            return ValidationError(msg)
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: PyPI package {package_name!r} does not exist"
@@ -179,10 +235,16 @@ class CondaValidator:
         channel, package_name = package_spec.split("::", 1)
 
         # Check package exists on the channel
-        response = httpx.head(
-            f"https://api.anaconda.org/package/{channel}/{package_name}",
-            follow_redirects=True,
-        )
+        try:
+            response = _retry_with_backoff(
+                httpx.head,
+                url=f"https://api.anaconda.org/package/{channel}/{package_name}",
+                follow_redirects=True,
+                timeout=30.0,
+            )
+        except Exception as e:
+            msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
+            return ValidationError(msg)
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: Conda package '{package_spec}' does not exist"
@@ -216,10 +278,13 @@ class CRANValidator:
             return None
 
         # CRAN packages can be checked via the packages database
-        response = httpx.head(
-            f"https://crandb.r-pkg.org/{package_name}",
-            follow_redirects=True,
-        )
+        try:
+            response = _retry_with_backoff(
+                httpx.head, url=f"https://crandb.r-pkg.org/{package_name}", follow_redirects=True, timeout=30.0
+            )
+        except Exception as e:
+            msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
+            return ValidationError(msg)
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: CRAN package '{package_name}' does not exist"
