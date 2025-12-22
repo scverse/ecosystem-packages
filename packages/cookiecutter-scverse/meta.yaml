@@ -3,8 +3,6 @@ description: |
   Cookiecutter template for scverse
 project_home: https://github.com/scverse/cookiecutter-scverse
 documentation_home: https://cookiecutter-scverse-instance.readthedocs.io/en/latest/
-install:
-  pypi: cookiecutter-scverse
 tags:
   - template
   - cookiecutter
