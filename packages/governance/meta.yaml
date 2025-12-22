@@ -6,9 +6,8 @@ documentation_home: https://scverse.org/about
 tags:
   - governance
   - documentation
-  - infrastructure
 license: BSD-3-Clause
-version: 1.0.0
+version: null
 authors:
   - scverse
 category: core-infrastructure

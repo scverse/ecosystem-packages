@@ -1,15 +1,14 @@
 name: cookiecutter-scverse
 description: |
-  Cookiecutter template for scverse
+  Cookiecutter template for scverse packages offering automated template sync
 project_home: https://github.com/scverse/cookiecutter-scverse
 documentation_home: https://cookiecutter-scverse-instance.readthedocs.io/en/latest/
 tags:
   - template
   - cookiecutter
-  - project scaffold
-  - infrastructure
 license: BSD-3-Clause
-version: 1.0.0
-authors:
-  - scverse
+version: 0.6.0
+contact:
+  - grst
+  - flying-sheep
 category: core-infrastructure
