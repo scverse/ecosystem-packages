@@ -6,9 +6,8 @@ documentation_home: https://github.com/scverse/integration-testing
 tags:
   - testing
   - continuous integration
-  - infrastructure
 license: MIT
-version: 1.0.0
-authors:
-  - scverse
+contact:
+  - ilan-gold
+  - flying-sheep
 category: core-infrastructure

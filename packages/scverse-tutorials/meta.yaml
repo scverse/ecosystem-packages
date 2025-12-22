@@ -1,6 +1,6 @@
 name: scverse-tutorials
 description: |
-  Tutorials for learning scverse
+  Tutorials and tutorials registry for scverse.org/learn.
 project_home: https://github.com/scverse/scverse-tutorials
 documentation_home: https://scverse-tutorials.readthedocs.io/en/latest/
 tutorials_home: https://scverse-tutorials.readthedocs.io/en/latest/
@@ -8,9 +8,8 @@ tags:
   - tutorials
   - education
   - documentation
-  - infrastructure
 license: BSD-3-Clause
-version: 1.0.0
-authors:
-  - scverse
+contact:
+  - grst
+  - flying-sheep
 category: core-infrastructure
