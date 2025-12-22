@@ -224,9 +224,7 @@
         },
         "test_command": {
             "description": "A shell command to install the package and execute the tests, assuming you are inside a freshly cloned copy of the package repository. Often this will be `pip install \".[test]\" && pytest`",
-            "type": [
-                "string"
-            ]
+            "type": ["string"]
         },
         "category": {
             "type": "string",
@@ -259,8 +257,6 @@
         }
     },
     "then": {
-        "required": [
-            "install"
-        ]
+        "required": ["install"]
     }
 }
