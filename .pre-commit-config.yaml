@@ -72,6 +72,7 @@ repos:
         pass_filenames: false
         additional_dependencies:
           - httpx
+          - httpx-retries
           - types-jsonschema
           - pillow
           - pygithub
