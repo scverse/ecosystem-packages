@@ -1,0 +1,80 @@
+[build-system]
+build-backend = "hatchling.build"
+
+requires = [ "hatch-vcs", "hatchling" ]
+
+[project]
+name = "ecosystem-scripts"
+description = "scripts for ecosystem package data"
+readme = "../README.md"
+license = "GPL-3.0"
+authors = [
+  { name = "Philipp A.", email = "flying-sheep@web.de" },
+  { name = "Gregor Sturm", email = "gregor.sturm@scverse.org" },
+]
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+dynamic = [ "version" ]
+dependencies = [
+  "httpx",
+  "httpx-retries",
+  "jsonschema>=4.25.1",
+  "pillow>=12",
+  "pygithub",
+  "pyyaml",
+  "rich",
+]
+
+urls.Documentation = "https://github.com/scverse/ecosystem-packages#readme"
+urls.Issues = "https://github.com/scverse/ecosystem-packages/issues"
+urls.Source = "https://github.com/scverse/ecosystem-packages"
+scripts.register-template-repos = "ecosystem_scripts.template_repo_registry:main"
+scripts.validate-registry = "ecosystem_scripts.validate_registry:main"
+
+[tool.hatch.version]
+source = "vcs"
+fallback-version = "0.0"
+
+[tool.hatch.envs.default]
+python = "3.13"
+
+[tool.ruff]
+line-length = 120
+lint.select = [
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "RUF",
+  "S",
+  "T",
+  "TC",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
+]
+lint.ignore = [  ]
+
+[tool.mypy]
+strict = true
+explicit_package_bases = true
+mypy_path = [ "$MYPY_CONFIG_FILE_DIR/typings", "$MYPY_CONFIG_FILE_DIR/src" ]

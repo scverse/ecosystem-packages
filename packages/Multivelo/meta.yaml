@@ -1,0 +1,20 @@
+name: Multivelo
+description: |
+  A mechanistic model of gene expression that extends the popular RNA velocity
+  framework by incorporating epigenomic data.
+project_home: https://github.com/welch-lab/MultiVelo
+documentation_home: https://multivelo.readthedocs.io/en/latest/api.html
+tutorials_home: https://multivelo.readthedocs.io/en/latest/MultiVelo_Demo.html
+publications:
+  - 10.1038/s41587-022-01476-y
+install:
+  pypi: multivelo
+tags:
+  - rna velocity
+license: BSD-3-Clause
+version: 0.1.3
+contact:
+  - jw156605
+  - danielee0707
+  - jacobrepucci
+category: ecosystem

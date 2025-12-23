@@ -1,0 +1,22 @@
+name: liana
+description: |
+  Python package to infer cell-cell communication events from omics data using a collection of methods.
+project_home: https://github.com/saezlab/liana-py
+documentation_home: https://liana-py.readthedocs.io/en/latest/
+tutorials_home: https://liana-py.readthedocs.io/en/latest/
+install:
+  pypi: liana
+tags:
+  - single-cell
+  - spatial
+  - ligand-receptor
+  - cell-cell communication
+license: GPL-3.0-only
+version: v1.0.0a1
+contact:
+  - dbdimitrov
+test_command: |
+  pip install poetry && \
+  poetry install --extras "full" && \
+  poetry run pytest --disable-warnings .
+category: ecosystem

@@ -1,0 +1,7 @@
+.DS_STORE
+__pycache__/
+.*cache/
+
+/.vscode/
+.venv
+schema.pyi

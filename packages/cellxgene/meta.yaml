@@ -1,0 +1,30 @@
+name: cellxgene
+description: |
+  CZ CELLxGENE Annotate (pronounced "cell-by-gene") is an interactive data explorer for single-cell datasets,
+  such as those coming from the Human Cell Atlas.
+project_home: https://github.com/chanzuckerberg/cellxgene
+documentation_home: https://docs.cellxgene.cziscience.com/
+publications:
+  - 10.1101/2021.04.05.438318
+install:
+  pypi: cellxgene
+tags:
+  - HCA
+license: MIT
+version: 1.1.1
+contact:
+  - csweaver
+  - bkmartinjr
+  - seve
+  - maniarathi
+  - atolopko-czi
+  - mckinsel
+  - MDunitz
+  - colinmegill
+  - blrnw3
+  - freeman-lab
+  - bmccandless
+  - mweiden
+test_command: |
+  pip install ".[test]" && pytest
+category: ecosystem

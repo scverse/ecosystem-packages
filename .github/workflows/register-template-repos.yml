@@ -1,0 +1,32 @@
+name: Register template repos
+
+on:
+  schedule:
+    # Twice a month: https://crontab.guru/#0_5_1,15_*_*
+    - cron: "0 5 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  register-template-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.BOT_GH_TOKEN }}
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+      - name: Update template repo registry
+        run: uvx --from ./scripts register-template-repos template-repos.yml
+        env:
+          GITHUB_TOKEN: "${{ secrets.BOT_GH_TOKEN }}"
+          FORCE_COLOR: "1"
+          COLUMNS: "150"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: ./template-repos.yml
+          author_name: scverse-bot
+          author_email: core-team@scverse.org
+          message: "Updated template-repos.yml"
+          push: true
+      - name: Show diff
+        run: git diff HEAD~1

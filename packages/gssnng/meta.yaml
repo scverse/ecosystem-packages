@@ -1,0 +1,24 @@
+name: gssnng
+description: |
+  Single-cell gene set scoring with nearest neighbor graph smoothed data.
+project_home: https://github.com/IlyaLab/gssnng
+documentation_home: https://gssnng.readthedocs.io/en/latest/
+tutorials_home: https://github.com/IlyaLab/gssnng/tree/main/notebooks
+publications:
+  - 10.1093/bioadv/vbad150
+install:
+  pypi: gssnng
+tags:
+  - scRNA-seq
+  - GSEA
+  - geneset-scoring
+  - smoothing
+  - python
+license: MIT
+version: v0.4.2
+contact:
+  - gibbsdavidl
+  - redst4r
+test_command: |
+  git clone git@github.com:IlyaLab/gssnng.git && pip install gssnng && pip install pytest && cd gssnng/ && pytest
+category: ecosystem

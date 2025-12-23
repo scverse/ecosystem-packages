@@ -1,0 +1,31 @@
+name: Panpipes
+description: |
+  A pipeline for multiomic single-cell and spatial transcriptomic data analysis
+project_home: https://github.com/DendrouLab/panpipes
+documentation_home: https://panpipes-pipelines.readthedocs.io/en/latest/index.html
+tutorials_home: https://panpipes-pipelines.readthedocs.io/en/latest/tutorials/index.html
+publications:
+  - 10.1101/2023.03.11.532085
+install:
+  pypi: panpipes
+tags:
+  - single-cell
+  - multiomics
+  - pipeline
+  - spatial
+  - bioinformatics
+license: BSD-3-Clause
+version: v0.5.0
+contact:
+  - bio-la
+  - crichgriffin
+  - SarahOuologuem
+  - giuliaelgarcia
+  - kevinrue
+  - deevdevil88
+  - Lilly-May
+  - tomthomas3000
+  - Zethson
+  - wlason
+test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

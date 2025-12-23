@@ -1,0 +1,81 @@
+fail_fast: false
+default_language_version:
+  python: python3
+default_stages:
+  - pre-commit
+  - pre-push
+minimum_pre_commit_version: 2.16.0
+repos:
+  # all files
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: detect-private-key
+      - id: check-ast
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: trailing-whitespace
+      - id: check-case-conflict
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.7.4
+    hooks:
+      - id: prettier
+  # package metadata
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.36.0
+    hooks:
+      - id: check-jsonschema
+        files: "scripts/src/ecosystem_scripts/schema.json"
+        args: ["--check-metaschema"]
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.36.0
+    hooks:
+      - id: check-jsonschema
+        files: "packages/.*/meta.yaml"
+        args: ["--schemafile", "scripts/src/ecosystem_scripts/schema.json"]
+  - repo: local
+    hooks:
+      - id: forbid-to-commit
+        name: Check files in `packages` directory
+        entry: |
+          Only `meta.yaml` and logo files are permitted in the packages directory
+        language: fail
+        files: "^packages/.*$"
+        exclude: "^packages/.*/(meta.yaml|logo\\..*)$"
+  # scripts
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.10
+    hooks:
+      - id: ruff-check
+        args: [--fix, --exit-non-zero-on-fix]
+        files: ^scripts/.*$
+      - id: ruff-format
+        files: ^scripts/.*$
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: v2.11.1
+    hooks:
+      - id: pyproject-fmt
+  - repo: https://github.com/camptocamp/jsonschema-gentypes
+    rev: "2.13.0"
+    hooks:
+      - id: jsonschema-gentypes
+        args:
+          - --json-schema=scripts/src/ecosystem_scripts/schema.json
+          - --python=scripts/src/ecosystem_scripts/schema.pyi
+        files: ^scripts/.*/schema.json$
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.19.1
+    hooks:
+      - id: mypy
+        args: [--config-file=scripts/pyproject.toml, scripts]
+        pass_filenames: false
+        additional_dependencies:
+          - httpx
+          - httpx-retries
+          - types-jsonschema
+          - pillow
+          - pygithub
+          - types-PyYAML
+          - rich
+        files: ^scripts/.*$
