@@ -1,0 +1,14 @@
+name: governance
+description: |
+  Governance docs for scverse
+project_home: https://github.com/scverse/governance
+documentation_home: https://scverse.org/about
+tags:
+  - governance
+  - documentation
+license: BSD-3-Clause
+contact:
+  - Zethson
+  - gtca
+  - mikelkou
+category: core-infrastructure
