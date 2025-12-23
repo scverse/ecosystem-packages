@@ -70,7 +70,7 @@ class LinkChecker:
             return ValidationError(msg)
 
         try:
-            response = self.client.head(url, follow_redirects=True, timeout=30.0)
+            response = self.client.head(url)
         except Exception as e:
             msg = f"URL {url} is not reachable: {e}"
             return ValidationError(msg)
@@ -113,10 +113,7 @@ class GitHubUserValidator:
 
         try:
             response = self.client.post(
-                "https://api.github.com/graphql",
-                headers=headers,
-                json={"query": f"query {{ {q} }}"},
-                timeout=30.0,
+                "https://api.github.com/graphql", headers=headers, json={"query": f"query {{ {q} }}"}
             )
         except Exception as e:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r}: {e}"
@@ -158,9 +155,7 @@ class PyPIValidator:
             return None
 
         try:
-            response = self.client.head(
-                f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True, timeout=30.0
-            )
+            response = self.client.head(f"https://pypi.org/pypi/{package_name}/json")
         except Exception as e:
             msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
             return ValidationError(msg)
@@ -206,11 +201,7 @@ class CondaValidator:
 
         # Check package exists on the channel
         try:
-            response = self.client.head(
-                f"https://api.anaconda.org/package/{channel}/{package_name}",
-                follow_redirects=True,
-                timeout=30.0,
-            )
+            response = self.client.head(f"https://api.anaconda.org/package/{channel}/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
             return ValidationError(msg)
@@ -249,7 +240,7 @@ class CRANValidator:
 
         # CRAN packages can be checked via the packages database
         try:
-            response = self.client.head(f"https://crandb.r-pkg.org/{package_name}", follow_redirects=True, timeout=30.0)
+            response = self.client.head(f"https://crandb.r-pkg.org/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
             return ValidationError(msg)
@@ -295,7 +286,7 @@ def validate_packages(
 
     # Create HTTP client with retry configuration using httpx_retries transport
     retry_transport = RetryTransport(retry=Retry(total=3, backoff_factor=2))
-    retry_client = httpx.Client(transport=retry_transport)
+    retry_client = httpx.Client(follow_redirects=True, timeout=30.0, transport=retry_transport)
 
     # using different link checkers,
     # because each of them may point to the same URL and this wouldn't qualify as duplicate
