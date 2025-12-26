@@ -1,0 +1,25 @@
+name: FlashDeconv
+description: |
+  FlashDeconv is a high-performance spatial transcriptomics deconvolution method using
+  structure-preserving randomized sketching. It estimates cell type proportions for
+  atlas-scale and subcellular-resolution platforms (Visium HD, Stereo-seq, Xenium) with
+  linear O(N) scaling - processing 1 million spots in ~3 minutes on commodity hardware.
+  FlashDeconv provides a scanpy-compatible API (fd.tl.deconvolve) that stores results
+  directly in AnnData objects, enabling seamless integration with the scverse ecosystem.
+project_home: https://github.com/cafferychen777/flashdeconv
+documentation_home: https://github.com/cafferychen777/flashdeconv#readme
+publications:
+  - 10.64898/2025.12.22.696108
+install:
+  pypi: flashdeconv
+license: GPL-3.0
+tags:
+  - spatial transcriptomics
+  - deconvolution
+  - visium hd
+  - cell type
+version: 0.1.2
+contact:
+  - cafferychen777
+test_command: pip install ".[dev]" && pytest
+category: ecosystem
