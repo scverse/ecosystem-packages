@@ -1,0 +1,29 @@
+name: scPRINT-2
+description: |
+  A next generation single cell foundation model
+project_home: https://github.com/cantinilab/scPRINT-2
+documentation_home: https://cantinilab.github.io/scPRINT-2/
+publications:
+  - 10.64898/2025.12.11.693702v2
+install:
+  pypi: scprint2
+tags:
+  - foundation model
+  - single cell
+  - RNAseq
+  - gene network inference
+  - denoising
+  - zero imputation
+  - label prediction
+  - zero shot
+  - embedding
+  - pytorch
+  - lightning
+  - species integration
+  - expression imputation
+  - counterfactual predictions
+license: GPL-3.0-or-later
+version: v1.0.0
+contact:
+  - jkobject (jeremie kalfon)
+test_command: pip install . && make test
