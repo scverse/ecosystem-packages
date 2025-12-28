@@ -13,7 +13,8 @@ tags:
   - filter
 license: BSD-3-Clause
 version: v0.1.0
-authors:
+contact:
   - zoepiran
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

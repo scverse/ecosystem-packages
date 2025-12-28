@@ -1,29 +1,25 @@
-name: pertpy
+name: Pertpy
 description: |
-  pertpy is a framework for the analysis of multi-condition omics data.
+  Pertpy is a framework for analyzing large-scale single-cell perturbation experiments.
+  It harmonizes datasets, automates metadata annotation, calculates perturbation distances,
+  and analyzes cellular responses to genetic modifications, drugs, and environmental changes.
 project_home: https://github.com/scverse/pertpy
 documentation_home: https://pertpy.readthedocs.io/en/stable/
-tutorials_home: https://pertpy.readthedocs.io/en/stable/tutorials/index.html
+tutorials_home: https://pertpy.readthedocs.io/en/stable/tutorials.html
+publications:
+  - 10.1101/2024.08.04.606516
 install:
   pypi: pertpy
+  conda: conda-forge::pertpy
 tags:
-  - single-cell
   - perturbation
-  - condition
-license: Apache-2.0
-version: v0.7.0
-authors:
-  - lukas heumos
-  - Lilly May
-  - Yuge Ji
-  - Alejandro Tejada
-  - Johannes Köster
-  - Emma Dann
-  - Xinyue Zhang
-  - Xichen Wu
-  - Tessa Green
-  - Stefan Peidli
-  - Antonia Schumacher
-  - Gregor Sturm
-test_command: |
-  pip install ".[dev,test]" && pytest
+  - drug response
+  - CRISPR
+  - genetic perturbation
+license: MIT
+version: 1.0.3
+contact:
+  - Zethson
+logo: logo.svg
+test_command: pip install ".[test]" && pytest
+category: core-framework

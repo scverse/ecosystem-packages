@@ -16,8 +16,9 @@ tags:
   - bioinformatics
 license: GPL-3.0-only
 version: v1.4.12
-authors:
+contact:
   - Starlitnightly
   - DBinary
   - JuliaMYQ
 test_command: pip install "." && pytest
+category: ecosystem

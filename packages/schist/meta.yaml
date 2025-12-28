@@ -12,8 +12,9 @@ tags:
 publications:
   - 10.1186/s12859-021-04489-7
 version: v0.8.1
-authors:
+contact:
   - dawe
   - leomorelli
 test_command: |
   pytest conftest.py
+category: ecosystem

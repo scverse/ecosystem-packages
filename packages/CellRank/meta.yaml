@@ -17,9 +17,10 @@ tags:
   - trajectory-generation
 license: BSD-3-Clause
 version: v1.5.1
-authors:
+contact:
   - Marius1311
   - michalk8
   - WeilerP
 test_command: |
   pip install ".[test]" && pytest
+category: ecosystem

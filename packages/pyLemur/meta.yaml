@@ -14,6 +14,7 @@ tags:
   - multi-condition
 license: MIT
 version: v0.1.0
-authors:
-  - Constantin Ahlmann-Eltze
+contact:
+  - const-ae
 test_command: pip install -e '.[dev]' && pytest
+category: ecosystem

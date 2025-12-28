@@ -14,6 +14,7 @@ tags:
   - scATAC-seq
 license: MIT
 version: v1.0.3
-authors:
-  - Lei Xiong
+contact:
+  - jsxlei
 test_command: pip install ".[test]" && pytest
+category: ecosystem

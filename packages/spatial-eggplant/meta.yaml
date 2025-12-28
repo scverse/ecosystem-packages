@@ -13,6 +13,7 @@ tags:
   - spatial registration
 license: MIT
 version: v0.2.3
-authors:
+contact:
   - almaan
 test_command: pip install "." && pytest
+category: ecosystem
