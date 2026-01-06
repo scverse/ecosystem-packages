@@ -6,8 +6,8 @@ description: |
   standard laptop without GPU. It provides accurate cell type proportion estimation with Pearson r = 0.944
   on the Spotless benchmark, and preserves rare cell type detection through leverage-score weighted sampling.
 project_home: https://github.com/cafferychen777/flashdeconv
-documentation_home: https://flashdeconv.readthedocs.io/
-tutorials_home: https://flashdeconv.readthedocs.io/
+documentation_home: https://github.com/cafferychen777/flashdeconv#readme
+tutorials_home: https://github.com/cafferychen777/flashdeconv/tree/main/examples
 publications:
   - 10.64898/2025.12.22.696108
 install:
