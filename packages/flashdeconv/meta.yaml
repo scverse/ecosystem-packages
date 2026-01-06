@@ -1,0 +1,27 @@
+name: flashdeconv
+description: |
+  FlashDeconv is a high-performance spatial transcriptomics deconvolution tool that enables cell type mapping
+  at atlas scale. Using structure-preserving sketching via randomized numerical linear algebra, FlashDeconv
+  achieves linear time and memory complexity, processing 1 million spots in approximately 3 minutes on a
+  standard laptop without GPU. It provides accurate cell type proportion estimation with Pearson r = 0.944
+  on the Spotless benchmark, and preserves rare cell type detection through leverage-score weighted sampling.
+project_home: https://github.com/cafferychen777/flashdeconv
+documentation_home: https://flashdeconv.readthedocs.io/
+tutorials_home: https://flashdeconv.readthedocs.io/
+publications:
+  - 10.64898/2025.12.22.696108
+install:
+  pypi: flashdeconv
+tags:
+  - spatial transcriptomics
+  - deconvolution
+  - cell type
+  - Visium HD
+  - sketching
+license: BSD-3-Clause
+version: v0.1
+contact:
+  - cafferychen777
+test_command: |
+  pip install ".[test]" && pytest
+category: ecosystem
