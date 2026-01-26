@@ -18,18 +18,18 @@ repos:
       - id: trailing-whitespace
       - id: check-case-conflict
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.0
+    rev: v3.8.1
     hooks:
       - id: prettier
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.0
+    rev: 0.36.1
     hooks:
       - id: check-jsonschema
         files: "scripts/src/ecosystem_scripts/schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.0
+    rev: 0.36.1
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
@@ -45,7 +45,7 @@ repos:
         exclude: "^packages/.*/(meta.yaml|logo\\..*)$"
   # scripts
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.13
+    rev: v0.14.14
     hooks:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
