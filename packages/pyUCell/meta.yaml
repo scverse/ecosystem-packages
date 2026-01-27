@@ -7,8 +7,8 @@ description: |
   processing of large datasets in a few minutes even on machines with limited
   computing power.
 project_home: https://github.com/carmonalab/pyucell
-documentation_home: https://pyucell.readthedocs.io/en/latest
-tutorials_home: https://pyucell.readthedocs.io/en/latest/notebooks/basic.html
+documentation_home: https://pyucell.readthedocs.io/
+tutorials_home: https://pyucell.readthedocs.io/page/notebooks/basic.html
 publications:
   - 10.1016/j.csbj.2021.06.043
 install:

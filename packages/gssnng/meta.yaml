@@ -2,7 +2,7 @@ name: gssnng
 description: |
   Single-cell gene set scoring with nearest neighbor graph smoothed data.
 project_home: https://github.com/IlyaLab/gssnng
-documentation_home: https://gssnng.readthedocs.io/en/latest/
+documentation_home: https://gssnng.readthedocs.io/
 tutorials_home: https://github.com/IlyaLab/gssnng/tree/main/notebooks
 publications:
   - 10.1093/bioadv/vbad150
