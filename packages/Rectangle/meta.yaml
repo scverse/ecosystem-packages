@@ -3,7 +3,7 @@ description: |
   Rectangle is a python package for computational deconvolution.
   Rectangle presents a novel approach to second-generation deconvolution, characterized by hierarchical processing, an estimation of unknown cellular content and a significant reduction in data volume during signature matrix computation.
 project_home: https://github.com/ComputationalBiomedicineGroup/Rectangle
-documentation_home: https://rectanglepy.readthedocs.io
+documentation_home: https://rectanglepy.readthedocs.io/
 tutorials_home: https://rectanglepy.readthedocs.io/notebooks/example.html
 install:
   pypi: rectanglepy

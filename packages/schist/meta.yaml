@@ -1,7 +1,7 @@
 name: schist
 description: schist applies Stochastic Block Models (SBM) to the analysis of single cell data, in particular to identify cell populations
 project_home: https://github.com/dawe/schist
-documentation_home: https://schist.readthedocs.io
+documentation_home: https://schist.readthedocs.io/
 tutorials_home: https://schist.readthedocs.io/page/tutorials.html
 install:
   conda: conda-forge::schist

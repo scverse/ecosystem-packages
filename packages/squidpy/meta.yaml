@@ -6,7 +6,7 @@ description: |
   if available.
 project_home: https://github.com/scverse/squidpy
 documentation_home: https://squidpy.readthedocs.io/
-tutorials_home: https://squidpy.readthedocs.io/page/notebooks/tutorials/index.html
+tutorials_home: https://squidpy.readthedocs.io/page/notebooks/tutorials/
 publications:
   - 10.1038/s41592-021-01358-2
 install:
