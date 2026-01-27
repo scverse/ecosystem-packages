@@ -6,8 +6,8 @@ description: |
   scvi-tools also contains easy-to-use implementations of more than 14 state-of-the-art
   probabilistic models in the field.
 project_home: https://github.com/scverse/scvi-tools
-documentation_home: https://docs.scvi-tools.org/en/stable/
-tutorials_home: https://docs.scvi-tools.org/en/stable/tutorials/index.html
+documentation_home: https://docs.scvi-tools.org/
+tutorials_home: https://docs.scvi-tools.org/page/tutorials/index.html
 publications:
   - 10.1038/s41587-021-01206-w # Scvi-tools library paper, NBT 2022
   - 10.1038/s41587-022-01272-8 # DestVI

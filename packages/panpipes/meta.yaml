@@ -2,8 +2,8 @@ name: Panpipes
 description: |
   A pipeline for multiomic single-cell and spatial transcriptomic data analysis
 project_home: https://github.com/DendrouLab/panpipes
-documentation_home: https://panpipes-pipelines.readthedocs.io/en/latest/index.html
-tutorials_home: https://panpipes-pipelines.readthedocs.io/en/latest/tutorials/index.html
+documentation_home: https://panpipes-pipelines.readthedocs.io/page/index.html
+tutorials_home: https://panpipes-pipelines.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.1101/2023.03.11.532085
 install:

@@ -4,8 +4,8 @@ description: |
   positioned between pandas and xarray. anndata offers a broad range of computationally
   efficient features including, among others, sparse data support, lazy operations, and GPU support.
 project_home: https://github.com/scverse/anndata
-documentation_home: https://anndata.readthedocs.io/en/latest/
-tutorials_home: https://anndata.readthedocs.io/en/latest/tutorials/index.html
+documentation_home: https://anndata.readthedocs.io/
+tutorials_home: https://anndata.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.1101/2021.12.16.473007
 install:

@@ -4,8 +4,8 @@ description: |
   python libraries for performant access, alignment, and processing of uni- and multi-modal
   spatial omics datasets.
 project_home: https://github.com/scverse/spatialdata
-documentation_home: https://spatialdata.scverse.org/en/latest/
-tutorials_home: https://spatialdata.scverse.org/en/latest/tutorials/notebooks/notebooks.html
+documentation_home: https://spatialdata.scverse.org/
+tutorials_home: https://spatialdata.scverse.org/page/tutorials/notebooks/notebooks.html
 publications:
   - 10.1038/s41592-024-02212-x
 install:

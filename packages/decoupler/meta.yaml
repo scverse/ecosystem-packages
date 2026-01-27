@@ -3,8 +3,8 @@ description: |
   decoupler is a framework containing different enrichment statistical methods to extract
   biologically driven scores from omics data within a unified framework.
 project_home: https://github.com/scverse/decoupler
-documentation_home: https://decoupler.readthedocs.io/en/latest/
-tutorials_home: https://decoupler.readthedocs.io/en/latest/notebooks/index.html
+documentation_home: https://decoupler.readthedocs.io/
+tutorials_home: https://decoupler.readthedocs.io/page/notebooks/index.html
 publications:
   - 10.1093/bioadv/vbac016
 install:
