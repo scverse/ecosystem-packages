@@ -2,7 +2,7 @@ name: Cell_BLAST
 description: |
   Cell BLAST is a cell querying tool for single-cell transcriptomics data.
 project_home: https://github.com/gao-lab/Cell_BLAST
-documentation_home: https://cblast.readthedocs.io/en/latest/
+documentation_home: https://cblast.readthedocs.io/
 publications:
   - 10.1038/s41467-020-17281-7
 install:

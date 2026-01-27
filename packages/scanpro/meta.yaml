@@ -1,8 +1,8 @@
 name: scanpro
 description: robust cell proportion analysis for single cell data
 project_home: https://github.com/loosolab/scanpro
-documentation_home: https://scanpro.readthedocs.io
-tutorials_home: https://scanpro.readthedocs.io/en/latest/proportion_analysis.html
+documentation_home: https://scanpro.readthedocs.io/
+tutorials_home: https://scanpro.readthedocs.io/page/proportion_analysis.html
 publications:
   - 10.1101/2023.08.14.553234
 install:
