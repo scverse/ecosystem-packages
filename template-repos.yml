@@ -12,7 +12,6 @@
 - url: https://github.com/CompCy-lab/scHub
 - url: https://github.com/Computational-Morphogenomics-Group/Ladder
 - url: https://github.com/ComputationalBiomedicineGroup/Rectangle
-- url: https://github.com/David-M-P/insight
 - url: https://github.com/Floto-Lab/BactGraph
 - url: https://github.com/FroeseLab/bulkpy
 - url: https://github.com/Gabriellvl/FlowSOM
@@ -21,6 +20,7 @@
 - url: https://github.com/MannLabs/alphapepttools
 - url: https://github.com/MannLabs/dvp-io
 - url: https://github.com/NKI-CCB/sobolev_alignment
+- url: https://github.com/PMBio/scDoRI
 - url: https://github.com/Teichlab/multi-view-atlas
 - url: https://github.com/YosefLab/cytovi-reference-implementation
 - url: https://github.com/YosefLab/embedding-scvi
@@ -32,6 +32,7 @@
 - url: https://github.com/YosefLab/visionpy
 - url: https://github.com/Zethson/fknni
 - url: https://github.com/adamgayoso/figmasvg
+- url: https://github.com/adamgayoso/umapjax
 - url: https://github.com/aertslab/CREsted
 - url: https://github.com/aertslab/TF-MINDI
 - url: https://github.com/agerardy/myeditdistance
@@ -109,6 +110,7 @@
 - url: https://github.com/scverse/deres
 - url: https://github.com/scverse/formulaic-contrasts
 - url: https://github.com/scverse/genomic-features
+- url: https://github.com/scverse/mudata
 - url: https://github.com/scverse/pertpy
 - url: https://github.com/scverse/pytometry
 - url: https://github.com/scverse/scanpy
