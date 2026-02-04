@@ -9,8 +9,8 @@ description = "scripts for ecosystem package data"
 readme = "../README.md"
 license = "GPL-3.0"
 authors = [
-  { name = "Philipp A.", email = "flying-sheep@web.de" },
   { name = "Gregor Sturm", email = "gregor.sturm@scverse.org" },
+  { name = "Philipp A.", email = "flying-sheep@web.de" },
 ]
 requires-python = ">=3.12"
 classifiers = [
@@ -36,12 +36,12 @@ urls.Source = "https://github.com/scverse/ecosystem-packages"
 scripts.register-template-repos = "ecosystem_scripts.template_repo_registry:main"
 scripts.validate-registry = "ecosystem_scripts.validate_registry:main"
 
+[tool.hatch.envs.default]
+python = "3.13"
+
 [tool.hatch.version]
 source = "vcs"
 fallback-version = "0.0"
-
-[tool.hatch.envs.default]
-python = "3.13"
 
 [tool.ruff]
 line-length = 120

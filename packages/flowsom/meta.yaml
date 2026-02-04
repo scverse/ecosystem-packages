@@ -6,8 +6,8 @@ description: |
   FlowSOM is used to distinguish cell populations from cytometry data in an unsupervised way and
   can help to gain deeper insights in fields such as immunology and oncology.
 project_home: https://github.com/saeyslab/FlowSOM_Python
-documentation_home: https://flowsom.readthedocs.io/en/latest/
-tutorials_home: https://flowsom.readthedocs.io/en/latest/notebooks/example.html
+documentation_home: https://flowsom.readthedocs.io/
+tutorials_home: https://flowsom.readthedocs.io/page/notebooks/example.html
 publications:
   - 10.1093/bioinformatics/btae179
   - 10.1002/cyto.a.22625
