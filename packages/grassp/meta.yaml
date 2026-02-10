@@ -7,14 +7,13 @@ description: |
 project_home: https://github.com/czbiohub-sf/grassp
 documentation_home: https://public.czbiohub.org/comp.bio/grassp/
 tutorials_home: https://public.czbiohub.org/comp.bio/grassp/tutorials/
-publications:
 install:
   pypi: grassp
 tags:
   - subcellular proteomics
   - mass-spectrometry
   - graph-based analysis
-license: BSD 3-Clause
+license: BSD-3-Clause
 version: v0.1.0
 contact:
   - mffrank
