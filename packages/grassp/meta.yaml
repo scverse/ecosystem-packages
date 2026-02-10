@@ -1,0 +1,25 @@
+
+name: grassp
+description: |
+  grassp (GRaph-based Analysis of Subcellular/Spatial Proteomics) is a Python module
+  for fast, flexible, and scalable analysis of mass-spectrometry-based subcellular proteomics datasets.
+  It uses the anndata format to store mass-spec data and results.
+  scanpy is used for dimensionality reduction and visualization functions.
+project_home: https://github.com/czbiohub-sf/grassp
+documentation_home: https://public.czbiohub.org/comp.bio/grassp/
+tutorials_home: https://public.czbiohub.org/comp.bio/grassp/tutorials/
+publications:
+install:
+  pypi: grassp
+tags:
+  - subcellular proteomics
+  - mass-spectrometry
+  - graph-based analysis
+license: BSD 3-Clause
+version: v0.1.0
+contact:
+  - mffrank
+  - duopeng
+  - kyleawayan
+test_command: pip install ".[dev]" && pytest
+category: ecosystem
