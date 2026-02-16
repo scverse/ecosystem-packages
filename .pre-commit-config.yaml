@@ -23,13 +23,13 @@ repos:
       - id: prettier
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.1
+    rev: 0.36.2
     hooks:
       - id: check-jsonschema
         files: "scripts/src/ecosystem_scripts/schema.json"
         args: ["--check-metaschema"]
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.1
+    rev: 0.36.2
     hooks:
       - id: check-jsonschema
         files: "packages/.*/meta.yaml"
@@ -45,7 +45,7 @@ repos:
         exclude: "^packages/.*/(meta.yaml|logo\\..*)$"
   # scripts
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.0
+    rev: v0.15.1
     hooks:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
@@ -53,7 +53,7 @@ repos:
       - id: ruff-format
         files: ^scripts/.*$
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: v2.14.2
+    rev: v2.16.0
     hooks:
       - id: pyproject-fmt
   - repo: https://github.com/camptocamp/jsonschema-gentypes
