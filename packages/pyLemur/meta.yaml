@@ -2,7 +2,7 @@ name: pyLemur
 description: |
   Python implementation of the LEMUR algorithm for analyzing multi-condition single-cell RNA-seq data..
 project_home: https://github.com/const-ae/pyLemur
-documentation_home: https://pyLemur.readthedocs.io
+documentation_home: https://pyLemur.readthedocs.io/
 tutorials_home: https://pylemur.readthedocs.io/page/notebooks/Tutorial.html
 publications:
   - 10.1101/2023.03.06.531268

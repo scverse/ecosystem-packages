@@ -3,8 +3,8 @@ description: |
   scGen is a generative model to predict single-cell perturbation response
   across cell types, studies and species.
 project_home: https://github.com/theislab/scgen
-documentation_home: https://scgen.readthedocs.io/en/stable/
-tutorials_home: https://scgen.readthedocs.io/en/stable/tutorials/index.html
+documentation_home: https://scgen.readthedocs.io/
+tutorials_home: https://scgen.readthedocs.io/page/tutorials/
 publications:
   - 10.1038/s41592-019-0494-8
 install:

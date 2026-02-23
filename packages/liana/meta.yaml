@@ -2,8 +2,8 @@ name: liana
 description: |
   Python package to infer cell-cell communication events from omics data using a collection of methods.
 project_home: https://github.com/saezlab/liana-py
-documentation_home: https://liana-py.readthedocs.io/en/latest/
-tutorials_home: https://liana-py.readthedocs.io/en/latest/
+documentation_home: https://liana-py.readthedocs.io/
+tutorials_home: https://liana-py.readthedocs.io/
 install:
   pypi: liana
 tags:

@@ -3,8 +3,8 @@ description: |
   A mechanistic model of gene expression that extends the popular RNA velocity
   framework by incorporating epigenomic data.
 project_home: https://github.com/welch-lab/MultiVelo
-documentation_home: https://multivelo.readthedocs.io/en/latest/api.html
-tutorials_home: https://multivelo.readthedocs.io/en/latest/MultiVelo_Demo.html
+documentation_home: https://multivelo.readthedocs.io/page/api.html
+tutorials_home: https://multivelo.readthedocs.io/page/MultiVelo_Demo.html
 publications:
   - 10.1038/s41587-022-01476-y
 install:

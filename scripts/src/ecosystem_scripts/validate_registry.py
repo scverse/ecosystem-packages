@@ -17,6 +17,7 @@ from typing import TYPE_CHECKING, cast
 import httpx
 import jsonschema
 import yaml
+from httpx_retries import Retry, RetryTransport
 from PIL import Image
 
 from ._logging import log, setup_logging
@@ -50,8 +51,9 @@ class ErrorList(list[Exception]):
 class LinkChecker:
     """Track known links and validate URLs."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
         self.known_links: set[str] = set()
+        self.client = client
 
     def check_and_register(self, url: str, context: str) -> None | ValidationError:
         """Check if URL is duplicate, validate it exists, and register it.
@@ -67,7 +69,12 @@ class LinkChecker:
             msg = f"{context}: Duplicate link: {url}"
             return ValidationError(msg)
 
-        response = httpx.head(url, follow_redirects=True)
+        try:
+            response = self.client.head(url)
+        except Exception as e:
+            msg = f"URL {url} is not reachable: {e}"
+            return ValidationError(msg)
+
         if response.status_code != httpx.codes.OK:
             msg = f"URL {url} is not reachable (error {response.status_code}). "
             return ValidationError(msg)
@@ -79,7 +86,8 @@ class LinkChecker:
 class GitHubUserValidator:
     """Validate GitHub usernames using the GitHub API."""
 
-    def __init__(self, github_token: str | None = None) -> None:
+    def __init__(self, client: httpx.Client, github_token: str | None = None) -> None:
+        self.client = client
         self.github_token = github_token
         self.validated_users: set[str] = set()
 
@@ -102,7 +110,14 @@ class GitHubUserValidator:
             headers["Authorization"] = f"token {self.github_token}"
 
         q = "\n".join(f"user{i}: user(login: {json.dumps(name)}) {{ login }}" for i, name in enumerate(unvalidated))
-        response = httpx.post("https://api.github.com/graphql", headers=headers, json={"query": f"query {{ {q} }}"})
+
+        try:
+            response = self.client.post(
+                "https://api.github.com/graphql", headers=headers, json={"query": f"query {{ {q} }}"}
+            )
+        except Exception as e:
+            msg = f"{context}: Failed to validate GitHub users {unvalidated!r}: {e}"
+            return ValidationError(msg)
 
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r} (error {response.status_code})"
@@ -122,7 +137,8 @@ class GitHubUserValidator:
 class PyPIValidator:
     """Validate PyPI package names against the PyPI API."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
         self.validated_packages: set[str] = set()
 
     def validate_package(self, package_name: str, context: str) -> None | ValidationError:
@@ -138,7 +154,11 @@ class PyPIValidator:
         if package_name in self.validated_packages:
             return None
 
-        response = httpx.head(f"https://pypi.org/pypi/{package_name}/json", follow_redirects=True)
+        try:
+            response = self.client.head(f"https://pypi.org/pypi/{package_name}/json")
+        except Exception as e:
+            msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
+            return ValidationError(msg)
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: PyPI package {package_name!r} does not exist"
@@ -155,7 +175,8 @@ class PyPIValidator:
 class CondaValidator:
     """Validate Conda package identifiers using the Anaconda API."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
         self.validated_packages: set[str] = set()
 
     def validate_package(self, package_spec: str, context: str) -> None | ValidationError:
@@ -179,10 +200,11 @@ class CondaValidator:
         channel, package_name = package_spec.split("::", 1)
 
         # Check package exists on the channel
-        response = httpx.head(
-            f"https://api.anaconda.org/package/{channel}/{package_name}",
-            follow_redirects=True,
-        )
+        try:
+            response = self.client.head(f"https://api.anaconda.org/package/{channel}/{package_name}")
+        except Exception as e:
+            msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
+            return ValidationError(msg)
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: Conda package '{package_spec}' does not exist"
@@ -199,7 +221,8 @@ class CondaValidator:
 class CRANValidator:
     """Validate CRAN package names using the CRAN API."""
 
-    def __init__(self) -> None:
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
         self.validated_packages: set[str] = set()
 
     def validate_package(self, package_name: str, context: str) -> None | ValidationError:
@@ -216,10 +239,11 @@ class CRANValidator:
             return None
 
         # CRAN packages can be checked via the packages database
-        response = httpx.head(
-            f"https://crandb.r-pkg.org/{package_name}",
-            follow_redirects=True,
-        )
+        try:
+            response = self.client.head(f"https://crandb.r-pkg.org/{package_name}")
+        except Exception as e:
+            msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
+            return ValidationError(msg)
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: CRAN package '{package_name}' does not exist"
@@ -260,16 +284,20 @@ def validate_packages(
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
     schema = json.loads(schema_file.read_bytes())
 
+    # Create HTTP client with retry configuration using httpx_retries transport
+    retry_transport = RetryTransport(retry=Retry(total=3, backoff_factor=2))
+    retry_client = httpx.Client(follow_redirects=True, timeout=30.0, transport=retry_transport)
+
     # using different link checkers,
     # because each of them may point to the same URL and this wouldn't qualify as duplicate
-    link_checker_home = LinkChecker()
-    link_checker_docs = LinkChecker()
-    link_checker_tutorials = LinkChecker()
+    link_checker_home = LinkChecker(retry_client)
+    link_checker_docs = LinkChecker(retry_client)
+    link_checker_tutorials = LinkChecker(retry_client)
 
-    github_validator = GitHubUserValidator(github_token)
-    pypi_validator = PyPIValidator()
-    conda_validator = CondaValidator()
-    cran_validator = CRANValidator()
+    github_validator = GitHubUserValidator(retry_client, github_token)
+    pypi_validator = PyPIValidator(retry_client)
+    conda_validator = CondaValidator(retry_client)
+    cran_validator = CRANValidator(retry_client)
 
     errors: defaultdict[str, ErrorList] = defaultdict(ErrorList)
     package_metadata: list[ScverseEcosystemPackages] = []
