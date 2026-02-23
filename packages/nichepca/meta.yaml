@@ -2,8 +2,8 @@ name: nichepca
 description: |
   A Python package for PCA-based spatial domain identification in single-cell spatial transcriptomics data.
 project_home: https://github.com/imsb-uke/nichepca
-documentation_home: https://nichepca.readthedocs.io/en/latest/
-tutorials_home: https://nichepca.readthedocs.io/en/latest/notebooks/example.html
+documentation_home: https://nichepca.readthedocs.io/
+tutorials_home: https://nichepca.readthedocs.io/page/notebooks/example.html
 install:
   pypi: nichepca
 tags:
