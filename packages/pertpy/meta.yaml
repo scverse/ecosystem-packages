@@ -4,8 +4,8 @@ description: |
   It harmonizes datasets, automates metadata annotation, calculates perturbation distances,
   and analyzes cellular responses to genetic modifications, drugs, and environmental changes.
 project_home: https://github.com/scverse/pertpy
-documentation_home: https://pertpy.readthedocs.io/en/stable/
-tutorials_home: https://pertpy.readthedocs.io/en/stable/tutorials.html
+documentation_home: https://pertpy.readthedocs.io/
+tutorials_home: https://pertpy.readthedocs.io/page/tutorials.html
 publications:
   - 10.1101/2024.08.04.606516
 install:

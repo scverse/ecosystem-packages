@@ -6,7 +6,7 @@ description: |
   - Perform dimensionality reduction and clustering of various types of single-cell data (open chromatin, histone marks, methylation etc..).
   - Create coverage files (bigwigs) for visualization.
 project_home: https://github.com/bhardwaj-lab/sincei
-documentation_home: https://sincei.readthedocs.io/en/latest/
+documentation_home: https://sincei.readthedocs.io/
 publications:
   - 10.1101/2024.07.27.605424
 install:
