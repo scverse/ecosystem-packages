@@ -2,8 +2,8 @@ name: scverse-tutorials
 description: |
   Tutorials and tutorials registry for scverse.org/learn.
 project_home: https://github.com/scverse/scverse-tutorials
-documentation_home: https://scverse-tutorials.readthedocs.io/en/latest/
-tutorials_home: https://scverse-tutorials.readthedocs.io/en/latest/
+documentation_home: https://scverse-tutorials.readthedocs.io/
+tutorials_home: https://scverse-tutorials.readthedocs.io/
 tags:
   - tutorials
   - education
