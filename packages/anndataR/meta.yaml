@@ -4,7 +4,7 @@ description: |
   of H5AD files and conversion to common R data structures.
 project_home: https://github.com/scverse/anndataR
 documentation_home: https://bioconductor.org/packages/anndataR/
-tutorials_home: https://anndatar.data-intuitive.com/
+tutorials_home: https://scverse.org/anndataR/
 install:
   bioconductor: anndataR
 license: MIT
