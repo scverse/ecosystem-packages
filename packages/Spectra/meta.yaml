@@ -1,0 +1,20 @@
+name: Spectra
+description: |
+  Spectra is a supervised factor analysis method that fits a seeded matrix factorization using either gene sets or a graph.
+project_home: https://github.com/dpeerlab/spectra
+documentation_home: https://github.com/dpeerlab/spectra/blob/main/README.md
+tutorials_home: https://github.com/dpeerlab/spectra/blob/main/notebooks/Spectra_Colaboratory_tutorial.ipynb
+publications:
+  - 10.1101/2022.12.20.521311
+install:
+  pypi: scSpectra
+tags:
+  - matrix factorization , factor analysis, single cell , gene set analysis, gene expression
+license: MIT
+version: 0.2.0
+authors:
+  - wallet-maker
+  - russelkune
+  - tobiaspk
+test_command: |
+  pip install "." && pytest
