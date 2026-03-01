@@ -1,7 +1,7 @@
 name: GRnnData
 description: |
-  An onverload of anndata to more easily work with gene networks.
-  Allows easy conversion between anndata and grnndata and provide loads of usefull utilities functions.
+  An overload of anndata to more easily work with gene networks.
+  Allows easy conversion between anndata and grnndata and provide loads of useful utilities functions.
 project_home: https://github.com/cantinilab/GRnnData
 documentation_home: https://cantinilab.github.io/GRnnData/
 publications:
@@ -17,6 +17,6 @@ tags:
 license: MIT
 version: v1.1.4
 contact:
-  - jkobject
+  - jkobject (jeremie kalfon)
 test_command: pip install . && make test
 category: ecosystem
