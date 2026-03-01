@@ -46,6 +46,7 @@
 - url: https://github.com/bunina-lab/scDoRI_tools
 - url: https://github.com/cameronraysmith/perturbvelo
 - url: https://github.com/carmonalab/pyucell
+- url: https://github.com/cellannotation/pairOT
 - url: https://github.com/clinicalomx/napari-prism
 - url: https://github.com/cobioda/scispy
 - url: https://github.com/const-ae/pyLemur
@@ -142,6 +143,7 @@
 - url: https://github.com/theislab/troutpy
 - url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module
+- url: https://github.com/vitkl/regularizedvi
 - url: https://github.com/wangd12rpi/hescape_changed
 - url: https://github.com/yizhak-lab-ccg/scXpand
 - url: https://github.com/zunderlab/eschr
