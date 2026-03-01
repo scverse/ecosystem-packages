@@ -1,0 +1,27 @@
+name: celltypist
+description: |
+  CellTypist is an automated cell type annotation tool for scRNA-seq datasets
+  on the basis of logistic regression classifiers optimised by the stochastic
+  gradient descent algorithm. CellTypist allows for cell prediction using
+  either built-in (with a current focus on immune sub-populations) or custom
+  models, in order to assist in the accurate classification of different cell
+  types and subtypes.
+project_home: https://github.com/Teichlab/celltypist
+documentation_home: https://celltypist.readthedocs.io
+install:
+  pypi: celltypist
+tags:
+  - python
+  - machine-learning
+  - scrna-seq
+  - single-cell
+  - cell-type-classification
+  - label-transfer
+publications:
+  - 10.1126/science.abl5197
+license: MIT
+version: v1.6.3
+authors:
+  - ChuanXu1
+  - prete
+test_command: null
