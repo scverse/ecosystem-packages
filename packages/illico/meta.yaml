@@ -1,0 +1,19 @@
+name: illico
+description: |
+  illico runs fast, CPU-based, wilcoxon rank-sum tests to identify differentially expressed genes for single-cell RNA-seq data.
+project_home: https://github.com/remydubois/illico
+documentation_home: https://github.com/remydubois/illico
+tutorials_home: https://github.com/remydubois/illico
+publications: []
+install:
+  pypi: illico
+tags:
+  - differential-gene-expression
+  - single-cell-RNA-seq
+license: Apache-2.0
+version: 0.1.1
+contact:
+  - remydubois
+test_command: |
+  tox -e unit-tests
+category: ecosystem
