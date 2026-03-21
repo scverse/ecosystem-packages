@@ -5,8 +5,8 @@ description: |
   of variation and borrows statistical strength across locations, thereby enabling the integration of single-cell
   and spatial transcriptomics with higher sensitivity and resolution than existing tools.
 project_home: https://github.com/BayraktarLab/cell2location
-documentation_home: https://cell2location.readthedocs.io/en/latest/
-tutorials_home: https://cell2location.readthedocs.io/en/latest/
+documentation_home: https://cell2location.readthedocs.io/
+tutorials_home: https://cell2location.readthedocs.io/
 publications:
   - 10.1038/s41587-021-01139-4
 install:

@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
 from collections import defaultdict
@@ -48,6 +49,11 @@ class ErrorList(list[Exception]):
         return super().append(obj)
 
 
+RE_RTD = re.compile(
+    r"https?://(?P<domain>.*\.(?:readthedocs\.io|rtfd\.io|readthedocs-hosted\.com))/(?P<version>en/[^/]+)(?P<path>.*)"
+)
+
+
 class LinkChecker:
     """Track known links and validate URLs."""
 
@@ -65,6 +71,12 @@ class LinkChecker:
         context
             Context information for error messages (e.g., file being validated)
         """
+        if m := re.fullmatch(RE_RTD, url):
+            new_url = f"https://{m['domain']}/" + (f"page{m['path']}" if m["path"].strip("/") else "")
+            msg = (
+                f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n{url}\n->\n{new_url}"
+            )
+            return ValidationError(msg)
         if url in self.known_links:
             msg = f"{context}: Duplicate link: {url}"
             return ValidationError(msg)

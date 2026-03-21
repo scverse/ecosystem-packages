@@ -5,8 +5,8 @@ description: |
   and differential expression testing. The Python-based implementation efficiently deals
   with datasets of more than one million cells.
 project_home: https://github.com/scverse/scanpy
-documentation_home: https://scanpy.readthedocs.io/en/latest/
-tutorials_home: https://scanpy.readthedocs.io/en/latest/tutorials.html
+documentation_home: https://scanpy.readthedocs.io/
+tutorials_home: https://scanpy.readthedocs.io/page/tutorials.html
 publications:
   - 10.1186/s13059-017-1382-0
 install:

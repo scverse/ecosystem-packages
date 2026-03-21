@@ -4,8 +4,8 @@ description: |
   vector field reconstruction, potential landscape mapping, differential geometry analyses,
   and most probably paths / in silico perturbation predictions.
 project_home: https://github.com/aristoteleo/dynamo-release
-documentation_home: https://dynamo-release.readthedocs.io/en/latest/
-tutorials_home: https://dynamo-release.readthedocs.io/en/latest/
+documentation_home: https://dynamo-release.readthedocs.io/
+tutorials_home: https://dynamo-release.readthedocs.io/
 publications:
   - 10.1016/j.cell.2021.12.045
 install:

@@ -2,8 +2,8 @@ name: PathML
 description: |
   An open-source toolkit for computational pathology and machine learning.
 project_home: https://pathml.org/
-documentation_home: https://pathml.readthedocs.io/en/latest/
-tutorials_home: https://pathml.readthedocs.io/en/latest/
+documentation_home: https://pathml.readthedocs.io/
+tutorials_home: https://pathml.readthedocs.io/
 publications:
   - 10.1158/1541-7786.MCR-21-0665
 install:

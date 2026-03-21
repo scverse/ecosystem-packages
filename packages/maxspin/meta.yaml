@@ -4,7 +4,7 @@ description: |
 publications:
   - 10.1016/j.crmeth.2023.100507
 project_home: https://github.com/dcjones/maxspin
-documentation_home: https://maxspin.readthedocs.io/en/latest/
+documentation_home: https://maxspin.readthedocs.io/
 tutorials_home: https://github.com/dcjones/maxspin/blob/main/tutorial.ipynb
 install:
   pypi: maxspin

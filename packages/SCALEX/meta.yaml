@@ -2,7 +2,7 @@ name: SCALEX
 description: |
   SCALEX is an integration and projection tool for atlas-level single-cell RNA-seq and ATAC-seq data.
 project_home: https://github.com/jsxlei/SCALEX
-documentation_home: https://scalex.readthedocs.io/en/latest/?badge=stable
+documentation_home: https://scalex.readthedocs.io/
 publications:
   - 10.1038/s41467-022-33758-z
 install:
