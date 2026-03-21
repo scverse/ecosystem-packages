@@ -27,3 +27,4 @@ version: v1.0.0
 contact:
   - jkobject (jeremie kalfon)
 test_command: pip install . && make test
+category: ecosystem
