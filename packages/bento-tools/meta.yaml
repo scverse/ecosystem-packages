@@ -2,8 +2,8 @@ name: bento-tools
 description: |
   A Python toolkit for subcellular analysis of spatial transcriptomics data
 project_home: https://github.com/ckmah/bento-tools
-documentation_home: https://bento-tools.readthedocs.io/en/latest/
-tutorials_home: https://bento-tools.readthedocs.io/en/latest/tutorials.html
+documentation_home: https://bento-tools.readthedocs.io/
+tutorials_home: https://bento-tools.readthedocs.io/page/tutorials.html
 publications:
   - 10.1101/2022.06.10.495510
 install:

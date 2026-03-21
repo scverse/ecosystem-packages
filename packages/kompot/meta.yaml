@@ -8,7 +8,7 @@ description: |
   inference with calibrated uncertainty estimates and capturing both global and cell-state-specific effects of perturbation.
 project_home: https://github.com/settylab/kompot
 documentation_home: https://kompot.readthedocs.io/
-tutorials_home: https://kompot.readthedocs.io/en/latest/notebooks/01_getting_started.html
+tutorials_home: https://kompot.readthedocs.io/page/notebooks/01_getting_started.html
 publications:
   - 10.1101/2025.06.03.657769
 install:

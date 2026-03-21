@@ -1,0 +1,13 @@
+name: stats
+description: |
+  Statistics for scverse
+project_home: https://github.com/scverse/stats
+documentation_home: https://scverse.org/stats/
+tags:
+  - statistics
+  - metrics
+license: MIT
+authors:
+  - maltekuehl
+  - grst
+category: core-infrastructure

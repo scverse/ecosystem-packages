@@ -1,0 +1,13 @@
+name: ecosystem-packages
+description: |
+  Registry for scverse ecosystem packages (https://scverse.org/packages/#ecosystem)
+project_home: https://github.com/scverse/ecosystem-packages
+documentation_home: https://github.com/scverse/ecosystem-packages
+tags:
+  - registry
+  - ecosystem
+license: BSD-3-Clause
+contact:
+  - grst
+  - flying-sheep
+category: core-infrastructure

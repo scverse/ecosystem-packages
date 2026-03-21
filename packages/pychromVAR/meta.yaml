@@ -2,8 +2,8 @@ name: pychromVAR
 description: |
   A python pacakge for chromVAR.
 project_home: https://github.com/lzj1769/pychromVAR
-documentation_home: https://pychromvar.readthedocs.io/en/latest/
-tutorials_home: https://pychromvar.readthedocs.io/en/latest/
+documentation_home: https://pychromvar.readthedocs.io/
+tutorials_home: https://pychromvar.readthedocs.io/
 install:
   pypi: pychromvar
 tags:

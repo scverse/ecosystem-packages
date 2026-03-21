@@ -3,8 +3,8 @@ description: |
   TreeData is a lightweight wrapper around AnnData which adds two additional attributes, obst and vart,
   to store nx.DiGraph trees for observations and variables.
 project_home: https://github.com/YosefLab/treedata
-documentation_home: https://treedata.readthedocs.io/en/latest/
-tutorials_home: https://treedata.readthedocs.io/en/latest/
+documentation_home: https://treedata.readthedocs.io/
+tutorials_home: https://treedata.readthedocs.io/
 install:
   pypi: treedata
 tags:
