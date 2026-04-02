@@ -1,0 +1,26 @@
+name: AlphaPeptTools
+description: |
+  AnnData-based downstream proteomics analysis package with comprehensive support of search engine report formats.
+  AlphaPeptTools features an `io` module for loading and standardizing MS-proteomics data, as well as `pp`, `pl`, `tl` and `metrics` 
+  modules to facilitate common proteomics-specific data processing, visualization and analysis tasks with a focus on metrics for 
+  evaluating the effect of different processing steps. Additionally, it features several example notebooks to demonstrate different 
+  proteomics use cases.
+project_home: https://github.com/MannLabs/alphapepttools
+documentation_home: https://mannlabs.github.io/alphapepttools/index.html
+tutorials_home: https://github.com/MannLabs/alphapepttools/tree/main/docs/notebooks
+publications:
+  - TBA
+install:
+  pypi: alphapepttools
+tags:
+  - proteomics
+  - annotated data
+  - best practices
+license: Apache License Version 2.0
+version: 0.1.0
+contact:
+  - vbrennsteiner
+  - lucas-diedrich
+  - mschwoer
+logo: apt_logo_clean.png
+category: ecosystem
