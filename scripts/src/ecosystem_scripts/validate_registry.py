@@ -329,7 +329,7 @@ def check_image(img_path: Path) -> None | ValidationError:
     return None
 
 
-def validate_packages(
+def validate_packages(  # noqa: C901
     schema_file: Traversable, registry_dir: Path, github_token: str | None = None
 ) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
