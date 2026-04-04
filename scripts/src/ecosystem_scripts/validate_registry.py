@@ -290,7 +290,6 @@ class BioconductorValidator:
             return None
 
         # Bioconductor packages can be checked via their web API
-        # Using the package landing page as a simple existence check
         try:
             response = self.client.head(f"https://bioconductor.org/packages/{package_name}/")
         except Exception as e:
