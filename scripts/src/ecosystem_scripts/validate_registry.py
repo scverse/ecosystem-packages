@@ -290,7 +290,6 @@ class BioconductorValidator:
             return None
 
         # Bioconductor packages can be checked via their web API
-        # Using the package landing page as a simple existence check
         try:
             response = self.client.head(f"https://bioconductor.org/packages/{package_name}/")
         except Exception as e:
@@ -330,7 +329,7 @@ def check_image(img_path: Path) -> None | ValidationError:
     return None
 
 
-def validate_packages(
+def validate_packages(  # noqa: C901
     schema_file: Traversable, registry_dir: Path, github_token: str | None = None
 ) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
