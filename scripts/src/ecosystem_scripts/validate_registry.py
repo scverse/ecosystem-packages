@@ -269,6 +269,45 @@ class CRANValidator:
         return None
 
 
+class BioconductorValidator:
+    """Validate Bioconductor package names using the Bioconductor API."""
+
+    def __init__(self, client: httpx.Client) -> None:
+        self.client = client
+        self.validated_packages: set[str] = set()
+
+    def validate_package(self, package_name: str, context: str) -> None | ValidationError:
+        """Validate that a Bioconductor package exists.
+
+        Parameters
+        ----------
+        package_name
+            The Bioconductor package name to validate
+        context
+            Context information for error messages (e.g., file being validated)
+        """
+        if package_name in self.validated_packages:
+            return None
+
+        # Bioconductor packages can be checked via their web API
+        try:
+            response = self.client.head(f"https://bioconductor.org/packages/{package_name}/")
+        except Exception as e:
+            msg = f"{context}: Failed to validate Bioconductor package '{package_name}': {e}"
+            return ValidationError(msg)
+
+        if response.status_code == httpx.codes.NOT_FOUND:
+            msg = f"{context}: Bioconductor package '{package_name}' does not exist"
+            return ValidationError(msg)
+        if response.status_code != httpx.codes.OK:
+            msg = f"{context}: Failed to validate Bioconductor package '{package_name}' (error {response.status_code})"
+            return ValidationError(msg)
+
+        self.validated_packages.add(package_name)
+        log.info(f"Validated Bioconductor package: {package_name}")
+        return None
+
+
 def check_image(img_path: Path) -> None | ValidationError:
     """Validates that the image exists and that it is either a SVG or fits into the 512x512 bounding box."""
     if not img_path.exists():
@@ -290,7 +329,7 @@ def check_image(img_path: Path) -> None | ValidationError:
     return None
 
 
-def validate_packages(
+def validate_packages(  # noqa: C901
     schema_file: Traversable, registry_dir: Path, github_token: str | None = None
 ) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
     """Find all package `meta.yaml` files in the registry dir and yield package records."""
@@ -310,6 +349,7 @@ def validate_packages(
     pypi_validator = PyPIValidator(retry_client)
     conda_validator = CondaValidator(retry_client)
     cran_validator = CRANValidator(retry_client)
+    bioconductor_validator = BioconductorValidator(retry_client)
 
     errors: defaultdict[str, ErrorList] = defaultdict(ErrorList)
     package_metadata: list[ScverseEcosystemPackages] = []
@@ -344,6 +384,8 @@ def validate_packages(
                 pkg_errors.append(conda_validator.validate_package(conda_name, pkg_id))
             if cran_name := install_info.get("cran"):
                 pkg_errors.append(cran_validator.validate_package(cran_name, pkg_id))
+            if bioconductor_name := install_info.get("bioconductor"):
+                pkg_errors.append(bioconductor_validator.validate_package(bioconductor_name, pkg_id))
 
         # Check logo (if available) and make path relative to root of registry
         if "logo" in tmp_meta:
