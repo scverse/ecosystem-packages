@@ -1,0 +1,19 @@
+name: clone2vec
+description: |
+  clone2vec is a Python package for analysis of lineage tracing coupled with single-cell RNA-Seq.
+project_home: https://github.com/kharchenkolab/clone2vec
+documentation_home: https://clone2vec.readthedocs.io/
+tutorials_home: https://clone2vec.readthedocs.io/
+install:
+  pypi: clone2vec
+tags:
+  - label-transfer
+license: MIT
+publications:
+  - 10.1101/2024.11.15.623687
+version: v0.1.0
+contact:
+  - serjisa
+test_command: |
+  pip install . && pytest
+category: ecosystem

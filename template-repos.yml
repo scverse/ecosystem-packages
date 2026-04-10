@@ -19,6 +19,7 @@
 - url: https://github.com/Lotfollahi-lab/mintflow
 - url: https://github.com/MannLabs/alphapepttools
 - url: https://github.com/MannLabs/dvp-io
+- url: https://github.com/Marcufong/CellFlow-UOT
 - url: https://github.com/NKI-CCB/sobolev_alignment
 - url: https://github.com/PMBio/scDoRI
 - url: https://github.com/Teichlab/multi-view-atlas
@@ -80,6 +81,7 @@
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
 - url: https://github.com/lucas-diedrich/bpca
+- url: https://github.com/lucas-diedrich/mulink
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/lueckenlab/patpy
 - url: https://github.com/lzj1769/LR2net
@@ -135,6 +137,7 @@
 - url: https://github.com/theislab/cellink
 - url: https://github.com/theislab/ehrapy
 - url: https://github.com/theislab/ehrdata
+- url: https://github.com/theislab/embpy
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/mapqc
 - url: https://github.com/theislab/multigrate
