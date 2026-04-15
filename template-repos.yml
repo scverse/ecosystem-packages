@@ -15,6 +15,7 @@
 - url: https://github.com/Floto-Lab/BactGraph
 - url: https://github.com/FroeseLab/bulkpy
 - url: https://github.com/Gabriellvl/FlowSOM
+- url: https://github.com/Genentech/MoCAVI
 - url: https://github.com/LiHongCSBLab/scMagnify
 - url: https://github.com/Lotfollahi-lab/mintflow
 - url: https://github.com/MannLabs/alphapepttools
@@ -99,10 +100,12 @@
 - url: https://github.com/quadbio/atac_mapper
 - url: https://github.com/quadbio/cell-annotator
 - url: https://github.com/quadbio/cellmapper
+- url: https://github.com/quadbio/scBulkDE
 - url: https://github.com/quadbio/scembed
 - url: https://github.com/quadbio/slurm_sweep
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
+- url: https://github.com/saezlab/MINA
 - url: https://github.com/scverse/annbatch
 - url: https://github.com/scverse/anndata
 - url: https://github.com/scverse/anndata-plot
@@ -137,7 +140,6 @@
 - url: https://github.com/theislab/cellink
 - url: https://github.com/theislab/ehrapy
 - url: https://github.com/theislab/ehrdata
-- url: https://github.com/theislab/embpy
 - url: https://github.com/theislab/geome
 - url: https://github.com/theislab/mapqc
 - url: https://github.com/theislab/multigrate
