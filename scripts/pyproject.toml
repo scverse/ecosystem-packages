@@ -11,10 +11,9 @@ authors = [
   { name = "Gregor Sturm", email = "gregor.sturm@scverse.org" },
   { name = "Philipp A.", email = "flying-sheep@web.de" },
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
 ]
@@ -35,7 +34,6 @@ scripts.register-template-repos = "ecosystem_scripts.template_repo_registry:main
 scripts.validate-registry = "ecosystem_scripts.validate_registry:main"
 
 [tool.hatch]
-envs.default.python = "3.13"
 version.source = "vcs"
 version.fallback-version = "0.0"
 
