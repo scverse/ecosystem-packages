@@ -10,6 +10,7 @@ import re
 import shutil
 import sys
 from collections import defaultdict
+from dataclasses import KW_ONLY, dataclass, field
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
@@ -54,14 +55,19 @@ RE_RTD = re.compile(
 )
 
 
-class LinkChecker:
+@dataclass
+class HTTPValidator[E = str]:
+    """Validate HTTP URLs."""
+
+    client: httpx.Client
+    _: KW_ONLY
+    validated: set[E] = field(default_factory=set)
+
+
+class LinkChecker(HTTPValidator):
     """Track known links and validate URLs."""
 
-    def __init__(self, client: httpx.Client) -> None:
-        self.known_links: set[str] = set()
-        self.client = client
-
-    def check_and_register(self, url: str, context: str) -> None | ValidationError:
+    def __call__(self, url: str, context: str) -> None | ValidationError:
         """Check if URL is duplicate, validate it exists, and register it.
 
         Parameters
@@ -77,7 +83,7 @@ class LinkChecker:
                 f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n{url}\n->\n{new_url}"
             )
             return ValidationError(msg)
-        if url in self.known_links:
+        if url in self.validated:
             msg = f"{context}: Duplicate link: {url}"
             return ValidationError(msg)
 
@@ -91,19 +97,17 @@ class LinkChecker:
             msg = f"URL {url} is not reachable (error {response.status_code}). "
             return ValidationError(msg)
 
-        self.known_links.add(url)
+        self.validated.add(url)
         return None
 
 
-class GitHubUserValidator:
+@dataclass
+class GitHubUserValidator(HTTPValidator):
     """Validate GitHub usernames using the GitHub API."""
 
-    def __init__(self, client: httpx.Client, github_token: str | None = None) -> None:
-        self.client = client
-        self.github_token = github_token
-        self.validated_users: set[str] = set()
+    github_token: str | None = None
 
-    def validate_usernames(self, usernames: Sequence[str], context: str) -> None | ValidationError:
+    def __call__(self, usernames: Sequence[str], context: str) -> None | ValidationError:
         """Validate that a GitHub username exists.
 
         Parameters
@@ -114,7 +118,7 @@ class GitHubUserValidator:
             Context information for error messages (e.g., file being validated)
         """
 
-        if not (unvalidated := list(set(usernames) - self.validated_users)):
+        if not (unvalidated := list(set(usernames) - self.validated)):
             return None
 
         headers = {}
@@ -141,19 +145,16 @@ class GitHubUserValidator:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r}:\n{error_msgs}"
             return ValidationError(msg)
 
-        self.validated_users |= set(unvalidated)
+        self.validated |= set(unvalidated)
         log.info(f"Validated GitHub users: {unvalidated!r}")
         return None
 
 
-class PyPIValidator:
+@dataclass
+class PyPIValidator(HTTPValidator):
     """Validate PyPI package names against the PyPI API."""
 
-    def __init__(self, client: httpx.Client) -> None:
-        self.client = client
-        self.validated_packages: set[str] = set()
-
-    def validate_package(self, package_name: str, context: str) -> None | ValidationError:
+    def __call__(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a PyPI package exists.
 
         Parameters
@@ -163,7 +164,7 @@ class PyPIValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_name in self.validated_packages:
+        if package_name in self.validated:
             return None
 
         try:
@@ -179,19 +180,16 @@ class PyPIValidator:
             msg = f"{context}: Failed to validate PyPI package {package_name!r} (error {response.status_code})"
             return ValidationError(msg)
 
-        self.validated_packages.add(package_name)
+        self.validated.add(package_name)
         log.info(f"Validated PyPI package: {package_name}")
         return None
 
 
-class CondaValidator:
+@dataclass
+class CondaValidator(HTTPValidator):
     """Validate Conda package identifiers using the Anaconda API."""
 
-    def __init__(self, client: httpx.Client) -> None:
-        self.client = client
-        self.validated_packages: set[str] = set()
-
-    def validate_package(self, package_spec: str, context: str) -> None | ValidationError:
+    def __call__(self, package_spec: str, context: str) -> None | ValidationError:
         """Validate that a Conda package exists.
 
         Parameters
@@ -201,7 +199,7 @@ class CondaValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_spec in self.validated_packages:
+        if package_spec in self.validated:
             return None
 
         # Parse channel and package name
@@ -225,19 +223,16 @@ class CondaValidator:
             msg = f"{context}: Failed to validate Conda package '{package_spec}' (error {response.status_code})"
             return ValidationError(msg)
 
-        self.validated_packages.add(package_spec)
+        self.validated.add(package_spec)
         log.info(f"Validated Conda package: {package_spec}")
         return None
 
 
-class CRANValidator:
+@dataclass
+class CRANValidator(HTTPValidator):
     """Validate CRAN package names using the CRAN API."""
 
-    def __init__(self, client: httpx.Client) -> None:
-        self.client = client
-        self.validated_packages: set[str] = set()
-
-    def validate_package(self, package_name: str, context: str) -> None | ValidationError:
+    def __call__(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a CRAN package exists.
 
         Parameters
@@ -247,7 +242,7 @@ class CRANValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_name in self.validated_packages:
+        if package_name in self.validated:
             return None
 
         # CRAN packages can be checked via the packages database
@@ -264,19 +259,16 @@ class CRANValidator:
             msg = f"{context}: Failed to validate CRAN package '{package_name}' (error {response.status_code})"
             return ValidationError(msg)
 
-        self.validated_packages.add(package_name)
+        self.validated.add(package_name)
         log.info(f"Validated CRAN package: {package_name}")
         return None
 
 
-class BioconductorValidator:
+@dataclass
+class BioconductorValidator(HTTPValidator):
     """Validate Bioconductor package names using the Bioconductor API."""
 
-    def __init__(self, client: httpx.Client) -> None:
-        self.client = client
-        self.validated_packages: set[str] = set()
-
-    def validate_package(self, package_name: str, context: str) -> None | ValidationError:
+    def __call__(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a Bioconductor package exists.
 
         Parameters
@@ -286,7 +278,7 @@ class BioconductorValidator:
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_name in self.validated_packages:
+        if package_name in self.validated:
             return None
 
         # Bioconductor packages can be checked via their web API
@@ -303,7 +295,7 @@ class BioconductorValidator:
             msg = f"{context}: Failed to validate Bioconductor package '{package_name}' (error {response.status_code})"
             return ValidationError(msg)
 
-        self.validated_packages.add(package_name)
+        self.validated.add(package_name)
         log.info(f"Validated Bioconductor package: {package_name}")
         return None
 
@@ -341,15 +333,15 @@ def validate_packages(  # noqa: C901
 
     # using different link checkers,
     # because each of them may point to the same URL and this wouldn't qualify as duplicate
-    link_checker_home = LinkChecker(retry_client)
-    link_checker_docs = LinkChecker(retry_client)
-    link_checker_tutorials = LinkChecker(retry_client)
+    check_home = LinkChecker(retry_client)
+    check_docs = LinkChecker(retry_client)
+    check_tutorial = LinkChecker(retry_client)
 
-    github_validator = GitHubUserValidator(retry_client, github_token)
-    pypi_validator = PyPIValidator(retry_client)
-    conda_validator = CondaValidator(retry_client)
-    cran_validator = CRANValidator(retry_client)
-    bioconductor_validator = BioconductorValidator(retry_client)
+    check_gh_users = GitHubUserValidator(retry_client, github_token)
+    check_pypi = PyPIValidator(retry_client)
+    check_conda = CondaValidator(retry_client)
+    check_cran = CRANValidator(retry_client)
+    check_bioc = BioconductorValidator(retry_client)
 
     errors: defaultdict[str, ErrorList] = defaultdict(ErrorList)
     package_metadata: list[ScverseEcosystemPackages] = []
@@ -367,25 +359,25 @@ def validate_packages(  # noqa: C901
             pkg_errors.append(e)
 
         # Check and register all links
-        pkg_errors.append(link_checker_home.check_and_register(tmp_meta["project_home"], pkg_id))
-        pkg_errors.append(link_checker_docs.check_and_register(tmp_meta["documentation_home"], pkg_id))
+        pkg_errors.append(check_home(tmp_meta["project_home"], pkg_id))
+        pkg_errors.append(check_docs(tmp_meta["documentation_home"], pkg_id))
         if url := tmp_meta.get("tutorials_home"):
-            pkg_errors.append(link_checker_tutorials.check_and_register(url, pkg_id))
+            pkg_errors.append(check_tutorial(url, pkg_id))
 
         # Validate GitHub usernames in contact field
         if usernames := tmp_meta.get("contact"):
-            pkg_errors.append(github_validator.validate_usernames(usernames, pkg_id))
+            pkg_errors.append(check_gh_users(usernames, pkg_id))
 
         # Validate install packages
         if install_info := tmp_meta.get("install"):
             if pypi_name := install_info.get("pypi"):
-                pkg_errors.append(pypi_validator.validate_package(pypi_name, pkg_id))
+                pkg_errors.append(check_pypi(pypi_name, pkg_id))
             if conda_name := install_info.get("conda"):
-                pkg_errors.append(conda_validator.validate_package(conda_name, pkg_id))
+                pkg_errors.append(check_conda(conda_name, pkg_id))
             if cran_name := install_info.get("cran"):
-                pkg_errors.append(cran_validator.validate_package(cran_name, pkg_id))
+                pkg_errors.append(check_cran(cran_name, pkg_id))
             if bioconductor_name := install_info.get("bioconductor"):
-                pkg_errors.append(bioconductor_validator.validate_package(bioconductor_name, pkg_id))
+                pkg_errors.append(check_bioc(bioconductor_name, pkg_id))
 
         # Check logo (if available) and make path relative to root of registry
         if "logo" in tmp_meta:

@@ -2,7 +2,7 @@ from logging import basicConfig, getLogger
 
 from rich.logging import RichHandler
 
-log = getLogger(__name__)
+log = getLogger("scverse-eco")
 
 
 def setup_logging() -> None:
