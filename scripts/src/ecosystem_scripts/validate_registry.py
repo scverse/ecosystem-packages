@@ -86,14 +86,15 @@ class LinkChecker(HTTPValidator):
         try:
             response = await self.client.head(url)
         except Exception as e:
-            msg = f"URL {url} is not reachable: {e}"
+            msg = f"{context}: URL {url} is not reachable: {e}"
             return ValidationError(msg)
 
         if response.status_code != httpx.codes.OK:
-            msg = f"URL {url} is not reachable (error {response.status_code}). "
+            msg = f"{context}: URL {url} is not reachable (error {response.status_code}). "
             return ValidationError(msg)
 
         self.validated.add(url)
+        log.info(f"Validated URL for {context}: {url!r}")
         return None
 
 
@@ -142,7 +143,7 @@ class GitHubUserValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated |= set(unvalidated)
-        log.info(f"Validated GitHub users: {unvalidated!r}")
+        log.info(f"Validated GitHub users for {context}: {unvalidated!r}")
         return None
 
 
@@ -177,7 +178,7 @@ class PyPIValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_name)
-        log.info(f"Validated PyPI package: {package_name}")
+        log.info(f"Validated PyPI package for {context}: {package_name}")
         return None
 
 
@@ -220,7 +221,7 @@ class CondaValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_spec)
-        log.info(f"Validated Conda package: {package_spec}")
+        log.info(f"Validated Conda package for {context}: {package_spec}")
         return None
 
 
@@ -256,7 +257,7 @@ class CRANValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_name)
-        log.info(f"Validated CRAN package: {package_name}")
+        log.info(f"Validated CRAN package for {context}: {package_name}")
         return None
 
 
@@ -292,7 +293,7 @@ class BioconductorValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_name)
-        log.info(f"Validated Bioconductor package: {package_name}")
+        log.info(f"Validated Bioconductor package for {context}: {package_name}")
         return None
 
 
