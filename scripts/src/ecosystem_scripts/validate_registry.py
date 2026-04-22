@@ -4,28 +4,34 @@
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
 import os
 import re
 import shutil
 import sys
-from collections import defaultdict
 from dataclasses import KW_ONLY, dataclass, field
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
-from typing import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast, override
 
 import httpx
 import jsonschema
 import yaml
+from httpx_limiter import (  # type: ignore[attr-defined]
+    AbstractRateLimiterRepository,
+    AsyncMultiRateLimitedTransport,
+    Rate,
+)
+from httpx_limiter.aiolimiter import AiolimiterAsyncLimiter  # type: ignore[attr-defined]
 from httpx_retries import Retry, RetryTransport
 from PIL import Image
 
 from ._logging import log, setup_logging
 
 if TYPE_CHECKING:
-    from collections.abc import Iterable, Mapping, Sequence
+    from collections.abc import Awaitable, Generator, Iterable, Mapping, Sequence
     from importlib.resources.abc import Traversable
 
     from .schema import ScverseEcosystemPackages  # pyright: ignore[reportMissingModuleSource]
@@ -40,16 +46,6 @@ class ValidationError(Exception):
     pass
 
 
-class ErrorList(list[Exception]):
-    """List of error messages. Ignores None objects, and logs an error when one gets added."""
-
-    def append(self, obj: Exception | None) -> None:
-        if obj is None:
-            return
-        log.error(f"Validation error: {obj}")
-        return super().append(obj)
-
-
 RE_RTD = re.compile(
     r"https?://(?P<domain>.*\.(?:readthedocs\.io|rtfd\.io|readthedocs-hosted\.com))/(?P<version>en/[^/]+)(?P<path>.*)"
 )
@@ -59,15 +55,18 @@ RE_RTD = re.compile(
 class HTTPValidator[E = str]:
     """Validate HTTP URLs."""
 
-    client: httpx.Client
+    client: httpx.AsyncClient
     _: KW_ONLY
     validated: set[E] = field(default_factory=set)
 
 
+@dataclass
 class LinkChecker(HTTPValidator):
     """Track known links and validate URLs."""
 
-    def __call__(self, url: str, context: str) -> None | ValidationError:
+    name: str
+
+    async def __call__(self, url: str, context: str) -> None | ValidationError:
         """Check if URL is duplicate, validate it exists, and register it.
 
         Parameters
@@ -80,24 +79,27 @@ class LinkChecker(HTTPValidator):
         if m := re.fullmatch(RE_RTD, url):
             new_url = f"https://{m['domain']}/" + (f"page{m['path']}" if m["path"].strip("/") else "")
             msg = (
-                f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n{url}\n->\n{new_url}"
+                f"{self.name}:{context}: "
+                f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n"
+                f"{url}\n->\n{new_url}"
             )
             return ValidationError(msg)
         if url in self.validated:
-            msg = f"{context}: Duplicate link: {url}"
+            msg = f"{self.name}:{context}: Duplicate link: {url}"
             return ValidationError(msg)
 
         try:
-            response = self.client.head(url)
+            response = await self.client.head(url)
         except Exception as e:
-            msg = f"URL {url} is not reachable: {e}"
+            msg = f"{self.name}:{context}: URL {url} is not reachable: {e}"
             return ValidationError(msg)
 
         if response.status_code != httpx.codes.OK:
-            msg = f"URL {url} is not reachable (error {response.status_code}). "
+            msg = f"{self.name}:{context}: URL {url} is not reachable (error {response.status_code}). "
             return ValidationError(msg)
 
         self.validated.add(url)
+        log.info(f"Validated {self.name} URL for {context}: {url!r}")
         return None
 
 
@@ -107,7 +109,7 @@ class GitHubUserValidator(HTTPValidator):
 
     github_token: str | None = None
 
-    def __call__(self, usernames: Sequence[str], context: str) -> None | ValidationError:
+    async def __call__(self, usernames: Sequence[str], context: str) -> None | ValidationError:
         """Validate that a GitHub username exists.
 
         Parameters
@@ -128,7 +130,7 @@ class GitHubUserValidator(HTTPValidator):
         q = "\n".join(f"user{i}: user(login: {json.dumps(name)}) {{ login }}" for i, name in enumerate(unvalidated))
 
         try:
-            response = self.client.post(
+            response = await self.client.post(
                 "https://api.github.com/graphql", headers=headers, json={"query": f"query {{ {q} }}"}
             )
         except Exception as e:
@@ -146,7 +148,7 @@ class GitHubUserValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated |= set(unvalidated)
-        log.info(f"Validated GitHub users: {unvalidated!r}")
+        log.info(f"Validated GitHub users for {context}: {unvalidated!r}")
         return None
 
 
@@ -154,7 +156,7 @@ class GitHubUserValidator(HTTPValidator):
 class PyPIValidator(HTTPValidator):
     """Validate PyPI package names against the PyPI API."""
 
-    def __call__(self, package_name: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a PyPI package exists.
 
         Parameters
@@ -168,7 +170,7 @@ class PyPIValidator(HTTPValidator):
             return None
 
         try:
-            response = self.client.head(f"https://pypi.org/pypi/{package_name}/json")
+            response = await self.client.head(f"https://pypi.org/pypi/{package_name}/json")
         except Exception as e:
             msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
             return ValidationError(msg)
@@ -181,7 +183,7 @@ class PyPIValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_name)
-        log.info(f"Validated PyPI package: {package_name}")
+        log.info(f"Validated PyPI package for {context}: {package_name}")
         return None
 
 
@@ -189,7 +191,7 @@ class PyPIValidator(HTTPValidator):
 class CondaValidator(HTTPValidator):
     """Validate Conda package identifiers using the Anaconda API."""
 
-    def __call__(self, package_spec: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_spec: str, context: str) -> None | ValidationError:
         """Validate that a Conda package exists.
 
         Parameters
@@ -211,7 +213,7 @@ class CondaValidator(HTTPValidator):
 
         # Check package exists on the channel
         try:
-            response = self.client.head(f"https://api.anaconda.org/package/{channel}/{package_name}")
+            response = await self.client.head(f"https://api.anaconda.org/package/{channel}/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
             return ValidationError(msg)
@@ -224,7 +226,7 @@ class CondaValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_spec)
-        log.info(f"Validated Conda package: {package_spec}")
+        log.info(f"Validated Conda package for {context}: {package_spec}")
         return None
 
 
@@ -232,7 +234,7 @@ class CondaValidator(HTTPValidator):
 class CRANValidator(HTTPValidator):
     """Validate CRAN package names using the CRAN API."""
 
-    def __call__(self, package_name: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a CRAN package exists.
 
         Parameters
@@ -247,7 +249,7 @@ class CRANValidator(HTTPValidator):
 
         # CRAN packages can be checked via the packages database
         try:
-            response = self.client.head(f"https://crandb.r-pkg.org/{package_name}")
+            response = await self.client.head(f"https://crandb.r-pkg.org/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
             return ValidationError(msg)
@@ -260,7 +262,7 @@ class CRANValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_name)
-        log.info(f"Validated CRAN package: {package_name}")
+        log.info(f"Validated CRAN package for {context}: {package_name}")
         return None
 
 
@@ -268,7 +270,7 @@ class CRANValidator(HTTPValidator):
 class BioconductorValidator(HTTPValidator):
     """Validate Bioconductor package names using the Bioconductor API."""
 
-    def __call__(self, package_name: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_name: str, context: str) -> None | ValidationError:
         """Validate that a Bioconductor package exists.
 
         Parameters
@@ -283,7 +285,7 @@ class BioconductorValidator(HTTPValidator):
 
         # Bioconductor packages can be checked via their web API
         try:
-            response = self.client.head(f"https://bioconductor.org/packages/{package_name}/")
+            response = await self.client.head(f"https://bioconductor.org/packages/{package_name}/")
         except Exception as e:
             msg = f"{context}: Failed to validate Bioconductor package '{package_name}': {e}"
             return ValidationError(msg)
@@ -296,15 +298,15 @@ class BioconductorValidator(HTTPValidator):
             return ValidationError(msg)
 
         self.validated.add(package_name)
-        log.info(f"Validated Bioconductor package: {package_name}")
+        log.info(f"Validated Bioconductor package for {context}: {package_name}")
         return None
 
 
-def check_image(img_path: Path) -> None | ValidationError:
+def check_image(img_path: Path) -> None:
     """Validates that the image exists and that it is either a SVG or fits into the 512x512 bounding box."""
     if not img_path.exists():
         msg = f"Image does not exist: {img_path}"
-        return ValidationError(msg)
+        raise ValidationError(msg)
     if img_path.suffix == ".svg":
         return None
     with Image.open(img_path) as img:
@@ -317,77 +319,120 @@ def check_image(img_path: Path) -> None | ValidationError:
             Actual dimensions (width, height): ({width}, ({height}))."
             """
         )
-        return ValidationError(msg)
+        raise ValidationError(msg)
     return None
 
 
-def validate_packages(  # noqa: C901
-    schema_file: Traversable, registry_dir: Path, github_token: str | None = None
-) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
-    """Find all package `meta.yaml` files in the registry dir and yield package records."""
-    schema = json.loads(schema_file.read_bytes())
+class DomainBasedRateLimiterRepository(AbstractRateLimiterRepository):
+    """Apply different rate limits based on the domain being requested."""
 
-    # Create HTTP client with retry configuration using httpx_retries transport
-    retry_transport = RetryTransport(retry=Retry(total=3, backoff_factor=2))
-    retry_client = httpx.Client(follow_redirects=True, timeout=30.0, transport=retry_transport)
+    @override
+    def get_identifier(self, request: httpx.Request) -> str:
+        return request.url.host
 
-    # using different link checkers,
-    # because each of them may point to the same URL and this wouldn't qualify as duplicate
-    check_home = LinkChecker(retry_client)
-    check_docs = LinkChecker(retry_client)
-    check_tutorial = LinkChecker(retry_client)
+    @override
+    def create(self, request: httpx.Request) -> AiolimiterAsyncLimiter:
+        return AiolimiterAsyncLimiter.create(Rate.create(magnitude=25))
 
-    check_gh_users = GitHubUserValidator(retry_client, github_token)
-    check_pypi = PyPIValidator(retry_client)
-    check_conda = CondaValidator(retry_client)
-    check_cran = CRANValidator(retry_client)
-    check_bioc = BioconductorValidator(retry_client)
 
-    errors: defaultdict[str, ErrorList] = defaultdict(ErrorList)
-    package_metadata: list[ScverseEcosystemPackages] = []
+@dataclass
+class Checker:
+    schema_file: Traversable
+    registry_dir: Path
+    _: KW_ONLY
+    github_token: str | None = None
 
-    for tmp_meta_file in sorted(registry_dir.rglob("meta.yaml"), key=lambda x: x.parent.name):
-        pkg_id = tmp_meta_file.parent.name
-        pkg_errors = errors[pkg_id]
-        log.info(f"Validating {pkg_id}")
-        with tmp_meta_file.open() as f:
+    def __post_init__(self) -> None:
+        self.schema = json.loads(self.schema_file.read_bytes())
+
+        # Create HTTP client with retry configuration using httpx_retries transport
+        transport: httpx.AsyncBaseTransport = AsyncMultiRateLimitedTransport.create(
+            repository=DomainBasedRateLimiterRepository()
+        )
+        transport = RetryTransport(transport, Retry(total=3, backoff_factor=2))
+        self.client = httpx.AsyncClient(follow_redirects=True, timeout=30.0, transport=transport)
+
+        # using different link checkers,
+        # because each of them may point to the same URL and this wouldn't qualify as duplicate
+        self.check_home = LinkChecker(self.client, name="home")
+        self.check_docs = LinkChecker(self.client, name="docs")
+        self.check_tutorial = LinkChecker(self.client, name="tutorial")
+
+        self.check_gh_users = GitHubUserValidator(self.client, self.github_token)
+        self.check_pypi = PyPIValidator(self.client)
+        self.check_conda = CondaValidator(self.client)
+        self.check_cran = CRANValidator(self.client)
+        self.check_bioc = BioconductorValidator(self.client)
+
+    async def validate_packages(self) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
+        """Find all package `meta.yaml` files in the registry dir and yield package records."""
+
+        errors: dict[str, list[ValidationError | jsonschema.ValidationError]] = {}
+        package_metadata: list[ScverseEcosystemPackages] = []
+
+        async with self.client:
+            async for check in asyncio.as_completed(
+                self.check_package(meta_path)
+                for meta_path in sorted(self.registry_dir.rglob("meta.yaml"), key=lambda x: x.parent.name)
+            ):
+                pkg_id, tmp_meta, pkg_errors = await check
+                errors[pkg_id] = pkg_errors
+                package_metadata.append(tmp_meta)
+
+        return errors, package_metadata
+
+    async def check_package(
+        self, meta_file: Path
+    ) -> tuple[str, ScverseEcosystemPackages, list[ValidationError | jsonschema.ValidationError]]:
+        pkg_id = meta_file.parent.name
+        with meta_file.open() as f:
             tmp_meta = cast("ScverseEcosystemPackages", yaml.load(f, yaml.SafeLoader))
 
+        pkg_errors: list[ValidationError | jsonschema.ValidationError] = []
         try:
-            jsonschema.validate(tmp_meta, schema)
+            jsonschema.validate(tmp_meta, self.schema)
         except jsonschema.ValidationError as e:
             pkg_errors.append(e)
 
+        # Check logo (if available) and make path relative to root of registry
+        if "logo" in tmp_meta:
+            img_path = self.registry_dir / pkg_id / tmp_meta["logo"]
+            try:
+                check_image(img_path)
+            except ValidationError as e:
+                pkg_errors.append(e)
+            tmp_meta["logo"] = str(img_path)
+
+        log.info(f"Validating {pkg_id}")
+        async for check in asyncio.as_completed(self.http_checks(pkg_id, tmp_meta)):
+            try:
+                await check
+            except ValidationError as e:
+                pkg_errors.append(e)
+
+        return pkg_id, tmp_meta, pkg_errors
+
+    def http_checks(self, pkg_id: str, tmp_meta: ScverseEcosystemPackages) -> Generator[Awaitable[Exception | None]]:
         # Check and register all links
-        pkg_errors.append(check_home(tmp_meta["project_home"], pkg_id))
-        pkg_errors.append(check_docs(tmp_meta["documentation_home"], pkg_id))
+        yield self.check_home(tmp_meta["project_home"], pkg_id)
+        yield self.check_docs(tmp_meta["documentation_home"], pkg_id)
         if url := tmp_meta.get("tutorials_home"):
-            pkg_errors.append(check_tutorial(url, pkg_id))
+            yield self.check_tutorial(url, pkg_id)
 
         # Validate GitHub usernames in contact field
         if usernames := tmp_meta.get("contact"):
-            pkg_errors.append(check_gh_users(usernames, pkg_id))
+            yield self.check_gh_users(usernames, pkg_id)
 
         # Validate install packages
         if install_info := tmp_meta.get("install"):
             if pypi_name := install_info.get("pypi"):
-                pkg_errors.append(check_pypi(pypi_name, pkg_id))
+                yield self.check_pypi(pypi_name, pkg_id)
             if conda_name := install_info.get("conda"):
-                pkg_errors.append(check_conda(conda_name, pkg_id))
+                yield self.check_conda(conda_name, pkg_id)
             if cran_name := install_info.get("cran"):
-                pkg_errors.append(check_cran(cran_name, pkg_id))
+                yield self.check_cran(cran_name, pkg_id)
             if bioconductor_name := install_info.get("bioconductor"):
-                pkg_errors.append(check_bioc(bioconductor_name, pkg_id))
-
-        # Check logo (if available) and make path relative to root of registry
-        if "logo" in tmp_meta:
-            img_path = registry_dir / pkg_id / tmp_meta["logo"]
-            pkg_errors.append(check_image(img_path))
-            tmp_meta["logo"] = str(img_path)
-
-        package_metadata.append(tmp_meta)
-
-    return errors, package_metadata
+                yield self.check_bioc(bioconductor_name, pkg_id)
 
 
 def make_output(
@@ -463,7 +508,8 @@ def main(args: Sequence[str] | None = None) -> None:
         parsed_args.outdir.mkdir(parents=True)
 
     log.info("Starting validation")
-    errors, packages = validate_packages(schema_file, parsed_args.registry_dir, github_token)
+    checker = Checker(schema_file, parsed_args.registry_dir, github_token=github_token)
+    errors, packages = asyncio.run(checker.validate_packages())
 
     if any(errors.values()):
         log.error("Validation error occured in at least one package. Exiting.")
