@@ -66,7 +66,7 @@ class LinkChecker(HTTPValidator):
 
     name: str
 
-    async def __call__(self, url: str, context: str) -> None | ValidationError:
+    async def __call__(self, url: str, context: str) -> None:
         """Check if URL is duplicate, validate it exists, and register it.
 
         Parameters
@@ -83,24 +83,23 @@ class LinkChecker(HTTPValidator):
                 f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n"
                 f"{url}\n->\n{new_url}"
             )
-            return ValidationError(msg)
+            raise ValidationError(msg)
         if url in self.validated:
             msg = f"{self.name}:{context}: Duplicate link: {url}"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         try:
             response = await self.client.head(url)
         except Exception as e:
             msg = f"{self.name}:{context}: URL {url} is not reachable: {e}"
-            return ValidationError(msg)
+            raise ValidationError(msg) from e
 
         if response.status_code != httpx.codes.OK:
             msg = f"{self.name}:{context}: URL {url} is not reachable (error {response.status_code}). "
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         self.validated.add(url)
         log.info(f"Validated {self.name} URL for {context}: {url!r}")
-        return None
 
 
 @dataclass
@@ -109,7 +108,7 @@ class GitHubUserValidator(HTTPValidator):
 
     github_token: str | None = None
 
-    async def __call__(self, usernames: Sequence[str], context: str) -> None | ValidationError:
+    async def __call__(self, usernames: Sequence[str], context: str) -> None:
         """Validate that a GitHub username exists.
 
         Parameters
@@ -121,7 +120,7 @@ class GitHubUserValidator(HTTPValidator):
         """
 
         if not (unvalidated := list(set(usernames) - self.validated)):
-            return None
+            return
 
         headers = {}
         if self.github_token:
@@ -135,28 +134,27 @@ class GitHubUserValidator(HTTPValidator):
             )
         except Exception as e:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r}: {e}"
-            return ValidationError(msg)
+            raise ValidationError(msg) from e
 
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r} (error {response.status_code})"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         gql_response = response.json()
         if errors := gql_response.get("errors"):
             error_msgs = "\n".join(f"- {error['message']}" for error in errors)
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r}:\n{error_msgs}"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         self.validated |= set(unvalidated)
         log.info(f"Validated GitHub users for {context}: {unvalidated!r}")
-        return None
 
 
 @dataclass
 class PyPIValidator(HTTPValidator):
     """Validate PyPI package names against the PyPI API."""
 
-    async def __call__(self, package_name: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_name: str, context: str) -> None:
         """Validate that a PyPI package exists.
 
         Parameters
@@ -167,31 +165,30 @@ class PyPIValidator(HTTPValidator):
             Context information for error messages (e.g., file being validated)
         """
         if package_name in self.validated:
-            return None
+            return
 
         try:
             response = await self.client.head(f"https://pypi.org/pypi/{package_name}/json")
         except Exception as e:
             msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
-            return ValidationError(msg)
+            raise ValidationError(msg) from e
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: PyPI package {package_name!r} does not exist"
-            return ValidationError(msg)
+            raise ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate PyPI package {package_name!r} (error {response.status_code})"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         self.validated.add(package_name)
         log.info(f"Validated PyPI package for {context}: {package_name}")
-        return None
 
 
 @dataclass
 class CondaValidator(HTTPValidator):
     """Validate Conda package identifiers using the Anaconda API."""
 
-    async def __call__(self, package_spec: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_spec: str, context: str) -> None:
         """Validate that a Conda package exists.
 
         Parameters
@@ -202,12 +199,12 @@ class CondaValidator(HTTPValidator):
             Context information for error messages (e.g., file being validated)
         """
         if package_spec in self.validated:
-            return None
+            return
 
         # Parse channel and package name
         if "::" not in package_spec:
             msg = f"{context}: Invalid Conda package spec {package_spec!r} (expected format: channel::package)"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         channel, package_name = package_spec.split("::", 1)
 
@@ -216,25 +213,24 @@ class CondaValidator(HTTPValidator):
             response = await self.client.head(f"https://api.anaconda.org/package/{channel}/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
-            return ValidationError(msg)
+            raise ValidationError(msg) from e
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: Conda package '{package_spec}' does not exist"
-            return ValidationError(msg)
+            raise ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate Conda package '{package_spec}' (error {response.status_code})"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         self.validated.add(package_spec)
         log.info(f"Validated Conda package for {context}: {package_spec}")
-        return None
 
 
 @dataclass
 class CRANValidator(HTTPValidator):
     """Validate CRAN package names using the CRAN API."""
 
-    async def __call__(self, package_name: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_name: str, context: str) -> None:
         """Validate that a CRAN package exists.
 
         Parameters
@@ -245,32 +241,31 @@ class CRANValidator(HTTPValidator):
             Context information for error messages (e.g., file being validated)
         """
         if package_name in self.validated:
-            return None
+            return
 
         # CRAN packages can be checked via the packages database
         try:
             response = await self.client.head(f"https://crandb.r-pkg.org/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
-            return ValidationError(msg)
+            raise ValidationError(msg) from e
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: CRAN package '{package_name}' does not exist"
-            return ValidationError(msg)
+            raise ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate CRAN package '{package_name}' (error {response.status_code})"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         self.validated.add(package_name)
         log.info(f"Validated CRAN package for {context}: {package_name}")
-        return None
 
 
 @dataclass
 class BioconductorValidator(HTTPValidator):
     """Validate Bioconductor package names using the Bioconductor API."""
 
-    async def __call__(self, package_name: str, context: str) -> None | ValidationError:
+    async def __call__(self, package_name: str, context: str) -> None:
         """Validate that a Bioconductor package exists.
 
         Parameters
@@ -281,25 +276,24 @@ class BioconductorValidator(HTTPValidator):
             Context information for error messages (e.g., file being validated)
         """
         if package_name in self.validated:
-            return None
+            return
 
         # Bioconductor packages can be checked via their web API
         try:
             response = await self.client.head(f"https://bioconductor.org/packages/{package_name}/")
         except Exception as e:
             msg = f"{context}: Failed to validate Bioconductor package '{package_name}': {e}"
-            return ValidationError(msg)
+            raise ValidationError(msg) from e
 
         if response.status_code == httpx.codes.NOT_FOUND:
             msg = f"{context}: Bioconductor package '{package_name}' does not exist"
-            return ValidationError(msg)
+            raise ValidationError(msg)
         if response.status_code != httpx.codes.OK:
             msg = f"{context}: Failed to validate Bioconductor package '{package_name}' (error {response.status_code})"
-            return ValidationError(msg)
+            raise ValidationError(msg)
 
         self.validated.add(package_name)
         log.info(f"Validated Bioconductor package for {context}: {package_name}")
-        return None
 
 
 def check_image(img_path: Path) -> None:
@@ -308,7 +302,7 @@ def check_image(img_path: Path) -> None:
         msg = f"Image does not exist: {img_path}"
         raise ValidationError(msg)
     if img_path.suffix == ".svg":
-        return None
+        return
     with Image.open(img_path) as img:
         width, height = img.size
     if not ((width == IMAGE_SIZE and height <= IMAGE_SIZE) or (width <= IMAGE_SIZE and height == IMAGE_SIZE)):
@@ -320,7 +314,6 @@ def check_image(img_path: Path) -> None:
             """
         )
         raise ValidationError(msg)
-    return None
 
 
 class DomainBasedRateLimiterRepository(AbstractRateLimiterRepository):
@@ -392,6 +385,7 @@ class Checker:
         try:
             jsonschema.validate(tmp_meta, self.schema)
         except jsonschema.ValidationError as e:
+            log.error(f"{pkg_id}: Failed to validate meta.yaml: {e}")
             pkg_errors.append(e)
 
         # Check logo (if available) and make path relative to root of registry
@@ -400,6 +394,7 @@ class Checker:
             try:
                 check_image(img_path)
             except ValidationError as e:
+                log.error(e)
                 pkg_errors.append(e)
             tmp_meta["logo"] = str(img_path)
 
@@ -408,6 +403,7 @@ class Checker:
             try:
                 await check
             except ValidationError as e:
+                log.error(e)
                 pkg_errors.append(e)
 
         return pkg_id, tmp_meta, pkg_errors
