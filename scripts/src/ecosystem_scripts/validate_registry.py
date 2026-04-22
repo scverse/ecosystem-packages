@@ -60,8 +60,11 @@ class HTTPValidator[E = str]:
     validated: set[E] = field(default_factory=set)
 
 
+@dataclass
 class LinkChecker(HTTPValidator):
     """Track known links and validate URLs."""
+
+    name: str
 
     async def __call__(self, url: str, context: str) -> None | ValidationError:
         """Check if URL is duplicate, validate it exists, and register it.
@@ -76,25 +79,27 @@ class LinkChecker(HTTPValidator):
         if m := re.fullmatch(RE_RTD, url):
             new_url = f"https://{m['domain']}/" + (f"page{m['path']}" if m["path"].strip("/") else "")
             msg = (
-                f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n{url}\n->\n{new_url}"
+                f"{self.name}:{context}: "
+                f"Please use the default version in ReadTheDocs URLs instead of {m['version']!r}:\n"
+                f"{url}\n->\n{new_url}"
             )
             return ValidationError(msg)
         if url in self.validated:
-            msg = f"{context}: Duplicate link: {url}"
+            msg = f"{self.name}:{context}: Duplicate link: {url}"
             return ValidationError(msg)
 
         try:
             response = await self.client.head(url)
         except Exception as e:
-            msg = f"{context}: URL {url} is not reachable: {e}"
+            msg = f"{self.name}:{context}: URL {url} is not reachable: {e}"
             return ValidationError(msg)
 
         if response.status_code != httpx.codes.OK:
-            msg = f"{context}: URL {url} is not reachable (error {response.status_code}). "
+            msg = f"{self.name}:{context}: URL {url} is not reachable (error {response.status_code}). "
             return ValidationError(msg)
 
         self.validated.add(url)
-        log.info(f"Validated URL for {context}: {url!r}")
+        log.info(f"Validated {self.name} URL for {context}: {url!r}")
         return None
 
 
@@ -349,9 +354,9 @@ class Checker:
 
         # using different link checkers,
         # because each of them may point to the same URL and this wouldn't qualify as duplicate
-        self.check_home = LinkChecker(self.client)
-        self.check_docs = LinkChecker(self.client)
-        self.check_tutorial = LinkChecker(self.client)
+        self.check_home = LinkChecker(self.client, name="home")
+        self.check_docs = LinkChecker(self.client, name="docs")
+        self.check_tutorial = LinkChecker(self.client, name="tutorial")
 
         self.check_gh_users = GitHubUserValidator(self.client, self.github_token)
         self.check_pypi = PyPIValidator(self.client)
