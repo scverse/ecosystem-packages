@@ -3,8 +3,8 @@ description: |
   Technology-invariant pipeline for spatial-omics analysis that
   scales to millions of cells. It includes segmentation, annotation,
   spatial statistics, and efficient visualization.
-project_home: https://github.com/gustaveroussy/sopa
-documentation_home: https://gustaveroussy.github.io/sopa/
+project_home: https://github.com/prism-oncology/sopa
+documentation_home: https://prism-oncology.github.io/sopa/
 publications:
   - 10.1038/s41467-024-48981-z
 install:
