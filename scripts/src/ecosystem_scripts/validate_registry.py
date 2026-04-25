@@ -360,7 +360,7 @@ class Checker:
     async def validate_packages(self) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
         """Find all package `meta.yaml` files in the registry dir and yield package records."""
 
-        errors: dict[str, list[ValidationError | jsonschema.ValidationError]] = {}
+        errors: dict[str, list[ValidationError]] = {}
         package_metadata: list[ScverseEcosystemPackages] = []
 
         async with self.client:
@@ -374,19 +374,18 @@ class Checker:
 
         return errors, package_metadata
 
-    async def check_package(
-        self, meta_file: Path
-    ) -> tuple[str, ScverseEcosystemPackages, list[ValidationError | jsonschema.ValidationError]]:
+    async def check_package(self, meta_file: Path) -> tuple[str, ScverseEcosystemPackages, list[ValidationError]]:
         pkg_id = meta_file.parent.name
         with meta_file.open() as f:
             tmp_meta = cast("ScverseEcosystemPackages", yaml.load(f, yaml.SafeLoader))
 
-        pkg_errors: list[ValidationError | jsonschema.ValidationError] = []
+        pkg_errors: list[ValidationError] = []
         try:
             jsonschema.validate(tmp_meta, self.schema)
         except jsonschema.ValidationError as e:
-            log.error(f"{pkg_id}: Failed to validate meta.yaml: {e}")
-            pkg_errors.append(e)
+            msg = f"{pkg_id}: Failed to validate meta.yaml: {e}"
+            log.error(msg)
+            pkg_errors.append(ValidationError(msg))
 
         # Check logo (if available) and make path relative to root of registry
         if "logo" in tmp_meta:
@@ -408,7 +407,7 @@ class Checker:
 
         return pkg_id, tmp_meta, pkg_errors
 
-    def http_checks(self, pkg_id: str, tmp_meta: ScverseEcosystemPackages) -> Generator[Awaitable[Exception | None]]:
+    def http_checks(self, pkg_id: str, tmp_meta: ScverseEcosystemPackages) -> Generator[Awaitable[None]]:
         # Check and register all links
         yield self.check_home(tmp_meta["project_home"], pkg_id)
         yield self.check_docs(tmp_meta["documentation_home"], pkg_id)
