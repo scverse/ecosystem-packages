@@ -1,0 +1,3 @@
+[envs.default]
+# this allows to e.g. `hatch run validate-registry` in the root directory
+workspace.members = ["scripts"]
