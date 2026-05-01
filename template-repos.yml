@@ -42,6 +42,7 @@
 - url: https://github.com/angelolab/mbt
 - url: https://github.com/angelolab/pici-vitessce
 - url: https://github.com/angelolab/tonic-vitessce
+- url: https://github.com/axelalmet/SnCXTalk
 - url: https://github.com/bartuschimschek/mmil-refactored
 - url: https://github.com/bioFAM/mofaflex
 - url: https://github.com/bioFAM/scDoRI
@@ -77,7 +78,6 @@
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/joechanlab/scDeBussy
-- url: https://github.com/joschif/delnx
 - url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
@@ -91,6 +91,7 @@
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/mengerj/adata_hf_datasets
 - url: https://github.com/mengerj/mmcontext
+- url: https://github.com/mlbelab/delnx
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/mumichae/scAtlasTb-utils
 - url: https://github.com/nitzanlab/biolord
@@ -141,9 +142,11 @@
 - url: https://github.com/theislab/ehrapy
 - url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/geome
+- url: https://github.com/theislab/lamin_dataloader
 - url: https://github.com/theislab/mapqc
 - url: https://github.com/theislab/multigrate
 - url: https://github.com/theislab/multimil
+- url: https://github.com/theislab/scConcept
 - url: https://github.com/theislab/spatialdata-db
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/theislab/troutpy
