@@ -1,0 +1,23 @@
+name: pyXenium
+description: |
+  pyXenium is a Python toolkit for 10x Genomics Xenium data that combines Xenium I/O,
+  multimodal RNA+protein analysis, contour-aware spatial profiling, topology workflows,
+  GMI inference, mechanostress analysis, and optional external workflow bridges.
+project_home: https://github.com/hutaobo/pyXenium
+documentation_home: https://pyxenium.readthedocs.io/en/latest/
+tutorials_home: https://pyxenium.readthedocs.io/en/latest/tutorials/index.html
+install:
+  pypi: pyXenium
+tags:
+  - xenium
+  - spatial omics
+  - spatial transcriptomics
+  - multimodal
+  - anndata
+  - pathology
+license: AGPL-3.0-only
+version: 0.4.5
+contact:
+  - hutaobo
+test_command: pip install -e ".[dev,docs]" && pytest -q && sphinx-build -b html docs docs/_build/html -W --keep-going
+category: ecosystem
