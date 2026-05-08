@@ -4,8 +4,8 @@ description: |
   multimodal RNA+protein analysis, contour-aware spatial profiling, topology workflows,
   GMI inference, mechanostress analysis, and optional external workflow bridges.
 project_home: https://github.com/hutaobo/pyXenium
-documentation_home: https://pyxenium.readthedocs.io/en/latest/
-tutorials_home: https://pyxenium.readthedocs.io/en/latest/tutorials/index.html
+documentation_home: https://pyxenium.readthedocs.io/
+tutorials_home: https://pyxenium.readthedocs.io/page/tutorials/index.html
 install:
   pypi: pyXenium
 tags:
