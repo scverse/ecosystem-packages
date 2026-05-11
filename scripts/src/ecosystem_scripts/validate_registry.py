@@ -19,12 +19,8 @@ from typing import TYPE_CHECKING, cast, override
 import httpx
 import jsonschema
 import yaml
-from httpx_limiter import (  # type: ignore[attr-defined]
-    AbstractRateLimiterRepository,
-    AsyncMultiRateLimitedTransport,
-    Rate,
-)
-from httpx_limiter.aiolimiter import AiolimiterAsyncLimiter  # type: ignore[attr-defined]
+from httpx_limiter import AbstractRateLimiterRepository, AsyncMultiRateLimitedTransport, Rate
+from httpx_limiter.aiolimiter import AiolimiterAsyncLimiter
 from httpx_retries import Retry, RetryTransport
 from PIL import Image
 
