@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.73 176.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5bb8bf;
+        stroke: #54acb2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+        stroke-width: .52px;
+      }
+
+      .cls-5 {
+        fill: #ebf0b5;
+      }
+
+      .cls-2 {
+        fill: #3fc6ee;
+        stroke: #39b4d8;
+      }
+
+      .cls-3 {
+        fill: #86ccab;
+        stroke: #a3ccb9;
+      }
+
+      .cls-6 {
+        opacity: .9;
+      }
+
+      .cls-7 {
+        letter-spacing: .05em;
+      }
+
+      .cls-7, .cls-8, .cls-9 {
+        fill: #17232c;
+        font-family: HelveticaNeue-Light, 'Helvetica Neue';
+        font-size: 58.53px;
+        font-weight: 300;
+      }
+
+      .cls-8 {
+        letter-spacing: .05em;
+      }
+
+      .cls-9 {
+        letter-spacing: .05em;
+      }
+
+      .cls-4 {
+        fill: #e6e7e8;
+        stroke: #f1f2f2;
+      }
+    </style>
+  </defs>
+  <g class="cls-6">
+    <polygon class="cls-2" points="211.87 110.99 217.98 121.63 283.46 175.94 283.46 134.46 211.87 110.99"/>
+    <polygon class="cls-3" points="283.46 48.06 283.46 .66 200.3 89.34 205.75 98.84 283.46 48.06"/>
+    <polygon class="cls-1" points="211.46 109.12 283.46 118.34 283.46 62.23 206.7 100.83 211.46 109.12"/>
+  </g>
+  <text class="cls-8" transform="translate(0 129.38)"><tspan x="0" y="0">dvp</tspan></text>
+  <path class="cls-5" d="M97,134.92H5.93c-3.27,0-5.93,2.65-5.93,5.93h0c0,3.27,2.65,5.93,5.93,5.93h84.42l6.66-11.85Z"/>
+  <path class="cls-4" d="M159.53,33.85l-76.38,132.29c-.77,1.33.19,2.99,1.73,2.99h152.75c1.54,0,2.5-1.66,1.73-2.99L162.99,33.85c-.77-1.33-2.69-1.33-3.46,0Z"/>
+  <text class="cls-7" transform="translate(138.11 129.38)"><tspan x="0" y="0">io</tspan></text>
+  <text class="cls-9" transform="translate(103.36 127.57)"><tspan x="0" y="0">-</tspan></text>
+</svg>
