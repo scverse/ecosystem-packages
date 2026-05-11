@@ -1,0 +1,19 @@
+name: scib-rapids
+description: |
+  GPU-accelerated single-cell integration benchmarking metrics using RAPIDS (cuML, CuPy)
+  as a drop-in replacement for the JAX-based metrics in scib-metrics.
+project_home: https://github.com/maarten-devries/scib-rapids
+documentation_home: https://scib-rapids.readthedocs.io/
+install:
+  pypi: scib-rapids
+tags:
+  - benchmarking
+  - single-cell
+  - data integration
+  - GPU acceleration
+  - RAPIDS
+license: BSD-3-Clause
+version: 0.1.0
+contact:
+  - maarten-devries
+category: ecosystem
