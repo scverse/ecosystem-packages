@@ -1,12 +1,12 @@
 name: ATLAS
-description: 
+description:
   ATLAS is a framework for multi-omic trajectory inference from paired single-cell RNA and ATAC sequencing data.
-  By integrating transcriptional and chromatin accessibility information within a unified representation, ATLAS enables pseudotime reconstruction and cell fate prediction that directly incorporate regulatory dynamics.  
+  By integrating transcriptional and chromatin accessibility information within a unified representation, ATLAS enables pseudotime reconstruction and cell fate prediction that directly incorporate regulatory dynamics.
 project_home: https://github.com/smilies-polito/atlas-smilies
 documentation_home: https://atlas-smilies.readthedocs.io/
 tutorials_home: https://atlas-smilies.readthedocs.io/
 publications:
-  - publication will be available soon 
+  - publication will be available soon
 install:
   pypi: atlas-smilies
 tags:
@@ -24,4 +24,4 @@ contact:
   - stefano.dicarlo@polito.it
 test_command: |
   pip install ".[test]" && pytest
-category: ecosystem 
+category: ecosystem
