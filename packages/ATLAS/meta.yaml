@@ -5,8 +5,6 @@ description:
 project_home: https://github.com/smilies-polito/atlas-smilies
 documentation_home: https://atlas-smilies.readthedocs.io/
 tutorials_home: https://atlas-smilies.readthedocs.io/
-publications:
-  - publication will be available soon
 install:
   pypi: atlas-smilies
 tags:
@@ -17,11 +15,8 @@ tags:
 license: BSD-3-Clause
 version: v1.0.0
 contact:
-  - alessia.leclercq@polito.it
-  - lorenzo.martini@polito.it
-  - roberta.bardini@polito.it
-  - alessandro.savino@polito.it
-  - stefano.dicarlo@polito.it
+  - AlessiaLeclercq
+  - smilies-polito
 test_command: |
   pip install ".[test]" && pytest
 category: ecosystem
