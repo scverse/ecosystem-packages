@@ -16,7 +16,7 @@ license: BSD-3-Clause
 version: v1.0.0
 contact:
   - AlessiaLeclercq
-  - smilies-polito
+  - LorenzoMartiniTini
 test_command: |
   pip install ".[test]" && pytest
 category: ecosystem
