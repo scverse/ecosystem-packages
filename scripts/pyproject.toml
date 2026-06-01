@@ -70,6 +70,6 @@ lint.select = [
 lint.ignore = []
 
 [tool.mypy]
-strict = true
-explicit_package_bases = true
 mypy_path = [ "$MYPY_CONFIG_FILE_DIR/typings", "$MYPY_CONFIG_FILE_DIR/src" ]
+explicit_package_bases = true
+strict = true
