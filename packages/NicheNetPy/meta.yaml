@@ -20,6 +20,7 @@ publications:
 version: 1.0.0
 contact:
   - vmedaert
+  - rseurinc
 logo: logo.webp
 test_command: |
   pip install -r requirements.txt &&
