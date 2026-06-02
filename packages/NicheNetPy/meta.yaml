@@ -1,0 +1,29 @@
+name: NicheNetPy
+description: |
+  The goal of NicheNet is to study intercellular communication from a computational perspective.
+  NicheNet uses human or mouse gene expression data of interacting cells as input and combines
+  this with a prior model that integrates existing knowledge on ligand-to-target signaling paths.
+  This allows to predict ligand-receptor interactions that might drive gene expression changes
+  in cells of interest.
+project_home: https://github.com/saeyslab/nichenetpy
+documentation_home: https://saeyslab.github.io/nichenetpy/nichenetpy.html
+tutorials_home: https://github.com/saeyslab/nichenetpy
+install:
+  pypi: nichenetpy
+license: BSD-3-Clause
+tags:
+  - python
+  - cell-cell-communication
+  - intercellular-communication
+publications:
+  - 10.1038/s41592-019-0667-5
+version: 1.0.0
+contact:
+  - vmedaert
+logo: logo.webp
+test_command: |
+  pip install -r requirements.txt &&
+  pip install pytest liana requests &&
+  pip install -e . &&
+  pytest -m "not large_download and not outdated"
+category: ecosystem
