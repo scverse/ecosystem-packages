@@ -15,6 +15,7 @@
 - url: https://github.com/Floto-Lab/BactGraph
 - url: https://github.com/FroeseLab/bulkpy
 - url: https://github.com/Gabriellvl/FlowSOM
+- url: https://github.com/Genentech/MoCAVI
 - url: https://github.com/LiHongCSBLab/scMagnify
 - url: https://github.com/Lotfollahi-lab/mintflow
 - url: https://github.com/MannLabs/alphapepttools
@@ -41,6 +42,7 @@
 - url: https://github.com/angelolab/mbt
 - url: https://github.com/angelolab/pici-vitessce
 - url: https://github.com/angelolab/tonic-vitessce
+- url: https://github.com/axelalmet/SnCXTalk
 - url: https://github.com/bartuschimschek/mmil-refactored
 - url: https://github.com/bioFAM/mofaflex
 - url: https://github.com/bioFAM/scDoRI
@@ -76,7 +78,6 @@
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
 - url: https://github.com/joechanlab/scDeBussy
-- url: https://github.com/joschif/delnx
 - url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
@@ -90,6 +91,7 @@
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
 - url: https://github.com/mengerj/adata_hf_datasets
 - url: https://github.com/mengerj/mmcontext
+- url: https://github.com/mlbelab/delnx
 - url: https://github.com/mostafavilabuw/drum
 - url: https://github.com/mumichae/scAtlasTb-utils
 - url: https://github.com/nitzanlab/biolord
@@ -99,10 +101,12 @@
 - url: https://github.com/quadbio/atac_mapper
 - url: https://github.com/quadbio/cell-annotator
 - url: https://github.com/quadbio/cellmapper
+- url: https://github.com/quadbio/scBulkDE
 - url: https://github.com/quadbio/scembed
 - url: https://github.com/quadbio/slurm_sweep
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
+- url: https://github.com/saezlab/MINA
 - url: https://github.com/scverse/annbatch
 - url: https://github.com/scverse/anndata
 - url: https://github.com/scverse/anndata-plot
@@ -137,17 +141,19 @@
 - url: https://github.com/theislab/cellink
 - url: https://github.com/theislab/ehrapy
 - url: https://github.com/theislab/ehrdata
-- url: https://github.com/theislab/embpy
 - url: https://github.com/theislab/geome
+- url: https://github.com/theislab/lamin_dataloader
 - url: https://github.com/theislab/mapqc
 - url: https://github.com/theislab/multigrate
 - url: https://github.com/theislab/multimil
+- url: https://github.com/theislab/scConcept
 - url: https://github.com/theislab/spatialdata-db
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/theislab/troutpy
 - url: https://github.com/timtreis/gefslim
 - url: https://github.com/vitkl/cell2module
 - url: https://github.com/vitkl/regularizedvi
+- url: https://github.com/vitkl/science_debate
 - url: https://github.com/wangd12rpi/hescape_changed
 - url: https://github.com/yizhak-lab-ccg/scXpand
 - url: https://github.com/zunderlab/eschr
