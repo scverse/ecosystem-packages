@@ -8,7 +8,7 @@ description: |
   Palantir has been designed to work with multidimensional single cell data from
   diverse technologies such as Mass cytometry and single cell RNA-seq.
 project_home: https://github.com/dpeerlab/Palantir
-documentation_home: https://palantir.readthedocs.io
+documentation_home: https://palantir.readthedocs.io/
 publications:
   - 10.1038/s41587-019-0068-4
 install:

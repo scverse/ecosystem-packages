@@ -2,8 +2,8 @@ name: biolord
 description: |
   biolord (biological representation disentanglement) is a deep generative framework for disentangling known and unknown attributes in single-cell data.
 project_home: https://github.com/nitzanlab/biolord
-documentation_home: https://biolord.readthedocs.io
-tutorials_home: https://biolord.readthedocs.io
+documentation_home: https://biolord.readthedocs.io/
+tutorials_home: https://biolord.readthedocs.io/
 install:
   pypi: biolord
 tags:

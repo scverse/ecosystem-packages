@@ -2,7 +2,7 @@ name: scib
 description: |
   Evaluating single-cell data integration methods
 project_home: https://github.com/theislab/scib
-documentation_home: https://scib.readthedocs.io
+documentation_home: https://scib.readthedocs.io/
 publications:
   - 10.1038/s41592-021-01336-8
 install:

@@ -5,8 +5,8 @@ description: |
   biologists to infer transcription factors, gene regulatory networks and
   cell types from single-cell RNA-seq data.
 project_home: https://github.com/aertslab/pySCENIC
-documentation_home: https://pyscenic.readthedocs.io/en/latest/
-tutorials_home: https://pyscenic.readthedocs.io/en/latest/tutorial.html
+documentation_home: https://pyscenic.readthedocs.io/
+tutorials_home: https://pyscenic.readthedocs.io/page/tutorial.html
 publications:
   - 10.1038/nmeth.4463
   - 10.1371/journal.pone.0012776

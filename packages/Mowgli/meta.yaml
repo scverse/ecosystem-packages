@@ -2,7 +2,7 @@ name: Mowgli
 description: |
   Paired single-cell multi-omics data integration with Optimal Transport-flavored Nonnegative Matrix Factorization
 project_home: https://github.com/cantinilab/mowgli
-documentation_home: https://mowgli.readthedocs.io
+documentation_home: https://mowgli.readthedocs.io/
 publications:
   - 10.1101/2023.02.02.526825
 install:

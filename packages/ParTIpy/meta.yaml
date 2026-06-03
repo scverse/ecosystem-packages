@@ -2,8 +2,8 @@ name: ParTIpy
 description: |
   Implements Pareto task inference and archetypal analysis for analyzing functional trade-offs in single-cell and spatial omics data.
 project_home: https://github.com/saezlab/ParTIpy
-documentation_home: https://partipy.readthedocs.io/en/latest/
-tutorials_home: https://partipy.readthedocs.io/en/latest/
+documentation_home: https://partipy.readthedocs.io/
+tutorials_home: https://partipy.readthedocs.io/
 install:
   pypi: partipy
 license: MIT

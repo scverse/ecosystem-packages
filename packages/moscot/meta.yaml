@@ -2,7 +2,7 @@ name: moscot
 description: |
   moscot is a scalable toolbox for multiomics single-cell optimal transport applications.
 project_home: https://github.com/theislab/moscot
-documentation_home: https://moscot.readthedocs.io/en/stable/index.html
+documentation_home: https://moscot.readthedocs.io/page/
 publications:
   - 10.1101/2023.05.11.540374
 install:

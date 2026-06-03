@@ -2,7 +2,7 @@ name: CellAnnotator
 description: |
   CellAnnotator is a lightweight tool to query large language models for cell type labels in scRNA-seq data. It can incorporate prior knowledge, and it creates consistent labels across samples in your study.
 project_home: https://github.com/quadbio/cell-annotator
-documentation_home: https://cell-annotator.readthedocs.io/en/latest/
+documentation_home: https://cell-annotator.readthedocs.io/
 install:
   pypi: cell-annotator
 tags:

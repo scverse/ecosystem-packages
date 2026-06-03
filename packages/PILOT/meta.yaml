@@ -2,8 +2,8 @@ name: PILOT
 description: |
   PILOT is a Python library for Detection of PatIent-Level distances from single cell genomics and pathomics data with Optimal Transport.
 project_home: https://github.com/CostaLab/PILOT
-documentation_home: https://pilot.readthedocs.io/en/latest/api.html
-tutorials_home: https://pilot.readthedocs.io/en/latest/
+documentation_home: https://pilot.readthedocs.io/page/api.html
+tutorials_home: https://pilot.readthedocs.io/
 publications:
   - 10.1038/s44320-023-00003-8
 install:

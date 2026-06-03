@@ -2,8 +2,8 @@ name: pytximport
 description: |
   A Python port of the `tximport` R package for importing transcript-level quantification data from various RNA-seq quantification tools such as `salmon` and `kallisto` and summarizing it to the gene level.
 project_home: https://github.com/complextissue/pytximport
-documentation_home: https://pytximport.readthedocs.io/en/latest/
-tutorials_home: https://pytximport.readthedocs.io/en/latest/
+documentation_home: https://pytximport.readthedocs.io/
+tutorials_home: https://pytximport.readthedocs.io/
 install:
   pypi: pytximport
 tags:

@@ -2,8 +2,8 @@ name: scFates
 description: |
   A scalable python package for tree inference and advanced pseudotime analysis from scRNAseq data.
 project_home: https://github.com/LouisFaure/scFates
-documentation_home: https://scfates.readthedocs.io/en/latest/
-tutorials_home: https://scfates.readthedocs.io/en/latest/Tree_Analysis_Bone_marrow_fates.html
+documentation_home: https://scfates.readthedocs.io/
+tutorials_home: https://scfates.readthedocs.io/page/Tree_Analysis_Bone_marrow_fates.html
 publications:
   - 10.1093/bioinformatics/btac746
 install:

@@ -2,7 +2,7 @@ name: CellMapper
 description: |
   CellMapper is a leightweight tool to transfer labels, expression values and embeddings from reference to query datasets using k-NN mapping. It's fast and versatile, applicable to mapping scenarios in space, across modalities, or from an atlas to a new query dataset.
 project_home: https://github.com/quadbio/cellmapper
-documentation_home: https://cellmapper.readthedocs.io/en/latest/
+documentation_home: https://cellmapper.readthedocs.io/
 install:
   pypi: cellmapper
 tags:

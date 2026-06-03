@@ -2,7 +2,7 @@ name: STMiner
 description: |
   Gene-centric spatial transcriptomics for deciphering complex spatial omics data
 project_home: https://github.com/xjtu-omics/STMiner
-documentation_home: https://stminerdoc.readthedocs.io/en/latest
+documentation_home: https://stminerdoc.readthedocs.io/
 install:
   pypi: stminer
 tags:
