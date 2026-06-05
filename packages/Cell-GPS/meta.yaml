@@ -1,0 +1,28 @@
+name: Cell-GPS
+description: |
+  Cell-GPS is the reference Python implementation of Cophenetic Spatial
+  Topology Embedding (COSTE), a spatial topology framework for spatial omics
+  data. It computes searcher-findee distance matrices, StructureMap/cophenetic
+  topology embeddings, and downstream topology analyses from coordinate tables
+  and AnnData-backed Xenium workflows.
+project_home: https://github.com/hutaobo/Cell-GPS
+documentation_home: https://cell-gps.readthedocs.io/
+tutorials_home: https://cell-gps.readthedocs.io/page/readme.html
+publications:
+  - 10.64898/2026.05.26.727847
+install:
+  pypi: Cell-GPS
+  conda: conda-forge::cell-gps
+tags:
+  - spatial omics
+  - spatial transcriptomics
+  - xenium
+  - anndata
+  - spatial topology
+  - structuremap
+license: MIT
+version: 0.0.6
+contact:
+  - hutaobo
+test_command: pip install -e . pytest anndata && pytest -q
+category: core-framework
