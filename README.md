@@ -33,32 +33,32 @@ If you cannot or do not want to comply with these requirements, you are still fr
 
 ### Mandatory
 
-Name of the tool: XXX
+Name of the tool: scPRINT-2
 
-Short description: XXX
+Short description: A next generation single cell foundation model
 
 How does the package use scverse data structures (please describe in a few sentences): XXX
 
-- [ ] The code is publicly available under an [OSI-approved](https://opensource.org/licenses/alphabetical) license
-- [ ] The package provides versioned releases
-- [ ] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
-- [ ] Automated tests cover essential functions of the package and a reasonable range of inputs and conditions [^1]
-- [ ] Continuous integration (CI) automatically executes these tests on each push or pull request [^2]
-- [ ] The package provides API documentation via a website or README[^3]
-- [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
-- [ ] I am an author or maintainer of the tool and agree on listing the package on the scverse website
+- [x] The code is publicly available under an [OSI-approved](https://opensource.org/licenses/alphabetical) license
+- [x] The package provides versioned releases
+- [x] The package can be installed from a standard registry (e.g. PyPI, conda-forge, bioconda)
+- [x] Automated tests cover essential functions of the package and a reasonable range of inputs and conditions [^1]
+- [x] Continuous integration (CI) automatically executes these tests on each push or pull request [^2]
+- [x] The package provides API documentation via a website or README[^3]
+- [x] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
+- [x] I am an author or maintainer of the tool and agree on listing the package on the scverse website
 
 ### Recommended
 
-- [ ] Please announce this package on scverse communication channels (zulip, discourse, twitter)
-- [ ] Please tag the author(s) these announcements. Handles (e.g. `@scverse_team`) to include are:
+- [x] Please announce this package on scverse communication channels (zulip, discourse, twitter)
+- [x] Please tag the author(s) these announcements. Handles (e.g. `@scverse_team`) to include are:
     - Zulip:
     - Discourse:
     - Mastodon:
     - Bluesky:
     - Twitter:
 
-- [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
+- [x] The package provides tutorials (or "vignettes") that help getting users started quickly
 - [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
 
 [^1]: We recommend thtat tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
