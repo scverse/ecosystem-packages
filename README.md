@@ -61,7 +61,7 @@ How does the package use scverse data structures (please describe in a few sente
 - [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
 - [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
 
-[^1]: We recommend thtat tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
+[^1]: We recommend that tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
 
 [^2]: Continuous integration means that software tests are automatically executed on every push to the git repository. This guarantees they are always run and that they are run in a clean environment. Scverse ecosystem packages most commonly use [GitHub Actions](https://github.com/features/actions) for CI. For an example, check out our [cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
 
