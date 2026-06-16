@@ -1,0 +1,24 @@
+name: ncountr
+description: |
+  ncountr is the first Python package for end-to-end Nanostring nCounter gene expression analysis.
+  It provides RCC file parsing, quality control, normalization, differential expression testing,
+  and gene set scoring. Results can be exported as AnnData objects for downstream analysis
+  with scanpy and the broader scverse ecosystem.
+project_home: https://github.com/princello/ncountr
+documentation_home: https://ncountr.readthedocs.io/
+tutorials_home: https://ncountr.readthedocs.io/page/vignettes/
+install:
+  pypi: ncountr
+license: MIT
+tags:
+  - gene-expression
+  - nanostring
+  - ncounter
+  - normalization
+  - differential-expression
+version: v0.1.0
+contact:
+  - princello
+test_command: |
+  pip install ".[dev]" && pytest
+category: ecosystem
