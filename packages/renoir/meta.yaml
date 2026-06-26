@@ -1,10 +1,10 @@
 name: Renoir
 github: Zafar-Lab/Renoir
-pypi: renoir-spatial        
+pypi: renoir-spatial
 docs: https://renoir.readthedocs.io/en/latest/
 version: "1.0.0"
 authors:
-  - narein97               
+  - narein97
 description: >
   Information-theory-based scoring framework for spatial cell-cell
   communication analysis. Renoir computes neighbourhood activity scores
