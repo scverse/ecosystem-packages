@@ -7,8 +7,8 @@ description: |
   via Leiden clustering, and ranks ligands driving domain-specific
   signalling. Built on AnnData and SpatialData.
 project_home: https://github.com/Zafar-Lab/Renoir
-documentation_home: https://renoir.readthedocs.io/en/latest/
-tutorials_home: https://renoir.readthedocs.io/en/latest/
+documentation_home: https://renoir.readthedocs.io/
+tutorials_home: https://renoir.readthedocs.io/
 publications:
   - 10.1038/s41467-026-72388-7
 install:
