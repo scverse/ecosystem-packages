@@ -11,7 +11,7 @@ tags:
 license: MIT
 publications:
   - 10.1101/2024.11.15.623687
-version: v1.0.1
+version: v0.1.0
 contact:
   - serjisa
 test_command: |
