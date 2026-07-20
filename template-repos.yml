@@ -90,11 +90,12 @@
 - url: https://github.com/macwiatrak/BacBench
 - url: https://github.com/macwiatrak/Bacformer
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
+- url: https://github.com/mdmanurung/annplyr
 - url: https://github.com/mengerj/adata_hf_datasets
 - url: https://github.com/mengerj/mmcontext
 - url: https://github.com/mlbelab/delnx
 - url: https://github.com/mostafavilabuw/drum
-- url: https://github.com/mumichae/scAtlasTb-utils
+- url: https://github.com/mumichae/scatlaspy
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/peng-lab/hescape
 - url: https://github.com/pinellolab/PerTurbo
@@ -130,6 +131,7 @@
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
 - url: https://github.com/srivarra/annsel
+- url: https://github.com/srivarra/czarr
 - url: https://github.com/srivarra/spatial-collection
 - url: https://github.com/srivarra/xrdantic
 - url: https://github.com/sueoglu/myeditdistance
@@ -149,6 +151,8 @@
 - url: https://github.com/theislab/multigrate
 - url: https://github.com/theislab/multimil
 - url: https://github.com/theislab/scConcept
+- url: https://github.com/theislab/scConcept_rep
+- url: https://github.com/theislab/scPDAC
 - url: https://github.com/theislab/spatialdata-db
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/theislab/troutpy
