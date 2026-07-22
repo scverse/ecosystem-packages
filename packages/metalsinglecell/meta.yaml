@@ -1,0 +1,24 @@
+name: metalsinglecell
+description: |
+  A Metal/MLX GPU implementation of the scanpy/squidpy single-cell analysis stack for Apple Silicon.
+  Drop-in replacements for the core scanpy (pp/tl) and squidpy (gr) functions that run on the M-series
+  GPU, plus an out-of-core streaming front-end for datasets larger than memory.
+project_home: https://github.com/gingerii/metal-SingleCell
+documentation_home: https://metal-singlecell.readthedocs.io/
+tutorials_home: https://metal-singlecell.readthedocs.io/en/latest/tutorials.html
+install:
+  pypi: metalsinglecell
+tags:
+  - GPU
+  - Apple Silicon
+  - single-cell
+  - spatial omics
+  - preprocessing
+  - clustering
+license: BSD-3-Clause
+version: v0.1.0
+contact:
+  - gingerii
+test_command: |
+  pip install -e . && pytest tests/ -m "not metal and not data"
+category: ecosystem
