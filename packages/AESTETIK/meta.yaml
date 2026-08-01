@@ -1,0 +1,29 @@
+name: AESTETIK
+description: |
+  Convolutional autoencoder that learns spot representations from spatial
+  transcriptomics by jointly integrating transcriptomics, morphology (H&E), and
+  spatial-neighborhood topology. The learned embeddings support downstream tasks
+  such as spatial-domain clustering and multi-modal analysis.
+project_home: https://github.com/ratschlab/aestetik
+documentation_home: https://github.com/ratschlab/aestetik#readme
+tutorials_home: https://github.com/ratschlab/aestetik/tree/main/example
+publications:
+  - 10.1093/bioinformatics/btag316
+  - 10.1101/2024.06.04.24308256
+install:
+  pypi: aestetik
+tags:
+  - spatial-omics
+  - spatial-transcriptomics
+  - representation-learning
+  - autoencoder
+  - multimodal
+  - computational-pathology
+  - deep learning
+  - pytorch
+license: MIT
+version: v0.3.1
+contact:
+  - KalinNonchev
+test_command: pip install '.[test-all]' && pytest -m "not slow"
+category: ecosystem
