@@ -18,6 +18,7 @@
 - url: https://github.com/Genentech/MoCAVI
 - url: https://github.com/LiHongCSBLab/scMagnify
 - url: https://github.com/Lotfollahi-lab/mintflow
+- url: https://github.com/LouiseDck/dummy-anndata
 - url: https://github.com/MannLabs/alphapepttools
 - url: https://github.com/MannLabs/dvp-io
 - url: https://github.com/Marcufong/CellFlow-UOT
@@ -30,6 +31,7 @@
 - url: https://github.com/YosefLab/pycea
 - url: https://github.com/YosefLab/scib-metrics
 - url: https://github.com/YosefLab/scvi-hub-models
+- url: https://github.com/YosefLab/scviva-tools
 - url: https://github.com/YosefLab/treedata
 - url: https://github.com/YosefLab/visionpy
 - url: https://github.com/Zethson/fknni
@@ -86,6 +88,7 @@
 - url: https://github.com/lucas-diedrich/mulink
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/lueckenlab/patpy
+- url: https://github.com/lueckenlab/scAtlasTb-py
 - url: https://github.com/lzj1769/LR2net
 - url: https://github.com/macwiatrak/BacBench
 - url: https://github.com/macwiatrak/Bacformer
@@ -95,7 +98,6 @@
 - url: https://github.com/mengerj/mmcontext
 - url: https://github.com/mlbelab/delnx
 - url: https://github.com/mostafavilabuw/drum
-- url: https://github.com/mumichae/scatlaspy
 - url: https://github.com/nitzanlab/biolord
 - url: https://github.com/peng-lab/hescape
 - url: https://github.com/pinellolab/PerTurbo
@@ -109,6 +111,7 @@
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/MINA
+- url: https://github.com/scverse/acumen
 - url: https://github.com/scverse/annbatch
 - url: https://github.com/scverse/anndata
 - url: https://github.com/scverse/anndata-plot
@@ -124,8 +127,11 @@
 - url: https://github.com/scverse/pytometry
 - url: https://github.com/scverse/scanpy
 - url: https://github.com/scverse/scirpy
+- url: https://github.com/scverse/scverse-doc
 - url: https://github.com/scverse/scverse-misc
 - url: https://github.com/scverse/scverse-tutorials
+- url: https://github.com/scverse/scvi-tools
+- url: https://github.com/scverse/scvi-tutorials
 - url: https://github.com/scverse/simple-scvi
 - url: https://github.com/scverse/spatial-sample-aggregation
 - url: https://github.com/scverse/spatialdata-plot
@@ -153,7 +159,9 @@
 - url: https://github.com/theislab/scConcept
 - url: https://github.com/theislab/scConcept_rep
 - url: https://github.com/theislab/scPDAC
+- url: https://github.com/theislab/sckitflow
 - url: https://github.com/theislab/spatialdata-db
+- url: https://github.com/theislab/squidpy-ports
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/theislab/troutpy
 - url: https://github.com/timtreis/gefslim
