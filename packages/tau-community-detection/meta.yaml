@@ -1,0 +1,24 @@
+name: TAU Community Detection
+description: >
+  Evolutionary graph community detection combining genetic search with
+  Leiden refinement, with native support for clustering Scanpy neighbor
+  graphs stored in AnnData.
+project_home: https://github.com/HillelCharbit/TAU
+documentation_home: https://github.com/HillelCharbit/TAU#readme
+
+install:
+  pypi: tau-community-detection
+license: MIT
+tags:
+  - community-detection
+  - clustering
+  - single-cell
+  - scanpy
+  - anndata
+  - graph-analysis
+publications:
+  - 10.1093/pnasnexus/pgad180
+version: 1.4.7
+contact:
+  - HillelCharbit
+category: ecosystem
