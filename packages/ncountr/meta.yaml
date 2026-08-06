@@ -16,7 +16,7 @@ tags:
   - ncounter
   - normalization
   - differential-expression
-version: v0.1.0
+version: 0.2.0
 contact:
   - princello
 test_command: |
