@@ -339,7 +339,14 @@ class Checker:
             repository=DomainBasedRateLimiterRepository()
         )
         transport = RetryTransport(transport, Retry(total=3, backoff_factor=2))
-        self.client = httpx.AsyncClient(follow_redirects=True, timeout=30.0, transport=transport)
+        # ReadTheDocs blocks requests with the default httpx user-agent; use a browser UA so
+        # that link checks reflect what a human visitor would actually experience.
+        self.client = httpx.AsyncClient(
+            follow_redirects=True,
+            timeout=30.0,
+            transport=transport,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; scverse-ecosystem-checker/1.0)"},
+        )
 
         # using different link checkers,
         # because each of them may point to the same URL and this wouldn't qualify as duplicate
