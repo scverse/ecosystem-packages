@@ -26,11 +26,10 @@ Submit a pull-request adding a `meta.yaml` file for your package to the `package
 
 Packages carry two kinds of keywords, and they do different jobs.
 
-`topics` say what a package is **for**. They come from a controlled vocabulary, are validated
-against [`schema.json`](scripts/src/ecosystem_scripts/schema.json), and drive the filters on
-[scverse.org/packages](https://scverse.org/packages/#ecosystem). Pick every topic that genuinely
-applies, usually one to three. If none of them fit your package, propose a new one in your pull
-request rather than forcing a bad match.
+`topics` say what a package is **for**.
+They come from a controlled vocabulary, are validated against [`schema.json`](scripts/src/ecosystem_scripts/schema.json), and drive the filters on [scverse.org/packages](https://scverse.org/packages/#ecosystem).
+Pick every topic that genuinely applies, usually one to three.
+If none of them fit your package, propose a new one in your pull request rather than forcing a bad match.
 
 | Topic                   | For packages that …                                                        |
 | ----------------------- | -------------------------------------------------------------------------- |
@@ -53,9 +52,8 @@ request rather than forcing a bad match.
 | `trajectory`            | infer pseudotime, RNA velocity, lineage or cell fate                       |
 | `visualization`         | provide plotting, interactive exploration or data browsers                 |
 
-`tags` stay free-form and are only used for search, so they do not need to match anyone else's
-spelling. Use them for anything the topics are too coarse to express — an assay, a method, a
-platform, a dependency.
+`tags` stay free-form and are only used for search, so they do not need to match anyone else's spelling.
+Use them for anything the topics are too coarse to express — an assay, a method, a platform, a dependency.
 
 ## What are the requirements for an ecosystem package?
 
