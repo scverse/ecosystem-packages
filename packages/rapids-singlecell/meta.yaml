@@ -2,7 +2,7 @@ name: rapids-singlecell
 description: |
   rapids-singlecell is a GPU-accelerated single-cell analysis library that serves as a
   drop-in replacement for scanpy, squidpy, and decoupler.
-project_home: https://github.com/scverse/rapids_singlecell
+project_home: https://github.com/scverse/rapids-singlecell
 documentation_home: https://rapids-singlecell.readthedocs.io/
 tutorials_home: https://rapids-singlecell.readthedocs.io/page/tutorials.html
 install:
