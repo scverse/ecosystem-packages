@@ -10,6 +10,10 @@ install:
   pypi: pegasuspy
 tags:
   - transcriptome analysis
+topics:
+  - preprocessing
+  - clustering
+  - annotation
 license: BSD-3-Clause
 version: v1.7.1
 contact:

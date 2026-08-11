@@ -9,6 +9,8 @@ install:
   pypi: Cell-BLAST
 tags:
   - BLAST
+topics:
+  - annotation
 license: MIT
 version: v0.3.8
 contact:

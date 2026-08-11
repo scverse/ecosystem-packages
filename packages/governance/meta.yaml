@@ -6,6 +6,8 @@ documentation_home: https://scverse.org/about
 tags:
   - governance
   - documentation
+topics:
+  - infrastructure
 license: BSD-3-Clause
 contact:
   - Zethson

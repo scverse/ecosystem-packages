@@ -10,6 +10,9 @@ tags:
   - spatial-omics
   - spatial domain identification
   - spatial clustering
+topics:
+  - spatial
+  - clustering
 license: MIT
 version: v0.0.3
 contact:

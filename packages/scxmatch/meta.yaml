@@ -17,6 +17,9 @@ tags:
   - distance-based matching
   - perturbation
   - condition
+topics:
+  - perturbation
+  - differential-analysis
 license: MIT
 version: v0.1.0
 contact:

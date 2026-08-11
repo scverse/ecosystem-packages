@@ -6,6 +6,8 @@ documentation_home: https://cookiecutter-scverse-instance.readthedocs.io/page/te
 tags:
   - template
   - cookiecutter
+topics:
+  - infrastructure
 license: BSD-3-Clause
 version: 0.6.0
 contact:

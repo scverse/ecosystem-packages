@@ -17,6 +17,10 @@ install:
 tags:
   - clustering
   - flowcytometry
+topics:
+  - proteomics
+  - clustering
+  - visualization
 license: GPL-3.0-only
 version: v0.0.1
 contact:

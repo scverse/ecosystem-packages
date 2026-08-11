@@ -12,6 +12,10 @@ tags:
   - metabolism
   - metabolic activities
   - cell-cell communication
+topics:
+  - differential-analysis
+  - spatial
+  - cell-communication
 license: MIT
 version: v0.4.5
 contact:

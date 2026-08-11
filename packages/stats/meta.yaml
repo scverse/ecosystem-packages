@@ -6,6 +6,8 @@ documentation_home: https://scverse.org/stats/
 tags:
   - statistics
   - metrics
+topics:
+  - infrastructure
 license: MIT
 authors:
   - maltekuehl

@@ -13,6 +13,8 @@ tags:
   - RNAseq
   - gene network inference
   - benchmark
+topics:
+  - gene-networks
 license: MIT
 version: v1.2.1
 contact:

@@ -15,6 +15,9 @@ tags:
   - multiplex imaging
   - spatialdata
   - pipeline
+topics:
+  - spatial
+  - imaging
 license: BSD-3-Clause
 version: v1.0.0
 contact:

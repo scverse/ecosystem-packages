@@ -12,6 +12,9 @@ install:
   pypi: dynamo-release
 tags:
   - vector
+topics:
+  - trajectory
+  - multi-omics
 license: BSD-3-Clause
 version: v1.1.0
 contact:

@@ -20,6 +20,10 @@ tags:
   - epigenomics
   - multi omics
   - BAM
+topics:
+  - epigenomics
+  - preprocessing
+  - clustering
 license: MIT
 version: v0.5.1
 authors:

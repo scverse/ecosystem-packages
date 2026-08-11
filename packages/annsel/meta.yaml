@@ -16,6 +16,8 @@ tags:
   - dataframe
   - accessor
   - utilities
+topics:
+  - infrastructure
 test_command: |
   pip install ".[test]" && pytest
 category: ecosystem

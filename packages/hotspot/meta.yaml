@@ -10,6 +10,8 @@ install:
   pypi: hotspotsc
 tags:
   - gene-signatures
+topics:
+  - gene-networks
 license: BSD-3-Clause
 version: v1.1.1
 contact:

@@ -14,6 +14,8 @@ tags:
   - pre-clinical
   - clinical
   - scrnaseq
+topics:
+  - integration
 license: MIT
 version: 1.0.0
 contact:

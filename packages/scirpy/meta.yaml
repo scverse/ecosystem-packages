@@ -16,6 +16,8 @@ tags:
   - TCR
   - BCR
   - AIRR
+topics:
+  - immune
 license: BSD-3-Clause
 version: 0.22.3
 contact:

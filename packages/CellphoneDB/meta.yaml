@@ -18,6 +18,8 @@ tags:
   - single-cell
   - python
   - jupyter
+topics:
+  - cell-communication
 license: MIT
 version: v5.0.0
 contact:

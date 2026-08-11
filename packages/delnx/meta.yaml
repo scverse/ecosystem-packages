@@ -11,6 +11,8 @@ tags:
   - regression models
   - dispersion estimation
   - JAX
+topics:
+  - differential-analysis
 license: MIT
 version: v0.2.3
 contact:

@@ -8,6 +8,8 @@ install:
   pypi: clone2vec
 tags:
   - label-transfer
+topics:
+  - trajectory
 license: MIT
 publications:
   - 10.1101/2024.11.15.623687

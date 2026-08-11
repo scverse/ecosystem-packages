@@ -9,6 +9,8 @@ install:
   pypi: scvelo
 tags:
   - rna velocity
+topics:
+  - trajectory
 license: BSD-3-Clause
 version: v0.2.5
 contact:

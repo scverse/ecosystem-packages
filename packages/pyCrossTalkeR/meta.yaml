@@ -10,6 +10,9 @@ tags:
   - CCI
   - scRNAseq
   - Node Importance
+topics:
+  - cell-communication
+  - visualization
 license: MIT
 version: v2.1.0
 contact:

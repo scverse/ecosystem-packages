@@ -19,6 +19,10 @@ tags:
   - embedding
   - pytorch
   - lightning
+topics:
+  - gene-networks
+  - annotation
+  - preprocessing
 license: MIT
 version: v1.6.2
 contact:

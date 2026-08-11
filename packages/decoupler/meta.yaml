@@ -15,6 +15,8 @@ tags:
   - pathway analysis
   - gene sets
   - functional annotation
+topics:
+  - differential-analysis
 license: BSD-3-Clause
 version: 2.1.1
 contact:

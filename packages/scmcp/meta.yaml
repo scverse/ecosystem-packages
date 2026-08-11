@@ -9,6 +9,8 @@ tags:
   - bioinformatics
   - LLM
   - AI
+topics:
+  - infrastructure
 license: BSD-3-Clause
 version: v0.2.2
 contact:

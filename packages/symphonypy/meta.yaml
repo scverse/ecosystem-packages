@@ -8,6 +8,9 @@ install:
   pypi: symphonypy
 tags:
   - label-transfer
+topics:
+  - annotation
+  - integration
 license: GPL-3.0-only
 version: v0.2.1
 contact:

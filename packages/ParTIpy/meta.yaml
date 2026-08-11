@@ -12,6 +12,9 @@ tags:
   - "archetypal analysis"
   - "division of labor"
   - "representation learning"
+topics:
+  - clustering
+  - spatial
 version: v0.0.04
 contact:
   - psl-schaefer

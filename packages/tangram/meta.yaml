@@ -11,6 +11,9 @@ install:
 tags:
   - spatial decomposition
   - spatial mapping
+topics:
+  - spatial
+  - integration
 license: BSD-3-Clause
 version: v1.0.3
 contact:

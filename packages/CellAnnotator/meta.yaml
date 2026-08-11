@@ -11,6 +11,8 @@ tags:
   - large language models
   - automatic annotation
   - cell state
+topics:
+  - annotation
 license: MIT
 version: v0.1.3
 contact:

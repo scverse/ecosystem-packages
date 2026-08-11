@@ -13,6 +13,9 @@ tags:
   - subcellular proteomics
   - mass-spectrometry
   - graph-based analysis
+topics:
+  - proteomics
+  - spatial
 license: BSD-3-Clause
 version: v0.1.0
 contact:

@@ -10,6 +10,9 @@ tags:
   - rapids
   - faiss
   - query-to-reference
+topics:
+  - integration
+  - annotation
 license: MIT
 version: v0.1.2
 contact:

@@ -6,6 +6,8 @@ documentation_home: https://scverse.org
 tags:
   - website
   - documentation
+topics:
+  - infrastructure
 license: BSD-3-Clause
 authors:
   - gtca

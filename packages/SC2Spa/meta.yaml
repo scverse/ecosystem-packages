@@ -15,6 +15,9 @@ tags:
   - spatial transcriptomics
   - deep learning
   - cell communication
+topics:
+  - spatial
+  - integration
 license: BSD-3-Clause
 version: v1.2
 contact:

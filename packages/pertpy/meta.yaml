@@ -16,6 +16,9 @@ tags:
   - drug response
   - CRISPR
   - genetic perturbation
+topics:
+  - perturbation
+  - differential-analysis
 license: MIT
 version: 1.0.3
 contact:

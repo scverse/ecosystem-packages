@@ -6,6 +6,8 @@ documentation_home: https://github.com/scverse/ecosystem-packages
 tags:
   - registry
   - ecosystem
+topics:
+  - infrastructure
 license: BSD-3-Clause
 contact:
   - grst

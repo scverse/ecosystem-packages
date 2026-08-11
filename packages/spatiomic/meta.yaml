@@ -13,6 +13,11 @@ tags:
   - multiplexed protein imaging
   - PathoPlex
   - subcellular analysis
+topics:
+  - spatial
+  - proteomics
+  - imaging
+  - clustering
 license: GPL-3.0-only
 version: v0.5.0
 contact:

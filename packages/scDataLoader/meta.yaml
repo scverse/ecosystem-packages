@@ -17,6 +17,9 @@ tags:
   - lightning
   - cellxgene
   - preprocessing
+topics:
+  - infrastructure
+  - preprocessing
 license: MIT
 version: v1.2.2
 contact:

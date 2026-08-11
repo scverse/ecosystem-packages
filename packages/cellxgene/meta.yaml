@@ -10,6 +10,9 @@ install:
   pypi: cellxgene
 tags:
   - HCA
+topics:
+  - visualization
+  - annotation
 license: MIT
 version: 1.1.1
 contact:

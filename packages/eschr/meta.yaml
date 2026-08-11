@@ -13,6 +13,8 @@ tags:
   - clustering
   - uncertainty
   - ensemble
+topics:
+  - clustering
 license: "MIT"
 version: v1.0.1
 contact:

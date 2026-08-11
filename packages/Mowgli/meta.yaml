@@ -13,6 +13,9 @@ tags:
   - multi omics
   - data integration
   - NMF
+topics:
+  - multi-omics
+  - integration
 license: GPL-3.0-only
 version: v0.2.0
 contact:

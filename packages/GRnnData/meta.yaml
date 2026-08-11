@@ -14,6 +14,9 @@ tags:
   - gene networks
   - format
   - utilities
+topics:
+  - gene-networks
+  - infrastructure
 license: MIT
 version: v1.1.4
 contact:

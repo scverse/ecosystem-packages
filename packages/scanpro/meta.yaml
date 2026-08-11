@@ -11,6 +11,8 @@ tags:
   - single cell
   - proportion analysis
   - multi omics
+topics:
+  - differential-analysis
 license: MIT
 version: 0.2.0
 contact:

@@ -8,6 +8,8 @@ tags:
   - tutorials
   - education
   - documentation
+topics:
+  - infrastructure
 license: BSD-3-Clause
 contact:
   - grst

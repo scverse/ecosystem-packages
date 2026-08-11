@@ -12,6 +12,9 @@ tags:
   - single-cell
   - RAPIDS
   - CUDA
+topics:
+  - preprocessing
+  - clustering
 license: MIT
 version: 0.13.3
 contact:

@@ -195,6 +195,36 @@
             "minItems": 1,
             "uniqueItems": true
         },
+        "topics": {
+            "description": "What the package is for, from a controlled vocabulary. Drives the filters on scverse.org/packages. Pick every topic that genuinely applies, usually one to three. Propose additions in a pull request.",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "annotation",
+                    "cell-communication",
+                    "clustering",
+                    "deconvolution",
+                    "differential-analysis",
+                    "epigenomics",
+                    "gene-networks",
+                    "imaging",
+                    "immune",
+                    "infrastructure",
+                    "integration",
+                    "multi-omics",
+                    "perturbation",
+                    "preprocessing",
+                    "proteomics",
+                    "spatial",
+                    "trajectory",
+                    "visualization"
+                ]
+            },
+            "minItems": 1,
+            "maxItems": 4,
+            "uniqueItems": true
+        },
         "publications": {
             "description": "DOIs of publications describing the package",
             "type": "array",
@@ -244,6 +274,7 @@
         "documentation_home",
         "license",
         "tags",
+        "topics",
         "category"
     ],
     "if": {

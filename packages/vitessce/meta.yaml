@@ -11,6 +11,10 @@ install:
   pypi: vitessce
 tags:
   - imaging
+topics:
+  - visualization
+  - spatial
+  - imaging
 license: MIT
 version: v3.5.7
 contact:

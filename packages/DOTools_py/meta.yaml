@@ -10,6 +10,8 @@ tags:
   - python
   - visualisation
   - analysis
+topics:
+  - visualization
 license: MIT
 version: v0.0.2
 contact:

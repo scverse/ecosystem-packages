@@ -10,6 +10,8 @@ install:
   pypi: pathml
 tags:
   - pathology
+topics:
+  - imaging
 license: GPL-2.0-only
 version: v2.1.0
 contact:

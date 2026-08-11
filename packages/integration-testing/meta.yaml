@@ -6,6 +6,8 @@ documentation_home: https://github.com/scverse/integration-testing
 tags:
   - testing
   - continuous integration
+topics:
+  - infrastructure
 license: MIT
 contact:
   - ilan-gold

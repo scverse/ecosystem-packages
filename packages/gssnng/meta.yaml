@@ -14,6 +14,8 @@ tags:
   - geneset-scoring
   - smoothing
   - python
+topics:
+  - differential-analysis
 license: MIT
 version: v0.4.2
 contact:

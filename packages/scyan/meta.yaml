@@ -15,6 +15,10 @@ tags:
   - annotation
   - batch-effect correction
   - debarcoding
+topics:
+  - proteomics
+  - annotation
+  - integration
 license: BSD-3-Clause
 version: v1.5.0
 contact:

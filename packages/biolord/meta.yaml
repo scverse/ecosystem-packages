@@ -10,6 +10,9 @@ tags:
   - single-cell
   - disentanglement
   - generative framework
+topics:
+  - perturbation
+  - integration
 license: BSD-3-Clause
 version: v0.0.1
 contact:

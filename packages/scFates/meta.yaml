@@ -12,6 +12,8 @@ tags:
   - pseudotime
   - cell-fate
   - trajectory-generation
+topics:
+  - trajectory
 license: BSD-3-Clause
 version: v1.0.0
 contact:

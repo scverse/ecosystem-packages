@@ -11,6 +11,8 @@ license: MIT
 tags:
   - rna-seq
   - deconvolution
+topics:
+  - deconvolution
 version: v0.1.6
 contact:
   - bernheder

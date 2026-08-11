@@ -11,6 +11,8 @@ tags:
   - benchmarking
   - single cell
   - data integration
+topics:
+  - integration
 license: MIT
 version: v1.0.5
 contact:

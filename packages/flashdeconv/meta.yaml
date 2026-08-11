@@ -18,6 +18,9 @@ tags:
   - cell type
   - Visium HD
   - sketching
+topics:
+  - spatial
+  - deconvolution
 license: BSD-3-Clause
 version: v0.1
 contact:

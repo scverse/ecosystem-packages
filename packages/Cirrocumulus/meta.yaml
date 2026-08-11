@@ -10,6 +10,8 @@ install:
   pypi: cirrocumulus
 tags:
   - visualization
+topics:
+  - visualization
 license: BSD-3-Clause
 version: v1.1.41
 contact:

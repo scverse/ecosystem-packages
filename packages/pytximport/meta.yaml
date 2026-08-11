@@ -10,6 +10,8 @@ tags:
   - rna-seq
   - bulk-rna-seq
   - differential-expression
+topics:
+  - infrastructure
 license: GPL-3.0-only
 version: v0.2.0
 contact:

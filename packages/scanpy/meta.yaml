@@ -18,6 +18,11 @@ tags:
   - clustering
   - visualization
   - differential expression
+topics:
+  - preprocessing
+  - clustering
+  - differential-analysis
+  - visualization
 license: BSD-3-Clause
 version: 1.11.5
 contact:

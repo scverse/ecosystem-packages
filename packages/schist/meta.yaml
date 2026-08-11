@@ -9,6 +9,8 @@ license: BSD-3-Clause
 tags:
   - clustering
   - single-cell
+topics:
+  - clustering
 publications:
   - 10.1186/s12859-021-04489-7
 version: v0.8.1

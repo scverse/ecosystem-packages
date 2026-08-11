@@ -11,6 +11,8 @@ tags:
   - single-cell
   - signals
   - filter
+topics:
+  - preprocessing
 license: BSD-3-Clause
 version: v0.1.0
 contact:

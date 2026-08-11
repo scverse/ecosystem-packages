@@ -12,6 +12,10 @@ tags:
   - trajectory inference
   - multi omics
   - spatial
+topics:
+  - multi-omics
+  - trajectory
+  - spatial
 license: BSD-3-Clause
 version: v0.4.0
 contact:

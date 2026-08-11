@@ -18,6 +18,8 @@ tags:
   - data integration
   - variational inference
   - deep learning
+topics:
+  - integration
 license: BSD-3-Clause
 version: 0.2.0
 contact:

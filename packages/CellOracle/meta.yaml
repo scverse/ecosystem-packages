@@ -12,6 +12,10 @@ install:
 tags:
   - GRN
   - TF
+topics:
+  - gene-networks
+  - epigenomics
+  - perturbation
 license: Apache-2.0
 version: v0.10.12
 contact:

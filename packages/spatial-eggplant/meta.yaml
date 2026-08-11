@@ -11,6 +11,9 @@ install:
 tags:
   - spatial alignment
   - spatial registration
+topics:
+  - spatial
+  - integration
 license: MIT
 version: v0.2.3
 contact:

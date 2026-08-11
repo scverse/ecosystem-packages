@@ -11,6 +11,8 @@ license: MIT
 tags:
   - rna-seq
   - differential-expression
+topics:
+  - differential-analysis
 publications:
   - 10.1101/2022.12.14.520412
 version: v0.3.0

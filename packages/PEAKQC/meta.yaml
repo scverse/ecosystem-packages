@@ -10,6 +10,9 @@ tags:
   - single cell
   - ATAC-seq
   - quality control
+topics:
+  - epigenomics
+  - preprocessing
 license: MIT
 version: 0.1.3
 contact:

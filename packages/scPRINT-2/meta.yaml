@@ -22,6 +22,10 @@ tags:
   - species integration
   - expression imputation
   - counterfactual predictions
+topics:
+  - gene-networks
+  - annotation
+  - preprocessing
 license: GPL-3.0-or-later
 version: v1.0.0
 contact:

@@ -11,6 +11,9 @@ install:
 tags:
   - spatially varying genes
   - spatial autocorrelation
+topics:
+  - spatial
+  - differential-analysis
 license: MIT
 version: v0.1.1
 contact:

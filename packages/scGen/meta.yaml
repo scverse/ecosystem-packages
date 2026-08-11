@@ -11,6 +11,8 @@ install:
   pypi: scgen
 tags:
   - perturbation
+topics:
+  - perturbation
 license: GPL-3.0-only
 version: v2.1.0
 contact:

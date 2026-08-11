@@ -12,6 +12,9 @@ tags:
   - integration
   - projection
   - scATAC-seq
+topics:
+  - integration
+  - epigenomics
 license: MIT
 version: v1.0.3
 contact:

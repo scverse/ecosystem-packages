@@ -11,6 +11,9 @@ tags:
   - spatial
   - ligand-receptor
   - cell-cell communication
+topics:
+  - cell-communication
+  - spatial
 license: GPL-3.0-only
 version: v1.0.0a1
 contact:

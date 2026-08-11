@@ -9,6 +9,8 @@ install:
 tags:
   - TF
   - scATAC-seq
+topics:
+  - epigenomics
 license: MIT
 version: v0.0.3
 contact:

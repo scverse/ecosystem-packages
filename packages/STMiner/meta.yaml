@@ -10,6 +10,8 @@ tags:
   - spatial patterns
   - optimal transport
   - mechine learning
+topics:
+  - spatial
 license: GPL-3.0-or-later
 version: v1.1.0
 contact:

@@ -11,6 +11,8 @@ tags:
   - bioinformatics
   - LLM
   - AI
+topics:
+  - annotation
 license: BSD-3-Clause
 version: v0.3.0
 contact:

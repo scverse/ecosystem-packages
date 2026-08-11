@@ -12,6 +12,8 @@ tags:
   - single-cell
   - differential expression
   - multi-condition
+topics:
+  - differential-analysis
 license: MIT
 version: v0.1.0
 contact:

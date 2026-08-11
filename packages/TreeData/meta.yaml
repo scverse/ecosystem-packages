@@ -9,6 +9,9 @@ install:
   pypi: treedata
 tags:
   - lineage-tracing
+topics:
+  - infrastructure
+  - trajectory
 license: BSD-3-Clause
 version: v0.2.2
 contact:

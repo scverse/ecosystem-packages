@@ -13,6 +13,10 @@ tags:
   - spatial clustering
   - spatial domains
   - gaussian mixture model
+topics:
+  - spatial
+  - multi-omics
+  - clustering
 license: BSD-3-Clause
 version: v0.3.1
 contact:
