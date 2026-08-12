@@ -60,7 +60,7 @@ How does the package use scverse data structures (please describe in a few sente
 
 - [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
 - [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
-- [ ] I would like to have my GitHub account added as a member of the scverse organization's GitHub account.
+- [ ] I would like to be invited to the scverse Github organization
 
 [^1]: We recommend thtat tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
 
