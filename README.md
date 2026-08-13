@@ -24,8 +24,8 @@ Submit a pull-request adding a `meta.yaml` file for your package to the `package
 
 ## Categories, tags and language
 
-Keywords are a controlled vocabulary rather than free text, so that the same concept is not spelled three different ways across the registry.
-The vocabulary is defined in [`schema.json`](scripts/src/ecosystem_scripts/schema.json) and validated in CI, and it deliberately overlaps with the one used by the [tutorial registry](https://github.com/scverse/scverse-tutorials/blob/main/tutorial-registry/schema.json).
+Keywords come from a controlled vocabulary, defined in [`schema.json`](scripts/src/ecosystem_scripts/schema.json) and validated in CI.
+It overlaps with the vocabulary used by the [tutorial registry](https://github.com/scverse/scverse-tutorials/blob/main/tutorial-registry/schema.json).
 
 `primary_category` is the single category your package is listed under on [scverse.org/packages](https://scverse.org/packages/#ecosystem).
 Pick the one a user looking for your package would browse first.
@@ -49,11 +49,10 @@ Pick every tag that genuinely applies.
 - **How it is built** — `deep learning`, `foundation model`, `large language models`, `probabilistic modeling`, `optimal transport`, `GPU acceleration`, `pipeline`
 - **Project shape** — `data structures`, `interoperability`, `file formats`, `documentation`
 
-If none of the existing terms fit your package, add one to the enum in your pull request and say why.
-That is a deliberate speed bump: it keeps the vocabulary small enough to be useful, while letting it grow when the science does.
+If none of the existing terms fit your package, add one to the enum in your pull request.
 
 `language` is the language you write in when using the package.
-It is assumed to be `Python` when omitted, so only set it if that is wrong.
+It is assumed to be `Python` when omitted.
 
 ## What are the requirements for an ecosystem package?
 
