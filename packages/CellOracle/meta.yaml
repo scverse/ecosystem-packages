@@ -15,6 +15,7 @@ tags:
   - gene regulatory networks
   - perturbation
 license: Apache-2.0
+language: Python
 version: v0.10.12
 contact:
   - KenjiKamimoto-ac

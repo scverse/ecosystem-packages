@@ -16,6 +16,7 @@ tags:
   - multimodal
   - visualization
 license: MIT
+language: Python
 version: v3.5.7
 contact:
   - keller-mark

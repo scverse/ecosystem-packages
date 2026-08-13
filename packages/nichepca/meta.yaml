@@ -11,6 +11,7 @@ tags:
   - spatial transcriptomics
   - clustering
 license: MIT
+language: Python
 version: v0.0.3
 contact:
   - dschaub95

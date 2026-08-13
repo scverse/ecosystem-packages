@@ -16,6 +16,7 @@ tags:
   - deep learning
   - file formats
 license: MIT
+language: Python
 version: v1.2.2
 contact:
   - jkobject

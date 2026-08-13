@@ -19,6 +19,7 @@ tags:
   - dimensionality reduction
   - trajectory inference
 license: GPL-2.0-or-later
+language: Python
 version: v1.3.3
 contact:
   - ManuSetty

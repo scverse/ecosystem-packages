@@ -16,6 +16,7 @@ tags:
   - RNA velocity
   - deep learning
 license: BSD-3-Clause
+language: Python
 version: v1.5.1
 contact:
   - Marius1311

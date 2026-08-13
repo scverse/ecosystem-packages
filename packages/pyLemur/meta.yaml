@@ -12,6 +12,7 @@ primary_category: scRNA-seq
 tags:
   - differential expression
 license: MIT
+language: Python
 version: v0.1.0
 contact:
   - const-ae

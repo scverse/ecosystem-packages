@@ -8,6 +8,7 @@ tutorials_home: https://annsel.readthedocs.io/page/notebooks/all_of_annsel.html
 install:
   pypi: annsel
 license: MIT
+language: Python
 version: v0.0.8
 contact:
   - srivarra

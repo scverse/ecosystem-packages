@@ -51,8 +51,7 @@ Pick every tag that genuinely applies.
 
 If none of the existing terms fit your package, add one to the enum in your pull request.
 
-`language` is the language you write in when using the package.
-It is assumed to be `Python` when omitted.
+`language` is the language you write in when using the package: `Python`, `R`, `Julia` or `Rust`.
 
 ## What are the requirements for an ecosystem package?
 

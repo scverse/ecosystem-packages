@@ -10,6 +10,7 @@ tags:
   - data integration
   - GPU acceleration
 license: MIT
+language: Python
 version: v0.1.2
 contact:
   - Marius1311

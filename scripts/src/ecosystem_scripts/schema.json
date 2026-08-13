@@ -260,9 +260,8 @@
             "uniqueItems": true
         },
         "language": {
-            "description": "Language a user writes code in when using the package. Assumed to be Python when omitted.",
+            "description": "Language a user writes code in when using the package.",
             "type": "string",
-            "default": "Python",
             "enum": ["Python", "R", "Julia", "Rust"]
         },
         "publications": {
@@ -315,6 +314,7 @@
         "license",
         "tags",
         "primary_category",
+        "language",
         "category"
     ],
     "if": {

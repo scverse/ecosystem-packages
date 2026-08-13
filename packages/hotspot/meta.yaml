@@ -13,6 +13,7 @@ tags:
   - functional analysis
   - gene regulatory networks
 license: BSD-3-Clause
+language: Python
 version: v1.1.1
 contact:
   - deto

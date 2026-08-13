@@ -10,6 +10,7 @@ tags:
   - scRNA-seq
   - visualization
 license: MIT
+language: Python
 version: v0.0.2
 contact:
   - davidrm-bio

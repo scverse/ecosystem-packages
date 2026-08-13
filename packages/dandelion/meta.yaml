@@ -16,6 +16,7 @@ primary_category: Adaptive immune cell receptor
 tags:
   - immune receptor
 license: AGPL-3.0-or-later
+language: Python
 version: v0.3.0
 contact:
   - zktuong

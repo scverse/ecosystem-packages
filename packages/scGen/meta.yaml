@@ -13,6 +13,7 @@ primary_category: scRNA-seq
 tags:
   - perturbation
 license: GPL-3.0-only
+language: Python
 version: v2.1.0
 contact:
   - M0hammadL

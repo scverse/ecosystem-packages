@@ -10,6 +10,7 @@ primary_category: scRNA-seq
 tags:
   - lineage tracing
 license: MIT
+language: Python
 publications:
   - 10.1101/2024.11.15.623687
 version: v0.1.0

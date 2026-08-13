@@ -7,6 +7,7 @@ primary_category: Infrastructure
 tags:
   - benchmarking
 license: MIT
+language: Python
 authors:
   - maltekuehl
   - grst

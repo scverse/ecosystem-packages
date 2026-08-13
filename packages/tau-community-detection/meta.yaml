@@ -9,6 +9,7 @@ documentation_home: https://github.com/HillelCharbit/TAU#readme
 install:
   pypi: tau-community-detection
 license: MIT
+language: Python
 primary_category: scRNA-seq
 tags:
   - clustering

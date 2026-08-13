@@ -13,6 +13,7 @@ tags:
   - spatial transcriptomics
   - segmentation
 license: BSD-2-Clause
+language: Python
 version: v1.0.1
 contact:
   - ckmah

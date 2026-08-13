@@ -14,6 +14,7 @@ tags:
   - multimodal
   - pipeline
 license: BSD-3-Clause
+language: Python
 version: v0.5.0
 contact:
   - bio-la

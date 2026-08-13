@@ -12,6 +12,7 @@ tags:
   - multimodal
   - compositional analysis
 license: MIT
+language: Python
 version: 0.2.0
 contact:
   - yalayoubi

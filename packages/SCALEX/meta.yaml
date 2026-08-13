@@ -13,6 +13,7 @@ tags:
   - ATAC-seq
   - data integration
 license: MIT
+language: Python
 version: v1.0.3
 contact:
   - jsxlei

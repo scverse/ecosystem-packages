@@ -16,6 +16,7 @@ tags:
   - ATAC-seq
   - epigenomics
 license: MIT
+language: Python
 version: 2.5.0
 contact:
   - kaizhang

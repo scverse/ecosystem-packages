@@ -13,6 +13,7 @@ tags:
   - cell-type annotation
   - visualization
 license: MIT
+language: Python
 version: 1.1.1
 contact:
   - csweaver

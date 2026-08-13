@@ -13,6 +13,7 @@ tags:
   - spatial transcriptomics
   - deconvolution
 license: BSD-3-Clause
+language: Python
 version: v1.0.3
 contact:
   - ziqlu0722

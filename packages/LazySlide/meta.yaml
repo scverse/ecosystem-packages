@@ -12,6 +12,7 @@ tags:
   - segmentation
   - deep learning
 license: MIT
+language: Python
 version: v0.3.0
 contact:
   - Mr-Milk

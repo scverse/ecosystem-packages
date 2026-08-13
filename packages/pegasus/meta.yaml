@@ -15,6 +15,7 @@ tags:
   - cell-type annotation
   - clustering
 license: BSD-3-Clause
+language: Python
 version: v1.7.1
 contact:
   - yihming

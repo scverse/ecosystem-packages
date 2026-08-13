@@ -15,6 +15,7 @@ primary_category: Adaptive immune cell receptor
 tags:
   - immune receptor
 license: BSD-3-Clause
+language: Python
 version: 0.22.3
 contact:
   - grst

@@ -13,6 +13,7 @@ tags:
   - spatial transcriptomics
   - data integration
 license: MIT
+language: Python
 version: v0.2.3
 contact:
   - almaan

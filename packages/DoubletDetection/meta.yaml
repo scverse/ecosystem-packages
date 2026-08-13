@@ -13,6 +13,7 @@ primary_category: scRNA-seq
 tags:
   - quality control
 license: MIT
+language: Python
 version: v4.2
 contact:
   - adamgayoso

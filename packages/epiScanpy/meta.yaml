@@ -13,6 +13,7 @@ primary_category: Epigenomics
 tags:
   - epigenomics
 license: BSD-3-Clause
+language: Python
 version: v0.3.2
 contact:
   - DaneseAnna

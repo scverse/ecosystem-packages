@@ -12,6 +12,7 @@ tags:
   - functional analysis
   - cell-cell communication
 license: MIT
+language: Python
 version: v0.4.5
 contact:
   - earmingol

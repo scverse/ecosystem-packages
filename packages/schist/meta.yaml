@@ -6,6 +6,7 @@ tutorials_home: https://schist.readthedocs.io/page/tutorials.html
 install:
   conda: conda-forge::schist
 license: BSD-3-Clause
+language: Python
 primary_category: scRNA-seq
 tags:
   - clustering

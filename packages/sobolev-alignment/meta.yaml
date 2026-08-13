@@ -13,6 +13,7 @@ tags:
   - deep learning
   - probabilistic modeling
 license: MIT
+language: Python
 version: 1.0.0
 contact:
   - saroudant

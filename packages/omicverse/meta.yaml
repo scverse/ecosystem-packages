@@ -14,6 +14,7 @@ tags:
   - bulk RNA-seq
   - multimodal
 license: GPL-3.0-only
+language: Python
 version: v1.4.12
 contact:
   - Starlitnightly

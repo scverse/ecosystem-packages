@@ -16,6 +16,7 @@ tags:
   - data integration
   - cell-type annotation
 license: BSD-3-Clause
+language: Python
 version: v1.5.0
 contact:
   - quentinblampey

@@ -15,6 +15,7 @@ tags:
   - imaging
   - pipeline
 license: MIT
+language: Python
 version: v0.7.0
 contact:
   - MeyerBender

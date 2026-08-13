@@ -6,6 +6,7 @@ tutorials_home: https://github.com/elmbeech/physicelldataloader/blob/master/man/
 install:
   pypi: pcdl
 license: BSD-3-Clause
+language: Python
 primary_category: Infrastructure
 tags:
   - file formats

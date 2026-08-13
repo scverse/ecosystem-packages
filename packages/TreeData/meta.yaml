@@ -12,6 +12,7 @@ tags:
   - lineage tracing
   - data structures
 license: BSD-3-Clause
+language: Python
 version: v0.2.2
 contact:
   - colganwi

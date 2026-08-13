@@ -15,6 +15,7 @@ tags:
   - perturbation
   - probabilistic modeling
 license: MIT
+language: Python
 version: v0.1.0
 contact:
   - annmoel

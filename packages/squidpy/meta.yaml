@@ -17,6 +17,7 @@ tags:
   - spatial transcriptomics
   - imaging
 license: BSD-3-Clause
+language: Python
 version: 1.6.5
 contact:
   - giovp

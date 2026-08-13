@@ -18,6 +18,7 @@ tags:
   - cell-type annotation
   - deconvolution
 license: BSD-3-Clause
+language: Python
 version: v0.1
 contact:
   - cafferychen777

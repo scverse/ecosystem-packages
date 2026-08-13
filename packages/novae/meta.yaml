@@ -13,6 +13,7 @@ tags:
   - spatial transcriptomics
   - deep learning
 license: BSD-3-Clause
+language: Python
 version: v0.2.1
 contact:
   - quentinblampey

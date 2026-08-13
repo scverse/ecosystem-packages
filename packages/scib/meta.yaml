@@ -12,6 +12,7 @@ tags:
   - data integration
   - benchmarking
 license: MIT
+language: Python
 version: v1.0.5
 contact:
   - mumichae

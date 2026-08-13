@@ -10,6 +10,7 @@ tags:
   - data integration
   - cell-type annotation
 license: MIT
+language: Python
 version: v0.5.2
 contact:
   - canergen

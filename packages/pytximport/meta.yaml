@@ -12,6 +12,7 @@ tags:
   - differential expression
   - file formats
 license: GPL-3.0-only
+language: Python
 version: v0.2.0
 contact:
   - maltekuehl

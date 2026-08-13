@@ -8,6 +8,7 @@ tutorials_home: https://pydeseq2.readthedocs.io/page/auto_examples/
 install:
   pypi: pydeseq2
 license: MIT
+language: Python
 primary_category: bulk RNA-seq
 tags:
   - bulk RNA-seq

@@ -7,6 +7,7 @@ tutorials_home: https://partipy.readthedocs.io/
 install:
   pypi: partipy
 license: MIT
+language: Python
 primary_category: scRNA-seq
 tags:
   - dimensionality reduction

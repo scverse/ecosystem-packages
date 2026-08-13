@@ -17,6 +17,7 @@ tags:
   - deep learning
   - foundation model
 license: MIT
+language: Python
 version: v1.6.2
 contact:
   - jkobject

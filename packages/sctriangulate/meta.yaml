@@ -12,6 +12,7 @@ primary_category: scRNA-seq
 tags:
   - clustering
 license: MIT
+language: Python
 version: v0.12.0
 contact:
   - frankligy
