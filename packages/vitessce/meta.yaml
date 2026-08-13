@@ -9,12 +9,12 @@ publications:
   - 10.1038/s41592-024-02436-x
 install:
   pypi: vitessce
+primary_category: Spatial
 tags:
+  - spatial transcriptomics
   - imaging
-topics:
+  - multimodal
   - visualization
-  - spatial
-  - imaging
 license: MIT
 version: v3.5.7
 contact:

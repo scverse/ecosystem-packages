@@ -9,10 +9,8 @@ publications:
   - 10.1038/s41467-021-25131-3
 install:
   pypi: episcanpy
+primary_category: Epigenomics
 tags:
-  - scanpy
-  - epigenomics
-topics:
   - epigenomics
 license: BSD-3-Clause
 version: v0.3.2

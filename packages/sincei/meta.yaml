@@ -11,19 +11,15 @@ publications:
   - 10.1101/2024.07.27.605424
 install:
   pypi: sincei
+primary_category: Epigenomics
 tags:
-  - single-cell
+  - epigenomics
+  - multimodal
   - preprocessing
   - quality control
   - clustering
   - visualization
-  - epigenomics
-  - multi omics
-  - BAM
-topics:
-  - epigenomics
-  - preprocessing
-  - clustering
+  - file formats
 license: MIT
 version: v0.5.1
 authors:

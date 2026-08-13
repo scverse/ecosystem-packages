@@ -7,11 +7,8 @@ documentation_home: https://sift-sc.readthedocs.io/
 tutorials_home: https://sift-sc.readthedocs.io/
 install:
   pypi: sift-sc
+primary_category: scRNA-seq
 tags:
-  - single-cell
-  - signals
-  - filter
-topics:
   - preprocessing
 license: BSD-3-Clause
 version: v0.1.0

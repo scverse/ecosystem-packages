@@ -7,22 +7,15 @@ publications:
   - 10.1101/2024.07.29.605556
 install:
   pypi: scprint
+primary_category: scRNA-seq
 tags:
-  - foundation model
-  - single cell
-  - RNAseq
-  - gene network inference
+  - scRNA-seq
   - denoising
-  - zero imputation
-  - label prediction
-  - zero shot
-  - embedding
-  - pytorch
-  - lightning
-topics:
-  - gene-networks
-  - annotation
-  - preprocessing
+  - cell-type annotation
+  - gene regulatory networks
+  - dimensionality reduction
+  - deep learning
+  - foundation model
 license: MIT
 version: v1.6.2
 contact:

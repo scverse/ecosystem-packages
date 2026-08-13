@@ -9,15 +9,12 @@ project_home: https://github.com/linbuliao/SC2Spa
 documentation_home: https://sc2spa.readthedocs.io/
 install:
   pypi: SC2Spa
+primary_category: Spatial
 tags:
-  - spatial inference
   - scRNA-seq
   - spatial transcriptomics
+  - cell-cell communication
   - deep learning
-  - cell communication
-topics:
-  - spatial
-  - integration
 license: BSD-3-Clause
 version: v1.2
 contact:

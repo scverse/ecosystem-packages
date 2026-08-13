@@ -11,11 +11,12 @@ publications:
   - 10.1038/s41587-021-01139-4
 install:
   pypi: cell2location
+primary_category: Spatial
 tags:
-  - Bayesian
-topics:
-  - spatial
+  - spatial transcriptomics
+  - cell-type annotation
   - deconvolution
+  - probabilistic modeling
 license: Apache-2.0
 version: v0.1
 contact:

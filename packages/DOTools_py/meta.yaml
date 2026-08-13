@@ -5,12 +5,9 @@ documentation_home: https://dotools-py.readthedocs.io/
 tutorials_home: https://dotools-py.readthedocs.io/
 install:
   pypi: DOtools-py
+primary_category: scRNA-seq
 tags:
   - scRNA-seq
-  - python
-  - visualisation
-  - analysis
-topics:
   - visualization
 license: MIT
 version: v0.0.2

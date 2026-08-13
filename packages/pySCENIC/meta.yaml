@@ -13,11 +13,9 @@ publications:
   - 10.1038/s41596-020-0336-2
 install:
   pypi: pyscenic
+primary_category: scRNA-seq
 tags:
-  - regulatory networks
-  - clustering
-topics:
-  - gene-networks
+  - gene regulatory networks
   - clustering
 license: GPL-3.0-only
 version: v0.12.0

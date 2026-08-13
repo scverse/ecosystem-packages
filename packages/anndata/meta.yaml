@@ -11,12 +11,9 @@ publications:
 install:
   pypi: anndata
   conda: conda-forge::anndata
+primary_category: Data structures
 tags:
-  - data structure
-  - annotated data
-  - sparse data
-topics:
-  - infrastructure
+  - data structures
 license: BSD-3-Clause
 version: 0.12.4
 contact:

@@ -8,16 +8,12 @@ documentation_home: https://sagar87.github.io/spatialproteomics
 tutorials_home: https://sagar87.github.io/spatialproteomics/notebooks/ExampleWorkflow.html
 install:
   pypi: spatialproteomics
+primary_category: Spatial
 tags:
-  - spatial-omics
-  - spatial-proteomics
-  - multiplex imaging
-  - spatialdata
-  - pipeline
-topics:
-  - spatial
-  - proteomics
+  - spatial transcriptomics
+  - spatial proteomics
   - imaging
+  - pipeline
 license: MIT
 version: v0.7.0
 contact:

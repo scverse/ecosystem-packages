@@ -9,9 +9,8 @@ publications:
   - 10.1038/s41592-019-0494-8
 install:
   pypi: scgen
+primary_category: scRNA-seq
 tags:
-  - perturbation
-topics:
   - perturbation
 license: GPL-3.0-only
 version: v2.1.0

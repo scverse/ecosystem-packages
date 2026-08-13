@@ -4,13 +4,9 @@ project_home: https://github.com/scmcphub
 documentation_home: https://docs.scmcphub.org
 install:
   pypi: scmcp
+primary_category: Infrastructure
 tags:
-  - scRNA-seq
-  - bioinformatics
-  - LLM
-  - AI
-topics:
-  - infrastructure
+  - large language models
 license: BSD-3-Clause
 version: v0.2.2
 contact:

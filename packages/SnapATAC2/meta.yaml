@@ -11,14 +11,10 @@ publications:
 install:
   pypi: snapatac2
   conda: bioconda::snapatac2
+primary_category: Epigenomics
 tags:
   - ATAC-seq
-  - chromatin accessibility
   - epigenomics
-topics:
-  - epigenomics
-  - preprocessing
-  - clustering
 license: MIT
 version: 2.5.0
 contact:

@@ -186,44 +186,84 @@
                 "ZPL-2.1"
             ]
         },
-        "tags": {
-            "description": "Keywords that describe the package",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "minItems": 1,
-            "uniqueItems": true
+        "primary_category": {
+            "description": "The single category the package is listed under on scverse.org/packages. Pick the one a user looking for this package would browse first.",
+            "type": "string",
+            "enum": [
+                "Data structures",
+                "scRNA-seq",
+                "bulk RNA-seq",
+                "Spatial",
+                "Epigenomics",
+                "Proteomics",
+                "Adaptive immune cell receptor",
+                "Multimodal",
+                "Imaging",
+                "Infrastructure"
+            ]
         },
-        "topics": {
-            "description": "What the package is for, from a controlled vocabulary. Drives the filters on scverse.org/packages. Pick every topic that genuinely applies, usually one to three. Propose additions in a pull request.",
+        "tags": {
+            "description": "What the package does, from a controlled vocabulary. Used for filtering and search on scverse.org/packages. Pick every tag that genuinely applies. If none of them fit, add a term to this enum in your pull request.",
             "type": "array",
             "items": {
                 "type": "string",
                 "enum": [
-                    "annotation",
-                    "cell-communication",
-                    "clustering",
-                    "deconvolution",
-                    "differential-analysis",
-                    "epigenomics",
-                    "gene-networks",
-                    "imaging",
-                    "immune",
-                    "infrastructure",
-                    "integration",
-                    "multi-omics",
-                    "perturbation",
-                    "preprocessing",
+                    "scRNA-seq",
+                    "bulk RNA-seq",
+                    "spatial transcriptomics",
+                    "spatial proteomics",
                     "proteomics",
-                    "spatial",
-                    "trajectory",
-                    "visualization"
+                    "flow cytometry",
+                    "ATAC-seq",
+                    "epigenomics",
+                    "immune receptor",
+                    "imaging",
+                    "multimodal",
+                    "preprocessing",
+                    "quality control",
+                    "denoising",
+                    "data integration",
+                    "cell-type annotation",
+                    "differential expression",
+                    "compositional analysis",
+                    "functional analysis",
+                    "gene regulatory networks",
+                    "cell-cell communication",
+                    "deconvolution",
+                    "clustering",
+                    "dimensionality reduction",
+                    "trajectory inference",
+                    "pseudotime",
+                    "RNA velocity",
+                    "lineage tracing",
+                    "perturbation",
+                    "spatially variable genes",
+                    "segmentation",
+                    "copy number variation",
+                    "visualization",
+                    "benchmarking",
+                    "deep learning",
+                    "foundation model",
+                    "large language models",
+                    "probabilistic modeling",
+                    "optimal transport",
+                    "GPU acceleration",
+                    "pipeline",
+                    "data structures",
+                    "interoperability",
+                    "file formats",
+                    "documentation"
                 ]
             },
             "minItems": 1,
-            "maxItems": 4,
+            "maxItems": 10,
             "uniqueItems": true
+        },
+        "language": {
+            "description": "Language a user writes code in when using the package. Assumed to be Python when omitted.",
+            "type": "string",
+            "default": "Python",
+            "enum": ["Python", "R", "Julia", "Rust"]
         },
         "publications": {
             "description": "DOIs of publications describing the package",
@@ -274,7 +314,7 @@
         "documentation_home",
         "license",
         "tags",
-        "topics",
+        "primary_category",
         "category"
     ],
     "if": {

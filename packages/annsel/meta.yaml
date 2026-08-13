@@ -11,13 +11,9 @@ license: MIT
 version: v0.0.8
 contact:
   - srivarra
+primary_category: Data structures
 tags:
-  - narwhals
-  - dataframe
-  - accessor
-  - utilities
-topics:
-  - infrastructure
+  - data structures
 test_command: |
   pip install ".[test]" && pytest
 category: ecosystem

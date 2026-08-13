@@ -5,13 +5,10 @@ project_home: https://github.com/YosefLab/popV
 documentation_home: https://popv.readthedocs.io/
 install:
   pypi: popv
+primary_category: scRNA-seq
 tags:
-  - cell type labels
-  - batch integration
-  - automatic annotation
-topics:
-  - annotation
-  - integration
+  - data integration
+  - cell-type annotation
 license: MIT
 version: v0.5.2
 contact:

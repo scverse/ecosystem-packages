@@ -7,15 +7,12 @@ publications:
   - 10.1101/2023.05.11.540374
 install:
   pypi: moscot
+primary_category: Multimodal
 tags:
-  - optimal transport
+  - spatial transcriptomics
+  - multimodal
   - trajectory inference
-  - multi omics
-  - spatial
-topics:
-  - multi-omics
-  - trajectory
-  - spatial
+  - optimal transport
 license: BSD-3-Clause
 version: v0.4.0
 contact:

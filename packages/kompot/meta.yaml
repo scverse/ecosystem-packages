@@ -14,17 +14,11 @@ publications:
 install:
   pypi: kompot
   conda: bioconda::kompot
+primary_category: scRNA-seq
 tags:
-  - differential-expression
-  - differential-abundance
-  - mahalanobis-distance
-  - gaussian-process
-  - phenotypic manifold
-  - continuous representation
-  - jax
-  - anndata
-topics:
-  - differential-analysis
+  - differential expression
+  - compositional analysis
+  - probabilistic modeling
 license: GPL-3.0-or-later
 version: v0.6.1
 contact:

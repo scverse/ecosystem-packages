@@ -6,10 +6,8 @@ tutorials_home: https://schist.readthedocs.io/page/tutorials.html
 install:
   conda: conda-forge::schist
 license: BSD-3-Clause
+primary_category: scRNA-seq
 tags:
-  - clustering
-  - single-cell
-topics:
   - clustering
 publications:
   - 10.1186/s12859-021-04489-7

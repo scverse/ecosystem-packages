@@ -10,12 +10,11 @@ publications:
   - 10.1093/nar/gkac1000
 install:
   pypi: favapy
+primary_category: scRNA-seq
 tags:
-  - coexpression networks
-  - functional associations
-  - variational autoencoders
-topics:
-  - gene-networks
+  - gene regulatory networks
+  - dimensionality reduction
+  - deep learning
 license: MIT
 version: v0.3.9.4
 contact:

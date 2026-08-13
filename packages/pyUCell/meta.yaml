@@ -13,12 +13,9 @@ publications:
   - 10.1016/j.csbj.2021.06.043
 install:
   pypi: pyucell
+primary_category: scRNA-seq
 tags:
-  - single-cell
-  - signature scoring
-  - module scoring
-topics:
-  - differential-analysis
+  - functional analysis
 license: MIT
 version: v0.3.0
 contact:

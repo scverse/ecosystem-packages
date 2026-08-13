@@ -6,13 +6,11 @@ documentation_home: https://biolord.readthedocs.io/
 tutorials_home: https://biolord.readthedocs.io/
 install:
   pypi: biolord
+primary_category: scRNA-seq
 tags:
-  - single-cell
-  - disentanglement
-  - generative framework
-topics:
+  - dimensionality reduction
   - perturbation
-  - integration
+  - deep learning
 license: BSD-3-Clause
 version: v0.0.1
 contact:

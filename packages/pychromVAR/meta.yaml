@@ -6,11 +6,10 @@ documentation_home: https://pychromvar.readthedocs.io/
 tutorials_home: https://pychromvar.readthedocs.io/
 install:
   pypi: pychromvar
+primary_category: Epigenomics
 tags:
-  - TF
-  - scATAC-seq
-topics:
-  - epigenomics
+  - ATAC-seq
+  - gene regulatory networks
 license: MIT
 version: v0.0.3
 contact:

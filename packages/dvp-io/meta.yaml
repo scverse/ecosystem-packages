@@ -6,14 +6,11 @@ documentation_home: https://dvp-io.readthedocs.io
 tutorials_home: https://dvp-io.readthedocs.io/page/tutorials.html
 install:
   pypi: dvp-io
+primary_category: Spatial
 tags:
-  - LC/MS-proteomics
-  - Spatial Proteomics
-  - Reader
-topics:
-  - spatial
+  - spatial proteomics
   - proteomics
-  - infrastructure
+  - file formats
 license: Apache-2.0
 version: 0.5.1
 contact:

@@ -20,46 +20,48 @@ Submit a pull-request adding a `meta.yaml` file for your package to the `package
 - Please refer to other entries for examples
 - The full definition of available fields is available in [`schema.json`](scripts/src/ecosystem_scripts/schema.json)
 - You can add a logo in svg/png/webp format if you like. Currently it is not used on our website, though.
-- Please set `topics` from the controlled vocabulary below, in addition to free-form `tags`
+- Please set `primary_category` and `tags` from the controlled vocabulary below
 
-## Topics and tags
+## Categories, tags and language
 
-Packages carry two kinds of keywords, and they do different jobs.
+Keywords are a controlled vocabulary rather than free text, so that the same concept is not spelled three different ways across the registry.
+The vocabulary is defined in [`schema.json`](scripts/src/ecosystem_scripts/schema.json) and validated in CI, and it deliberately overlaps with the one used by the [tutorial registry](https://github.com/scverse/scverse-tutorials/blob/main/tutorial-registry/schema.json).
 
-`topics` say what a package is **for**.
-They come from a controlled vocabulary, are validated against [`schema.json`](scripts/src/ecosystem_scripts/schema.json), and drive the filters on [scverse.org/packages](https://scverse.org/packages/#ecosystem).
-Pick every topic that genuinely applies, usually one to three.
-If none of them fit your package, propose a new one in your pull request rather than forcing a bad match.
+`primary_category` is the single category your package is listed under on [scverse.org/packages](https://scverse.org/packages/#ecosystem).
+Pick the one a user looking for your package would browse first.
 
-| Topic                   | For packages that …                                                        |
-| ----------------------- | -------------------------------------------------------------------------- |
-| `annotation`            | assign cell type or state labels, or transfer them from a reference        |
-| `cell-communication`    | infer ligand–receptor interactions and cell–cell signalling                |
-| `clustering`            | group cells, spots or genes into populations or domains                    |
-| `deconvolution`         | estimate cell type composition of mixed or bulk measurements               |
-| `differential-analysis` | test for differential expression or abundance, or score gene sets          |
-| `epigenomics`           | work with chromatin accessibility, methylation or related modalities       |
-| `gene-networks`         | infer regulatory networks, co-expression or gene programs                  |
-| `imaging`               | work with histology, microscopy or whole-slide images                      |
-| `immune`                | analyse immune receptor repertoires or are otherwise immunology-specific   |
-| `infrastructure`        | provide data structures, file formats, I/O or tooling rather than analysis |
-| `integration`           | correct batch effects, map to references, or join datasets and modalities  |
-| `multi-omics`           | jointly analyse two or more molecular modalities                           |
-| `perturbation`          | analyse CRISPR screens, drug response or other perturbation experiments    |
-| `preprocessing`         | do quality control, filtering, normalisation or denoising                  |
-| `proteomics`            | work with mass spectrometry, cytometry or other protein measurements       |
-| `spatial`               | work with spatially resolved measurements                                  |
-| `trajectory`            | infer pseudotime, RNA velocity, lineage or cell fate                       |
-| `visualization`         | provide plotting, interactive exploration or data browsers                 |
+- `Data structures`
+- `scRNA-seq`
+- `bulk RNA-seq`
+- `Spatial`
+- `Epigenomics`
+- `Proteomics`
+- `Adaptive immune cell receptor`
+- `Multimodal`
+- `Imaging`
+- `Infrastructure`
 
-`tags` stay free-form and are only used for search, so they do not need to match anyone else's spelling.
-Use them for anything the topics are too coarse to express — an assay, a method, a platform, a dependency.
+`tags` say what the package does, and drive filtering and search on the website.
+Pick every tag that genuinely applies.
+
+- **Data and modality** — `scRNA-seq`, `bulk RNA-seq`, `spatial transcriptomics`, `spatial proteomics`, `proteomics`, `flow cytometry`, `ATAC-seq`, `epigenomics`, `immune receptor`, `imaging`, `multimodal`
+- **Analysis step** — `preprocessing`, `quality control`, `denoising`, `data integration`, `cell-type annotation`, `differential expression`, `compositional analysis`, `functional analysis`, `gene regulatory networks`, `cell-cell communication`, `deconvolution`, `clustering`, `dimensionality reduction`, `trajectory inference`, `pseudotime`, `RNA velocity`, `lineage tracing`, `perturbation`, `spatially variable genes`, `segmentation`, `copy number variation`, `visualization`, `benchmarking`
+- **How it is built** — `deep learning`, `foundation model`, `large language models`, `probabilistic modeling`, `optimal transport`, `GPU acceleration`, `pipeline`
+- **Project shape** — `data structures`, `interoperability`, `file formats`, `documentation`
+
+If none of the existing terms fit your package, add one to the enum in your pull request and say why.
+That is a deliberate speed bump: it keeps the vocabulary small enough to be useful, while letting it grow when the science does.
+
+`language` is the language you write in when using the package.
+It is assumed to be `Python` when omitted, so only set it if that is wrong.
 
 ## What are the requirements for an ecosystem package?
 
 For a package to become an approved ecosystem package, it must fulfill all mandatory requirements from the checklist below.
 
 Ecosystem packages can be written in non-Python languages as long as they fulfill the above requirements.
+
+Authors of ecosystem packages agree to abide by the [scverse code of conduct](https://scverse.org/about/code_of_conduct/) on all scverse communication channels.
 
 If you cannot or do not want to comply with these requirements, you are still free to make your package interoperable with scverse by using our datastructures, but we will not list your package on our ecosystem page.
 
@@ -80,8 +82,9 @@ How does the package use scverse data structures (please describe in a few sente
 - [ ] Continuous integration (CI) automatically executes these tests on each push or pull request [^2]
 - [ ] The package provides API documentation via a website or README[^3]
 - [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
-- [ ] The `topics` field is set from the controlled vocabulary documented above
+- [ ] `primary_category` and `tags` are set from the controlled vocabulary documented above
 - [ ] I am an author or maintainer of the tool and agree on listing the package on the scverse website
+- [ ] I agree to abide by the [scverse code of conduct](https://scverse.org/about/code_of_conduct/) on all scverse communication channels
 
 ### Recommended
 

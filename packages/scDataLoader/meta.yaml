@@ -9,17 +9,12 @@ publications:
   - 10.1101/2024.07.29.605556
 install:
   pypi: scdataloader
+primary_category: Infrastructure
 tags:
-  - dataloader
-  - single cell
-  - RNAseq
-  - pytorch
-  - lightning
-  - cellxgene
+  - scRNA-seq
   - preprocessing
-topics:
-  - infrastructure
-  - preprocessing
+  - deep learning
+  - file formats
 license: MIT
 version: v1.2.2
 contact:

@@ -11,13 +11,10 @@ publications:
 install:
   pypi: mudata
   conda: conda-forge::mudata
+primary_category: Data structures
 tags:
-  - data structure
   - multimodal
-  - multi-omics
-topics:
-  - multi-omics
-  - infrastructure
+  - data structures
 license: BSD-3-Clause
 version: 0.3.2
 contact:

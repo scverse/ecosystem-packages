@@ -7,10 +7,9 @@ publications:
   - 10.1038/s41587-020-0591-3
 install:
   pypi: scvelo
+primary_category: scRNA-seq
 tags:
-  - rna velocity
-topics:
-  - trajectory
+  - RNA velocity
 license: BSD-3-Clause
 version: v0.2.5
 contact:

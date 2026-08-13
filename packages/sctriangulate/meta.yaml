@@ -8,9 +8,8 @@ publications:
   - 10.1101/2021.10.16.464640
 install:
   pypi: sctriangulate
+primary_category: scRNA-seq
 tags:
-  - clustering
-topics:
   - clustering
 license: MIT
 version: v0.12.0

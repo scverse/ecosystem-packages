@@ -7,15 +7,12 @@ publications:
   - 10.1101/2023.02.02.526825
 install:
   pypi: mowgli
+primary_category: Multimodal
 tags:
-  - single cell
-  - optimal transport
-  - multi omics
+  - multimodal
   - data integration
-  - NMF
-topics:
-  - multi-omics
-  - integration
+  - dimensionality reduction
+  - optimal transport
 license: GPL-3.0-only
 version: v0.2.0
 contact:

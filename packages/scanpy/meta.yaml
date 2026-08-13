@@ -12,16 +12,11 @@ publications:
 install:
   pypi: scanpy
   conda: conda-forge::scanpy
+primary_category: scRNA-seq
 tags:
-  - single-cell
   - preprocessing
-  - clustering
-  - visualization
   - differential expression
-topics:
-  - preprocessing
   - clustering
-  - differential-analysis
   - visualization
 license: BSD-3-Clause
 version: 1.11.5

@@ -5,13 +5,12 @@ project_home: https://github.com/rendeirolab/lazyslide
 documentation_home: https://lazyslide.readthedocs.io/
 install:
   pypi: lazyslide
+primary_category: Imaging
 tags:
-  - Pathology
-  - Whole Slide Imaging
-  - PyTorch
-topics:
   - imaging
   - preprocessing
+  - segmentation
+  - deep learning
 license: MIT
 version: v0.3.0
 contact:

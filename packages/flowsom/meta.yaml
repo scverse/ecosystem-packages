@@ -14,13 +14,10 @@ publications:
   - 10.1038/s41596-021-00550-0
 install:
   conda: conda-forge::flowsom
+primary_category: Proteomics
 tags:
+  - flow cytometry
   - clustering
-  - flowcytometry
-topics:
-  - proteomics
-  - clustering
-  - visualization
 license: GPL-3.0-only
 version: v0.0.1
 contact:

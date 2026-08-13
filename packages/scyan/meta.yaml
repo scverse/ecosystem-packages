@@ -10,15 +10,11 @@ publications:
   - 10.1093/bib/bbad260
 install:
   pypi: scyan
+primary_category: Proteomics
 tags:
-  - cytometry
-  - annotation
-  - batch-effect correction
-  - debarcoding
-topics:
-  - proteomics
-  - annotation
-  - integration
+  - flow cytometry
+  - data integration
+  - cell-type annotation
 license: BSD-3-Clause
 version: v1.5.0
 contact:

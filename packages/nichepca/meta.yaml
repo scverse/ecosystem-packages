@@ -6,12 +6,9 @@ documentation_home: https://nichepca.readthedocs.io/
 tutorials_home: https://nichepca.readthedocs.io/page/notebooks/example.html
 install:
   pypi: nichepca
+primary_category: Spatial
 tags:
-  - spatial-omics
-  - spatial domain identification
-  - spatial clustering
-topics:
-  - spatial
+  - spatial transcriptomics
   - clustering
 license: MIT
 version: v0.0.3

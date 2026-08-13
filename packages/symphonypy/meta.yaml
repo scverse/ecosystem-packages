@@ -6,11 +6,9 @@ project_home: https://github.com/potulabe/symphonypy
 documentation_home: https://github.com/potulabe/symphonypy
 install:
   pypi: symphonypy
+primary_category: scRNA-seq
 tags:
-  - label-transfer
-topics:
-  - annotation
-  - integration
+  - cell-type annotation
 license: GPL-3.0-only
 version: v0.2.1
 contact:

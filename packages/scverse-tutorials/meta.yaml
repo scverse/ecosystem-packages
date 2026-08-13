@@ -4,12 +4,9 @@ description: |
 project_home: https://github.com/scverse/scverse-tutorials
 documentation_home: https://scverse-tutorials.readthedocs.io/
 tutorials_home: https://scverse-tutorials.readthedocs.io/
+primary_category: Infrastructure
 tags:
-  - tutorials
-  - education
   - documentation
-topics:
-  - infrastructure
 license: BSD-3-Clause
 contact:
   - grst

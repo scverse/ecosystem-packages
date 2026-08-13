@@ -12,14 +12,10 @@ publications:
 install:
   pypi: squidpy
   conda: conda-forge::squidpy
+primary_category: Spatial
 tags:
-  - spatial omics
   - spatial transcriptomics
-  - image analysis
-topics:
-  - spatial
   - imaging
-  - visualization
 license: BSD-3-Clause
 version: 1.6.5
 contact:

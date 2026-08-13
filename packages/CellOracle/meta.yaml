@@ -9,12 +9,10 @@ publications:
   - 10.1101/2020.02.17.947416
 install:
   pypi: celloracle
+primary_category: Epigenomics
 tags:
-  - GRN
-  - TF
-topics:
-  - gene-networks
   - epigenomics
+  - gene regulatory networks
   - perturbation
 license: Apache-2.0
 version: v0.10.12

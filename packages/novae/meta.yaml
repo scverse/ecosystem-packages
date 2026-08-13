@@ -8,15 +8,10 @@ publications:
   - 10.1101/2024.09.09.612009
 install:
   pypi: novae
+primary_category: Spatial
 tags:
-  - spatial-omics
-  - spatial-transcriptomics
-  - spatialdata
+  - spatial transcriptomics
   - deep learning
-topics:
-  - spatial
-  - clustering
-  - integration
 license: BSD-3-Clause
 version: v0.2.1
 contact:

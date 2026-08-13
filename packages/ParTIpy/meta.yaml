@@ -7,14 +7,9 @@ tutorials_home: https://partipy.readthedocs.io/
 install:
   pypi: partipy
 license: MIT
+primary_category: scRNA-seq
 tags:
-  - "single cell"
-  - "archetypal analysis"
-  - "division of labor"
-  - "representation learning"
-topics:
-  - clustering
-  - spatial
+  - dimensionality reduction
 version: v0.0.04
 contact:
   - psl-schaefer
