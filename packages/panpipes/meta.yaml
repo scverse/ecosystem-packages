@@ -8,13 +8,13 @@ publications:
   - 10.1101/2023.03.11.532085
 install:
   pypi: panpipes
+primary_category: Multimodal
 tags:
-  - single-cell
-  - multiomics
+  - spatial transcriptomics
+  - multimodal
   - pipeline
-  - spatial
-  - bioinformatics
 license: BSD-3-Clause
+language: Python
 version: v0.5.0
 contact:
   - bio-la

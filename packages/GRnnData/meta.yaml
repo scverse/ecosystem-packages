@@ -8,13 +8,13 @@ publications:
   - 10.1101/2024.07.29.605556
 install:
   pypi: grnndata
+primary_category: Data structures
 tags:
-  - single cell
-  - RNAseq
-  - gene networks
-  - format
-  - utilities
+  - scRNA-seq
+  - gene regulatory networks
+  - file formats
 license: MIT
+language: Python
 version: v1.1.4
 contact:
   - jkobject

@@ -9,9 +9,14 @@ publications:
   - 10.1038/s41592-024-02436-x
 install:
   pypi: vitessce
+primary_category: Spatial
 tags:
+  - spatial transcriptomics
   - imaging
+  - multimodal
+  - visualization
 license: MIT
+language: Python
 version: v3.5.7
 contact:
   - keller-mark

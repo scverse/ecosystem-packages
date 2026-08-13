@@ -8,9 +8,12 @@ publications:
   - 10.1101/2022.06.10.495510
 install:
   pypi: bento-tools
+primary_category: Spatial
 tags:
-  - spatial analysis
+  - spatial transcriptomics
+  - segmentation
 license: BSD-2-Clause
+language: Python
 version: v1.0.1
 contact:
   - ckmah

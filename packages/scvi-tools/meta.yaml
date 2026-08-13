@@ -29,12 +29,15 @@ publications:
 install:
   pypi: scvi-tools
   conda: conda-forge::scvi-tools
+primary_category: scRNA-seq
 tags:
-  - machine learning
-  - probabilistic models
-  - variational inference
+  - data integration
+  - cell-type annotation
+  - differential expression
   - deep learning
+  - probabilistic modeling
 license: BSD-3-Clause
+language: Python
 version: 1.4.0.post1
 contact:
   - ori-kron-wis

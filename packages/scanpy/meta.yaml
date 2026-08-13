@@ -12,13 +12,14 @@ publications:
 install:
   pypi: scanpy
   conda: conda-forge::scanpy
+primary_category: scRNA-seq
 tags:
-  - single-cell
   - preprocessing
+  - differential expression
   - clustering
   - visualization
-  - differential expression
 license: BSD-3-Clause
+language: Python
 version: 1.11.5
 contact:
   - flying-sheep

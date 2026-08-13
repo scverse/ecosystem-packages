@@ -6,11 +6,12 @@ documentation_home: https://pycrosstalker.readthedocs.io
 tutorials_home: https://pycrosstalker.readthedocs.io
 install:
   pypi: pycrosstalker
+primary_category: scRNA-seq
 tags:
-  - CCI
-  - scRNAseq
-  - Node Importance
+  - scRNA-seq
+  - cell-cell communication
 license: MIT
+language: Python
 version: v2.1.0
 contact:
   - jsnagai

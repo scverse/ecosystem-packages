@@ -8,10 +8,11 @@ documentation_home: https://maxspin.readthedocs.io/
 tutorials_home: https://github.com/dcjones/maxspin/blob/main/tutorial.ipynb
 install:
   pypi: maxspin
+primary_category: Spatial
 tags:
-  - spatially varying genes
-  - spatial autocorrelation
+  - spatially variable genes
 license: MIT
+language: Python
 version: v0.1.1
 contact:
   - dcjones

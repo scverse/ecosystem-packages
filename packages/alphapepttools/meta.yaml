@@ -10,11 +10,12 @@ documentation_home: https://mannlabs.github.io/alphapepttools/index.html
 tutorials_home: https://github.com/MannLabs/alphapepttools/tree/main/docs/notebooks
 install:
   pypi: alphapepttools
+primary_category: Proteomics
 tags:
   - proteomics
-  - annotated data
-  - best practices
+  - file formats
 license: Apache-2.0
+language: Python
 version: 0.2.0
 contact:
   - vbrennsteiner

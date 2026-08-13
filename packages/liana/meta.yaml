@@ -6,12 +6,12 @@ documentation_home: https://liana-py.readthedocs.io/
 tutorials_home: https://liana-py.readthedocs.io/
 install:
   pypi: liana
+primary_category: scRNA-seq
 tags:
-  - single-cell
-  - spatial
-  - ligand-receptor
+  - spatial transcriptomics
   - cell-cell communication
 license: GPL-3.0-only
+language: Python
 version: v1.0.0a1
 contact:
   - dbdimitrov

@@ -8,12 +8,13 @@ publications:
   - 10.1038/s41588-023-01588-4
 install:
   pypi: cellcharter
+primary_category: Spatial
 tags:
-  - spatial omics
-  - spatial clustering
-  - spatial domains
-  - gaussian mixture model
+  - spatial transcriptomics
+  - clustering
+  - probabilistic modeling
 license: BSD-3-Clause
+language: Python
 version: v0.3.1
 contact:
   - marcovarrone

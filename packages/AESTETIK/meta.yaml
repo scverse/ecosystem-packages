@@ -12,16 +12,15 @@ publications:
   - 10.1101/2024.06.04.24308256
 install:
   pypi: aestetik
+primary_category: Spatial
 tags:
-  - spatial-omics
-  - spatial-transcriptomics
-  - representation-learning
-  - autoencoder
+  - spatial transcriptomics
+  - imaging
   - multimodal
-  - computational-pathology
+  - dimensionality reduction
   - deep learning
-  - pytorch
 license: MIT
+language: Python
 version: v0.3.1
 contact:
   - KalinNonchev

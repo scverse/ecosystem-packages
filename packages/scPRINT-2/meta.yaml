@@ -7,22 +7,19 @@ publications:
   - 10.64898/2025.12.11.693702v2
 install:
   pypi: scprint2
+primary_category: scRNA-seq
 tags:
-  - foundation model
-  - single cell
-  - RNAseq
-  - gene network inference
+  - scRNA-seq
   - denoising
-  - zero imputation
-  - label prediction
-  - zero shot
-  - embedding
-  - pytorch
-  - lightning
-  - species integration
-  - expression imputation
-  - counterfactual predictions
+  - data integration
+  - cell-type annotation
+  - gene regulatory networks
+  - dimensionality reduction
+  - perturbation
+  - deep learning
+  - foundation model
 license: GPL-3.0-or-later
+language: Python
 version: v1.0.0
 contact:
   - jkobject

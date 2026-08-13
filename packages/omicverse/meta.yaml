@@ -9,12 +9,12 @@ publications:
   - 10.1101/2023.06.06.543913
 install:
   pypi: omicverse
+primary_category: Multimodal
 tags:
-  - single-cell
-  - bulk-rna-seq
-  - omics
-  - bioinformatics
+  - bulk RNA-seq
+  - multimodal
 license: GPL-3.0-only
+language: Python
 version: v1.4.12
 contact:
   - Starlitnightly

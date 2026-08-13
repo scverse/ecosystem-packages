@@ -10,11 +10,13 @@ publications:
   - 10.1038/s41592-024-02212-x
 install:
   pypi: spatialdata
+primary_category: Data structures
 tags:
-  - data structure
-  - spatial omics
-  - FAIR
+  - spatial transcriptomics
+  - data structures
+  - file formats
 license: BSD-3-Clause
+language: Python
 version: 0.5.0
 contact:
   - LucaMarconato

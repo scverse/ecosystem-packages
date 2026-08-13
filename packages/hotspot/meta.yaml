@@ -8,9 +8,12 @@ publications:
   - 10.1016/j.cels.2021.04.005
 install:
   pypi: hotspotsc
+primary_category: scRNA-seq
 tags:
-  - gene-signatures
+  - functional analysis
+  - gene regulatory networks
 license: BSD-3-Clause
+language: Python
 version: v1.1.1
 contact:
   - deto

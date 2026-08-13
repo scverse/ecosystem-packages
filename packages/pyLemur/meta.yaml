@@ -8,11 +8,11 @@ publications:
   - 10.1101/2023.03.06.531268
 install:
   pypi: pyLemur
+primary_category: scRNA-seq
 tags:
-  - single-cell
   - differential expression
-  - multi-condition
 license: MIT
+language: Python
 version: v0.1.0
 contact:
   - const-ae

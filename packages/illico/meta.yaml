@@ -7,10 +7,12 @@ tutorials_home: https://github.com/remydubois/illico
 publications: []
 install:
   pypi: illico
+primary_category: scRNA-seq
 tags:
-  - differential-gene-expression
-  - single-cell-RNA-seq
+  - scRNA-seq
+  - differential expression
 license: Apache-2.0
+language: Python
 version: 0.1.1
 contact:
   - remydubois

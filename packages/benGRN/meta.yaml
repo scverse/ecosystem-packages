@@ -8,12 +8,13 @@ publications:
   - 10.1101/2024.07.29.605556
 install:
   pypi: bengrn
+primary_category: scRNA-seq
 tags:
-  - single cell
-  - RNAseq
-  - gene network inference
-  - benchmark
+  - scRNA-seq
+  - gene regulatory networks
+  - benchmarking
 license: MIT
+language: Python
 version: v1.2.1
 contact:
   - jkobject

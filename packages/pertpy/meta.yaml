@@ -11,12 +11,12 @@ publications:
 install:
   pypi: pertpy
   conda: conda-forge::pertpy
+primary_category: scRNA-seq
 tags:
+  - differential expression
   - perturbation
-  - drug response
-  - CRISPR
-  - genetic perturbation
 license: MIT
+language: Python
 version: 1.0.3
 contact:
   - Zethson

@@ -5,12 +5,14 @@ project_home: https://github.com/xjtu-omics/STMiner
 documentation_home: https://stminerdoc.readthedocs.io/
 install:
   pypi: stminer
+primary_category: Spatial
 tags:
-  - spatial variable genes
-  - spatial patterns
+  - spatial transcriptomics
+  - spatially variable genes
+  - deep learning
   - optimal transport
-  - mechine learning
 license: GPL-3.0-or-later
+language: Python
 version: v1.1.0
 contact:
   - PSSUN

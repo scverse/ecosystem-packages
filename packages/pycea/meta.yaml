@@ -6,10 +6,12 @@ documentation_home: https://pycea.readthedocs.io/
 tutorials_home: https://pycea.readthedocs.io/
 install:
   pypi: pycea-lineage
+primary_category: scRNA-seq
 tags:
-  - lineage-tracing
-  - TreeData
+  - lineage tracing
+  - data structures
 license: BSD-3-Clause
+language: Python
 version: v0.1.0
 contact:
   - colganwi

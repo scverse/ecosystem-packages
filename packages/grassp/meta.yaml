@@ -9,11 +9,12 @@ documentation_home: https://public.czbiohub.org/comp.bio/grassp/
 tutorials_home: https://public.czbiohub.org/comp.bio/grassp/tutorials/
 install:
   pypi: grassp
+primary_category: Spatial
 tags:
-  - subcellular proteomics
-  - mass-spectrometry
-  - graph-based analysis
+  - spatial proteomics
+  - proteomics
 license: BSD-3-Clause
+language: Python
 version: v0.1.0
 contact:
   - mffrank

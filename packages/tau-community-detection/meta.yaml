@@ -9,13 +9,10 @@ documentation_home: https://github.com/HillelCharbit/TAU#readme
 install:
   pypi: tau-community-detection
 license: MIT
+language: Python
+primary_category: scRNA-seq
 tags:
-  - community-detection
   - clustering
-  - single-cell
-  - scanpy
-  - anndata
-  - graph-analysis
 publications:
   - 10.1093/pnasnexus/pgad180
 version: 1.4.7

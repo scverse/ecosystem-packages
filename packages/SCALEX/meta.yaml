@@ -7,12 +7,13 @@ publications:
   - 10.1038/s41467-022-33758-z
 install:
   pypi: SCALEX
+primary_category: Multimodal
 tags:
   - scRNA-seq
-  - integration
-  - projection
-  - scATAC-seq
+  - ATAC-seq
+  - data integration
 license: MIT
+language: Python
 version: v1.0.3
 contact:
   - jsxlei

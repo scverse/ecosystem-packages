@@ -6,13 +6,13 @@ project_home: https://github.com/maarten-devries/scib-rapids
 documentation_home: https://scib-rapids.readthedocs.io/
 install:
   pypi: scib-rapids
+primary_category: scRNA-seq
 tags:
-  - benchmarking
-  - single-cell
   - data integration
+  - benchmarking
   - GPU acceleration
-  - RAPIDS
 license: BSD-3-Clause
+language: Python
 version: 0.1.0
 contact:
   - maarten-devries

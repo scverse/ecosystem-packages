@@ -11,14 +11,12 @@ publications:
   - 10.1038/s41586-022-04918-4
 install:
   pypi: cellphonedb
+primary_category: scRNA-seq
 tags:
   - scRNA-seq
   - cell-cell communication
-  - ligand-receptor
-  - single-cell
-  - python
-  - jupyter
 license: MIT
+language: Python
 version: v5.0.0
 contact:
   - chapuzzo

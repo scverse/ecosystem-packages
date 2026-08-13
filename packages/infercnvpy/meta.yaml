@@ -6,9 +6,11 @@ documentation_home: https://infercnvpy.readthedocs.io/
 tutorials_home: https://infercnvpy.readthedocs.io/page/tutorials.html
 install:
   pypi: infercnvpy
+primary_category: scRNA-seq
 tags:
-  - CNV
+  - copy number variation
 license: BSD-3-Clause
+language: Python
 version: v0.3.0
 contact:
   - grst

@@ -8,10 +8,12 @@ publications:
   - 10.1038/s41592-021-01264-7
 install:
   pypi: tangram-sc
+primary_category: Spatial
 tags:
-  - spatial decomposition
-  - spatial mapping
+  - spatial transcriptomics
+  - deconvolution
 license: BSD-3-Clause
+language: Python
 version: v1.0.3
 contact:
   - ziqlu0722
