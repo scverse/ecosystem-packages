@@ -80,7 +80,6 @@ How does the package use scverse data structures (please describe in a few sente
 - [ ] Continuous integration (CI) automatically executes these tests on each push or pull request [^2]
 - [ ] The package provides API documentation via a website or README[^3]
 - [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
-- [ ] `primary_category` and `tags` are set from the controlled vocabulary documented above
 - [ ] I am an author or maintainer of the tool and agree on listing the package on the scverse website
 - [ ] I agree to abide by the [scverse code of conduct](https://scverse.org/about/code_of_conduct/) on all scverse communication channels
 
