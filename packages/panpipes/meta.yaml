@@ -5,7 +5,7 @@ project_home: https://github.com/DendrouLab/panpipes
 documentation_home: https://panpipes-pipelines.readthedocs.io/
 tutorials_home: https://panpipes-pipelines.readthedocs.io/page/tutorials/
 publications:
-  - 10.1101/2023.03.11.532085
+  - 10.1186/s13059-024-03322-7
 install:
   pypi: panpipes
 primary_category: Multimodal
