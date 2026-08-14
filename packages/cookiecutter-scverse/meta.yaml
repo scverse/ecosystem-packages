@@ -3,10 +3,11 @@ description: |
   Cookiecutter template for scverse packages offering automated template sync
 project_home: https://github.com/scverse/cookiecutter-scverse
 documentation_home: https://cookiecutter-scverse-instance.readthedocs.io/page/template_usage.html
+primary_category: Infrastructure
 tags:
-  - template
-  - cookiecutter
+  - documentation
 license: BSD-3-Clause
+language: Python
 version: 0.6.0
 contact:
   - grst

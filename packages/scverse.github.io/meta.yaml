@@ -3,10 +3,11 @@ description: |
   scverse.org website
 project_home: https://github.com/scverse/scverse.github.io
 documentation_home: https://scverse.org
+primary_category: Infrastructure
 tags:
-  - website
   - documentation
 license: BSD-3-Clause
+language: Python
 authors:
   - gtca
 category: core-infrastructure

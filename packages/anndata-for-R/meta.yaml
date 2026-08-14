@@ -10,11 +10,12 @@ project_home: https://github.com/dynverse/anndata
 documentation_home: https://anndata.dynverse.org
 install:
   cran: anndata
+primary_category: Data structures
 tags:
   - data structures
   - interoperability
-  - R
 license: MIT
+language: R
 version: 0.7.5.5
 contact:
   - rcannood

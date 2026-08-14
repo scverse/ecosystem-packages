@@ -6,13 +6,13 @@ documentation_home: https://sccellfie.readthedocs.io/
 tutorials_home: https://sccellfie.readthedocs.io/
 install:
   pypi: sccellfie
+primary_category: scRNA-seq
 tags:
-  - single-cell
-  - spatial
-  - metabolism
-  - metabolic activities
+  - spatial transcriptomics
+  - functional analysis
   - cell-cell communication
 license: MIT
+language: Python
 version: v0.4.5
 contact:
   - earmingol

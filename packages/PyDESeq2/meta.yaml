@@ -8,11 +8,13 @@ tutorials_home: https://pydeseq2.readthedocs.io/page/auto_examples/
 install:
   pypi: pydeseq2
 license: MIT
+language: Python
+primary_category: bulk RNA-seq
 tags:
-  - rna-seq
-  - differential-expression
+  - bulk RNA-seq
+  - differential expression
 publications:
-  - 10.1101/2022.12.14.520412
+  - 10.1093/bioinformatics/btad547
 version: v0.3.0
 contact:
   - BorisMuzellec

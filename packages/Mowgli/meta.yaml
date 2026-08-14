@@ -4,16 +4,17 @@ description: |
 project_home: https://github.com/cantinilab/mowgli
 documentation_home: https://mowgli.readthedocs.io/
 publications:
-  - 10.1101/2023.02.02.526825
+  - 10.1038/s41467-023-43019-2
 install:
   pypi: mowgli
+primary_category: Multimodal
 tags:
-  - single cell
-  - optimal transport
-  - multi omics
+  - multimodal
   - data integration
-  - NMF
+  - dimensionality reduction
+  - optimal transport
 license: GPL-3.0-only
+language: Python
 version: v0.2.0
 contact:
   - gjhuizing

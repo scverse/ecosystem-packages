@@ -8,13 +8,13 @@ tutorials_home: https://scverse.org/anndataR/
 install:
   bioconductor: anndataR
 license: MIT
+language: R
+primary_category: Data structures
 tags:
   - data structures
   - interoperability
-  - R
-  - Bioconductor
 publications:
-  - 10.1101/2025.08.18.669052 # bioRxiv preprint
+  - 10.1093/bioinformatics/btag288
 version: 1.0.0
 contact:
   - lazappi

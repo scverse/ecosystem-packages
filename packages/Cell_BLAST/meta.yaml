@@ -7,9 +7,12 @@ publications:
   - 10.1038/s41467-020-17281-7
 install:
   pypi: Cell-BLAST
+primary_category: scRNA-seq
 tags:
-  - BLAST
+  - data integration
+  - cell-type annotation
 license: MIT
+language: Python
 version: v0.3.8
 contact:
   - Jeff1995

@@ -8,9 +8,14 @@ publications:
   - 10.1038/s41592-020-0905-x
 install:
   pypi: pegasuspy
+primary_category: scRNA-seq
 tags:
-  - transcriptome analysis
+  - scRNA-seq
+  - preprocessing
+  - cell-type annotation
+  - clustering
 license: BSD-3-Clause
+language: Python
 version: v1.7.1
 contact:
   - yihming

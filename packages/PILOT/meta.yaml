@@ -15,14 +15,14 @@ install:
     # Install the PILOT package from PyPI
     pip install pilotpy
   pypi: pilotpy
+primary_category: Multimodal
 tags:
-  - multi-omics
-  - single-cell
-  - trajectory
-  - pathomics-data
-  - ot
-  - patient-level
+  - imaging
+  - multimodal
+  - trajectory inference
+  - optimal transport
 license: MIT
+language: Python
 version: v2.0.6
 contact:
   - mehdijoodaki

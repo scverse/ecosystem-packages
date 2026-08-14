@@ -8,9 +8,12 @@ publications:
   - 10.1101/2021.04.05.438318
 install:
   pypi: cellxgene
+primary_category: scRNA-seq
 tags:
-  - HCA
+  - cell-type annotation
+  - visualization
 license: MIT
+language: Python
 version: 1.1.1
 contact:
   - csweaver

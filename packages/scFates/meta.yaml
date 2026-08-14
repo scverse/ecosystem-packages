@@ -8,11 +8,12 @@ publications:
   - 10.1093/bioinformatics/btac746
 install:
   pypi: scFates
+primary_category: scRNA-seq
 tags:
+  - trajectory inference
   - pseudotime
-  - cell-fate
-  - trajectory-generation
 license: BSD-3-Clause
+language: Python
 version: v1.0.0
 contact:
   - LouisFaure
