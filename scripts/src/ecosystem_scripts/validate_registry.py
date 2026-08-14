@@ -264,39 +264,14 @@ class CRANValidator(HTTPValidator):
 
 
 BIOC_VIEWS_URL = "https://bioconductor.org/packages/release/bioc/VIEWS"
+RE_BIOC_VERSION = re.compile(r"^Package: (\S+)\nVersion: (\S+)$", re.MULTILINE)
 
 
 @dataclass
 class BioconductorValidator(HTTPValidator):
-    """Validate Bioconductor package names and record the released version.
-
-    Bioconductor publishes every package and version in a single DCF file, so one request
-    covers the whole registry.
-    """
+    """Validate Bioconductor package names and record the released version."""
 
     versions: dict[str, str] = field(default_factory=dict)
-    _fetched: asyncio.Event = field(default_factory=asyncio.Event)
-    _lock: asyncio.Lock = field(default_factory=asyncio.Lock)
-
-    async def _load_views(self, context: str) -> None:
-        async with self._lock:
-            if self._fetched.is_set():
-                return
-            try:
-                response = await self.client.get(BIOC_VIEWS_URL)
-                response.raise_for_status()
-            except Exception as e:
-                msg = f"{context}: Failed to fetch the Bioconductor package list: {e}"
-                raise ValidationError(msg) from e
-
-            name: str | None = None
-            for line in response.text.splitlines():
-                if line.startswith("Package: "):
-                    name = line.removeprefix("Package: ").strip()
-                elif line.startswith("Version: ") and name:
-                    self.versions[name] = line.removeprefix("Version: ").strip()
-                    name = None
-            self._fetched.set()
 
     async def __call__(self, package_name: str, context: str) -> None:
         """Validate that a Bioconductor package exists and remember its latest version.
@@ -308,7 +283,14 @@ class BioconductorValidator(HTTPValidator):
         context
             Context information for error messages (e.g., file being validated)
         """
-        await self._load_views(context)
+        if not self.versions:
+            # Bioconductor publishes every package and version in one DCF file, so this is one request for all of them.
+            try:
+                response = await self.client.get(BIOC_VIEWS_URL)
+            except Exception as e:
+                msg = f"{context}: Failed to fetch the Bioconductor package list: {e}"
+                raise ValidationError(msg) from e
+            self.versions = dict(RE_BIOC_VERSION.findall(response.text))
 
         if package_name not in self.versions:
             msg = f"{context}: Bioconductor package '{package_name}' does not exist"
