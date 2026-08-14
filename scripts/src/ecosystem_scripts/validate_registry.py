@@ -287,9 +287,12 @@ class BioconductorValidator(HTTPValidator):
             # Bioconductor publishes every package and version in one DCF file, so this is one request for all of them.
             try:
                 response = await self.client.get(BIOC_VIEWS_URL)
-            except Exception as e:
+            except httpx.HTTPError as e:
                 msg = f"{context}: Failed to fetch the Bioconductor package list: {e}"
                 raise ValidationError(msg) from e
+            if response.status_code != httpx.codes.OK:
+                msg = f"{context}: Failed to fetch the Bioconductor package list (error {response.status_code})"
+                raise ValidationError(msg)
             self.versions = dict(RE_BIOC_VERSION.findall(response.text))
 
         if package_name not in self.versions:
@@ -415,7 +418,6 @@ class Checker:
                 log.error(e)
                 pkg_errors.append(e)
 
-        # The registry does not carry a version: whatever the package index says is the truth.
         if version := self.released_version(tmp_meta):
             tmp_meta["version"] = version
 
