@@ -11,7 +11,6 @@ tags:
   - cell-type annotation
 license: MIT
 language: Python
-version: v0.5.2
 contact:
   - canergen
 test_command: pip install -e '.[test]' && pytest

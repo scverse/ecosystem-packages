@@ -13,7 +13,6 @@ tags:
   - deep learning
 license: BSD-3-Clause
 language: Python
-version: v0.0.1
 contact:
   - zoepiran
 test_command: |

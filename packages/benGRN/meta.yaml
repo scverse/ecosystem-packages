@@ -15,7 +15,6 @@ tags:
   - benchmarking
 license: MIT
 language: Python
-version: v1.2.1
 contact:
   - jkobject
 test_command: pip install . && make test

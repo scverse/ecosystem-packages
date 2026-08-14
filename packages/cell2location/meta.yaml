@@ -19,7 +19,6 @@ tags:
   - probabilistic modeling
 license: Apache-2.0
 language: Python
-version: v0.1
 contact:
   - vitkl
   - yozhikoff

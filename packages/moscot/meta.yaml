@@ -15,7 +15,6 @@ tags:
   - optimal transport
 license: BSD-3-Clause
 language: Python
-version: v0.4.0
 contact:
   - MUCDK
   - giovp

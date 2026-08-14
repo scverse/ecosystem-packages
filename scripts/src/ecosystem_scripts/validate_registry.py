@@ -148,10 +148,12 @@ class GitHubUserValidator(HTTPValidator):
 
 @dataclass
 class PyPIValidator(HTTPValidator):
-    """Validate PyPI package names against the PyPI API."""
+    """Validate PyPI package names against the PyPI API and record the released version."""
+
+    versions: dict[str, str] = field(default_factory=dict)
 
     async def __call__(self, package_name: str, context: str) -> None:
-        """Validate that a PyPI package exists.
+        """Validate that a PyPI package exists and remember its latest version.
 
         Parameters
         ----------
@@ -160,11 +162,11 @@ class PyPIValidator(HTTPValidator):
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_name in self.validated:
+        if package_name in self.versions:
             return
 
         try:
-            response = await self.client.head(f"https://pypi.org/pypi/{package_name}/json")
+            response = await self.client.get(f"https://pypi.org/pypi/{package_name}/json")
         except Exception as e:
             msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
             raise ValidationError(msg) from e
@@ -176,13 +178,15 @@ class PyPIValidator(HTTPValidator):
             msg = f"{context}: Failed to validate PyPI package {package_name!r} (error {response.status_code})"
             raise ValidationError(msg)
 
-        self.validated.add(package_name)
-        log.info(f"Validated PyPI package for {context}: {package_name}")
+        self.versions[package_name] = str(response.json()["info"]["version"])
+        log.info(f"Validated PyPI package for {context}: {package_name} {self.versions[package_name]}")
 
 
 @dataclass
 class CondaValidator(HTTPValidator):
-    """Validate Conda package identifiers using the Anaconda API."""
+    """Validate Conda package identifiers using the Anaconda API and record the released version."""
+
+    versions: dict[str, str] = field(default_factory=dict)
 
     async def __call__(self, package_spec: str, context: str) -> None:
         """Validate that a Conda package exists.
@@ -194,7 +198,7 @@ class CondaValidator(HTTPValidator):
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_spec in self.validated:
+        if package_spec in self.versions:
             return
 
         # Parse channel and package name
@@ -206,7 +210,7 @@ class CondaValidator(HTTPValidator):
 
         # Check package exists on the channel
         try:
-            response = await self.client.head(f"https://api.anaconda.org/package/{channel}/{package_name}")
+            response = await self.client.get(f"https://api.anaconda.org/package/{channel}/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
             raise ValidationError(msg) from e
@@ -218,13 +222,15 @@ class CondaValidator(HTTPValidator):
             msg = f"{context}: Failed to validate Conda package '{package_spec}' (error {response.status_code})"
             raise ValidationError(msg)
 
-        self.validated.add(package_spec)
-        log.info(f"Validated Conda package for {context}: {package_spec}")
+        self.versions[package_spec] = str(response.json()["latest_version"])
+        log.info(f"Validated Conda package for {context}: {package_spec} {self.versions[package_spec]}")
 
 
 @dataclass
 class CRANValidator(HTTPValidator):
-    """Validate CRAN package names using the CRAN API."""
+    """Validate CRAN package names using the CRAN API and record the released version."""
+
+    versions: dict[str, str] = field(default_factory=dict)
 
     async def __call__(self, package_name: str, context: str) -> None:
         """Validate that a CRAN package exists.
@@ -236,12 +242,12 @@ class CRANValidator(HTTPValidator):
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_name in self.validated:
+        if package_name in self.versions:
             return
 
         # CRAN packages can be checked via the packages database
         try:
-            response = await self.client.head(f"https://crandb.r-pkg.org/{package_name}")
+            response = await self.client.get(f"https://crandb.r-pkg.org/{package_name}")
         except Exception as e:
             msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
             raise ValidationError(msg) from e
@@ -253,16 +259,47 @@ class CRANValidator(HTTPValidator):
             msg = f"{context}: Failed to validate CRAN package '{package_name}' (error {response.status_code})"
             raise ValidationError(msg)
 
-        self.validated.add(package_name)
-        log.info(f"Validated CRAN package for {context}: {package_name}")
+        self.versions[package_name] = str(response.json()["Version"])
+        log.info(f"Validated CRAN package for {context}: {package_name} {self.versions[package_name]}")
+
+
+BIOC_VIEWS_URL = "https://bioconductor.org/packages/release/bioc/VIEWS"
 
 
 @dataclass
 class BioconductorValidator(HTTPValidator):
-    """Validate Bioconductor package names using the Bioconductor API."""
+    """Validate Bioconductor package names and record the released version.
+
+    Bioconductor publishes every package and version in a single DCF file, so one request
+    covers the whole registry.
+    """
+
+    versions: dict[str, str] = field(default_factory=dict)
+    _fetched: asyncio.Event = field(default_factory=asyncio.Event)
+    _lock: asyncio.Lock = field(default_factory=asyncio.Lock)
+
+    async def _load_views(self, context: str) -> None:
+        async with self._lock:
+            if self._fetched.is_set():
+                return
+            try:
+                response = await self.client.get(BIOC_VIEWS_URL)
+                response.raise_for_status()
+            except Exception as e:
+                msg = f"{context}: Failed to fetch the Bioconductor package list: {e}"
+                raise ValidationError(msg) from e
+
+            name: str | None = None
+            for line in response.text.splitlines():
+                if line.startswith("Package: "):
+                    name = line.removeprefix("Package: ").strip()
+                elif line.startswith("Version: ") and name:
+                    self.versions[name] = line.removeprefix("Version: ").strip()
+                    name = None
+            self._fetched.set()
 
     async def __call__(self, package_name: str, context: str) -> None:
-        """Validate that a Bioconductor package exists.
+        """Validate that a Bioconductor package exists and remember its latest version.
 
         Parameters
         ----------
@@ -271,25 +308,13 @@ class BioconductorValidator(HTTPValidator):
         context
             Context information for error messages (e.g., file being validated)
         """
-        if package_name in self.validated:
-            return
+        await self._load_views(context)
 
-        # Bioconductor packages can be checked via their web API
-        try:
-            response = await self.client.head(f"https://bioconductor.org/packages/{package_name}/")
-        except Exception as e:
-            msg = f"{context}: Failed to validate Bioconductor package '{package_name}': {e}"
-            raise ValidationError(msg) from e
-
-        if response.status_code == httpx.codes.NOT_FOUND:
+        if package_name not in self.versions:
             msg = f"{context}: Bioconductor package '{package_name}' does not exist"
             raise ValidationError(msg)
-        if response.status_code != httpx.codes.OK:
-            msg = f"{context}: Failed to validate Bioconductor package '{package_name}' (error {response.status_code})"
-            raise ValidationError(msg)
 
-        self.validated.add(package_name)
-        log.info(f"Validated Bioconductor package for {context}: {package_name}")
+        log.info(f"Validated Bioconductor package for {context}: {package_name} {self.versions[package_name]}")
 
 
 def check_image(img_path: Path) -> None:
@@ -408,7 +433,25 @@ class Checker:
                 log.error(e)
                 pkg_errors.append(e)
 
+        # The registry does not carry a version: whatever the package index says is the truth.
+        if version := self.released_version(tmp_meta):
+            tmp_meta["version"] = version
+
         return pkg_id, tmp_meta, pkg_errors
+
+    def released_version(self, tmp_meta: ScverseEcosystemPackages) -> str | None:
+        """Return the version the package's index reports, preferring the primary install target."""
+        if not (install := tmp_meta.get("install")):
+            return None
+        if name := install.get("pypi"):
+            return self.check_pypi.versions.get(name)
+        if spec := install.get("conda"):
+            return self.check_conda.versions.get(spec)
+        if name := install.get("cran"):
+            return self.check_cran.versions.get(name)
+        if name := install.get("bioconductor"):
+            return self.check_bioc.versions.get(name)
+        return None
 
     def http_checks(self, pkg_id: str, tmp_meta: ScverseEcosystemPackages) -> Generator[Awaitable[None]]:
         # Check and register all links

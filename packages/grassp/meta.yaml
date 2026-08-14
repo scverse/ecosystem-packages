@@ -15,7 +15,6 @@ tags:
   - proteomics
 license: BSD-3-Clause
 language: Python
-version: v0.1.0
 contact:
   - mffrank
   - duopeng

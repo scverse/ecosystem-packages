@@ -11,7 +11,6 @@ tags:
   - cell-type annotation
 license: GPL-3.0-only
 language: Python
-version: v0.2.1
 contact:
   - serjisa
   - potulabe

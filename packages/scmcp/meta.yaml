@@ -9,7 +9,6 @@ tags:
   - large language models
 license: BSD-3-Clause
 language: Python
-version: v0.2.2
 contact:
   - huangsh
 test_command: uv run --no-sync pytest

@@ -16,7 +16,6 @@ tags:
   - data integration
 license: BSD-3-Clause
 language: Python
-version: 0.1.7
 contact:
   - gtca
 logo: logo.svg

@@ -14,7 +14,6 @@ tags:
   - segmentation
 license: GPL-3.0-only
 language: Python
-version: v0.5.0
 contact:
   - maltekuehl
 test_command: uv run pytest -m "not gpu"

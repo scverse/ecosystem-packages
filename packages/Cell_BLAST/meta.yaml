@@ -13,7 +13,6 @@ tags:
   - cell-type annotation
 license: MIT
 language: Python
-version: v0.3.8
 contact:
   - Jeff1995
 test_command: |

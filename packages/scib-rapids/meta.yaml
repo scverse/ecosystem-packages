@@ -13,7 +13,6 @@ tags:
   - GPU acceleration
 license: BSD-3-Clause
 language: Python
-version: 0.1.0
 contact:
   - maarten-devries
 category: ecosystem

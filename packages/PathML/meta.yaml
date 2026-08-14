@@ -13,7 +13,6 @@ tags:
   - imaging
 license: GPL-2.0-only
 language: Python
-version: v2.1.0
 contact:
   - jacob-rosenthal
   - ryanccarelli

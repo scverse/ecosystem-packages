@@ -20,7 +20,6 @@ tags:
   - foundation model
 license: GPL-3.0-or-later
 language: Python
-version: v1.0.0
 contact:
   - jkobject
 test_command: pip install . && make test

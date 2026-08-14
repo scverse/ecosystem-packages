@@ -16,7 +16,6 @@ tags:
   - data structures
 license: BSD-3-Clause
 language: Python
-version: 0.12.4
 contact:
   - flying-sheep
   - ilan-gold

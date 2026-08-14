@@ -17,7 +17,6 @@ tags:
   - file formats
 license: MIT
 language: Python
-version: v1.2.2
 contact:
   - jkobject
 test_command: pip install . && make test

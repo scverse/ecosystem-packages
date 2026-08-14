@@ -16,7 +16,6 @@ tags:
   - file formats
 license: Apache-2.0
 language: Python
-version: 0.2.0
 contact:
   - vbrennsteiner
   - lucas-diedrich
