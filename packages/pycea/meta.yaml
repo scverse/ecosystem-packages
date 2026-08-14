@@ -12,7 +12,6 @@ tags:
   - data structures
 license: BSD-3-Clause
 language: Python
-version: v0.1.0
 contact:
   - colganwi
 test_command: pip install ".[test]" && pytest

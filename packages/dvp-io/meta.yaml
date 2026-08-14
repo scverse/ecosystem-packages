@@ -13,7 +13,6 @@ tags:
   - file formats
 license: Apache-2.0
 language: Python
-version: 0.5.1
 contact:
   - lucas-diedrich
 logo: logo.svg

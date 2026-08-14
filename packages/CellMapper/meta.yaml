@@ -11,7 +11,6 @@ tags:
   - GPU acceleration
 license: MIT
 language: Python
-version: v0.1.2
 contact:
   - Marius1311
 test_command: pip install -e '.[test]' && pytest

@@ -16,7 +16,6 @@ tags:
   - pipeline
 license: BSD-3-Clause
 language: Python
-version: v1.0.0
 contact:
   - quentinblampey
 test_command: pip install ".[dev,cellpose]" && pytest

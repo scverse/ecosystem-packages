@@ -13,7 +13,6 @@ tags:
   - spatially variable genes
 license: MIT
 language: Python
-version: v0.1.1
 contact:
   - dcjones
 test_command: pip install "." && pytest

@@ -14,7 +14,6 @@ tags:
   - pseudotime
 license: BSD-3-Clause
 language: Python
-version: v1.0.0
 contact:
   - LouisFaure
 test_command: |

@@ -19,7 +19,6 @@ tags:
   - deconvolution
 license: BSD-3-Clause
 language: Python
-version: v0.1
 contact:
   - cafferychen777
 test_command: |

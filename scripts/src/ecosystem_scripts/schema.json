@@ -274,8 +274,9 @@
             }
         },
         "version": {
-            "description": "The version of the package at the point when this entry was created or updated",
-            "type": "string"
+            "description": "Latest released version, derived from the package index at build time. Do not set this in meta.yaml; it is overwritten.",
+            "type": "string",
+            "readOnly": true
         },
         "contact": {
             "description": "Point of contact for this package. Does not need to be the full list of maintainers. Entries must be Github user IDs.",
@@ -327,6 +328,6 @@
         }
     },
     "then": {
-        "required": ["install", "version"]
+        "required": ["install"]
     }
 }

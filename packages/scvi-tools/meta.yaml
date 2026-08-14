@@ -38,7 +38,6 @@ tags:
   - probabilistic modeling
 license: BSD-3-Clause
 language: Python
-version: 1.4.0.post1
 contact:
   - ori-kron-wis
   - canergen

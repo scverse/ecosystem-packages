@@ -17,7 +17,6 @@ tags:
   - RNA velocity
 license: BSD-3-Clause
 language: Python
-version: v1.1.0
 contact:
   - Xiaojieqiu
   - dummyindex

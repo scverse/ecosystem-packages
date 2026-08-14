@@ -20,7 +20,6 @@ tags:
   - visualization
 license: BSD-3-Clause
 language: Python
-version: 1.11.5
 contact:
   - flying-sheep
   - ilan-gold

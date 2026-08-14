@@ -11,7 +11,6 @@ tags:
   - large language models
 license: MIT
 language: Python
-version: v0.1.3
 contact:
   - Marius1311
 test_command: pip install -e '.[test]' && pytest

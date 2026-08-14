@@ -4,6 +4,10 @@ on:
     branches: [main]
   push:
     branches: [main]
+  # Versions come from the package indexes, so rebuild daily to pick up new releases.
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

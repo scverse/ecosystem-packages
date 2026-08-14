@@ -20,7 +20,6 @@ tags:
   - deep learning
 license: MIT
 language: Python
-version: v0.3.1
 contact:
   - KalinNonchev
 test_command: pip install '.[test-all]' && pytest -m "not slow"

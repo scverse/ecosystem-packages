@@ -9,7 +9,6 @@ install:
   pypi: annsel
 license: MIT
 language: Python
-version: v0.0.8
 contact:
   - srivarra
 primary_category: Data structures

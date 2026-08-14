@@ -13,7 +13,6 @@ tags:
   - differential expression
 license: MIT
 language: Python
-version: v0.1.0
 contact:
   - const-ae
 test_command: pip install -e '.[dev]' && pytest

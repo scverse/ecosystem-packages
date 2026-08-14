@@ -13,7 +13,6 @@ primary_category: bulk RNA-seq
 tags:
   - bulk RNA-seq
   - deconvolution
-version: v0.1.6
 contact:
   - bernheder
 test_command: |

@@ -13,7 +13,6 @@ tags:
   - optimal transport
 license: GPL-3.0-or-later
 language: Python
-version: v1.1.0
 contact:
   - PSSUN
 test_command: pip install "." && pytest

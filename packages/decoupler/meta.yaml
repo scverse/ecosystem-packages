@@ -15,7 +15,6 @@ tags:
   - functional analysis
 license: BSD-3-Clause
 language: Python
-version: 2.1.1
 contact:
   - PauBadiaM
 logo: logo.svg

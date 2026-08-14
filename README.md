@@ -53,6 +53,9 @@ If none of the existing terms fit your package, add one to the enum in your pull
 
 `language` is the language you write in when using the package: `Python`, `R`, `Julia` or `Rust`.
 
+`version` is not something you set.
+It is read from PyPI, conda, CRAN or Bioconductor when the registry is built, and refreshed daily, so it always reflects the latest release.
+
 ## What are the requirements for an ecosystem package?
 
 For a package to become an approved ecosystem package, it must fulfill all mandatory requirements from the checklist below.
