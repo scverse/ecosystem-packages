@@ -5,7 +5,7 @@ description: |
 project_home: https://github.com/cantinilab/GRnnData
 documentation_home: https://cantinilab.github.io/GRnnData/
 publications:
-  - 10.1101/2024.07.29.605556
+  - 10.1038/s41467-025-58699-1
 install:
   pypi: grnndata
 primary_category: Data structures

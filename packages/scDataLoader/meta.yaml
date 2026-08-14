@@ -6,7 +6,7 @@ description: |
 project_home: https://github.com/jkobject/scDataLoader
 documentation_home: https://www.jkobject.com/scDataLoader/
 publications:
-  - 10.1101/2024.07.29.605556
+  - 10.1038/s41467-025-58699-1
 install:
   pypi: scdataloader
 primary_category: Infrastructure

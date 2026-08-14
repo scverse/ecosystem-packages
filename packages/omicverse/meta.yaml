@@ -6,7 +6,7 @@ description: |
 project_home: https://github.com/Starlitnightly/omicverse
 documentation_home: https://omicverse.readthedocs.io/
 publications:
-  - 10.1101/2023.06.06.543913
+  - 10.1038/s41467-024-50194-3
 install:
   pypi: omicverse
 primary_category: Multimodal

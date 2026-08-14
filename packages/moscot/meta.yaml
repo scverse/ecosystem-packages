@@ -4,7 +4,7 @@ description: |
 project_home: https://github.com/theislab/moscot
 documentation_home: https://moscot.readthedocs.io/page/
 publications:
-  - 10.1101/2023.05.11.540374
+  - 10.1038/s41586-024-08453-2
 install:
   pypi: moscot
 primary_category: Multimodal
