@@ -4,7 +4,7 @@ description: |
 project_home: https://github.com/cantinilab/scPRINT-2
 documentation_home: https://cantinilab.github.io/scPRINT-2/
 publications:
-  - 10.64898/2025.12.11.693702v2
+  - 10.64898/2025.12.11.693702
 install:
   pypi: scprint2
 primary_category: scRNA-seq

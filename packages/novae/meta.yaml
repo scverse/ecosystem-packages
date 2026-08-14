@@ -5,7 +5,7 @@ description: |
 project_home: https://github.com/prism-oncology/novae
 documentation_home: https://prism-oncology.github.io/novae/
 publications:
-  - 10.1101/2024.09.09.612009
+  - 10.1038/s41592-025-02899-6
 install:
   pypi: novae
 primary_category: Spatial
