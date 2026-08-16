@@ -5,7 +5,7 @@ description: |
   hardware acceleration.
 project_home: https://github.com/YosefLab/scib-metrics
 documentation_home: https://scib-metrics.readthedocs.io/
-tutorials_home: https://scib-metrics.readthedocs.io/en/latest/tutorials.html
+tutorials_home: https://scib-metrics.readthedocs.io/page/tutorials.html
 publications:
   - 10.1038/s41592-021-01336-8 # scIB benchmarking paper, Nat Methods 2022
 install:

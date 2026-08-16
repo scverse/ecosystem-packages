@@ -6,7 +6,7 @@ description: |
   interoperable models.
 project_home: https://github.com/YosefLab/scviva-tools
 documentation_home: https://scviva-tools.readthedocs.io/
-tutorials_home: https://scviva-tools.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://scviva-tools.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.1038/s41587-021-01206-w # Scvi-tools library paper, NBT 2022
   - 10.1038/s41587-022-01272-8 # DestVI
