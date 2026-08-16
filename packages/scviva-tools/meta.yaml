@@ -1,0 +1,37 @@
+name: scviva-tools
+description: |
+  scviva-tools is a consolidated spatial transcriptomics analysis toolkit built on scvi-tools,
+  providing niche-aware representation learning (scVIVA), deconvolution (DestVI, Stereoscope),
+  noise correction (ResolVI), imputation (GIMVI), and spatial mapping (Tangram) as first-class,
+  interoperable models.
+project_home: https://github.com/YosefLab/scviva-tools
+documentation_home: https://scviva-tools.readthedocs.io/
+tutorials_home: https://scviva-tools.readthedocs.io/en/latest/tutorials/index.html
+publications:
+  - 10.1038/s41587-021-01206-w # Scvi-tools library paper, NBT 2022
+  - 10.1038/s41587-022-01272-8 # DestVI
+  - 10.1101/2025.01.20.634005 # resolVI
+  - 10.1101/2025.06.01.657182 # scVIVA
+  - 10.1101/2025.11.11.687271 # Harreman
+  - 10.1186/s13059-024-03419-z # VIVS
+  - 10.48550/arXiv.1905.02269 # gimVI
+  - 10.1038/s42003-020-01247-y # Stereoscope
+  - 10.1038/s41592-021-01264-7 # Tangram
+  - 10.1038/s41587-021-01139-4 # Cell2location
+  - 10.64898/2026.01.15.699786 # CSDE
+install:
+  pypi: scviva-tools
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - deconvolution
+  - denoising
+  - data integration
+  - deep learning
+  - probabilistic modeling
+license: BSD-3-Clause
+language: Python
+contact:
+  - ori-kron-wis
+test_command: hatch test
+category: ecosystem

@@ -1,0 +1,24 @@
+name: scib-metrics
+description: |
+  scib-metrics provides accelerated, Python-only implementations of the scIB metrics for
+  benchmarking single-cell data integration methods, using JAX for jit-compilation and
+  hardware acceleration.
+project_home: https://github.com/YosefLab/scib-metrics
+documentation_home: https://scib-metrics.readthedocs.io/
+tutorials_home: https://scib-metrics.readthedocs.io/en/latest/tutorials.html
+publications:
+  - 10.1038/s41592-021-01336-8 # scIB benchmarking paper, Nat Methods 2022
+install:
+  pypi: scib-metrics
+primary_category: scRNA-seq
+tags:
+  - data integration
+  - benchmarking
+  - GPU acceleration
+license: BSD-3-Clause
+language: Python
+contact:
+  - adamgayoso
+  - ori-kron-wis
+test_command: hatch test
+category: ecosystem
