@@ -2,19 +2,18 @@ name: novae
 description: |
   Graph-based foundation model for spatial transcriptomics data.
   Zero-shot spatial domain inference, batch-effect correction, and many other features.
-project_home: https://github.com/MICS-Lab/novae
-documentation_home: https://mics-lab.github.io/novae/
+project_home: https://github.com/prism-oncology/novae
+documentation_home: https://prism-oncology.github.io/novae/
 publications:
-  - 10.1101/2024.09.09.612009
+  - 10.1038/s41592-025-02899-6
 install:
   pypi: novae
+primary_category: Spatial
 tags:
-  - spatial-omics
-  - spatial-transcriptomics
-  - spatialdata
+  - spatial transcriptomics
   - deep learning
 license: BSD-3-Clause
-version: v0.2.1
+language: Python
 contact:
   - quentinblampey
 test_command: pip install ".[dev]" && pytest

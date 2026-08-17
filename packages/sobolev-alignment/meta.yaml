@@ -7,15 +7,13 @@ publications:
   - 10.1101/2022.03.08.483431
 install:
   pypi: sobolev-alignment
+primary_category: scRNA-seq
 tags:
-  - ML
-  - deep-generative-models
-  - kernel-methods
-  - pre-clinical
-  - clinical
-  - scrnaseq
+  - scRNA-seq
+  - deep learning
+  - probabilistic modeling
 license: MIT
-version: 1.0.0
+language: Python
 contact:
   - saroudant
 test_command: |

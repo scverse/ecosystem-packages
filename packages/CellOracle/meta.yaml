@@ -6,14 +6,16 @@ project_home: https://github.com/morris-lab/CellOracle
 documentation_home: https://morris-lab.github.io/CellOracle.documentation/
 tutorials_home: https://morris-lab.github.io/CellOracle.documentation/
 publications:
-  - 10.1101/2020.02.17.947416
+  - 10.1038/s41586-022-05688-9
 install:
   pypi: celloracle
+primary_category: Epigenomics
 tags:
-  - GRN
-  - TF
+  - epigenomics
+  - gene regulatory networks
+  - perturbation
 license: Apache-2.0
-version: v0.10.12
+language: Python
 contact:
   - KenjiKamimoto-ac
   - sam-morris

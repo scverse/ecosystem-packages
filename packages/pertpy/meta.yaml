@@ -7,17 +7,16 @@ project_home: https://github.com/scverse/pertpy
 documentation_home: https://pertpy.readthedocs.io/
 tutorials_home: https://pertpy.readthedocs.io/page/tutorials.html
 publications:
-  - 10.1101/2024.08.04.606516
+  - 10.1038/s41592-025-02909-7
 install:
   pypi: pertpy
   conda: conda-forge::pertpy
+primary_category: scRNA-seq
 tags:
+  - differential expression
   - perturbation
-  - drug response
-  - CRISPR
-  - genetic perturbation
 license: MIT
-version: 1.0.3
+language: Python
 contact:
   - Zethson
 logo: logo.svg

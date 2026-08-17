@@ -9,12 +9,12 @@ publications:
   - 10.1186/s13059-024-03386-5
 install:
   pypi: eschr
+primary_category: scRNA-seq
 tags:
   - clustering
-  - uncertainty
-  - ensemble
+  - probabilistic modeling
 license: "MIT"
-version: v1.0.1
+language: Python
 contact:
   - smgoggin10
 test_command: pip install ".[test]" && pytest

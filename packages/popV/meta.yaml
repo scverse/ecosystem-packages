@@ -5,12 +5,12 @@ project_home: https://github.com/YosefLab/popV
 documentation_home: https://popv.readthedocs.io/
 install:
   pypi: popv
+primary_category: scRNA-seq
 tags:
-  - cell type labels
-  - batch integration
-  - automatic annotation
+  - data integration
+  - cell-type annotation
 license: MIT
-version: v0.5.2
+language: Python
 contact:
   - canergen
 test_command: pip install -e '.[test]' && pytest
