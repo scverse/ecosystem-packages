@@ -14,7 +14,6 @@ tags:
   - GPU acceleration
 license: MIT
 language: Python
-version: 0.13.3
 contact:
   - Intron7
 logo: logo.svg

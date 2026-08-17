@@ -20,7 +20,6 @@ tags:
   - clustering
 license: GPL-3.0-only
 language: Python
-version: v0.0.1
 contact:
   - artuurC
   - berombau

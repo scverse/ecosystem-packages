@@ -19,7 +19,6 @@ tags:
   - clustering
 license: GPL-3.0-only
 language: Python
-version: v0.12.0
 contact:
   - bramvds
   - cflerin

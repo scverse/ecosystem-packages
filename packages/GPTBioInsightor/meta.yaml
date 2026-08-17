@@ -12,7 +12,6 @@ tags:
   - large language models
 license: BSD-3-Clause
 language: Python
-version: v0.3.0
 contact:
   - huangsh
 test_command: pip install "." && pytest

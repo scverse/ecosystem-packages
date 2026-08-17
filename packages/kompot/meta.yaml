@@ -21,7 +21,6 @@ tags:
   - probabilistic modeling
 license: GPL-3.0-or-later
 language: Python
-version: v0.6.1
 contact:
   - katosh
   - ManuSetty

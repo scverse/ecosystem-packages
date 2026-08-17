@@ -12,7 +12,6 @@ tags:
   - RNA velocity
 license: BSD-3-Clause
 language: Python
-version: v0.2.5
 contact:
   - WeilerP
   - VolkerBergen

@@ -22,7 +22,6 @@ tags:
   - file formats
 license: MIT
 language: Python
-version: v0.5.1
 authors:
   - vivekbhr
   - saroudant

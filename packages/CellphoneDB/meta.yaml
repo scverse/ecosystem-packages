@@ -17,7 +17,6 @@ tags:
   - cell-cell communication
 license: MIT
 language: Python
-version: v5.0.0
 contact:
   - chapuzzo
   - datasome

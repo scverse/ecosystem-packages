@@ -51,7 +51,10 @@ Pick every tag that genuinely applies.
 
 If none of the existing terms fit your package, add one to the enum in your pull request.
 
-`language` is the language you write in when using the package: `Python`, `R`, `Julia` or `Rust`.
+`language` is the language you write in when using the package: `Python`, `R`, `Julia`, `Rust` or `C++`.
+
+`version` is not something you set.
+It is read from PyPI, conda, CRAN or Bioconductor when the registry is built, and refreshed daily, so it always reflects the latest release.
 
 ## What are the requirements for an ecosystem package?
 

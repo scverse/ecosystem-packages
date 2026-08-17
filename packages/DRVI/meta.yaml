@@ -20,7 +20,6 @@ tags:
   - probabilistic modeling
 license: BSD-3-Clause
 language: Python
-version: 0.2.0
 contact:
   - moinfar
 test_command: uvx hatch run pytest
