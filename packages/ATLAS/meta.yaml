@@ -8,10 +8,13 @@ tutorials_home: https://atlas-smilies.readthedocs.io/
 install:
   pypi: atlas-smilies
 tags:
-  - single-cell
-  - multi-omics
-  - cell-fate
-  - trajectory-inference
+  - multimodal
+  - trajectory inference
+  - pseudotime
+  - scRNA-seq
+  - ATAC-seq
+primary_category: Multimodal
+language: Python
 license: BSD-3-Clause
 version: v1.0.0
 contact:
