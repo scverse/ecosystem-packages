@@ -262,7 +262,7 @@
         "language": {
             "description": "Language a user writes code in when using the package.",
             "type": "string",
-            "enum": ["Python", "R", "Julia", "Rust"]
+            "enum": ["Python", "R", "Julia", "Rust", "C++"]
         },
         "publications": {
             "description": "DOIs of publications describing the package",
