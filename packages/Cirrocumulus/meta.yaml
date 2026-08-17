@@ -8,10 +8,11 @@ publications:
   - 10.1038/s41592-020-0905-x
 install:
   pypi: cirrocumulus
+primary_category: scRNA-seq
 tags:
   - visualization
 license: BSD-3-Clause
-version: v1.1.41
+language: Python
 contact:
   - joshua-gould
   - yihming

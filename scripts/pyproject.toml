@@ -5,7 +5,7 @@ requires = [ "hatch-vcs", "hatchling" ]
 [project]
 name = "ecosystem-scripts"
 description = "scripts for ecosystem package data"
-readme = "../README.md"
+readme = "README.md"
 license = "GPL-3.0"
 authors = [
   { name = "Gregor Sturm", email = "gregor.sturm@scverse.org" },
@@ -70,6 +70,6 @@ lint.select = [
 lint.ignore = []
 
 [tool.mypy]
-strict = true
-explicit_package_bases = true
 mypy_path = [ "$MYPY_CONFIG_FILE_DIR/typings", "$MYPY_CONFIG_FILE_DIR/src" ]
+explicit_package_bases = true
+strict = true

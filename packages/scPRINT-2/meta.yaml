@@ -1,0 +1,26 @@
+name: scPRINT-2
+description: |
+  A next generation single cell foundation model
+project_home: https://github.com/cantinilab/scPRINT-2
+documentation_home: https://cantinilab.github.io/scPRINT-2/
+publications:
+  - 10.64898/2025.12.11.693702
+install:
+  pypi: scprint2
+primary_category: scRNA-seq
+tags:
+  - scRNA-seq
+  - denoising
+  - data integration
+  - cell-type annotation
+  - gene regulatory networks
+  - dimensionality reduction
+  - perturbation
+  - deep learning
+  - foundation model
+license: GPL-3.0-or-later
+language: Python
+contact:
+  - jkobject
+test_command: pip install . && make test
+category: ecosystem

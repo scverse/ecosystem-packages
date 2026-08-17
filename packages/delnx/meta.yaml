@@ -6,13 +6,11 @@ documentation_home: https://delnx.readthedocs.io/
 tutorials_home: https://delnx.readthedocs.io/
 install:
   pypi: delnx
+primary_category: scRNA-seq
 tags:
   - differential expression
-  - regression models
-  - dispersion estimation
-  - JAX
 license: MIT
-version: v0.2.3
+language: Python
 contact:
   - joschif
   - adaml9

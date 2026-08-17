@@ -10,12 +10,12 @@ publications:
 install:
   pypi: muon
   conda: conda-forge::muon
+primary_category: Multimodal
 tags:
   - multimodal
-  - multi-omics
-  - integration
+  - data integration
 license: BSD-3-Clause
-version: 0.1.7
+language: Python
 contact:
   - gtca
 logo: logo.svg

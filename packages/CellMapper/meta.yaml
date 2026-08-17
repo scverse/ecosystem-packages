@@ -5,13 +5,12 @@ project_home: https://github.com/quadbio/cellmapper
 documentation_home: https://cellmapper.readthedocs.io/
 install:
   pypi: cellmapper
+primary_category: scRNA-seq
 tags:
-  - k-NN based mapping
-  - rapids
-  - faiss
-  - query-to-reference
+  - data integration
+  - GPU acceleration
 license: MIT
-version: v0.1.2
+language: Python
 contact:
   - Marius1311
 test_command: pip install -e '.[test]' && pytest
