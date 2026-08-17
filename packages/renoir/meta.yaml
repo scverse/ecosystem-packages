@@ -1,0 +1,28 @@
+name: Renoir
+description: |
+  An information-theory-based scoring framework for spatial cell-cell
+  communication analysis. Renoir computes neighbourhood activity scores
+  for ligand-target pairs across spatial transcriptomics platforms
+  (Visium, VisiumHD, CosMx, Xenium), identifies communication domains
+  via Leiden clustering, and ranks ligands driving domain-specific
+  signalling. Built on AnnData and SpatialData.
+project_home: https://github.com/Zafar-Lab/Renoir
+documentation_home: https://renoir.readthedocs.io/
+tutorials_home: https://renoir.readthedocs.io/
+publications:
+  - 10.1038/s41467-026-72388-7
+install:
+  pypi: renoir-spatial
+tags:
+  - spatial transcriptomics
+  - cell-cell communication
+  - ligand-target
+  - spatial omics
+license: MIT
+version: v1.0.0
+contact:
+  - narein97
+test_command: |
+  pip install renoir-spatial
+  pytest -v -m "not integration"
+category: ecosystem
