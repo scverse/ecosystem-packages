@@ -4,15 +4,15 @@ project_home: https://github.com/loosolab/scanpro
 documentation_home: https://scanpro.readthedocs.io/
 tutorials_home: https://scanpro.readthedocs.io/page/proportion_analysis.html
 publications:
-  - 10.1101/2023.08.14.553234
+  - 10.1038/s41598-024-66381-7
 install:
   pypi: scanpro
+primary_category: scRNA-seq
 tags:
-  - single cell
-  - proportion analysis
-  - multi omics
+  - multimodal
+  - compositional analysis
 license: MIT
-version: 0.2.0
+language: Python
 contact:
   - yalayoubi
   - mlooso

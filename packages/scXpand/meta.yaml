@@ -9,14 +9,13 @@ publications:
   - 10.1101/2025.09.14.676069
 install:
   pypi: scxpand
+primary_category: Adaptive immune cell receptor
 tags:
-  - cancer
   - scRNA-seq
-  - scTCR-seq
-  - T-cell clonal expansion
-  - machine learning
+  - immune receptor
+  - deep learning
 license: MIT
-version: v0.4.3
+language: Python
 contact:
   - ronamit
   - ofirshorer

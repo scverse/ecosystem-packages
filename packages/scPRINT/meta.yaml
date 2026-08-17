@@ -4,23 +4,20 @@ description: |
 project_home: https://github.com/cantinilab/scPRINT
 documentation_home: https://cantinilab.github.io/scPRINT/
 publications:
-  - 10.1101/2024.07.29.605556
+  - 10.1038/s41467-025-58699-1
 install:
   pypi: scprint
+primary_category: scRNA-seq
 tags:
-  - foundation model
-  - single cell
-  - RNAseq
-  - gene network inference
+  - scRNA-seq
   - denoising
-  - zero imputation
-  - label prediction
-  - zero shot
-  - embedding
-  - pytorch
-  - lightning
+  - cell-type annotation
+  - gene regulatory networks
+  - dimensionality reduction
+  - deep learning
+  - foundation model
 license: MIT
-version: v1.6.2
+language: Python
 contact:
   - jkobject
 test_command: pip install . && make test

@@ -11,12 +11,12 @@ publications:
 install:
   pypi: mudata
   conda: conda-forge::mudata
+primary_category: Data structures
 tags:
-  - data structure
   - multimodal
-  - multi-omics
+  - data structures
 license: BSD-3-Clause
-version: 0.3.2
+language: Python
 contact:
   - gtca
   - ilia-kats

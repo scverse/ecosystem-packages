@@ -7,10 +7,12 @@ documentation_home: https://treedata.readthedocs.io/
 tutorials_home: https://treedata.readthedocs.io/
 install:
   pypi: treedata
+primary_category: Data structures
 tags:
-  - lineage-tracing
+  - lineage tracing
+  - data structures
 license: BSD-3-Clause
-version: v0.2.2
+language: Python
 contact:
   - colganwi
 test_command: pip install ".[test]" && pytest
