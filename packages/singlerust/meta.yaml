@@ -9,9 +9,10 @@ publications:
   - 10.1101/2025.08.04.668429
 tags:
   - scRNA-seq
-  - rust
-  - single-cell
-  - analysis
+  - preprocessing
+  - differential expression
+primary_category: scRNA-seq
+language: Rust
 license: BSD-3-Clause
 version: v0.5.8
 contact:
