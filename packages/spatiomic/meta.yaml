@@ -6,15 +6,14 @@ documentation_home: https://spatiomic.org
 tutorials_home: https://spatiomic.org/latest/tutorials/full_example.html
 install:
   pypi: spatiomic
+primary_category: Spatial
 tags:
-  - spatial biology
+  - spatial transcriptomics
   - spatial proteomics
-  - spatial omics
-  - multiplexed protein imaging
-  - PathoPlex
-  - subcellular analysis
+  - imaging
+  - segmentation
 license: GPL-3.0-only
-version: v0.5.0
+language: Python
 contact:
   - maltekuehl
 test_command: uv run pytest -m "not gpu"

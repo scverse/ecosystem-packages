@@ -12,14 +12,14 @@ publications:
   - 10.1101/2024.11.06.622266
 install:
   pypi: drvi-py
+primary_category: scRNA-seq
 tags:
-  - disentanglement
-  - interpretability
   - data integration
-  - variational inference
+  - dimensionality reduction
   - deep learning
+  - probabilistic modeling
 license: BSD-3-Clause
-version: 0.2.0
+language: Python
 contact:
   - moinfar
 test_command: uvx hatch run pytest

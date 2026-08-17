@@ -6,13 +6,12 @@ project_home: https://github.com/huang-sh/GPTBioInsightor
 documentation_home: https://gptbioinsightor.readthedocs.io/
 install:
   pypi: gptbioinsightor
+primary_category: scRNA-seq
 tags:
-  - single-cell
-  - bioinformatics
-  - LLM
-  - AI
+  - deep learning
+  - large language models
 license: BSD-3-Clause
-version: v0.3.0
+language: Python
 contact:
   - huangsh
 test_command: pip install "." && pytest

@@ -7,12 +7,12 @@ publications:
   - 10.1038/s41592-021-01336-8
 install:
   pypi: scib
+primary_category: scRNA-seq
 tags:
-  - benchmarking
-  - single cell
   - data integration
+  - benchmarking
 license: MIT
-version: v1.0.5
+language: Python
 contact:
   - mumichae
   - LuckyMD

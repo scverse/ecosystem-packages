@@ -6,16 +6,11 @@ tutorials_home: https://github.com/elmbeech/physicelldataloader/blob/master/man/
 install:
   pypi: pcdl
 license: BSD-3-Clause
+language: Python
+primary_category: Infrastructure
 tags:
-  - python3
-  - downstream data analysis
-  - physicell
-  - multicellular system
-  - agent-based modeling
-  - diffusion transport solver
-  - newtonian physics
+  - file formats
 #publications:
-version: v4.0.4
 category: ecosystem
 contact:
   - ASundus

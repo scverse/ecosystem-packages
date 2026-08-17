@@ -9,10 +9,11 @@ publications:
   - 10.1016/j.cels.2019.03.003
 install:
   pypi: doubletdetection
+primary_category: scRNA-seq
 tags:
-  - doublet
+  - quality control
 license: MIT
-version: v4.2
+language: Python
 contact:
   - adamgayoso
   - JonathanShor

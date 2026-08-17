@@ -7,13 +7,13 @@ documentation_home: https://rapids-singlecell.readthedocs.io/
 tutorials_home: https://rapids-singlecell.readthedocs.io/page/tutorials.html
 install:
   pypi: rapids-singlecell
+primary_category: scRNA-seq
 tags:
+  - preprocessing
+  - clustering
   - GPU acceleration
-  - single-cell
-  - RAPIDS
-  - CUDA
 license: MIT
-version: 0.13.3
+language: Python
 contact:
   - Intron7
 logo: logo.svg

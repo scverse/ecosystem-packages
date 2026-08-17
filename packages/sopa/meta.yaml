@@ -9,14 +9,13 @@ publications:
   - 10.1038/s41467-024-48981-z
 install:
   pypi: sopa
+primary_category: Spatial
 tags:
-  - spatial-omics
-  - spatial-transcriptomics
-  - multiplex imaging
-  - spatialdata
+  - spatial transcriptomics
+  - imaging
   - pipeline
 license: BSD-3-Clause
-version: v1.0.0
+language: Python
 contact:
   - quentinblampey
 test_command: pip install ".[dev,cellpose]" && pytest

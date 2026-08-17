@@ -9,12 +9,11 @@ tutorials_home: https://theislab.github.io/zellkonverter/
 install:
   bioconductor: zellkonverter
 license: MIT
+language: R
+primary_category: Data structures
 tags:
   - data structures
   - interoperability
-  - R
-  - Bioconductor
-version: 1.20.0
 contact:
   - lazappi
 logo: logo.svg

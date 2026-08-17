@@ -3,10 +3,11 @@ description: |
   A repo for integration testing core packages against upstream core packages
 project_home: https://github.com/scverse/integration-testing
 documentation_home: https://github.com/scverse/integration-testing
+primary_category: Infrastructure
 tags:
-  - testing
-  - continuous integration
+  - benchmarking
 license: MIT
+language: Python
 contact:
   - ilan-gold
   - flying-sheep
