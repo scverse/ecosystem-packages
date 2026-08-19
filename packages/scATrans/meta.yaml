@@ -8,7 +8,7 @@ description: |
   and plotting through scanpy-compatible APIs.
 project_home: https://github.com/leelieber2025/scATrans
 documentation_home: https://scatrans.readthedocs.io
-tutorials_home: https://scatrans.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://scatrans.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.64898/2026.08.03.740741
   - 10.5281/zenodo.21365873
