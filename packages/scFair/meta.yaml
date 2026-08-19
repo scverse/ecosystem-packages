@@ -6,7 +6,7 @@ description: |
   markers are not lost to majority-biased ranking.
 project_home: https://github.com/leelieber2025/scFair
 documentation_home: https://scfair.readthedocs.io
-tutorials_home: https://scfair.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://scfair.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.64898/2026.08.08.743679
   - 10.5281/zenodo.21761251
