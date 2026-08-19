@@ -5,7 +5,7 @@ description: |
   structure can be analysed on its own or together with cellular context.
 project_home: https://github.com/moeghaf/Mantpy
 documentation_home: https://mantpy.readthedocs.io/
-tutorials_home: https://mantpy.readthedocs.io/en/latest/tutorials/loading-data.html
+tutorials_home: https://mantpy.readthedocs.io/page/tutorials/loading-data.html
 install:
   pypi: mantpy
 primary_category: Spatial
