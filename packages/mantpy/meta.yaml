@@ -6,6 +6,8 @@ description: |
 project_home: https://github.com/moeghaf/Mantpy
 documentation_home: https://mantpy.readthedocs.io/
 tutorials_home: https://mantpy.readthedocs.io/page/tutorials/loading-data.html
+publications:
+  - 10.1101/2025.06.04.657781
 install:
   pypi: mantpy
 primary_category: Spatial
