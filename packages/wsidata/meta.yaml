@@ -3,6 +3,7 @@ description: |
   wsidata is a data-structure for efficient IO of Whole Slide Images based on spatialdata.
 project_home: https://github.com/rendeirolab/wsidata
 documentation_home: https://wsidata.readthedocs.io/
+inventory: https://wsidata.readthedocs.io/en/stable/
 install:
   pypi: wsidata
 primary_category: Data structures

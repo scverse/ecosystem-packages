@@ -3,6 +3,7 @@ description: |
   Statistics for scverse
 project_home: https://github.com/scverse/stats
 documentation_home: https://scverse.org/stats/
+inventory: null
 primary_category: Infrastructure
 tags:
   - benchmarking

@@ -7,6 +7,7 @@ description: |
   on the Spotless benchmark, and preserves rare cell type detection through leverage-score weighted sampling.
 project_home: https://github.com/cafferychen777/flashdeconv
 documentation_home: https://github.com/cafferychen777/flashdeconv#readme
+inventory: null
 tutorials_home: https://github.com/cafferychen777/flashdeconv/tree/main/examples
 publications:
   - 10.64898/2025.12.22.696108
