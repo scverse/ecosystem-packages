@@ -5,11 +5,13 @@ project_home: https://github.com/rendeirolab/wsidata
 documentation_home: https://wsidata.readthedocs.io/
 install:
   pypi: wsidata
+primary_category: Data structures
 tags:
-  - Pathology
-  - Whole Slide Imaging
+  - imaging
+  - data structures
+  - file formats
 license: MIT
-version: v0.3.0
+language: Python
 contact:
   - Mr-Milk
   - eabila

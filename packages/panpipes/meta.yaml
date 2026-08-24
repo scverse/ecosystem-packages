@@ -5,17 +5,16 @@ project_home: https://github.com/DendrouLab/panpipes
 documentation_home: https://panpipes-pipelines.readthedocs.io/
 tutorials_home: https://panpipes-pipelines.readthedocs.io/page/tutorials/
 publications:
-  - 10.1101/2023.03.11.532085
+  - 10.1186/s13059-024-03322-7
 install:
   pypi: panpipes
+primary_category: Multimodal
 tags:
-  - single-cell
-  - multiomics
+  - spatial transcriptomics
+  - multimodal
   - pipeline
-  - spatial
-  - bioinformatics
 license: BSD-3-Clause
-version: v0.5.0
+language: Python
 contact:
   - bio-la
   - crichgriffin

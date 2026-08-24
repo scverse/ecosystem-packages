@@ -9,16 +9,13 @@ publications:
   - 10.1101/2025.06.25.661473
 install:
   conda: bioconda::scxmatch
+primary_category: scRNA-seq
 tags:
   - scRNA-seq
-  - single-cell
-  - python
-  - statistical testing
-  - distance-based matching
   - perturbation
-  - condition
+  - probabilistic modeling
 license: MIT
-version: v0.1.0
+language: Python
 contact:
   - annmoel
   - dbblumenthal

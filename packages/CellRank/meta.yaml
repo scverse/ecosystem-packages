@@ -10,13 +10,13 @@ publications:
   - 10.1038/s41592-021-01346-6
 install:
   pypi: cellrank
+primary_category: scRNA-seq
 tags:
-  - ML
-  - cell-fate
-  - rna-velocity
-  - trajectory-generation
+  - trajectory inference
+  - RNA velocity
+  - deep learning
 license: BSD-3-Clause
-version: v1.5.1
+language: Python
 contact:
   - Marius1311
   - michalk8

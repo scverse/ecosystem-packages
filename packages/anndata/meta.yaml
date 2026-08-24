@@ -4,19 +4,18 @@ description: |
   positioned between pandas and xarray. anndata offers a broad range of computationally
   efficient features including, among others, sparse data support, lazy operations, and GPU support.
 project_home: https://github.com/scverse/anndata
-documentation_home: https://anndata.readthedocs.io/
-tutorials_home: https://anndata.readthedocs.io/page/tutorials/
+documentation_home: https://anndata.scverse.org/
+tutorials_home: https://anndata.scverse.org/page/tutorials/
 publications:
-  - 10.1101/2021.12.16.473007
+  - 10.21105/joss.04371
 install:
   pypi: anndata
   conda: conda-forge::anndata
+primary_category: Data structures
 tags:
-  - data structure
-  - annotated data
-  - sparse data
+  - data structures
 license: BSD-3-Clause
-version: 0.12.4
+language: Python
 contact:
   - flying-sheep
   - ilan-gold
