@@ -47,6 +47,7 @@ How does the package use scverse data structures (please describe in a few sente
 - [ ] The package provides API documentation via a website or README[^3]
 - [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
 - [ ] I am an author or maintainer of the tool and agree on listing the package on the scverse website
+- [ ] Could you confirm you agree to abide by the scverse code of conduct on all scverse communication channels
 
 ### Recommended
 
