@@ -5,6 +5,7 @@ description: |
   with the main canvas under shared grouping, splitting and dendrogram-based reordering.
 project_home: https://github.com/Marsilea-viz/marsilea
 documentation_home: https://marsilea.readthedocs.io
+inventory: https://marsilea.readthedocs.io/en/stable/
 tutorials_home: https://marsilea.readthedocs.io/page/tutorial/index.html
 publications:
   - 10.1186/s13059-024-03469-3

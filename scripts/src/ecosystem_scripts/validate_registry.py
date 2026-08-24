@@ -80,6 +80,10 @@ class LinkChecker(HTTPValidator):
                 f"{url}\n->\n{new_url}"
             )
             raise ValidationError(msg)
+        await self.check_reachable(url, context)
+
+    async def check_reachable(self, url: str, context: str) -> None:
+        """Check that `url` is not a duplicate, answers 200, and register it."""
         if url in self.validated:
             msg = f"{self.name}:{context}: Duplicate link: {url}"
             raise ValidationError(msg)
@@ -96,6 +100,20 @@ class LinkChecker(HTTPValidator):
 
         self.validated.add(url)
         log.info(f"Validated {self.name} URL for {context}: {url!r}")
+
+
+@dataclass
+class InventoryChecker(LinkChecker):
+    """Check that the intersphinx inventory is served where `inventory` says it is.
+
+    Unlike the human-facing links, an inventory URL may legitimately name a version
+    (e.g. `.../en/stable/`) instead of using `/page/`, so the ReadTheDocs default-version rule
+    doesn't apply here.
+    """
+
+    @override
+    async def __call__(self, url: str, context: str) -> None:
+        await self.check_reachable(f"{url}objects.inv", context)
 
 
 @dataclass
@@ -363,6 +381,7 @@ class Checker:
         self.check_home = LinkChecker(self.client, name="home")
         self.check_docs = LinkChecker(self.client, name="docs")
         self.check_tutorial = LinkChecker(self.client, name="tutorial")
+        self.check_inventory = InventoryChecker(self.client, name="inventory")
 
         self.check_gh_users = GitHubUserValidator(self.client, self.github_token)
         self.check_pypi = PyPIValidator(self.client)
@@ -443,6 +462,8 @@ class Checker:
         yield self.check_docs(tmp_meta["documentation_home"], pkg_id)
         if url := tmp_meta.get("tutorials_home"):
             yield self.check_tutorial(url, pkg_id)
+        if url := tmp_meta.get("inventory"):
+            yield self.check_inventory(url, pkg_id)
 
         # Validate GitHub usernames in contact field
         if usernames := tmp_meta.get("contact"):

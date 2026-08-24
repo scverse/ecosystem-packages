@@ -7,6 +7,7 @@ description: |
   of single cells can be further used to study the communication of the single cells.
 project_home: https://github.com/linbuliao/SC2Spa
 documentation_home: https://sc2spa.readthedocs.io/
+inventory: https://sc2spa.readthedocs.io/en/latest/
 install:
   pypi: SC2Spa
 primary_category: Spatial

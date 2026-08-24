@@ -4,6 +4,7 @@ description: |
   from scratch of the main features of the R package DESeq2 (Love et al. 2014).
 project_home: https://github.com/scverse/PyDESeq2
 documentation_home: https://pydeseq2.readthedocs.io/
+inventory: https://pydeseq2.readthedocs.io/en/stable/
 tutorials_home: https://pydeseq2.readthedocs.io/page/auto_examples/
 install:
   pypi: pydeseq2

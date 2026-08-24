@@ -4,6 +4,7 @@ description: |
   RNA-seq count matrices.
 project_home: https://github.com/JonathanShor/DoubletDetection
 documentation_home: https://doubletdetection.readthedocs.io/
+inventory: https://doubletdetection.readthedocs.io/en/stable/
 tutorials_home: https://doubletdetection.readthedocs.io/
 publications:
   - 10.1016/j.cels.2019.03.003

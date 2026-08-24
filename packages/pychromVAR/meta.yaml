@@ -3,6 +3,7 @@ description: |
   A python pacakge for chromVAR.
 project_home: https://github.com/lzj1769/pychromVAR
 documentation_home: https://pychromvar.readthedocs.io/
+inventory: https://pychromvar.readthedocs.io/en/latest/
 tutorials_home: https://pychromvar.readthedocs.io/
 install:
   pypi: pychromvar

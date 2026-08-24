@@ -5,6 +5,7 @@ description: |
   and analyzes cellular responses to genetic modifications, drugs, and environmental changes.
 project_home: https://github.com/scverse/pertpy
 documentation_home: https://pertpy.readthedocs.io/
+inventory: https://pertpy.readthedocs.io/en/stable/
 tutorials_home: https://pertpy.readthedocs.io/page/tutorials.html
 publications:
   - 10.1038/s41592-025-02909-7

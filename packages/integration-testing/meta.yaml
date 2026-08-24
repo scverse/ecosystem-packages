@@ -3,6 +3,7 @@ description: |
   A repo for integration testing core packages against upstream core packages
 project_home: https://github.com/scverse/integration-testing
 documentation_home: https://github.com/scverse/integration-testing
+inventory: null
 primary_category: Infrastructure
 tags:
   - benchmarking

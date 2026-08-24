@@ -5,6 +5,7 @@ description: |
   functionality is achieved via HDF5-based .h5mu files with libraries in R and Julia.
 project_home: https://github.com/scverse/mudata
 documentation_home: https://mudata.readthedocs.io/
+inventory: https://mudata.readthedocs.io/stable/
 tutorials_home: https://mudata.readthedocs.io/page/notebooks/quickstart_mudata.html
 publications:
   - 10.1186/s13059-021-02577-8

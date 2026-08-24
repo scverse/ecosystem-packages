@@ -4,6 +4,7 @@ description: |
   drop-in replacement for scanpy, squidpy, and decoupler.
 project_home: https://github.com/scverse/rapids-singlecell
 documentation_home: https://rapids-singlecell.readthedocs.io/
+inventory: https://rapids-singlecell.readthedocs.io/en/latest/
 tutorials_home: https://rapids-singlecell.readthedocs.io/page/tutorials.html
 install:
   pypi: rapids-singlecell

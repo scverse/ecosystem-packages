@@ -3,6 +3,7 @@ description: |
   Spatial alignment and gene expression mapping of single cell transcriptomic data.
 project_home: https://github.com/broadinstitute/Tangram
 documentation_home: https://tangram-sc.readthedocs.io/
+inventory: https://tangram-sc.readthedocs.io/en/latest/
 tutorials_home: https://tangram-sc.readthedocs.io/page/tutorials.html
 publications:
   - 10.1038/s41592-021-01264-7

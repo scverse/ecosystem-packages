@@ -4,6 +4,7 @@ description:
   By integrating transcriptional and chromatin accessibility information within a unified representation, ATLAS enables pseudotime reconstruction and cell fate prediction that directly incorporate regulatory dynamics.
 project_home: https://github.com/smilies-polito/atlas-smilies
 documentation_home: https://atlas-smilies.readthedocs.io/
+inventory: https://atlas-smilies.readthedocs.io/en/latest/
 tutorials_home: https://atlas-smilies.readthedocs.io/
 install:
   pypi: atlas-smilies

@@ -2,6 +2,7 @@ name: PEAKQC
 description: periodicity evaluation in scATAC-seq data for quality assessment
 project_home: https://github.com/loosolab/PEAKQC
 documentation_home: https://loosolab.pages.gwdg.de/software/peakqc/
+inventory: https://loosolab.pages.gwdg.de/software/peakqc/
 publications:
   - 10.1093/bib/bbaf465
 install:

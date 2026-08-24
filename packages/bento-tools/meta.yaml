@@ -3,6 +3,7 @@ description: |
   A Python toolkit for subcellular analysis of spatial transcriptomics data
 project_home: https://github.com/ckmah/bento-tools
 documentation_home: https://bento-tools.readthedocs.io/
+inventory: https://bento-tools.readthedocs.io/en/latest/
 tutorials_home: https://bento-tools.readthedocs.io/page/tutorials.html
 publications:
   - 10.1186/s13059-024-03217-7

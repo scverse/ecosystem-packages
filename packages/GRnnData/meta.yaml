@@ -4,6 +4,7 @@ description: |
   Allows easy conversion between anndata and grnndata and provide loads of useful utilities functions.
 project_home: https://github.com/cantinilab/GRnnData
 documentation_home: https://cantinilab.github.io/GRnnData/
+inventory: https://cantinilab.github.io/GRnnData/
 publications:
   - 10.1038/s41467-025-58699-1
 install:

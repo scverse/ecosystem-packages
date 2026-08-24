@@ -3,6 +3,7 @@ description: |
   Python package to mix-and-match conflicting clustering results in single cell analysis and generate reconciled clustering solutions
 project_home: https://github.com/frankligy/scTriangulate
 documentation_home: https://sctriangulate.readthedocs.io/page/get_started.html
+inventory: https://sctriangulate.readthedocs.io/en/latest/
 tutorials_home: https://sctriangulate.readthedocs.io/page/tutorial.html
 publications:
   - 10.1038/s41467-023-36016-y

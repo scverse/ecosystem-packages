@@ -4,6 +4,7 @@ description: |
   directly from single-cell RNA sequencing (scRNA-seq), without paired T-cell receptor (TCR) sequencing.
 project_home: https://github.com/yizhak-lab-ccg/scXpand
 documentation_home: https://scxpand.readthedocs.io/
+inventory: https://scxpand.readthedocs.io/en/latest/
 tutorials_home: https://scxpand.readthedocs.io/
 publications:
   - 10.1101/2025.09.14.676069

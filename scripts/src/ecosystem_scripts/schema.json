@@ -29,6 +29,12 @@
             "type": "string",
             "format": "uri"
         },
+        "inventory": {
+            "description": "Root URL (with trailing slash) under which the package's Sphinx `objects.inv` is served, so other scverse docs can `intersphinx` to it. Unlike documentation_home (a link for humans) it must be a documentation root, which on ReadTheDocs means either `https://<domain>/page/` or a concrete version like `https://<domain>/en/stable/`. Use null if the package publishes no inventory. Required for Python packages, forbidden for others.",
+            "type": ["string", "null"],
+            "format": "uri",
+            "pattern": "^https://.*/$"
+        },
         "install": {
             "type": "object",
             "properties": {
@@ -318,16 +324,58 @@
         "language",
         "category"
     ],
-    "if": {
-        "not": {
-            "properties": {
-                "category": {
-                    "const": "core-infrastructure"
+    "allOf": [
+        {
+            "if": {
+                "not": {
+                    "properties": {
+                        "category": {
+                            "const": "core-infrastructure"
+                        }
+                    }
+                }
+            },
+            "then": {
+                "required": ["install"]
+            }
+        },
+        {
+            "comment": "Only Python packages can be intersphinx targets, so only they carry `inventory` (null if they publish none).",
+            "if": {
+                "properties": {
+                    "language": {
+                        "const": "Python"
+                    }
+                },
+                "required": ["language"]
+            },
+            "then": {
+                "required": ["inventory"]
+            },
+            "else": {
+                "not": {
+                    "required": ["inventory"]
+                }
+            }
+        },
+        {
+            "comment": "ReadTheDocs always serves an inventory, so `null` there means the URL is wrong rather than that there is nothing to link to.",
+            "if": {
+                "properties": {
+                    "documentation_home": {
+                        "pattern": "^https?://[^/]*\\.readthedocs(\\.io|-hosted\\.com)(/|$)"
+                    }
+                },
+                "required": ["documentation_home"]
+            },
+            "then": {
+                "required": ["inventory"],
+                "properties": {
+                    "inventory": {
+                        "type": "string"
+                    }
                 }
             }
         }
-    },
-    "then": {
-        "required": ["install"]
-    }
+    ]
 }

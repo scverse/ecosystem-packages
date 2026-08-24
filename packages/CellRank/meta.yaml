@@ -5,6 +5,7 @@ description: |
   hypothesis based on these.
 project_home: https://github.com/theislab/cellrank
 documentation_home: https://cellrank.readthedocs.io/
+inventory: https://cellrank.readthedocs.io/en/latest/
 tutorials_home: https://cellrank.readthedocs.io/
 publications:
   - 10.1038/s41592-021-01346-6

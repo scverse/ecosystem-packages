@@ -6,6 +6,7 @@ description: |
   couple of functions for visualization.
 project_home: https://github.com/zktuong/dandelion
 documentation_home: https://sc-dandelion.readthedocs.io/
+inventory: https://sc-dandelion.readthedocs.io/en/latest/
 tutorials_home: https://sc-dandelion.readthedocs.io/
 publications:
   - 10.1038/s41591-021-01329-2

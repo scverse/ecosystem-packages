@@ -4,6 +4,7 @@ description: |
   Zero-shot spatial domain inference, batch-effect correction, and many other features.
 project_home: https://github.com/prism-oncology/novae
 documentation_home: https://prism-oncology.github.io/novae/
+inventory: https://prism-oncology.github.io/novae/
 publications:
   - 10.1038/s41592-025-02899-6
 install:

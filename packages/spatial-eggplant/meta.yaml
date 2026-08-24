@@ -3,6 +3,7 @@ description: |
   Python package designed to transfer information from multiple spatial-transcriptomics data sets to a single reference representing a Common Coordinate Framework (CCF).
 project_home: https://github.com/almaan/eggplant
 documentation_home: https://spatial-eggplant.readthedocs.io/
+inventory: https://spatial-eggplant.readthedocs.io/en/latest/
 tutorials_home: https://spatial-eggplant.readthedocs.io/
 publications:
   - 10.1101/2021.11.11.468178

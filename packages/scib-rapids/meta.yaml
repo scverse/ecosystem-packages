@@ -4,6 +4,7 @@ description: |
   as a drop-in replacement for the JAX-based metrics in scib-metrics.
 project_home: https://github.com/maarten-devries/scib-rapids
 documentation_home: https://scib-rapids.readthedocs.io/
+inventory: https://scib-rapids.readthedocs.io/en/latest/
 install:
   pypi: scib-rapids
 primary_category: scRNA-seq

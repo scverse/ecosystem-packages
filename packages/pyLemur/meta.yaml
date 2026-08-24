@@ -3,6 +3,7 @@ description: |
   Python implementation of the LEMUR algorithm for analyzing multi-condition single-cell RNA-seq data..
 project_home: https://github.com/const-ae/pyLemur
 documentation_home: https://pyLemur.readthedocs.io/
+inventory: https://pylemur.readthedocs.io/en/latest/
 tutorials_home: https://pylemur.readthedocs.io/page/notebooks/Tutorial.html
 publications:
   - 10.1038/s41588-024-01996-0

@@ -3,6 +3,7 @@ description: |
   Sobolev alignment of deep probabilistic models for comparing single cell profiles from pre-clinical models and patients
 project_home: https://github.com/NKI-CCB/sobolev_alignment
 documentation_home: https://sobolev-alignment.readthedocs.io/
+inventory: https://sobolev-alignment.readthedocs.io/en/latest/
 publications:
   - 10.1101/2022.03.08.483431
 install:

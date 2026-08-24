@@ -5,6 +5,7 @@ description: |
   so we changed the name to OmicVerse, it aimed to solve all task in RNA-seq.
 project_home: https://github.com/Starlitnightly/omicverse
 documentation_home: https://omicverse.readthedocs.io/
+inventory: https://omicverse.readthedocs.io/en/latest/
 publications:
   - 10.1038/s41467-024-50194-3
 install:
