@@ -5,7 +5,6 @@ description: |
   can be used for debarcoding or population discovery.
 project_home: https://github.com/prism-oncology/scyan
 documentation_home: https://prism-oncology.github.io/scyan/
-inventory: https://prism-oncology.github.io/scyan/
 tutorials_home: https://prism-oncology.github.io/scyan/tutorials/usage/
 publications:
   - 10.1093/bib/bbad260

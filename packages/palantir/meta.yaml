@@ -9,7 +9,6 @@ description: |
   diverse technologies such as Mass cytometry and single cell RNA-seq.
 project_home: https://github.com/dpeerlab/Palantir
 documentation_home: https://palantir.readthedocs.io/
-inventory: https://palantir.readthedocs.io/en/latest/
 publications:
   - 10.1038/s41587-019-0068-4
 install:

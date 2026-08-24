@@ -4,7 +4,6 @@ description: |
   DNA methylation (for example scBS-seq) data.
 project_home: https://github.com/colomemaria/epiScanpy
 documentation_home: https://episcanpy.readthedocs.io/
-inventory: https://episcanpy.readthedocs.io/en/latest/
 tutorials_home: https://episcanpy.readthedocs.io/
 publications:
   - 10.1038/s41467-021-25131-3

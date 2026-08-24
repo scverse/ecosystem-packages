@@ -4,7 +4,6 @@ description: |
   2D/3D spatial image views, genome browser tracks, statistical plots, and control views, built on web technologies such as WebGL and WebXR.
 project_home: https://github.com/vitessce/vitessce
 documentation_home: https://vitessce.github.io/vitessce-python/
-inventory: https://vitessce.github.io/vitessce-python/
 tutorials_home: https://github.com/vitessce/vitessce/tree/main/examples
 publications:
   - 10.1038/s41592-024-02436-x

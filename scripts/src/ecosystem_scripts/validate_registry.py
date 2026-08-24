@@ -80,10 +80,6 @@ class LinkChecker(HTTPValidator):
                 f"{url}\n->\n{new_url}"
             )
             raise ValidationError(msg)
-        await self.check_reachable(url, context)
-
-    async def check_reachable(self, url: str, context: str) -> None:
-        """Check that `url` is not a duplicate, answers 200, and register it."""
         if url in self.validated:
             msg = f"{self.name}:{context}: Duplicate link: {url}"
             raise ValidationError(msg)
@@ -102,18 +98,62 @@ class LinkChecker(HTTPValidator):
         log.info(f"Validated {self.name} URL for {context}: {url!r}")
 
 
-@dataclass
-class InventoryChecker(LinkChecker):
-    """Check that the intersphinx inventory is served where `inventory` says it is.
+RE_RTD_DOMAIN = re.compile(r"https?://(?P<domain>[^/]+\.(?:readthedocs\.io|rtfd\.io|readthedocs-hosted\.com))(?:/|$)")
 
-    Unlike the human-facing links, an inventory URL may legitimately name a version
-    (e.g. `.../en/stable/`) instead of using `/page/`, so the ReadTheDocs default-version rule
-    doesn't apply here.
+
+def inventory_candidates(meta: ScverseEcosystemPackages) -> list[str]:
+    """Where to look for a package's `objects.inv`, most likely location first.
+
+    Empty for a package that has none to look for: one in another language, or one whose `inventory`
+    is explicitly null.
+    A set `inventory` is taken as given, an absent one is guessed from `documentation_home`:
+
+    - On a recognizable ReadTheDocs domain, `/page/` redirects to the default version's inventory,
+      so the docs link's own path is irrelevant.
+    - Otherwise the docs link is assumed to be the documentation root, falling back to `/page/` on
+      the bare domain: ReadTheDocs serves a custom domain from its root, redirect included, so that
+      is the only place such a redirect can be.
     """
+    if meta.get("language") != "Python":
+        return []
+    if inventory := meta.get("inventory"):
+        return [f"{inventory}objects.inv"]
+    if "inventory" in meta:  # explicitly null: the package publishes none
+        return []
+    if m := RE_RTD_DOMAIN.match(docs_home := meta["documentation_home"]):
+        return [f"https://{m['domain']}/page/objects.inv"]
+    # A fragment or query is never part of a path, and appending to one would request the bare page.
+    root = re.split(r"[#?]", docs_home)[0].rstrip("/")
+    origin = "/".join(root.split("/", 3)[:3])
+    return [f"{root}/objects.inv", f"{origin}/page/objects.inv"]
 
-    @override
-    async def __call__(self, url: str, context: str) -> None:
-        await self.check_reachable(f"{url}objects.inv", context)
+
+@dataclass
+class InventoryChecker(HTTPValidator):
+    """Resolve where each package serves its intersphinx inventory, and check that it is there."""
+
+    roots: dict[str, str] = field(default_factory=dict)
+
+    async def __call__(self, candidates: Sequence[str], context: str) -> None:
+        """Record the root under which the first reachable candidate `objects.inv` is served."""
+        for url in candidates:
+            try:
+                response = await self.client.head(url)
+            except Exception as e:
+                log.debug(f"inventory:{context}: {url} is not reachable: {e}")
+                continue
+            if response.status_code == httpx.codes.OK:
+                # `/page/` redirects to whichever version the project currently serves, so follow it.
+                # Any other URL is kept as written, or a redirect stub could downgrade it to http://.
+                resolved = str(response.url) if url.endswith("/page/objects.inv") else url
+                self.roots[context] = resolved.removesuffix("objects.inv")
+                log.info(f"Validated inventory URL for {context}: {self.roots[context]!r}")
+                return
+        msg = (
+            f"inventory:{context}: No inventory found at {', '.join(candidates)}. "
+            "Set `inventory` to the URL your `objects.inv` is served under, or to `null` if there is none."
+        )
+        raise ValidationError(msg)
 
 
 @dataclass
@@ -381,7 +421,7 @@ class Checker:
         self.check_home = LinkChecker(self.client, name="home")
         self.check_docs = LinkChecker(self.client, name="docs")
         self.check_tutorial = LinkChecker(self.client, name="tutorial")
-        self.check_inventory = InventoryChecker(self.client, name="inventory")
+        self.check_inventory = InventoryChecker(self.client)
 
         self.check_gh_users = GitHubUserValidator(self.client, self.github_token)
         self.check_pypi = PyPIValidator(self.client)
@@ -439,6 +479,9 @@ class Checker:
 
         if version := self.released_version(tmp_meta):
             tmp_meta["version"] = version
+        # Publish a concrete inventory URL even where meta.yaml leaves it to be derived.
+        if root := self.check_inventory.roots.get(pkg_id):
+            tmp_meta["inventory"] = root
 
         return pkg_id, tmp_meta, pkg_errors
 
@@ -462,8 +505,8 @@ class Checker:
         yield self.check_docs(tmp_meta["documentation_home"], pkg_id)
         if url := tmp_meta.get("tutorials_home"):
             yield self.check_tutorial(url, pkg_id)
-        if url := tmp_meta.get("inventory"):
-            yield self.check_inventory(url, pkg_id)
+        if candidates := inventory_candidates(tmp_meta):
+            yield self.check_inventory(candidates, pkg_id)
 
         # Validate GitHub usernames in contact field
         if usernames := tmp_meta.get("contact"):

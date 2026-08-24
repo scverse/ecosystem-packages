@@ -4,7 +4,6 @@ description: |
   GPTBioInsightor utilizes the powerful capabilities of large language models to help people quickly gain knowledge and insight, enhancing their work efficiency.
 project_home: https://github.com/huang-sh/GPTBioInsightor
 documentation_home: https://gptbioinsightor.readthedocs.io/
-inventory: https://gptbioinsightor.readthedocs.io/en/latest/
 install:
   pypi: gptbioinsightor
 primary_category: scRNA-seq

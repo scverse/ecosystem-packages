@@ -3,7 +3,6 @@ description: |
   p(opular)V(oting) is a consensus tool for transfering labels from an annotated reference dataset to an unannotated query dataset. Consensus calling allows interpretable scores that quantify certainty.
 project_home: https://github.com/YosefLab/popV
 documentation_home: https://popv.readthedocs.io/
-inventory: https://popv.readthedocs.io/en/latest/
 install:
   pypi: popv
 primary_category: scRNA-seq

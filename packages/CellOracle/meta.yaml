@@ -4,7 +4,6 @@ description: |
   to infer gene regulatory networks (GRNs), critical regulators of cell identity.
 project_home: https://github.com/morris-lab/CellOracle
 documentation_home: https://morris-lab.github.io/CellOracle.documentation/
-inventory: https://morris-lab.github.io/CellOracle.documentation/
 tutorials_home: https://morris-lab.github.io/CellOracle.documentation/
 publications:
   - 10.1038/s41586-022-05688-9

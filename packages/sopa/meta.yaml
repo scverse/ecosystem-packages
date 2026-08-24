@@ -5,7 +5,6 @@ description: |
   spatial statistics, and efficient visualization.
 project_home: https://github.com/prism-oncology/sopa
 documentation_home: https://prism-oncology.github.io/sopa/
-inventory: https://prism-oncology.github.io/sopa/
 publications:
   - 10.1038/s41467-024-48981-z
 install:

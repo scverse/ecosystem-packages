@@ -4,7 +4,6 @@ description: |
   biologically driven scores from omics data within a unified framework.
 project_home: https://github.com/scverse/decoupler
 documentation_home: https://decoupler.readthedocs.io/
-inventory: https://decoupler.readthedocs.io/en/latest/
 tutorials_home: https://decoupler.readthedocs.io/page/notebooks/
 publications:
   - 10.1093/bioadv/vbac016

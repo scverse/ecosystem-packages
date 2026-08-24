@@ -30,7 +30,7 @@
             "format": "uri"
         },
         "inventory": {
-            "description": "Root URL (with trailing slash) under which the package's Sphinx `objects.inv` is served, so other scverse docs can `intersphinx` to it. Unlike documentation_home (a link for humans) it must be a documentation root, which on ReadTheDocs means either `https://<domain>/page/` or a concrete version like `https://<domain>/en/stable/`. Use null if the package publishes no inventory. Required for Python packages, forbidden for others.",
+            "description": "Root URL (with trailing slash) under which the package's Sphinx `objects.inv` is served, so other docs can `intersphinx` to it. Python-only. Omit it to have it derived from documentation_home at build time, which is what almost every package wants; only set it where that fails, e.g. to pin `https://<domain>/en/stable/` instead of the default version. Use null if the package publishes no inventory.",
             "type": ["string", "null"],
             "format": "uri",
             "pattern": "^https://.*/$"
@@ -340,7 +340,7 @@
             }
         },
         {
-            "comment": "Only Python packages can be intersphinx targets, so only they carry `inventory` (null if they publish none).",
+            "comment": "Only Python packages can be intersphinx targets, so only they carry `inventory`.",
             "if": {
                 "properties": {
                     "language": {
@@ -349,9 +349,6 @@
                 },
                 "required": ["language"]
             },
-            "then": {
-                "required": ["inventory"]
-            },
             "else": {
                 "not": {
                     "required": ["inventory"]
@@ -359,7 +356,7 @@
             }
         },
         {
-            "comment": "ReadTheDocs always serves an inventory, so `null` there means the URL is wrong rather than that there is nothing to link to.",
+            "comment": "ReadTheDocs always serves an inventory, so `null` there means the docs URL is wrong rather than that there is nothing to link to.",
             "if": {
                 "properties": {
                     "documentation_home": {
@@ -369,7 +366,6 @@
                 "required": ["documentation_home"]
             },
             "then": {
-                "required": ["inventory"],
                 "properties": {
                     "inventory": {
                         "type": "string"

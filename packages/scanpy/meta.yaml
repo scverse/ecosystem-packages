@@ -6,7 +6,6 @@ description: |
   with datasets of more than one million cells.
 project_home: https://github.com/scverse/scanpy
 documentation_home: https://scanpy.scverse.org/
-inventory: https://scanpy.scverse.org/en/stable/
 tutorials_home: https://scanpy.scverse.org/page/tutorials.html
 publications:
   - 10.1186/s13059-017-1382-0

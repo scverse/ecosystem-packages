@@ -3,7 +3,6 @@ description: |
   Hotspot is a tool for identifying informative genes (and gene modules) in a single-cell dataset.
 project_home: https://github.com/yoseflab/hotspot
 documentation_home: https://hotspot.readthedocs.io/
-inventory: https://hotspot.readthedocs.io/en/latest/
 tutorials_home: https://hotspot.readthedocs.io/
 publications:
   - 10.1016/j.cels.2021.04.005

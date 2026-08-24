@@ -3,7 +3,7 @@ description: |
   LazySlide is a Python library for processing whole slide images (WSI) analysis. It provides a simple interface to perform robust preprocessing and advanced analysis for WSI.
 project_home: https://github.com/rendeirolab/lazyslide
 documentation_home: https://lazyslide.readthedocs.io/
-inventory: https://lazyslide.readthedocs.io/en/latest/
+inventory: https://lazyslide.readthedocs.io/en/stable/
 install:
   pypi: lazyslide
 primary_category: Imaging

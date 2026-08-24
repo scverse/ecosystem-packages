@@ -4,7 +4,6 @@ description: |
   uncertainty scores and soft clustering outputs for enhanced interpretability.
 project_home: https://github.com/zunderlab/eschr
 documentation_home: https://eschr.readthedocs.io/
-inventory: https://eschr.readthedocs.io/en/latest/
 tutorials_home: https://eschr.readthedocs.io/page/notebooks/paul15_mouse_hematopoiesis.html
 publications:
   - 10.1186/s13059-024-03386-5

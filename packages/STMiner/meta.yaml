@@ -3,7 +3,6 @@ description: |
   Gene-centric spatial transcriptomics for deciphering complex spatial omics data
 project_home: https://github.com/xjtu-omics/STMiner
 documentation_home: https://stminerdoc.readthedocs.io/
-inventory: https://stminerdoc.readthedocs.io/en/latest/
 install:
   pypi: stminer
 primary_category: Spatial

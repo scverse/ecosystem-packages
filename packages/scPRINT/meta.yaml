@@ -3,7 +3,6 @@ description: |
   A single cell foundation model for Gene network inference and more...
 project_home: https://github.com/cantinilab/scPRINT
 documentation_home: https://cantinilab.github.io/scPRINT/
-inventory: https://cantinilab.github.io/scPRINT/
 publications:
   - 10.1038/s41467-025-58699-1
 install:

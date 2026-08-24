@@ -3,7 +3,6 @@ description: |
   Read/write functions to and from spatialdata for Deep Visual Proteomics
 project_home: https://github.com/MannLabs/dvp-io.git
 documentation_home: https://dvp-io.readthedocs.io
-inventory: https://dvp-io.readthedocs.io/en/latest/
 tutorials_home: https://dvp-io.readthedocs.io/page/tutorials.html
 install:
   pypi: dvp-io
