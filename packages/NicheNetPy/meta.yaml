@@ -12,9 +12,10 @@ install:
   pypi: nichenetpy
 license: BSD-3-Clause
 tags:
-  - python
-  - cell-cell-communication
-  - intercellular-communication
+  - cell-cell communication
+  - scRNA-seq
+primary_category: scRNA-seq
+language: Python
 publications:
   - 10.1038/s41592-019-0667-5
 version: 1.0.0
