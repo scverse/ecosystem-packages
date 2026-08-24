@@ -5,6 +5,7 @@ description: |
   efficient features including, among others, sparse data support, lazy operations, and GPU support.
 project_home: https://github.com/scverse/anndata
 documentation_home: https://anndata.scverse.org/
+inventory: https://anndata.scverse.org/page/
 tutorials_home: https://anndata.scverse.org/page/tutorials/
 publications:
   - 10.21105/joss.04371

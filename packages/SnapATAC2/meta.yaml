@@ -4,8 +4,8 @@ description: |
   enabling efficient preprocessing, dimensionality reduction, clustering, and integration
   with single-cell RNA-seq.
 project_home: https://github.com/scverse/SnapATAC2
-documentation_home: https://scverse.org/SnapATAC2/
-tutorials_home: https://scverse.org/SnapATAC2/tutorials/
+documentation_home: https://snapatac2.scverse.org/
+tutorials_home: https://snapatac2.scverse.org/tutorials/
 publications:
   - 10.1038/s41592-023-02139-9
 install:

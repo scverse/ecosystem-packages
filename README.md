@@ -57,7 +57,8 @@ If none of the existing terms fit your package, add one to the enum in your pull
 It is read from PyPI, conda, CRAN or Bioconductor when the registry is built, and refreshed daily, so it always reflects the latest release.
 
 `inventory` is your [intersphinx](https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html) URL, so other project docs can cross-link into yours.
-It is Python-only, and derived from `documentation_home` unless you set it – so set it only to override that, e.g. to pin `stable` where we would find the default version.
+It is Python-only, and derived from `documentation_home` unless you set it – so set it only where that fails or you want to override it.
+It fails if you host on ReadTheDocs under your own domain, which is indistinguishable from any other static host: set `inventory: https://<your-domain>/page/` there, which stays on whichever version you serve by default.
 Use `null` if you only have a README instead of using Sphinx or a MkDocs variant and therefore have no `objects.inv` – we assume you have one when you host on ReadTheDocs.
 
 ## What are the requirements for an ecosystem package?

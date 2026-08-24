@@ -30,7 +30,7 @@
             "format": "uri"
         },
         "inventory": {
-            "description": "Root URL (with trailing slash) under which the package's Sphinx `objects.inv` is served, so other docs can `intersphinx` to it. Python-only. Omit it to have it derived from documentation_home at build time, which is what almost every package wants; only set it where that fails, e.g. to pin `https://<domain>/en/stable/` instead of the default version. Use null if the package publishes no inventory.",
+            "description": "Root URL (with trailing slash) under which the package's Sphinx `objects.inv` is served, so other docs can `intersphinx` to it. Python-only. Omit it to have it derived from documentation_home at build time, which is what almost every package wants; set it where that fails or to override it: `https://<domain>/page/` for ReadTheDocs under a custom domain (indistinguishable from any other static host), or `https://<domain>/en/stable/` to pin a version instead of the default one. Use null if the package publishes no inventory.",
             "type": ["string", "null"],
             "format": "uri",
             "pattern": "^https://.*/$"
