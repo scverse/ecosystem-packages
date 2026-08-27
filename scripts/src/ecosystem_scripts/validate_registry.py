@@ -36,6 +36,7 @@ if TYPE_CHECKING:
 # Constants
 HERE = Path(__file__).parent
 IMAGE_SIZE = 512
+CORE_ORDER_CATEGORIES = frozenset({"core-datastructure", "core-framework"})
 
 
 class ValidationError(Exception):
@@ -392,6 +393,23 @@ class DomainBasedRateLimiterRepository(AbstractRateLimiterRepository):
         return AiolimiterAsyncLimiter.create(Rate.create(magnitude=25))
 
 
+def core_ranks(
+    order_file: Path, pkgs: Mapping[str, ScverseEcosystemPackages]
+) -> tuple[Mapping[str, int], Sequence[ValidationError]]:
+    """Rank core packages by their position in `core-order.yml`, checking it lists exactly them."""
+    order: Sequence[str] = yaml.safe_load(order_file.read_text())
+    core = {pkg_id for pkg_id, meta in pkgs.items() if meta.get("category") in CORE_ORDER_CATEGORIES}
+    errors = [
+        ValidationError(f"{order_file.name}: {sorted(wrong)} {problem}")
+        for problem, wrong in [
+            ("are core packages but unlisted; add them where they should appear", core - set(order)),
+            ("are listed but not core packages", set(order) - core),
+        ]
+        if wrong
+    ]
+    return {pkg_id: i for i, pkg_id in enumerate(order)}, errors
+
+
 @dataclass
 class Checker:
     schema_file: Traversable
@@ -401,6 +419,7 @@ class Checker:
 
     def __post_init__(self) -> None:
         self.schema = json.loads(self.schema_file.read_bytes())
+        self.core_order_file = self.registry_dir.parent / "core-order.yml"
 
         # Create HTTP client with retry configuration using httpx_retries transport
         transport: httpx.AsyncBaseTransport = AsyncMultiRateLimitedTransport.create(
@@ -432,8 +451,8 @@ class Checker:
     async def validate_packages(self) -> tuple[Mapping[str, Sequence[Exception]], Sequence[ScverseEcosystemPackages]]:
         """Find all package `meta.yaml` files in the registry dir and yield package records."""
 
-        errors: dict[str, list[ValidationError]] = {}
-        package_metadata: list[ScverseEcosystemPackages] = []
+        errors: dict[str, Sequence[ValidationError]] = {}
+        pkgs: dict[str, ScverseEcosystemPackages] = {}
 
         async with self.client:
             async for check in asyncio.as_completed(
@@ -442,9 +461,14 @@ class Checker:
             ):
                 pkg_id, tmp_meta, pkg_errors = await check
                 errors[pkg_id] = pkg_errors
-                package_metadata.append(tmp_meta)
+                pkgs[pkg_id] = tmp_meta
 
-        return errors, package_metadata
+        # order: first core packages by `core-order.yml`, then ecosystem packages alphabetically
+        ranks, errors[self.core_order_file.name] = core_ranks(self.core_order_file, pkgs)
+        for e in errors[self.core_order_file.name]:
+            log.error(e)
+        order = sorted(pkgs, key=lambda p: (ranks.get(p, len(ranks)), p.casefold(), p))
+        return errors, [pkgs[pkg_id] for pkg_id in order]
 
     async def check_package(self, meta_file: Path) -> tuple[str, ScverseEcosystemPackages, list[ValidationError]]:
         pkg_id = meta_file.parent.name

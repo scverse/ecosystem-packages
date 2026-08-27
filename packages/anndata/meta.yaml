@@ -1,4 +1,5 @@
 name: AnnData
+blurb: Standard for annotated matrices
 description: |
   anndata is a Python package for handling annotated data matrices in memory and on disk,
   positioned between pandas and xarray. anndata offers a broad range of computationally

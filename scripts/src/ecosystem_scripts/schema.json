@@ -14,6 +14,12 @@
             "description": "Summary of the purpose of the package (1-2 sentences).",
             "type": "string"
         },
+        "blurb": {
+            "description": "Tagline shown next to the package name in listings, e.g. \"Standard for annotated matrices\". A noun phrase, no trailing period. Required for core frameworks and data structures.",
+            "type": "string",
+            "maxLength": 60,
+            "pattern": "[^.]$"
+        },
         "project_home": {
             "description": "Link to the source code of the project (Usually a GitHub project page)",
             "type": "string",
@@ -337,6 +343,20 @@
             },
             "then": {
                 "required": ["install"]
+            }
+        },
+        {
+            "comment": "Core frameworks and data structures are listed with their blurb on scverse.org.",
+            "if": {
+                "properties": {
+                    "category": {
+                        "enum": ["core-framework", "core-datastructure"]
+                    }
+                },
+                "required": ["category"]
+            },
+            "then": {
+                "required": ["blurb"]
             }
         },
         {
