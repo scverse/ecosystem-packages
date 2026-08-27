@@ -1,4 +1,5 @@
 name: scvi-tools
+blurb: Single-cell machine learning framework
 description: |
   scvi-tools is a library for developing and deploying machine learning models based on
   PyTorch and AnnData. With an emphasis on probabilistic models, scvi-tools streamlines

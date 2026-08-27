@@ -1,4 +1,5 @@
 name: SnapATAC2
+blurb: Single-cell ATAC analysis framework
 description: |
   SnapATAC2 is a scalable and modular pipeline for analyzing single-cell ATAC-seq data,
   enabling efficient preprocessing, dimensionality reduction, clustering, and integration
