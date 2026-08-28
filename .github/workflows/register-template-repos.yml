@@ -10,7 +10,7 @@ jobs:
   register-template-repos:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.BOT_GH_TOKEN }}
       - name: Install uv
@@ -21,7 +21,7 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.BOT_GH_TOKEN }}"
           FORCE_COLOR: "1"
           COLUMNS: "150"
-      - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@v11
         with:
           add: ./template-repos.yml
           author_name: scverse-bot
