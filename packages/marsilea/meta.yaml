@@ -1,0 +1,23 @@
+name: Marsilea
+description: |
+  Marsilea is a declarative visualization library for composing complex, multi-panel figures
+  such as annotated heatmaps, oncoprints and UpSet plots, where every side plot stays aligned
+  with the main canvas under shared grouping, splitting and dendrogram-based reordering.
+project_home: https://github.com/Marsilea-viz/marsilea
+documentation_home: https://marsilea.readthedocs.io
+tutorials_home: https://marsilea.readthedocs.io/page/tutorial/index.html
+publications:
+  - 10.1186/s13059-024-03469-3
+install:
+  pypi: marsilea
+  conda: conda-forge::marsilea
+primary_category: Infrastructure
+tags:
+  - visualization
+license: MIT
+language: Python
+contact:
+  - Mr-Milk
+logo: logo.svg
+test_command: uv sync --dev && uv run pytest tests/
+category: ecosystem

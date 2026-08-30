@@ -1,18 +1,28 @@
 name: wsidata
 description: |
-  wsidata is a data-structure for efficient IO of Whole Slide Images based on spatialdata.
+  wsidata provides data structures and IO for whole slide image (WSI) analysis, built on SpatialData.
+  A single WSIData object holds the multi-resolution slide, tissue and tile geometries, and derived
+  features, so WSIs can be handled with the same tooling as other scverse data.
 project_home: https://github.com/rendeirolab/wsidata
 documentation_home: https://wsidata.readthedocs.io/
+tutorials_home: https://wsidata.readthedocs.io/page/intro/index.html
+publications:
+  - 10.1038/s41592-026-03044-7
 install:
   pypi: wsidata
+  conda: conda-forge::wsidata
+primary_category: Data structures
 tags:
-  - Pathology
-  - Whole Slide Imaging
+  - imaging
+  - data structures
+  - file formats
+  - interoperability
 license: MIT
-version: v0.3.0
+language: Python
 contact:
   - Mr-Milk
   - eabila
   - afrendeiro
+logo: logo.svg
 test_command: uv run task test
 category: ecosystem

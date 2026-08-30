@@ -4,18 +4,20 @@ description: |
   large-scale scRNA-seq (and proteomics) data.
 project_home: https://github.com/mikelkou/fava
 documentation_home: https://github.com/mikelkou/fava/blob/main/README.md
+inventory: null
 tutorials_home: https://github.com/mikelkou/fava/blob/main/How_to_use_favapy_in_a_notebook.ipynb
 publications:
   - 10.1101/2022.07.06.499022
   - 10.1093/nar/gkac1000
 install:
   pypi: favapy
+primary_category: scRNA-seq
 tags:
-  - coexpression networks
-  - functional associations
-  - variational autoencoders
+  - gene regulatory networks
+  - dimensionality reduction
+  - deep learning
 license: MIT
-version: v0.3.9.4
+language: Python
 contact:
   - mikelkou
 category: ecosystem

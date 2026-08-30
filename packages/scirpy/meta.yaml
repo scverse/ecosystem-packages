@@ -1,4 +1,5 @@
 name: Scirpy
+blurb: Single-cell immune sequencing analysis framework
 description: |
   Scirpy is a scalable toolkit to analyse T-cell receptor or B-cell receptor repertoires
   from single-cell RNA sequencing data. It seamlessly integrates with scanpy and provides
@@ -11,13 +12,11 @@ publications:
 install:
   pypi: scirpy
   conda: bioconda::scirpy
+primary_category: Adaptive immune cell receptor
 tags:
   - immune receptor
-  - TCR
-  - BCR
-  - AIRR
 license: BSD-3-Clause
-version: 0.22.3
+language: Python
 contact:
   - grst
 logo: logo.svg

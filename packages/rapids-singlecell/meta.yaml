@@ -1,4 +1,5 @@
 name: rapids-singlecell
+blurb: GPU-accelerated framework for scRNA analysis
 description: |
   rapids-singlecell is a GPU-accelerated single-cell analysis library that serves as a
   drop-in replacement for scanpy, squidpy, and decoupler.
@@ -7,13 +8,13 @@ documentation_home: https://rapids-singlecell.readthedocs.io/
 tutorials_home: https://rapids-singlecell.readthedocs.io/page/tutorials.html
 install:
   pypi: rapids-singlecell
+primary_category: scRNA-seq
 tags:
+  - preprocessing
+  - clustering
   - GPU acceleration
-  - single-cell
-  - RAPIDS
-  - CUDA
 license: MIT
-version: 0.13.3
+language: Python
 contact:
   - Intron7
 logo: logo.svg

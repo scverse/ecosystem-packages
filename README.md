@@ -20,12 +20,53 @@ Submit a pull-request adding a `meta.yaml` file for your package to the `package
 - Please refer to other entries for examples
 - The full definition of available fields is available in [`schema.json`](scripts/src/ecosystem_scripts/schema.json)
 - You can add a logo in svg/png/webp format if you like. Currently it is not used on our website, though.
+- Please set `primary_category` and `tags` from the controlled vocabulary below
+
+## Categories, tags and language
+
+Keywords come from a controlled vocabulary, defined in [`schema.json`](scripts/src/ecosystem_scripts/schema.json) and validated in CI.
+It overlaps with the vocabulary used by the [tutorial registry](https://github.com/scverse/scverse-tutorials/blob/main/tutorial-registry/schema.json).
+
+`primary_category` is the single category your package is listed under on [scverse.org/packages](https://scverse.org/packages/#ecosystem).
+Pick the one a user looking for your package would browse first.
+
+- `Data structures`
+- `scRNA-seq`
+- `bulk RNA-seq`
+- `Spatial`
+- `Epigenomics`
+- `Proteomics`
+- `Adaptive immune cell receptor`
+- `Multimodal`
+- `Imaging`
+- `Infrastructure`
+
+`tags` say what the package does, and drive filtering and search on the website.
+Pick every tag that genuinely applies.
+
+- **Data and modality** — `scRNA-seq`, `bulk RNA-seq`, `spatial transcriptomics`, `spatial proteomics`, `proteomics`, `flow cytometry`, `ATAC-seq`, `epigenomics`, `immune receptor`, `imaging`, `multimodal`
+- **Analysis step** — `preprocessing`, `quality control`, `denoising`, `data integration`, `cell-type annotation`, `differential expression`, `compositional analysis`, `functional analysis`, `gene regulatory networks`, `cell-cell communication`, `deconvolution`, `clustering`, `dimensionality reduction`, `trajectory inference`, `pseudotime`, `RNA velocity`, `lineage tracing`, `perturbation`, `spatially variable genes`, `segmentation`, `copy number variation`, `visualization`, `benchmarking`
+- **How it is built** — `deep learning`, `foundation model`, `large language models`, `probabilistic modeling`, `optimal transport`, `GPU acceleration`, `pipeline`
+- **Project shape** — `data structures`, `interoperability`, `file formats`, `documentation`
+
+If none of the existing terms fit your package, add one to the enum in your pull request.
+
+`language` is the language you write in when using the package: `Python`, `R`, `Julia`, `Rust` or `C++`.
+
+`version` is not something you set.
+It is read from PyPI, conda, CRAN or Bioconductor when the registry is built, and refreshed daily, so it always reflects the latest release.
+
+`inventory` is your [intersphinx](https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html) URL, so other project docs can cross-link into yours.
+It is Python-only, and derived from `documentation_home` unless you set it – so set it only to override that, e.g. to pin `stable` where we would find the default version.
+Use `null` if you only have a README instead of using Sphinx or a MkDocs variant and therefore have no `objects.inv` – we assume you have one when you host on ReadTheDocs.
 
 ## What are the requirements for an ecosystem package?
 
 For a package to become an approved ecosystem package, it must fulfill all mandatory requirements from the checklist below.
 
 Ecosystem packages can be written in non-Python languages as long as they fulfill the above requirements.
+
+Authors of ecosystem packages agree to abide by the [scverse code of conduct](https://scverse.org/about/code_of_conduct/) on all scverse communication channels.
 
 If you cannot or do not want to comply with these requirements, you are still free to make your package interoperable with scverse by using our datastructures, but we will not list your package on our ecosystem page.
 
@@ -47,6 +88,7 @@ How does the package use scverse data structures (please describe in a few sente
 - [ ] The package provides API documentation via a website or README[^3]
 - [ ] The package uses scverse datastructures where appropriate (i.e. AnnData, MuData or SpatialData and their modality-specific extensions)
 - [ ] I am an author or maintainer of the tool and agree on listing the package on the scverse website
+- [ ] I agree to abide by the [scverse code of conduct](https://scverse.org/about/code_of_conduct/) on all scverse communication channels
 
 ### Recommended
 
@@ -60,9 +102,10 @@ How does the package use scverse data structures (please describe in a few sente
 
 - [ ] The package provides tutorials (or "vignettes") that help getting users started quickly
 - [ ] The package uses the [scverse cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
+- [ ] I would like to be invited to the scverse Github organization
 
-[^1]: We recommend thtat tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
+[^1]: We recommend that tests cover at least all user facing (public) functions. Minimal tests ensure that the function does not fail on an example data set. Ideally, tests also ensure the correctness of the results, e.g. by comparing against a snapshot.
 
 [^2]: Continuous integration means that software tests are automatically executed on every push to the git repository. This guarantees they are always run and that they are run in a clean environment. Scverse ecosystem packages most commonly use [GitHub Actions](https://github.com/features/actions) for CI. For an example, check out our [cookiecutter template](https://github.com/scverse/cookiecutter-scverse).
 
-[^3]: By API documentation, we mean an overview of _all_ public functions provided a package, with documentation of their parameters. For an example, see the [Scanpy documentation](https://scanpy.readthedocs.io/page/api/preprocessing.html). In simple cases, this can be done manually in a README file. For anything more complex, we recommend the [Sphinx Autodoc plugin](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html)
+[^3]: By API documentation, we mean an overview of _all_ public functions provided a package, with documentation of their parameters. For an example, see the [Scanpy documentation](https://scanpy.scverse.org/page/api/preprocessing.html). In simple cases, this can be done manually in a README file. For anything more complex, we recommend the [Sphinx Autodoc plugin](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html)

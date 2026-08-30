@@ -14,6 +14,12 @@
             "description": "Summary of the purpose of the package (1-2 sentences).",
             "type": "string"
         },
+        "blurb": {
+            "description": "Tagline shown next to the package name in listings, e.g. \"Standard for annotated matrices\". A noun phrase, no trailing period. Required for core frameworks and data structures.",
+            "type": "string",
+            "maxLength": 60,
+            "pattern": "[^.]$"
+        },
         "project_home": {
             "description": "Link to the source code of the project (Usually a GitHub project page)",
             "type": "string",
@@ -28,6 +34,12 @@
             "descripton": "Link to the tutorials/vignette (often a subpage of the documentation)",
             "type": "string",
             "format": "uri"
+        },
+        "inventory": {
+            "description": "Root URL (with trailing slash) under which the package's Sphinx `objects.inv` is served, so other docs can `intersphinx` to it. Python-only. Omit it to have it derived from documentation_home at build time, which is what almost every package wants; only set it where that fails, e.g. to pin `https://<domain>/en/stable/` instead of the default version. Use null if the package publishes no inventory.",
+            "type": ["string", "null"],
+            "format": "uri",
+            "pattern": "^https://.*/$"
         },
         "install": {
             "type": "object",
@@ -186,14 +198,83 @@
                 "ZPL-2.1"
             ]
         },
+        "primary_category": {
+            "description": "The single category the package is listed under on scverse.org/packages. Pick the one a user looking for this package would browse first.",
+            "type": "string",
+            "enum": [
+                "Data structures",
+                "scRNA-seq",
+                "bulk RNA-seq",
+                "Spatial",
+                "Epigenomics",
+                "Proteomics",
+                "Adaptive immune cell receptor",
+                "Multimodal",
+                "Imaging",
+                "Infrastructure"
+            ]
+        },
         "tags": {
-            "description": "Keywords that describe the package",
+            "description": "What the package does, from a controlled vocabulary. Used for filtering and search on scverse.org/packages. Pick every tag that genuinely applies. If none of them fit, add a term to this enum in your pull request.",
             "type": "array",
             "items": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                    "scRNA-seq",
+                    "bulk RNA-seq",
+                    "spatial transcriptomics",
+                    "spatial proteomics",
+                    "proteomics",
+                    "flow cytometry",
+                    "ATAC-seq",
+                    "epigenomics",
+                    "immune receptor",
+                    "imaging",
+                    "multimodal",
+                    "preprocessing",
+                    "quality control",
+                    "denoising",
+                    "data integration",
+                    "cell-type annotation",
+                    "differential expression",
+                    "compositional analysis",
+                    "functional analysis",
+                    "gene regulatory networks",
+                    "cell-cell communication",
+                    "deconvolution",
+                    "clustering",
+                    "dimensionality reduction",
+                    "trajectory inference",
+                    "pseudotime",
+                    "RNA velocity",
+                    "lineage tracing",
+                    "perturbation",
+                    "spatially variable genes",
+                    "segmentation",
+                    "copy number variation",
+                    "visualization",
+                    "benchmarking",
+                    "deep learning",
+                    "foundation model",
+                    "large language models",
+                    "probabilistic modeling",
+                    "optimal transport",
+                    "GPU acceleration",
+                    "pipeline",
+                    "data structures",
+                    "interoperability",
+                    "file formats",
+                    "documentation"
+                ]
             },
             "minItems": 1,
+            "maxItems": 10,
             "uniqueItems": true
+        },
+        "language": {
+            "description": "Language a user writes code in when using the package.",
+            "type": "string",
+            "enum": ["Python", "R", "Julia", "Rust", "C++"]
         },
         "publications": {
             "description": "DOIs of publications describing the package",
@@ -205,8 +286,9 @@
             }
         },
         "version": {
-            "description": "The version of the package at the point when this entry was created or updated",
-            "type": "string"
+            "description": "Latest released version, derived from the package index at build time. Do not set this in meta.yaml; it is overwritten.",
+            "type": "string",
+            "readOnly": true
         },
         "contact": {
             "description": "Point of contact for this package. Does not need to be the full list of maintainers. Entries must be Github user IDs.",
@@ -244,18 +326,72 @@
         "documentation_home",
         "license",
         "tags",
+        "primary_category",
+        "language",
         "category"
     ],
-    "if": {
-        "not": {
-            "properties": {
-                "category": {
-                    "const": "core-infrastructure"
+    "allOf": [
+        {
+            "if": {
+                "not": {
+                    "properties": {
+                        "category": {
+                            "const": "core-infrastructure"
+                        }
+                    }
+                }
+            },
+            "then": {
+                "required": ["install"]
+            }
+        },
+        {
+            "comment": "Core frameworks and data structures are listed with their blurb on scverse.org.",
+            "if": {
+                "properties": {
+                    "category": {
+                        "enum": ["core-framework", "core-datastructure"]
+                    }
+                },
+                "required": ["category"]
+            },
+            "then": {
+                "required": ["blurb"]
+            }
+        },
+        {
+            "comment": "Only Python packages can be intersphinx targets, so only they carry `inventory`.",
+            "if": {
+                "properties": {
+                    "language": {
+                        "const": "Python"
+                    }
+                },
+                "required": ["language"]
+            },
+            "else": {
+                "not": {
+                    "required": ["inventory"]
+                }
+            }
+        },
+        {
+            "comment": "ReadTheDocs always serves an inventory, so `null` there means the docs URL is wrong rather than that there is nothing to link to.",
+            "if": {
+                "properties": {
+                    "documentation_home": {
+                        "pattern": "^https?://[^/]*\\.readthedocs(\\.io|-hosted\\.com)(/|$)"
+                    }
+                },
+                "required": ["documentation_home"]
+            },
+            "then": {
+                "properties": {
+                    "inventory": {
+                        "type": "string"
+                    }
                 }
             }
         }
-    },
-    "then": {
-        "required": ["install", "version"]
-    }
+    ]
 }

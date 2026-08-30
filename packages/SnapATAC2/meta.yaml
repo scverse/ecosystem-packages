@@ -1,4 +1,5 @@
 name: SnapATAC2
+blurb: Single-cell ATAC analysis framework
 description: |
   SnapATAC2 is a scalable and modular pipeline for analyzing single-cell ATAC-seq data,
   enabling efficient preprocessing, dimensionality reduction, clustering, and integration
@@ -11,12 +12,12 @@ publications:
 install:
   pypi: snapatac2
   conda: bioconda::snapatac2
+primary_category: Epigenomics
 tags:
   - ATAC-seq
-  - chromatin accessibility
   - epigenomics
 license: MIT
-version: 2.5.0
+language: Python
 contact:
   - kaizhang
 logo: logo.svg

@@ -7,19 +7,19 @@ description: |
   on the Spotless benchmark, and preserves rare cell type detection through leverage-score weighted sampling.
 project_home: https://github.com/cafferychen777/flashdeconv
 documentation_home: https://github.com/cafferychen777/flashdeconv#readme
+inventory: null
 tutorials_home: https://github.com/cafferychen777/flashdeconv/tree/main/examples
 publications:
   - 10.64898/2025.12.22.696108
 install:
   pypi: flashdeconv
+primary_category: Spatial
 tags:
   - spatial transcriptomics
+  - cell-type annotation
   - deconvolution
-  - cell type
-  - Visium HD
-  - sketching
 license: BSD-3-Clause
-version: v0.1
+language: Python
 contact:
   - cafferychen777
 test_command: |
