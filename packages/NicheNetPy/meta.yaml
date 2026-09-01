@@ -7,6 +7,7 @@ description: |
   in cells of interest.
 project_home: https://github.com/saeyslab/nichenetpy
 documentation_home: https://saeyslab.github.io/nichenetpy/nichenetpy.html
+inventory: null
 tutorials_home: https://github.com/saeyslab/nichenetpy
 install:
   pypi: nichenetpy
