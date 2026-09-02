@@ -29,3 +29,4 @@ test_command: |
   pip install -e . &&
   pytest -m "not large_download and not outdated"
 category: ecosystem
+inventory: null
