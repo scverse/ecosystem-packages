@@ -6,6 +6,7 @@ description: |
   and spatial transcriptomics with higher sensitivity and resolution than existing tools.
 project_home: https://github.com/BayraktarLab/cell2location
 documentation_home: https://cell2location.readthedocs.io/
+inventory: https://cell2location.readthedocs.io/en/stable/
 tutorials_home: https://cell2location.readthedocs.io/
 publications:
   - 10.1038/s41587-021-01139-4

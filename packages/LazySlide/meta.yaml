@@ -1,21 +1,31 @@
 name: LazySlide
 description: |
-  LazySlide is a Python library for processing whole slide images (WSI) analysis. It provides a simple interface to perform robust preprocessing and advanced analysis for WSI.
+  LazySlide is a Python framework for whole slide image (WSI) analysis that integrates with the
+  scverse ecosystem. It covers preprocessing, tissue and cell segmentation, feature extraction with
+  pathology foundation models, and multimodal integration of histology with omics and text.
 project_home: https://github.com/rendeirolab/lazyslide
 documentation_home: https://lazyslide.readthedocs.io/
+tutorials_home: https://lazyslide.readthedocs.io/page/tutorials/index.html
+publications:
+  - 10.1038/s41592-026-03044-7
 install:
   pypi: lazyslide
+  conda: conda-forge::lazyslide
 primary_category: Imaging
 tags:
   - imaging
   - preprocessing
   - segmentation
   - deep learning
+  - foundation model
+  - multimodal
+  - visualization
 license: MIT
 language: Python
 contact:
   - Mr-Milk
   - eabila
   - afrendeiro
+logo: logo.svg
 test_command: uv run task test
 category: ecosystem

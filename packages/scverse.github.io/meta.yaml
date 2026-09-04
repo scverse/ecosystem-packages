@@ -3,6 +3,7 @@ description: |
   scverse.org website
 project_home: https://github.com/scverse/scverse.github.io
 documentation_home: https://scverse.org
+inventory: null
 primary_category: Infrastructure
 tags:
   - documentation

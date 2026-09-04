@@ -7,6 +7,7 @@ description: |
   proteomics use cases.
 project_home: https://github.com/MannLabs/alphapepttools
 documentation_home: https://mannlabs.github.io/alphapepttools/index.html
+inventory: null
 tutorials_home: https://github.com/MannLabs/alphapepttools/tree/main/docs/notebooks
 install:
   pypi: alphapepttools

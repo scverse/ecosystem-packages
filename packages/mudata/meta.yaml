@@ -1,4 +1,5 @@
 name: MuData
+blurb: Multimodal data format
 description: |
   MuData is a format for annotated multimodal datasets where each modality is represented
   by an AnnData object. MuData's reference implementation is in Python, and the cross-language

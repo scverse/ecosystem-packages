@@ -4,6 +4,7 @@ description: |
   annotation.
 project_home: https://github.com/potulabe/symphonypy
 documentation_home: https://github.com/potulabe/symphonypy
+inventory: null
 install:
   pypi: symphonypy
 primary_category: scRNA-seq
