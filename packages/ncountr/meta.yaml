@@ -9,14 +9,15 @@ documentation_home: https://ncountr.readthedocs.io/
 tutorials_home: https://ncountr.readthedocs.io/page/vignettes/
 install:
   pypi: ncountr
-license: MIT
+primary_category: bulk RNA-seq
 tags:
-  - gene-expression
-  - nanostring
-  - ncounter
-  - normalization
-  - differential-expression
-version: 0.2.0
+  - bulk RNA-seq
+  - preprocessing
+  - quality control
+  - differential expression
+  - functional analysis
+license: MIT
+language: Python
 contact:
   - princello
 test_command: |
