@@ -1,5 +1,5 @@
 name: AmbiDose
-description: |
+description:
   AmbiDose removes ambient RNA from droplet scRNA-seq by pinning soup composition
   on empty droplets, assigning a per-cell dose along that profile, and subtracting
   a rank-1 term from observed nonzero counts with gene-name-free native-gene
