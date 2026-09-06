@@ -7,7 +7,7 @@ description: |
   labels are not supplied.
 project_home: https://github.com/leelieber2025/AmbiDose
 documentation_home: https://ambidose.readthedocs.io
-tutorials_home: https://ambidose.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://ambidose.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.5281/zenodo.22278199
 install:
