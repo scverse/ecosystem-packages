@@ -6,12 +6,13 @@ documentation_home: https://clone2vec.readthedocs.io/
 tutorials_home: https://clone2vec.readthedocs.io/
 install:
   pypi: clone2vec
+primary_category: scRNA-seq
 tags:
-  - label-transfer
+  - lineage tracing
 license: MIT
+language: Python
 publications:
   - 10.1101/2024.11.15.623687
-version: v0.1.0
 contact:
   - serjisa
 test_command: |

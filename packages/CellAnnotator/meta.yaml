@@ -5,14 +5,12 @@ project_home: https://github.com/quadbio/cell-annotator
 documentation_home: https://cell-annotator.readthedocs.io/
 install:
   pypi: cell-annotator
+primary_category: scRNA-seq
 tags:
-  - cell type labels
-  - openai
+  - cell-type annotation
   - large language models
-  - automatic annotation
-  - cell state
 license: MIT
-version: v0.1.3
+language: Python
 contact:
   - Marius1311
 test_command: pip install -e '.[test]' && pytest

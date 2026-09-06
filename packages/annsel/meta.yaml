@@ -8,14 +8,12 @@ tutorials_home: https://annsel.readthedocs.io/page/notebooks/all_of_annsel.html
 install:
   pypi: annsel
 license: MIT
-version: v0.0.8
+language: Python
 contact:
   - srivarra
+primary_category: Data structures
 tags:
-  - narwhals
-  - dataframe
-  - accessor
-  - utilities
+  - data structures
 test_command: |
   pip install ".[test]" && pytest
 category: ecosystem

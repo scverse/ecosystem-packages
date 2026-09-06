@@ -8,14 +8,13 @@ publications:
   - 10.1093/bioadv/vbad150
 install:
   pypi: gssnng
+primary_category: scRNA-seq
 tags:
   - scRNA-seq
-  - GSEA
-  - geneset-scoring
-  - smoothing
-  - python
+  - preprocessing
+  - functional analysis
 license: MIT
-version: v0.4.2
+language: Python
 contact:
   - gibbsdavidl
   - redst4r

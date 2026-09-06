@@ -13,19 +13,13 @@ publications:
   - 10.1038/s41587-019-0068-4
 install:
   pypi: palantir
+primary_category: scRNA-seq
 tags:
-  - markov-chain
-  - dimensionality-reduction
-  - scrna-seq
-  - trajectory-generation
-  - diffusion-maps
-  - differentiation
-  - manifold-learning
-  - single-cell-genomics
-  - cell-fate-transitions
-  - scrna-seq-analysis
+  - scRNA-seq
+  - dimensionality reduction
+  - trajectory inference
 license: GPL-2.0-or-later
-version: v1.3.3
+language: Python
 contact:
   - ManuSetty
   - katosh

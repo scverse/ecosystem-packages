@@ -8,11 +8,12 @@ publications:
   - 10.1101/2021.11.11.468178
 install:
   pypi: spatial-eggplant
+primary_category: Spatial
 tags:
-  - spatial alignment
-  - spatial registration
+  - spatial transcriptomics
+  - data integration
 license: MIT
-version: v0.2.3
+language: Python
 contact:
   - almaan
 test_command: pip install "." && pytest

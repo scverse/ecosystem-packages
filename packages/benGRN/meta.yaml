@@ -5,16 +5,16 @@ description: |
 project_home: https://github.com/jkobject/benGRN
 documentation_home: https://www.jkobject.com/benGRN
 publications:
-  - 10.1101/2024.07.29.605556
+  - 10.1038/s41467-025-58699-1
 install:
   pypi: bengrn
+primary_category: scRNA-seq
 tags:
-  - single cell
-  - RNAseq
-  - gene network inference
-  - benchmark
+  - scRNA-seq
+  - gene regulatory networks
+  - benchmarking
 license: MIT
-version: v1.2.1
+language: Python
 contact:
   - jkobject
 test_command: pip install . && make test

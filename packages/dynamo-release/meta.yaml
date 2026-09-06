@@ -10,10 +10,13 @@ publications:
   - 10.1016/j.cell.2021.12.045
 install:
   pypi: dynamo-release
+primary_category: Multimodal
 tags:
-  - vector
+  - multimodal
+  - trajectory inference
+  - RNA velocity
 license: BSD-3-Clause
-version: v1.1.0
+language: Python
 contact:
   - Xiaojieqiu
   - dummyindex

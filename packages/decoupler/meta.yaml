@@ -1,4 +1,5 @@
 name: decoupler
+blurb: Enrichment analysis framework
 description: |
   decoupler is a framework containing different enrichment statistical methods to extract
   biologically driven scores from omics data within a unified framework.
@@ -10,13 +11,11 @@ publications:
 install:
   pypi: decoupler
   conda: conda-forge::decoupler-py
+primary_category: scRNA-seq
 tags:
-  - enrichment analysis
-  - pathway analysis
-  - gene sets
-  - functional annotation
+  - functional analysis
 license: BSD-3-Clause
-version: 2.1.1
+language: Python
 contact:
   - PauBadiaM
 logo: logo.svg

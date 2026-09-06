@@ -4,12 +4,14 @@ description: |
   annotation.
 project_home: https://github.com/potulabe/symphonypy
 documentation_home: https://github.com/potulabe/symphonypy
+inventory: null
 install:
   pypi: symphonypy
+primary_category: scRNA-seq
 tags:
-  - label-transfer
+  - cell-type annotation
 license: GPL-3.0-only
-version: v0.2.1
+language: Python
 contact:
   - serjisa
   - potulabe

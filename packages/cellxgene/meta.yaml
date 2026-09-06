@@ -4,14 +4,17 @@ description: |
   such as those coming from the Human Cell Atlas.
 project_home: https://github.com/chanzuckerberg/cellxgene
 documentation_home: https://docs.cellxgene.cziscience.com/
+inventory: null
 publications:
   - 10.1101/2021.04.05.438318
 install:
   pypi: cellxgene
+primary_category: scRNA-seq
 tags:
-  - HCA
+  - cell-type annotation
+  - visualization
 license: MIT
-version: 1.1.1
+language: Python
 contact:
   - csweaver
   - bkmartinjr

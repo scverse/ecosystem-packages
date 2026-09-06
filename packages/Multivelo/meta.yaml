@@ -9,10 +9,12 @@ publications:
   - 10.1038/s41587-022-01476-y
 install:
   pypi: multivelo
+primary_category: Epigenomics
 tags:
-  - rna velocity
+  - epigenomics
+  - RNA velocity
 license: BSD-3-Clause
-version: 0.1.3
+language: Python
 contact:
   - jw156605
   - danielee0707

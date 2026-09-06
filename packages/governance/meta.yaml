@@ -3,10 +3,12 @@ description: |
   Governance docs for scverse
 project_home: https://github.com/scverse/governance
 documentation_home: https://scverse.org/about
+inventory: null
+primary_category: Infrastructure
 tags:
-  - governance
   - documentation
 license: BSD-3-Clause
+language: Python
 contact:
   - Zethson
   - gtca

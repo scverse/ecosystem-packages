@@ -6,12 +6,13 @@ documentation_home: https://pytximport.readthedocs.io/
 tutorials_home: https://pytximport.readthedocs.io/
 install:
   pypi: pytximport
+primary_category: bulk RNA-seq
 tags:
-  - rna-seq
-  - bulk-rna-seq
-  - differential-expression
+  - bulk RNA-seq
+  - differential expression
+  - file formats
 license: GPL-3.0-only
-version: v0.2.0
+language: Python
 contact:
   - maltekuehl
 test_command: |

@@ -8,10 +8,11 @@ publications:
   - 10.1158/1541-7786.MCR-21-0665
 install:
   pypi: pathml
+primary_category: Imaging
 tags:
-  - pathology
+  - imaging
 license: GPL-2.0-only
-version: v2.1.0
+language: Python
 contact:
   - jacob-rosenthal
   - ryanccarelli

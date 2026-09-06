@@ -5,15 +5,14 @@ project_home: https://github.com/const-ae/pyLemur
 documentation_home: https://pyLemur.readthedocs.io/
 tutorials_home: https://pylemur.readthedocs.io/page/notebooks/Tutorial.html
 publications:
-  - 10.1101/2023.03.06.531268
+  - 10.1038/s41588-024-01996-0
 install:
   pypi: pyLemur
+primary_category: scRNA-seq
 tags:
-  - single-cell
   - differential expression
-  - multi-condition
 license: MIT
-version: v0.1.0
+language: Python
 contact:
   - const-ae
 test_command: pip install -e '.[dev]' && pytest
