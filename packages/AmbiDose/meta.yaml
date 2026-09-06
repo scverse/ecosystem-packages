@@ -1,0 +1,26 @@
+name: AmbiDose
+description: |
+  AmbiDose removes ambient RNA from droplet scRNA-seq by pinning soup composition
+  on empty droplets, assigning a per-cell dose along that profile, and subtracting
+  a rank-1 term from observed nonzero counts with gene-name-free native-gene
+  protection. Input and output are AnnData; Scanpy Leiden typing is used when
+  labels are not supplied.
+project_home: https://github.com/leelieber2025/AmbiDose
+documentation_home: https://ambidose.readthedocs.io
+tutorials_home: https://ambidose.readthedocs.io/en/latest/tutorials/index.html
+publications:
+  - 10.5281/zenodo.22278199
+install:
+  pypi: ambidose
+primary_category: scRNA-seq
+tags:
+  - scRNA-seq
+  - preprocessing
+  - quality control
+  - denoising
+license: Apache-2.0
+language: Python
+contact:
+  - leelieber2025
+test_command: pip install ".[dev]" && pytest
+category: ecosystem
