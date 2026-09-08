@@ -1,0 +1,27 @@
+name: pbcheck
+blurb: Pseudoreplication audit for single-cell DE designs
+description: |
+  pbcheck audits one single-cell RNA-seq differential-expression design for pseudoreplication.
+  Given an .h5ad file, the donor and condition columns and the two condition levels, it first
+  checks the design from the metadata alone (donors per group, donor nesting within condition,
+  batch separation of condition), then runs a naive per-cell test and a donor-pseudobulk test on
+  the same frozen gene universe, each against a donor-permutation null, and reports each arm's
+  permutation floor, the ratio of the real-label result to that floor and the genomic inflation
+  factor, with caveats, as JSON, Markdown and HTML.
+project_home: https://github.com/s4s4s4s/pbcheck
+documentation_home: https://github.com/s4s4s4s/pbcheck/blob/main/docs/USAGE.md
+tutorials_home: https://github.com/s4s4s4s/pbcheck/blob/main/demo/README.md
+inventory: null
+install:
+  pypi: pbcheck
+primary_category: scRNA-seq
+tags:
+  - scRNA-seq
+  - differential expression
+  - quality control
+license: BSD-3-Clause
+language: Python
+contact:
+  - s4s4s4s
+test_command: pip install ".[dev]" && pytest -m "not slow"
+category: ecosystem
