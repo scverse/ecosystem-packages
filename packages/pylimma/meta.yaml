@@ -1,0 +1,20 @@
+name: pylimma
+description: >
+  A Python port of R limma for differential expression and abundance analysis, with native support for AnnData objects.
+project_home: https://github.com/john-mulvey/pylimma
+documentation_home: https://pylimma.readthedocs.io
+tutorials_home: https://pylimma.readthedocs.io/
+install:
+  pypi: pylimma
+license: GPL-3.0-or-later
+tags:
+  - differential-expression
+  - rna-seq
+  - proteomics
+publications:
+  - 10.64898/2026.07.06.736732
+version: "0.1.0"
+contact:
+  - john-mulvey
+test_command: pip install ".[dev]" && pytest
+category: ecosystem
