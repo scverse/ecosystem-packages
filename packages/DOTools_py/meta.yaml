@@ -4,7 +4,7 @@ project_home: https://github.com/davidrm-bio/DOTools_py
 documentation_home: https://dotools-py.readthedocs.io/
 tutorials_home: https://dotools-py.readthedocs.io/
 publications:
- - 10.1093/bioadv/vbag098
+  - 10.1093/bioadv/vbag098
 install:
   pypi: DOtools-py
 primary_category: scRNA-seq
