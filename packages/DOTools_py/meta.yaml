@@ -10,7 +10,7 @@ install:
 primary_category: scRNA-seq
 tags:
   - scRNA-seq
-  - spatial-transcriptomics
+  - spatial transcriptomics
   - visualization
 license: MIT
 language: Python
