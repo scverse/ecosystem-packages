@@ -5,7 +5,6 @@
 - url: https://github.com/BoevaLab/infercnvpy
 - url: https://github.com/COMBINE-lab/QCatch
 - url: https://github.com/CSOgroup/cellcharter
-- url: https://github.com/CSOgroup/jedipy
 - url: https://github.com/CSOgroup/torchgmm
 - url: https://github.com/ChanghaoGong/STutils
 - url: https://github.com/ChengmingZhang-CAS/BrainBeacon
@@ -113,6 +112,7 @@
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/mc-astra
+- url: https://github.com/scverse/PyDESeq2
 - url: https://github.com/scverse/acumen
 - url: https://github.com/scverse/annbatch
 - url: https://github.com/scverse/anndata
@@ -124,6 +124,8 @@
 - url: https://github.com/scverse/deres
 - url: https://github.com/scverse/formulaic-contrasts
 - url: https://github.com/scverse/genomic-features
+- url: https://github.com/scverse/liana
+- url: https://github.com/scverse/mantispy
 - url: https://github.com/scverse/mudata
 - url: https://github.com/scverse/muon
 - url: https://github.com/scverse/pertpy
@@ -137,6 +139,7 @@
 - url: https://github.com/scverse/scvi-tutorials
 - url: https://github.com/scverse/simple-scvi
 - url: https://github.com/scverse/spatial-sample-aggregation
+- url: https://github.com/scverse/spatialdata
 - url: https://github.com/scverse/spatialdata-io
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
