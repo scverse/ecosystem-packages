@@ -2,7 +2,7 @@ name: annbatch
 description: |
   A data loader and io utilities for mini-batched data loading of on-disk AnnData files as well as in-memory data, co-developed by Lamin Labs and scverse.
 project_home: https://github.com/scverse/annbatch
-documentation_home: https://github.com/scverse/annbatch#readme
+documentation_home: https://annbatch.readthedocs.io/en/stable/
 inventory: null
 tutorials_home: https://annbatch.readthedocs.io/en/stable/
 publications:
