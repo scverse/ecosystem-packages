@@ -5,7 +5,7 @@ project_home: https://github.com/scverse/annbatch
 documentation_home: https://annbatch.readthedocs.io/en/stable/
 tutorials_home: https://annbatch.readthedocs.io/en/stable/
 publications:
-  - arXiv:2604.01949
+  - 10.48550/arXiv.2604.01949
 install:
   pypi: annbatch
 primary_category: Data structures
