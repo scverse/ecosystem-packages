@@ -1,0 +1,21 @@
+name: annbatch
+description: |
+  A data loader and io utilities for mini-batched data loading of on-disk AnnData files as well as in-memory data, co-developed by Lamin Labs and scverse.
+project_home: https://github.com/scverse/annbatch
+documentation_home: https://annbatch.readthedocs.io/
+tutorials_home: https://annbatch.readthedocs.io/
+publications:
+  - 10.48550/arXiv.2604.01949
+install:
+  pypi: annbatch
+primary_category: Data structures
+tags:
+  - data structures
+  - deep learning
+  - GPU acceleration
+license: MIT
+language: Python
+contact:
+  - ilan-gold
+test_command: pip install --group=test && pytest
+category: ecosystem
