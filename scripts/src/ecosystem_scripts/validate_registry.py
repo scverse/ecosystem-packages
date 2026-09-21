@@ -440,6 +440,7 @@ class Checker:
         self.check_home = LinkChecker(self.client, name="home")
         self.check_docs = LinkChecker(self.client, name="docs")
         self.check_tutorial = LinkChecker(self.client, name="tutorial")
+        self.check_binding = LinkChecker(self.client, name="binding")
         self.check_inventory = InventoryChecker(self.client)
 
         self.check_gh_users = GitHubUserValidator(self.client, self.github_token)
@@ -529,6 +530,8 @@ class Checker:
         yield self.check_docs(tmp_meta["documentation_home"], pkg_id)
         if url := tmp_meta.get("tutorials_home"):
             yield self.check_tutorial(url, pkg_id)
+        for binding in tmp_meta.get("bindings", []):
+            yield self.check_binding(binding["url"], pkg_id)
         if candidates := inventory_candidates(tmp_meta):
             yield self.check_inventory(candidates, pkg_id)
 
