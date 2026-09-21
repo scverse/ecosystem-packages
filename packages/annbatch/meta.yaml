@@ -10,8 +10,9 @@ install:
   pypi: annbatch
 primary_category: Data structures
 tags:
-  - Infrastructure
+  - data structures
   - deep learning
+  - GPU acceleration
 license: MIT
 language: Python
 contact:
