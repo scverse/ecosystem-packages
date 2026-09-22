@@ -273,8 +273,33 @@
         },
         "language": {
             "description": "Language a user writes code in when using the package.",
-            "type": "string",
-            "enum": ["Python", "R", "Julia", "Rust", "C++"]
+            "$ref": "#/$defs/language"
+        },
+        "bindings": {
+            "description": "Implementations of this package's objects or on-disk format in other languages, maintained under the scverse org. Drives the language filter and the per-language links on scverse.org/packages.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "description": "Language the implementation is written for.",
+                        "$ref": "#/$defs/language"
+                    },
+                    "name": {
+                        "description": "Name of the implementation, e.g. anndataR",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "Link to its documentation or source",
+                        "type": "string",
+                        "format": "uri"
+                    }
+                },
+                "required": ["language", "name", "url"],
+                "additionalProperties": false
+            },
+            "minItems": 1,
+            "uniqueItems": true
         },
         "publications": {
             "description": "DOIs of publications describing the package",
@@ -393,5 +418,11 @@
                 }
             }
         }
-    ]
+    ],
+    "$defs": {
+        "language": {
+            "type": "string",
+            "enum": ["Python", "R", "Julia", "Rust", "C++"]
+        }
+    }
 }
