@@ -19,3 +19,4 @@ contact:
   - ilan-gold
 test_command: pip install --group=test && pytest
 category: ecosystem
+logo: logo.svg
