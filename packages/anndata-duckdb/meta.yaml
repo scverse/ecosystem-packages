@@ -1,0 +1,22 @@
+name: anndata-duckdb
+description: |
+  A DuckDB extension for reading AnnData (.h5ad) files, providing SQL access to
+  single-cell genomics data. Query observation metadata, gene metadata, expression
+  matrices, dimensional reductions, and layers directly with SQL. Install DuckDB,
+  then run: INSTALL anndata; LOAD anndata;
+project_home: https://github.com/honicky/anndata-duckdb-extension
+documentation_home: https://github.com/honicky/anndata-duckdb-extension#readme
+install:
+  pypi: duckdb
+  conda: conda-forge::duckdb
+tags:
+  - SQL
+  - DuckDB
+  - data access
+  - single-cell
+  - HDF5
+license: MIT
+version: 0.11.5
+contact:
+  - honicky
+category: ecosystem
