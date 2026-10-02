@@ -2,8 +2,8 @@ name: CloneTrast
 description: |
   CloneTrast is a contrastive learning framework for revealing pan-cancer clonal niches of T cells from scRNA-seq without requiring paired scTCR-seq.
 project_home: https://github.com/yizhak-lab-ccg/CloneTrast
-documentation_home: https://clonetrast.readthedocs.io/en/latest/
-tutorials_home: https://clonetrast.readthedocs.io/en/latest/tutorials.html
+documentation_home: https://clonetrast.readthedocs.io/
+tutorials_home: https://clonetrast.readthedocs.io/
 install:
   pypi: clonetrast
 primary_category: scRNA-seq
