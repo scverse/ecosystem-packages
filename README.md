@@ -53,6 +53,17 @@ If none of the existing terms fit your package, add one to the enum in your pull
 
 `language` is the language you write in when using the package: `Python`, `R`, `Julia`, `Rust` or `C++`.
 
+`bindings` lists implementations of your package's objects or on-disk format in other languages, maintained under the scverse org.
+They show up as links on your entry on [scverse.org/packages](https://scverse.org/packages/) and feed the language filter there, so a user looking for what they can call from R finds you.
+Each entry needs a `language` from the same list, a `name` and a `url`:
+
+```yaml
+bindings:
+    - language: R
+      name: anndataR
+      url: https://anndatar.scverse.org/
+```
+
 `version` is not something you set.
 It is read from PyPI, conda, CRAN or Bioconductor when the registry is built, and refreshed daily, so it always reflects the latest release.
 

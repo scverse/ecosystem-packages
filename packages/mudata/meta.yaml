@@ -18,6 +18,10 @@ tags:
   - data structures
 license: BSD-3-Clause
 language: Python
+bindings:
+  - language: Julia
+    name: Muon.jl
+    url: https://scverse.org/Muon.jl/
 contact:
   - gtca
   - ilia-kats

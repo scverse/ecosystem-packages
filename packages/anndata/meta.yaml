@@ -17,6 +17,13 @@ tags:
   - data structures
 license: BSD-3-Clause
 language: Python
+bindings:
+  - language: R
+    name: anndataR
+    url: https://anndatar.scverse.org/
+  - language: Rust
+    name: anndata-rs
+    url: https://scverse.org/anndata-rs/
 contact:
   - flying-sheep
   - ilan-gold
