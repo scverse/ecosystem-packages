@@ -9,7 +9,7 @@ project_home: https://github.com/leelieber2025/AmbiDose
 documentation_home: https://ambidose.readthedocs.io
 tutorials_home: https://ambidose.readthedocs.io/page/tutorials/index.html
 publications:
-  - doi.org/10.64898/2026.09.27.754849
+  - 10.64898/2026.09.27.754849
   - 10.5281/zenodo.22278199
 install:
   pypi: ambidose
