@@ -1,0 +1,28 @@
+name: mantpy
+description: |
+  Mantpy is a framework for graph-based analysis of the extracellular matrix (ECM) in spatial
+  proteomics. It represents cells and ECM patches as distinct, linked node types, so matrix
+  structure can be analysed on its own or together with cellular context.
+project_home: https://github.com/moeghaf/Mantpy
+documentation_home: https://mantpy.readthedocs.io/
+tutorials_home: https://mantpy.readthedocs.io/page/tutorials/loading-data.html
+publications:
+  - 10.1101/2025.06.04.657781
+install:
+  pypi: mantpy
+primary_category: Spatial
+tags:
+  - spatial proteomics
+  - imaging
+  - preprocessing
+  - segmentation
+  - clustering
+  - visualization
+  - interoperability
+license: MIT
+language: Python
+contact:
+  - moeghaf
+logo: logo.png
+test_command: uvx hatch test
+category: ecosystem
