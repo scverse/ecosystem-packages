@@ -14,7 +14,7 @@ from dataclasses import KW_ONLY, dataclass, field
 from importlib.resources import files
 from pathlib import Path
 from textwrap import dedent
-from typing import TYPE_CHECKING, cast, override
+from typing import TYPE_CHECKING, Literal, cast, override
 
 import httpx
 import jsonschema
@@ -322,7 +322,10 @@ class CRANValidator(HTTPValidator):
         log.info(f"Validated CRAN package for {context}: {package_name} {self.versions[package_name]}")
 
 
-BIOC_VIEWS_URL = "https://bioconductor.org/packages/release/bioc/VIEWS"
+BIOC_VIEWS_URLS: Mapping[Literal["release", "devel"], str] = {
+    "release": "https://bioconductor.org/packages/release/bioc/VIEWS",
+    "devel": " https://bioconductor.org/packages/devel/bioc/VIEWS",
+}
 RE_BIOC_VERSION = re.compile(r"^Package: (\S+)\nVersion: (\S+)$", re.MULTILINE)
 
 
@@ -343,22 +346,32 @@ class BioconductorValidator(HTTPValidator):
             Context information for error messages (e.g., file being validated)
         """
         if not self.versions:
-            # Bioconductor publishes every package and version in one DCF file, so this is one request for all of them.
-            try:
-                response = await self.client.get(BIOC_VIEWS_URL)
-            except httpx.HTTPError as e:
-                msg = f"{context}: Failed to fetch the Bioconductor package list: {e}"
-                raise ValidationError(msg) from e
-            if response.status_code != httpx.codes.OK:
-                msg = f"{context}: Failed to fetch the Bioconductor package list (error {response.status_code})"
-                raise ValidationError(msg)
-            self.versions = dict(RE_BIOC_VERSION.findall(response.text))
+            vs_r, vs_d = await asyncio.gather(
+                self.load_versions(context, channel="release"),
+                self.load_versions(context, channel="devel"),
+            )
+            self.versions = vs_r | vs_d
 
         if package_name not in self.versions:
             msg = f"{context}: Bioconductor package '{package_name}' does not exist"
             raise ValidationError(msg)
 
         log.info(f"Validated Bioconductor package for {context}: {package_name} {self.versions[package_name]}")
+
+    async def load_versions(self, context: str, *, channel: Literal["release", "devel"]) -> dict[str, str]:
+        """Load all package versions.
+
+        Bioconductor publishes every package and version in one DCF file, so this needs one request.
+        """
+        try:
+            response = await self.client.get(BIOC_VIEWS_URLS[channel])
+        except httpx.HTTPError as e:
+            msg = f"{context}: Failed to fetch the Bioconductor {channel} package list: {e}"
+            raise ValidationError(msg) from e
+        if response.status_code != httpx.codes.OK:
+            msg = f"{context}: Failed to fetch the Bioconductor {channel} package list (error {response.status_code})"
+            raise ValidationError(msg)
+        return dict(RE_BIOC_VERSION.findall(response.text))
 
 
 def check_image(img_path: Path) -> None:
