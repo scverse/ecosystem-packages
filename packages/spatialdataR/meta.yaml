@@ -15,10 +15,11 @@ install:
   bioconductor: spatialdataR
 primary_category: Data structures
 tags:
-  - R
-  - Bioconductor
+  - imaging
   - data structures
   - interoperability
+  - spatial proteomics
+  - spatial transcriptomics
 project_home: https://github.com/HelenaLC/spatialdataR
 documentation_home: https://helenalc.github.io/spatialdataR
 tutorials_home: https://helenalc.github.io/SpatialData.demo
