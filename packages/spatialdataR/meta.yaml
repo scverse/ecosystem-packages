@@ -1,0 +1,28 @@
+name: spatialdataR
+description: |
+  spatialdataR provides an R interface to Python/scverse's 'spatialdata'
+  for unified spatial omics data handling. Adheres to OME-NGFF standards, 
+  providing lazy, on-disk representations for multiscale images and 
+  labels (ZarrArray), as well as points and shapes (DuckDB-backed 
+  tables). Includes handling of coordinate transformation systems and 
+  spatial utilities for cropping, masking, and querying. Integrates 
+  tabular annotations as 'SingleCellExperiment's (via 'anndataR'), 
+  enabling interoperable spatial omics workflows across R and Python.
+language: R
+category: ecosystem
+license: Artistic-2.0
+install:
+  bioconductor: spatialdataR
+primary_category: Data structures
+tags:
+  - R
+  - Bioconductor
+  - data structures
+  - interoperability
+project_home: https://github.com/HelenaLC/spatialdataR
+documentation_home: https://helenalc.github.io/spatialdataR
+tutorials_home: https://helenalc.github.io/SpatialData.demo
+contact:
+  - HelenaLC
+  - Artur-man
+  - Bisaloo
