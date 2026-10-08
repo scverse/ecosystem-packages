@@ -323,8 +323,7 @@ class CRANValidator(HTTPValidator):
 
 
 BIOC_VIEWS_URLS: Mapping[Literal["release", "devel"], str] = {
-    "release": "https://bioconductor.org/packages/release/bioc/VIEWS",
-    "devel": " https://bioconductor.org/packages/devel/bioc/VIEWS",
+    channel: f"https://bioconductor.org/packages/{channel}/bioc/VIEWS" for channel in ("release", "devel")
 }
 RE_BIOC_VERSION = re.compile(r"^Package: (\S+)\nVersion: (\S+)$", re.MULTILINE)
 
