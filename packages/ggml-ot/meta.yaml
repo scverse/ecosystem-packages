@@ -8,16 +8,14 @@ publications:
   - 10.48550/arXiv.2506.15383
 install:
   pypi: ggml-ot
+primary_category: scRNA-seq
 tags:
   - optimal transport
-  - metric learning
-  - patient-level
-  - sample-level
-  - classification
-  - clustering
-  - embedding
+  - compositional analysis
+  - scRNA-seq
+  - dimensionality reduction
 license: MIT
-version: v0.9.92
+language: Python
 contact:
   - DaminK
 logo: logo.png
