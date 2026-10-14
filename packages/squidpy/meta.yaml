@@ -1,4 +1,5 @@
 name: Squidpy
+blurb: Spatial single-cell analysis
 description: |
   Squidpy is a tool for the analysis and visualization of spatial molecular data. It builds
   on top of scanpy and anndata, from which it inherits modularity and scalability. It provides

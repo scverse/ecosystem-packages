@@ -1,4 +1,5 @@
 name: Pertpy
+blurb: Perturbation data analysis framework
 description: |
   Pertpy is a framework for analyzing large-scale single-cell perturbation experiments.
   It harmonizes datasets, automates metadata annotation, calculates perturbation distances,

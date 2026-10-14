@@ -4,6 +4,7 @@ description: |
   This is particularly useful in analyzing multivariate distributions in structured data, such as single-cell RNA-seq or ATAC-seq.
 project_home: https://github.com/bionetslab/scxmatch
 documentation_home: https://github.com/bionetslab/scxmatch
+inventory: null
 tutorials_home: https://github.com/bionetslab/scxmatch
 publications:
   - 10.1101/2025.06.25.661473

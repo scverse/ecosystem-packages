@@ -1,4 +1,5 @@
 name: decoupler
+blurb: Enrichment analysis framework
 description: |
   decoupler is a framework containing different enrichment statistical methods to extract
   biologically driven scores from omics data within a unified framework.

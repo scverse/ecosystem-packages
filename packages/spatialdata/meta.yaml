@@ -1,4 +1,5 @@
 name: SpatialData
+blurb: Spatial data format
 description: |
   SpatialData is a data framework that comprises a FAIR storage format and a collection of
   python libraries for performant access, alignment, and processing of uni- and multi-modal

@@ -5,6 +5,7 @@ description: >
   graphs stored in AnnData.
 project_home: https://github.com/HillelCharbit/TAU
 documentation_home: https://github.com/HillelCharbit/TAU#readme
+inventory: null
 
 install:
   pypi: tau-community-detection

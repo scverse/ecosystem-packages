@@ -6,6 +6,7 @@ description: |
   such as spatial-domain clustering and multi-modal analysis.
 project_home: https://github.com/ratschlab/aestetik
 documentation_home: https://github.com/ratschlab/aestetik#readme
+inventory: null
 tutorials_home: https://github.com/ratschlab/aestetik/tree/main/example
 publications:
   - 10.1093/bioinformatics/btag316

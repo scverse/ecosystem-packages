@@ -2,6 +2,7 @@ name: scmcp
 description: A MCP server hub for scRNA-Seq analysis software.
 project_home: https://github.com/scmcphub
 documentation_home: https://docs.scmcphub.org
+inventory: null
 install:
   pypi: scmcp
 primary_category: Infrastructure

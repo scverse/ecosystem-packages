@@ -4,6 +4,7 @@ description: |
   such as those coming from the Human Cell Atlas.
 project_home: https://github.com/chanzuckerberg/cellxgene
 documentation_home: https://docs.cellxgene.cziscience.com/
+inventory: null
 publications:
   - 10.1101/2021.04.05.438318
 install:

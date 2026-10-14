@@ -1,0 +1,15 @@
+# Order in which the core packages are listed on scverse.org.
+# Must list exactly the packages whose `category` is core-datastructure or core-framework;
+# everything else is appended alphabetically.
+- anndata
+- mudata
+- spatialdata
+- scanpy
+- muon
+- squidpy
+- scvi-tools
+- scirpy
+- SnapATAC2
+- rapids-singlecell
+- pertpy
+- decoupler

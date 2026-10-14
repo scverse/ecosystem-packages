@@ -1,4 +1,5 @@
 name: Muon
+blurb: Multi-omics analysis framework
 description: |
   muon is a Python framework for multimodal omics analysis. It provides functionality
   for working with multimodal data, including preprocessing, integration, and visualization.

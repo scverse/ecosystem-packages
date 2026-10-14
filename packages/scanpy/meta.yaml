@@ -1,4 +1,5 @@
 name: Scanpy
+blurb: Single-cell analysis framework
 description: |
   Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly
   with anndata. It includes preprocessing, visualization, clustering, trajectory inference

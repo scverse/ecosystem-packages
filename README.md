@@ -53,8 +53,23 @@ If none of the existing terms fit your package, add one to the enum in your pull
 
 `language` is the language you write in when using the package: `Python`, `R`, `Julia`, `Rust` or `C++`.
 
+`bindings` lists implementations of your package's objects or on-disk format in other languages, maintained under the scverse org.
+They show up as links on your entry on [scverse.org/packages](https://scverse.org/packages/) and feed the language filter there, so a user looking for what they can call from R finds you.
+Each entry needs a `language` from the same list, a `name` and a `url`:
+
+```yaml
+bindings:
+    - language: R
+      name: anndataR
+      url: https://anndatar.scverse.org/
+```
+
 `version` is not something you set.
 It is read from PyPI, conda, CRAN or Bioconductor when the registry is built, and refreshed daily, so it always reflects the latest release.
+
+`inventory` is your [intersphinx](https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html) URL, so other project docs can cross-link into yours.
+It is Python-only, and derived from `documentation_home` unless you set it – so set it only to override that, e.g. to pin `stable` where we would find the default version.
+Use `null` if you only have a README instead of using Sphinx or a MkDocs variant and therefore have no `objects.inv` – we assume you have one when you host on ReadTheDocs.
 
 ## What are the requirements for an ecosystem package?
 
