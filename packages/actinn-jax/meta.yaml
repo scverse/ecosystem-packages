@@ -1,0 +1,22 @@
+name: actinn-jax
+description: |
+  actinn-jax is a JAX reimplementation of ACTINN for cell-type annotation of scRNA-seq
+  data. It trains a neural-network classifier from a labelled AnnData reference and
+  annotates query AnnData objects on CPU. Pre-trained human references are bundled or
+  downloaded on first use, gene identifiers are matched between reference and query
+  automatically, and a two-stage coarse-to-fine workflow supports atlas-scale references.
+project_home: https://github.com/iandriver/actinn-jax
+documentation_home: https://github.com/iandriver/actinn-jax#readme
+install:
+  pypi: actinn-jax
+primary_category: scRNA-seq
+tags:
+  - scRNA-seq
+  - cell-type annotation
+  - deep learning
+license: MIT
+language: Python
+contact:
+  - iandriver
+test_command: pip install -e '.[test]' && pytest
+category: ecosystem
