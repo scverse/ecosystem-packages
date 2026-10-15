@@ -88,7 +88,6 @@
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/lueckenlab/patpy
 - url: https://github.com/lueckenlab/scAtlasTb-py
-- url: https://github.com/lzj1769/LR2net
 - url: https://github.com/macwiatrak/BacBench
 - url: https://github.com/macwiatrak/Bacformer
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
@@ -114,6 +113,7 @@
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/mc-astra
+- url: https://github.com/scverse-bot/spatialdata-db
 - url: https://github.com/scverse/PyDESeq2
 - url: https://github.com/scverse/acumen
 - url: https://github.com/scverse/annbatch
