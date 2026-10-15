@@ -4,6 +4,8 @@ description: |
 project_home: https://github.com/yizhak-lab-ccg/CloneTrast
 documentation_home: https://clonetrast.readthedocs.io/
 tutorials_home: https://clonetrast.readthedocs.io/
+publications:
+  - 10.64898/2026.10.06.757206
 install:
   pypi: clonetrast
 primary_category: scRNA-seq
