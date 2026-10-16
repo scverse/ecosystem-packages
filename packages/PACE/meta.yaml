@@ -1,0 +1,35 @@
+name: PACE
+blurb: Proximity-associated changes in expression
+description: |
+  PACE asks a directed question of imaging-based spatial transcriptomics such as
+  Xenium and CosMx: when a cell of one type sits next to cells of another, which
+  of its genes change, and by how much? It fits a hierarchical negative binomial
+  mixed model in which every focal-neighbour relationship borrows strength from
+  the others, and a per-cell contamination term absorbs the short-range ambient
+  signal that leaks between adjacent cells through segmentation error, so the
+  estimated neighbour effect reflects biology rather than transcript
+  misassignment. The fitted slopes are stabilised by multivariate adaptive
+  shrinkage and reported with a local false sign rate, alongside a per-gene
+  variance decomposition and per-pair driver tables.
+
+  The Python package shares its compiled C++ core with the Bioconductor R
+  package, and reproduces it bit for bit: the fitted random effects and
+  dispersions are identical, and the shrinkage calls the same gene-focal set.
+project_home: https://github.com/ecool50/pace-python
+documentation_home: https://ecool50.github.io/pace-python/
+tutorials_home: https://ecool50.github.io/pace-python/demo.html
+install:
+  pypi: pace-spatial
+category: ecosystem
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - imaging
+  - probabilistic modeling
+  - cell-cell communication
+  - differential expression
+license: GPL-3.0-or-later
+language: Python
+contact:
+  - ecool50
+test_command: pip install ".[test]" && pytest
