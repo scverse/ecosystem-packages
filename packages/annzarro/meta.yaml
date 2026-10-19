@@ -8,7 +8,7 @@ description: |
   with the server under 3 GiB of memory.
 project_home: https://github.com/settylab/annzarro
 documentation_home: https://annzarro.readthedocs.io/
-tutorials_home: https://annzarro.readthedocs.io/en/latest/tutorials/tour.html
+tutorials_home: https://annzarro.readthedocs.io/page/tutorials/tour.html
 publications:
   - 10.64898/2026.10.10.758158
 install:
