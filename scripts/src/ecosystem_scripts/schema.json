@@ -211,6 +211,7 @@
                 "Adaptive immune cell receptor",
                 "Multimodal",
                 "Imaging",
+                "Microbiome",
                 "Infrastructure"
             ]
         },
@@ -231,6 +232,7 @@
                     "immune receptor",
                     "imaging",
                     "multimodal",
+                    "microbiome",
                     "preprocessing",
                     "quality control",
                     "denoising",

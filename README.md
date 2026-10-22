@@ -39,12 +39,13 @@ Pick the one a user looking for your package would browse first.
 - `Adaptive immune cell receptor`
 - `Multimodal`
 - `Imaging`
+- `Microbiome`
 - `Infrastructure`
 
 `tags` say what the package does, and drive filtering and search on the website.
 Pick every tag that genuinely applies.
 
-- **Data and modality** — `scRNA-seq`, `bulk RNA-seq`, `spatial transcriptomics`, `spatial proteomics`, `proteomics`, `flow cytometry`, `ATAC-seq`, `epigenomics`, `immune receptor`, `imaging`, `multimodal`
+- **Data and modality** — `scRNA-seq`, `bulk RNA-seq`, `spatial transcriptomics`, `spatial proteomics`, `proteomics`, `flow cytometry`, `ATAC-seq`, `epigenomics`, `immune receptor`, `imaging`, `multimodal`, `microbiome`
 - **Analysis step** — `preprocessing`, `quality control`, `denoising`, `data integration`, `cell-type annotation`, `differential expression`, `compositional analysis`, `functional analysis`, `gene regulatory networks`, `cell-cell communication`, `deconvolution`, `clustering`, `dimensionality reduction`, `trajectory inference`, `pseudotime`, `RNA velocity`, `lineage tracing`, `perturbation`, `spatially variable genes`, `segmentation`, `copy number variation`, `visualization`, `benchmarking`
 - **How it is built** — `deep learning`, `foundation model`, `large language models`, `probabilistic modeling`, `optimal transport`, `GPU acceleration`, `pipeline`
 - **Project shape** — `data structures`, `interoperability`, `file formats`, `documentation`
