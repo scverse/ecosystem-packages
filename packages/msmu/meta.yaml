@@ -1,0 +1,26 @@
+name: msmu
+description: >-
+  Python toolkit for modular and traceable LC-MS/MS proteomics analysis using
+  MuData and AnnData. It supports search-result import, preprocessing,
+  protein/PTM summarization, statistical analysis, and visualization.
+project_home: https://github.com/bertis-informatics/msmu
+documentation_home: https://bertis-informatics.github.io/msmu/
+tutorials_home: https://bertis-informatics.github.io/msmu/tutorials/quick_start/
+install:
+  pypi: msmu
+license: BSD-3-Clause
+primary_category: Proteomics
+tags:
+  - proteomics
+  - preprocessing
+  - quality control
+  - differential expression
+  - dimensionality reduction
+  - visualization
+  - interoperability
+  - file formats
+language: Python
+publications:
+  - 10.64898/2026.01.07.698308
+test_command: python -m pip install ".[dev]" && python -m pytest
+category: ecosystem
