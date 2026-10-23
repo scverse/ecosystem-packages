@@ -7,7 +7,7 @@ description: |
   with Dask.
 project_home: https://github.com/saeyslab/harpy
 documentation_home: https://harpy.readthedocs.io/en/latest/
-tutorials_home: https://harpy.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://github.com/vibspatial/spatial_multi_omics_training
 publications:
   - 10.1093/bioinformatics/btag122
   - 10.5281/zenodo.15546703
