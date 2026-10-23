@@ -17,6 +17,9 @@ primary_category: Spatial
 tags:
   - spatial transcriptomics
   - spatial proteomics
+  - imaging
+  - segmentation
+  - clustering
 license: BSD-3-Clause
 language: Python
 contact:
