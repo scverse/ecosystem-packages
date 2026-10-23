@@ -20,6 +20,7 @@ tags:
   - imaging
   - segmentation
   - clustering
+  - quality control
 license: BSD-3-Clause
 language: Python
 contact:
