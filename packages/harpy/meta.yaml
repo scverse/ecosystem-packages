@@ -1,0 +1,31 @@
+name: harpy
+description: |
+  Spatial omics analysis for spatial transcriptomics and proteomics, built on
+  SpatialData: out-of-core image preprocessing, tiled segmentation, aggregation
+  of images, segmentation masks and transcripts into AnnData tables, feature
+  extraction, and pixel- and cell-level clustering, scaling to very large images
+  with Dask.
+project_home: https://github.com/saeyslab/harpy
+documentation_home: https://harpy.readthedocs.io/en/latest/
+tutorials_home: https://harpy.readthedocs.io/en/latest/tutorials/index.html
+publications:
+  - 10.1093/bioinformatics/btag122
+install:
+  pypi: harpy-analysis
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - spatial proteomics
+  - imaging
+  - preprocessing
+  - segmentation
+  - quality control
+  - clustering
+  - visualization
+  - GPU acceleration
+license: BSD-3-Clause
+language: Python
+contact:
+  - ArneDefauw
+test_command: pip install ".[dev,cellpose3]" && pytest
+category: ecosystem
