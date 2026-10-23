@@ -4,7 +4,7 @@ description: |
   Harpy is a Python library for spatial multi-omics analysis on SpatialData,
   from image preprocessing and segmentation to analysis-ready AnnData tables.
 project_home: https://github.com/saeyslab/harpy
-documentation_home: https://harpy.readthedocs.io/en/latest/
+documentation_home: https://harpy.readthedocs.io/
 tutorials_home: https://github.com/vibspatial/spatial_multi_omics_training
 publications:
   - 10.1093/bioinformatics/btag122
