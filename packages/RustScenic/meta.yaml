@@ -1,0 +1,26 @@
+name: RustScenic
+description: |
+  Rust-backed Python package for SCENIC-style gene regulatory network analysis
+  of single-cell RNA-seq and multiome data. Provides GRN inference, regulon
+  activity scoring, motif enrichment, scATAC topic modelling and enhancer-linked
+  regulon assembly.
+project_home: https://github.com/Ekin-Kahraman/rustscenic
+documentation_home: https://ekin-kahraman.github.io/rustscenic/
+tutorials_home: https://ekin-kahraman.github.io/rustscenic/quickstart/
+inventory: https://ekin-kahraman.github.io/rustscenic/
+install:
+  pypi: rustscenic
+primary_category: scRNA-seq
+tags:
+  - scRNA-seq
+  - ATAC-seq
+  - epigenomics
+  - multimodal
+  - gene regulatory networks
+  - functional analysis
+  - pipeline
+license: Apache-2.0
+language: Python
+contact:
+  - Ekin-Kahraman
+category: ecosystem
