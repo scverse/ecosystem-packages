@@ -4,7 +4,7 @@ description: >-
   proteomics analysis using MuData.
 project_home: https://github.com/bertis-informatics/msmu
 documentation_home: https://bertis-informatics.github.io/msmu/
-tutorials_home: https://bertis-informatics.github.io/msmu/tutorials/quick_start/
+tutorials_home: https://bertis-informatics.github.io/msmu/tutorials/dda-tmt/
 install:
   pypi: msmu
 license: BSD-3-Clause
