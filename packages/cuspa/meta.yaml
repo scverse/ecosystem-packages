@@ -1,0 +1,22 @@
+name: cuspa
+description: |
+  Lightweight GPU-accelerated spatial operations for spatial omics, with CUDA
+  kernels and Python APIs for point-in-polygon queries, overlap detection, and
+  cell-level aggregation. It assigns transcript coordinates to cell polygons and
+  builds sparse cells-by-genes count matrices on the GPU, with GeoPandas and
+  SpatialData adapters.
+project_home: https://github.com/NVIDIA/cuspa
+documentation_home: https://nvidia.github.io/cuspa/
+install:
+  pypi: cuspa, cuspa-cu12, cuspa-cu13
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - segmentation
+  - GPU acceleration
+license: Apache-2.0
+language: Python
+contact:
+  - Intron7
+test_command: pip install ".[test]" && pytest
+category: ecosystem
