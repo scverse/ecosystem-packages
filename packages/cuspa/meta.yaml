@@ -8,7 +8,7 @@ description: |
 project_home: https://github.com/NVIDIA/cuspa
 documentation_home: https://nvidia.github.io/cuspa/
 install:
-  pypi: cuspa, cuspa-cu12, cuspa-cu13
+  pypi: cuspa
 primary_category: Spatial
 tags:
   - spatial transcriptomics
