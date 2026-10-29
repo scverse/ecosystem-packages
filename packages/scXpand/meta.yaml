@@ -6,7 +6,7 @@ project_home: https://github.com/yizhak-lab-ccg/scXpand
 documentation_home: https://scxpand.readthedocs.io/
 tutorials_home: https://scxpand.readthedocs.io/
 publications:
-  - 10.1101/2025.09.14.676069
+  - 10.1016/j.xgen.2026.101328
 install:
   pypi: scxpand
 primary_category: Adaptive immune cell receptor
