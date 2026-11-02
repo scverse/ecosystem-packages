@@ -7,6 +7,7 @@ description: |
   SpatialData adapters.
 project_home: https://github.com/NVIDIA/cuspa
 documentation_home: https://nvidia.github.io/cuspa/
+inventory: https://nvidia.github.io/cuspa/latest/
 install:
   pypi: cuspa
 primary_category: Spatial
