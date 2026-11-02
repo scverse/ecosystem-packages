@@ -1,0 +1,25 @@
+name: mantispy
+description: |
+  mantispy brings Cell Painting and other image-based profiling data into the
+  scverse ecosystem, from reading what a pipeline wrote through quality control,
+  normalization and batch correction to calling hits and evaluating what survived.
+  Profiles are AnnData objects and the images behind them SpatialData objects.
+project_home: https://github.com/scverse/mantispy
+documentation_home: https://mantispy.readthedocs.io/
+tutorials_home: https://mantispy.readthedocs.io/page/tutorials/general.html
+install:
+  pypi: mantispy
+primary_category: Imaging
+tags:
+  - imaging
+  - preprocessing
+  - quality control
+  - data integration
+  - perturbation
+license: BSD-3-Clause
+language: Python
+contact:
+  - timtreis
+  - Zethson
+test_command: pip install . --group test && pytest
+category: ecosystem
