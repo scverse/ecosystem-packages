@@ -1,0 +1,23 @@
+name: Cafe
+description: >-
+  Cafe is a modular framework to study cellular dynamics based on single-cell RNA-seq AnnData structures. It provides an integrated platform for inferring, visualizing and benchmarking cell fate trajectories.
+project_home: https://github.com/HuangDDU/cafe-release
+documentation_home: https://cafe-release.readthedocs.io/
+tutorials_home: https://cafe-release.readthedocs.io/page/tutorial/quickstart/
+install:
+  pypi: cafe-release
+license: BSD-3-Clause
+category: ecosystem
+primary_category: scRNA-seq
+language: Python
+tags:
+  - trajectory inference
+  - pseudotime
+  - RNA velocity
+  - visualization
+  - benchmarking
+contact:
+  - HuangDDU
+publications:
+  - 10.1101/2025.02.04.636565
+logo: logo.svg
