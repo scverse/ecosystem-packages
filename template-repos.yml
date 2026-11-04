@@ -62,6 +62,7 @@
 - url: https://github.com/davidrm-bio/DOTools_py
 - url: https://github.com/dertrotl/geneGATer
 - url: https://github.com/devsystemslab/HNOCA-tools
+- url: https://github.com/dschaub95/fastersom
 - url: https://github.com/edbiomedai/scmorph
 - url: https://github.com/emdann/pert2state_model
 - url: https://github.com/ergonyc/lblator
@@ -88,7 +89,6 @@
 - url: https://github.com/lucas-diedrich/sccoral
 - url: https://github.com/lueckenlab/patpy
 - url: https://github.com/lueckenlab/scAtlasTb-py
-- url: https://github.com/lzj1769/LR2net
 - url: https://github.com/macwiatrak/BacBench
 - url: https://github.com/macwiatrak/Bacformer
 - url: https://github.com/macwiatrak/scverse-hackathon-data-4-ai
@@ -114,6 +114,7 @@
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/mc-astra
+- url: https://github.com/scverse-bot/spatialdata-db
 - url: https://github.com/scverse/PyDESeq2
 - url: https://github.com/scverse/acumen
 - url: https://github.com/scverse/annbatch
@@ -122,6 +123,7 @@
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
   reason: Instance repo gets updated by the bot via the template
+- url: https://github.com/scverse/cupy-stubs
 - url: https://github.com/scverse/decoupler
 - url: https://github.com/scverse/deres
 - url: https://github.com/scverse/formulaic-contrasts
@@ -132,6 +134,7 @@
 - url: https://github.com/scverse/muon
 - url: https://github.com/scverse/pertpy
 - url: https://github.com/scverse/pytometry
+- url: https://github.com/scverse/rapids-singlecell
 - url: https://github.com/scverse/scanpy
 - url: https://github.com/scverse/scirpy
 - url: https://github.com/scverse/scverse-doc
@@ -145,6 +148,7 @@
 - url: https://github.com/scverse/spatialdata-io
 - url: https://github.com/scverse/spatialdata-plot
 - url: https://github.com/scverse/squidpy
+- url: https://github.com/scverse/zarr-kvikio
 - url: https://github.com/srivarra/annsel
 - url: https://github.com/srivarra/czarr
 - url: https://github.com/srivarra/spatial-collection
@@ -169,6 +173,7 @@
 - url: https://github.com/theislab/scConcept_rep
 - url: https://github.com/theislab/scPDAC
 - url: https://github.com/theislab/sckitflow
+- url: https://github.com/theislab/sprotmetrics
 - url: https://github.com/theislab/squidpy-ports
 - url: https://github.com/theislab/transcription_factor_activity
 - url: https://github.com/theislab/troutpy

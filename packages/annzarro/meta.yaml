@@ -1,0 +1,28 @@
+name: AnnZarro
+description: |
+  Read-only browser viewer for AnnData (Zarr, h5ad) built around cell-by-cell and gene-by-gene
+  matrices: linked cell and gene plots and tables, focus and selection across panels, and
+  shareable deep links, as a web server or a desktop app. It scales to atlas size: every cell of
+  Tahoe-100M (95.6 million) is drawn in one plot on a laptop in about six seconds, and a
+  billion-cell store opens in seconds and stays explorable through subsets streamed from disk,
+  with the server under 3 GiB of memory.
+project_home: https://github.com/settylab/annzarro
+documentation_home: https://annzarro.readthedocs.io/
+tutorials_home: https://annzarro.readthedocs.io/page/tutorials/tour.html
+publications:
+  - 10.64898/2026.10.10.758158
+install:
+  pypi: annzarro
+primary_category: scRNA-seq
+tags:
+  - visualization
+  - scRNA-seq
+license: MIT
+language: Python
+contact:
+  - katosh
+  - ManuSetty
+logo: logo.png
+test_command: |
+  pip install ".[test]" && pytest
+category: ecosystem
