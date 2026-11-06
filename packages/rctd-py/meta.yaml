@@ -1,0 +1,29 @@
+name: rctd-py
+description: |
+  rctd-py is a GPU-accelerated PyTorch reimplementation of RCTD (Robust Cell Type Decomposition, Cable et al. 2022;
+  the R package spacexr) that decomposes spatial transcriptomics spots or cells into cell-type proportions using an
+  annotated single-cell reference, in full, doublet and multi mode. It gives the same calls as R spacexr wherever both
+  pick the same sigma, runs 10-57x faster than R in doublet mode on one GPU (NVIDIA L40S), reads AnnData and
+  SpatialData, and writes its results back into the AnnData.
+project_home: https://github.com/p-gueguen/rctd-py
+documentation_home: https://rctd-py.readthedocs.io/
+tutorials_home: https://rctd-py.readthedocs.io/page/tutorials/slideseq_cerebellum.html
+publications:
+  - 10.1038/s41587-021-00830-w
+install:
+  pypi: rctd-py
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - deconvolution
+  - cell-type annotation
+  - GPU acceleration
+  - probabilistic modeling
+license: GPL-3.0-or-later
+language: Python
+contact:
+  - p-gueguen
+logo: logo.png
+test_command: |
+  pip install ".[dev]" && pytest -m "not slow"
+category: ecosystem
