@@ -1,0 +1,16 @@
+name: scverse-doc
+description: |
+  scverse documentation theme & utilities
+project_home: https://github.com/scverse/scverse-doc
+documentation_home: https://scverse-doc.readthedocs.io/
+install:
+  pypi: scverse-doc
+primary_category: Infrastructure
+tags:
+  - documentation
+license: MPL-2.0
+language: Python
+contact:
+  - flying-sheep
+  - Zethson
+category: core-infrastructure
