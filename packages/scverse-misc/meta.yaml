@@ -1,0 +1,17 @@
+name: scverse-misc
+description: |
+  Miscellaneous utility code used by scverse packages
+project_home: https://github.com/scverse/scverse-misc
+documentation_home: https://scverse-misc.readthedocs.io/
+install:
+  pypi: scverse-misc
+  conda: conda-forge::scverse-misc
+primary_category: Infrastructure
+tags:
+  - utilities
+license: BSD-3-Clause
+language: Python
+contact:
+  - ilia-kats
+  - flying-sheep
+category: core-infrastructure
