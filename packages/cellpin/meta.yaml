@@ -1,0 +1,21 @@
+name: cellpin
+description: cellpin is a lightweight probabilistic model that reconstructs and denoises spatial transcriptomes from single-cell RNA-seq references. It enables transcriptome-wide imputation, robust atlas-to-spatial label-transfer, and improved biological interpretation of both targeted-panel and full-transcriptome spatial datasets.
+project_home: https://github.com/Saur-Lab/cellpin
+documentation_home: https://cellpin.readthedocs.io/
+tutorials_home: https://cellpin.readthedocs.io/
+install:
+  pypi: cellpin
+license: MIT
+tags:
+  - spatial-transcriptomics
+  - single-cell
+  - transcriptome-imputation
+  - label-transfer
+publications:
+  - 10.64898/2026.06.02.729566
+version: 0.1.1
+contact:
+  - philinscience
+  - MDLDan
+test_command: uv sync --group test && uv run pytest
+category: ecosystem
