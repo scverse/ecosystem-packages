@@ -1,0 +1,25 @@
+name: CellGPS
+description: |
+  CellGPS is the reference Python implementation of Cophenetic Spatial
+  Topology Embedding (COSTE) for spatial omics. It computes searcher-findee
+  distance matrices and StructureMap/cophenetic topology from coordinate
+  tables and AnnData-backed workflows.
+project_home: https://github.com/Moldia/CellGPS
+documentation_home: https://github.com/Moldia/CellGPS/tree/main/docs
+tutorials_home: https://github.com/Moldia/CellGPS#quick-start-from-a-coordinate-table
+inventory: null
+publications:
+  - 10.64898/2026.05.26.727847
+# Source-only draft: no legacy registry package is used for this application.
+# A supported standard-registry install target is still required before merge.
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - clustering
+  - visualization
+license: MIT
+language: Python
+contact:
+  - hutaobo
+test_command: python -m pip install -e . pytest && python -m pytest -q
+category: ecosystem
