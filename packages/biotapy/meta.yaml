@@ -1,0 +1,22 @@
+name: biotapy
+description: |
+  biotapy is a mia/phyloseq-style toolkit for microbiome data in Python, built on AnnData and TreeData.
+  It reads BIOM, QIIME 2, DADA2 and phyloseq data and provides preprocessing, diversity, ordination and plotting.
+project_home: https://github.com/pedrocr83/biotapy
+documentation_home: https://biotapy.readthedocs.io/
+tutorials_home: https://biotapy.readthedocs.io/page/tutorials/index.html
+install:
+  pypi: biotapy
+primary_category: Microbiome
+tags:
+  - microbiome
+  - preprocessing
+  - dimensionality reduction
+  - visualization
+  - interoperability
+license: BSD-3-Clause
+language: Python
+contact:
+  - pedrocr83
+test_command: uv run --group test pytest
+category: ecosystem
