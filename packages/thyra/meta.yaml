@@ -1,0 +1,26 @@
+name: thyra
+description: |
+  Converts mass spectrometry imaging (MSI) data from Bruker, Waters, PHI and imzML
+  into SpatialData. Pixel spectra are stored as an AnnData table next to the optical image;
+  ion mobility and MS/MS data are kept in tables of their own.
+project_home: https://github.com/M4i-Imaging-Mass-Spectrometry/thyra
+documentation_home: https://M4i-Imaging-Mass-Spectrometry.github.io/thyra/
+tutorials_home: https://M4i-Imaging-Mass-Spectrometry.github.io/thyra/tutorial/
+publications:
+  - 10.1038/s41592-026-03305-5
+  - 10.1021/jasms.6c00169
+install:
+  pypi: thyra
+primary_category: Spatial
+tags:
+  - mass spectrometry imaging
+  - imaging
+  - file formats
+  - interoperability
+license: MIT
+language: Python
+contact:
+  - Tomatokeftes
+logo: logo.svg
+test_command: uv sync --locked --no-default-groups --group test && uv run pytest -m "not integration"
+category: ecosystem
