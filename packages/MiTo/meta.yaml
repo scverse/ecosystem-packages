@@ -1,0 +1,26 @@
+name: MiTo
+description: |
+  MiTo infers clonal ancestries in single-cell data from natural mitochondrial DNA variation:
+  it reads MAESTER, mtscATAC-seq and ReDeeM output into an AnnData allele-frequency matrix,
+  selects informative MT-SNVs, calls genotypes, reconstructs the cell phylogeny and annotates its clones.
+project_home: https://github.com/andrecossa5/MiTo
+documentation_home: https://mito.readthedocs.io/
+tutorials_home: https://mito.readthedocs.io/page/getting_started.html
+publications:
+  - 10.1038/s41467-026-71607-5
+install:
+  pypi: scmito
+primary_category: scRNA-seq
+tags:
+  - lineage tracing
+  - multimodal
+  - ATAC-seq
+  - preprocessing
+  - visualization
+license: MIT
+language: Python
+contact:
+  - andrecossa5
+logo: logo.png
+test_command: pip install ".[test]" && pytest
+category: ecosystem
