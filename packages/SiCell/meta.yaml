@@ -1,5 +1,6 @@
 name: SiCell
-description: SiCell.jl is a Julia-native toolkit for end-to-end single-cell RNA-seq
+description:
+  SiCell.jl is a Julia-native toolkit for end-to-end single-cell RNA-seq
   analysis, including quality control, normalization, dimensionality reduction, clustering,
   differential expression, cell-type annotation, batch alignment, and trajectory analysis.
   Its optional Muon.jl extension enables conversion between SiCell's native analysis
@@ -15,16 +16,16 @@ version: 0.1.1
 primary_category: scRNA-seq
 language: Julia
 tags:
-- preprocessing
-- quality control
-- data integration
-- cell-type annotation
-- differential expression
-- clustering
-- dimensionality reduction
-- trajectory inference
-- interoperability
-- data structures
+  - preprocessing
+  - quality control
+  - data integration
+  - cell-type annotation
+  - differential expression
+  - clustering
+  - dimensionality reduction
+  - trajectory inference
+  - interoperability
+  - data structures
 contact:
-- Sizerta
+  - Sizerta
 category: ecosystem
