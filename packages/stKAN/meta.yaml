@@ -1,0 +1,20 @@
+name: stKAN
+description: |
+  Variational autoencoder with Kolmogorov-Arnold Network for spatial domain detection.
+project_home: https://github.com/linjing-lab/stKAN
+documentation_home: https://github.com/linjing-lab/stkan/blob/main/README.md
+tutorials_home: https://github.com/linjing-lab/stkan/blob/main/identify.ipynb
+publications:
+  - 10.1016/j.compbiolchem.2026.109347
+install:
+  pypi: stkan
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - clustering
+  - deep learning
+license: MIT
+language: Python
+contact:
+  - linjing-lab
+category: ecosystem
