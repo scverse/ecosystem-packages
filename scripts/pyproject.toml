@@ -21,7 +21,7 @@ classifiers = [
 dynamic = [ "version" ]
 dependencies = [
   "httpx",
-  "httpx-limiter[aiolimiter]<0.7.0",
+  "httpx-limiter[aiolimiter]<0.7",
   "httpx-retries",
   "jsonschema>=4.25.1",
   "pillow>=12",
