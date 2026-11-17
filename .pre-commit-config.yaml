@@ -72,7 +72,7 @@ repos:
         pass_filenames: false
         additional_dependencies:
           - httpx
-          - httpx-limiter
+          - "httpx-limiter<0.7.0"
           - httpx-retries
           - types-jsonschema
           - pillow
