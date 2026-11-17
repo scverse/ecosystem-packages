@@ -1,0 +1,29 @@
+name: scATrans
+description: |
+  scATrans is a Python package for mechanism-aware single-cell differential analysis. Differential
+  expression defines which genes change; scATrans then uses the nascent (unspliced) excess residual
+  to annotate those genes along a transcription- versus stabilization-driven axis, with pooled,
+  induction-matched and permutation-calibrated tests at the gene-program level. Without spliced/
+  unspliced layers it still supports conventional DE, functional enrichment (ORA, GSEA, GO, KEGG)
+  and plotting through scanpy-compatible APIs.
+project_home: https://github.com/leelieber2025/scATrans
+documentation_home: https://scatrans.readthedocs.io
+tutorials_home: https://scatrans.readthedocs.io/page/tutorials/index.html
+publications:
+  - 10.64898/2026.08.03.740741
+  - 10.5281/zenodo.21365873
+install:
+  pypi: scatrans
+  conda: bioconda::scatrans
+primary_category: scRNA-seq
+tags:
+  - differential expression
+  - functional analysis
+  - RNA velocity
+  - visualization
+license: Apache-2.0
+language: Python
+contact:
+  - leelieber2025
+test_command: pip install ".[dev]" && pytest -m "not plot and not slow"
+category: ecosystem

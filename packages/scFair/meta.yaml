@@ -1,0 +1,25 @@
+name: scFair
+description: |
+  scFair is a drop-in Python alternative to scanpy.pp.highly_variable_genes that addresses two
+  silent failure modes in single-cell HVG selection: it sizes n_top_genes automatically instead
+  of requiring a guessed gene count, and it uses same-rank extension so that rare cell-type
+  markers are not lost to majority-biased ranking.
+project_home: https://github.com/leelieber2025/scFair
+documentation_home: https://scfair.readthedocs.io
+tutorials_home: https://scfair.readthedocs.io/page/tutorials/index.html
+publications:
+  - 10.64898/2026.08.08.743679
+  - 10.5281/zenodo.21761251
+install:
+  pypi: scfair
+  conda: bioconda::scfair
+primary_category: scRNA-seq
+tags:
+  - preprocessing
+  - dimensionality reduction
+license: Apache-2.0
+language: Python
+contact:
+  - leelieber2025
+test_command: pip install ".[dev]" && pytest -m "not plot and not slow"
+category: ecosystem

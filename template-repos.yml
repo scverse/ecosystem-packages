@@ -15,6 +15,7 @@
 - url: https://github.com/CostaLab/spatial_sigurd_py
 - url: https://github.com/Floto-Lab/BactGraph
 - url: https://github.com/FroeseLab/bulkpy
+- url: https://github.com/GPCCA/pyGPCCA
 - url: https://github.com/Gabriellvl/FlowSOM
 - url: https://github.com/Genentech/MoCAVI
 - url: https://github.com/LiHongCSBLab/scMagnify
@@ -72,7 +73,6 @@
 - url: https://github.com/grst/karttapullautin2tiles
 - url: https://github.com/grst/spatialdata-plot
 - url: https://github.com/icbi-lab/atlas_protocol
-- url: https://github.com/icbi-lab/infercnvpy
 - url: https://github.com/icbi-lab/shears
 - url: https://github.com/ilia-kats/PolarbearPlus
 - url: https://github.com/immunitastx/monkeybread
@@ -81,6 +81,7 @@
 - url: https://github.com/jkobject/hierarchical_classifier
 - url: https://github.com/jkobject/simpler_flash
 - url: https://github.com/jlause/scverse-tutorials
+- url: https://github.com/joechanlab/scDeBussy
 - url: https://github.com/jskerman/chronai
 - url: https://github.com/karadavis-lab/nbl
 - url: https://github.com/lhqing/scmallet
@@ -111,6 +112,7 @@
 - url: https://github.com/quadbio/scBulkDE
 - url: https://github.com/quadbio/scembed
 - url: https://github.com/quadbio/slurm_sweep
+- url: https://github.com/rushin682/spatialbatch
 - url: https://github.com/rushin682/spatialstream
 - url: https://github.com/saeyslab/FlowSOM_Python
 - url: https://github.com/saezlab/mc-astra
@@ -120,14 +122,16 @@
 - url: https://github.com/scverse/annbatch
 - url: https://github.com/scverse/anndata
 - url: https://github.com/scverse/anndata-plot
+- url: https://github.com/scverse/cellrank
 - url: https://github.com/scverse/cookiecutter-scverse-instance
   skip: true
   reason: Instance repo gets updated by the bot via the template
 - url: https://github.com/scverse/cupy-stubs
 - url: https://github.com/scverse/decoupler
-- url: https://github.com/scverse/deres
 - url: https://github.com/scverse/formulaic-contrasts
+- url: https://github.com/scverse/gatac
 - url: https://github.com/scverse/genomic-features
+- url: https://github.com/scverse/infercnvpy
 - url: https://github.com/scverse/liana
 - url: https://github.com/scverse/mantispy
 - url: https://github.com/scverse/mudata
@@ -161,6 +165,7 @@
 - url: https://github.com/theislab/DRVI
 - url: https://github.com/theislab/cellflow_reproducibility
 - url: https://github.com/theislab/cellink
+- url: https://github.com/theislab/diffsvg
 - url: https://github.com/theislab/ehrapy
 - url: https://github.com/theislab/ehrdata
 - url: https://github.com/theislab/embpy

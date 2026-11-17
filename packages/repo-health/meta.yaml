@@ -1,0 +1,16 @@
+name: repo-health
+description: |
+  Automated checks for security and consistency on scverse.org GitHub repositories
+project_home: https://github.com/scverse/repo-health
+documentation_home: https://scverse.org/repo-health/
+inventory: null
+primary_category: Infrastructure
+tags:
+  - continuous integration
+  - security
+license: MPL-2.0
+language: Python
+contact:
+  - grst
+  - Zethson
+category: core-infrastructure

@@ -264,7 +264,10 @@
                     "data structures",
                     "interoperability",
                     "file formats",
-                    "documentation"
+                    "documentation",
+                    "continuous integration",
+                    "security",
+                    "utilities"
                 ]
             },
             "minItems": 1,
