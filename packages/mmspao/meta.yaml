@@ -1,0 +1,22 @@
+name: mmspao
+description: |
+  Graph-Aware Latent Representation Learning for Multimodal Spatial Omics Integration
+project_home: https://github.com/linjing-lab/mmspao
+documentation_home: https://github.com/linjing-lab/mmspao/blob/main/README.md
+tutorials_home: https://github.com/linjing-lab/mmspao/blob/main/notebooks/3Modalities.ipynb
+publications:
+  - 10.1177/15578100261480770
+install:
+  pypi: mmspao
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - spatial proteomics
+  - ATAC-seq
+  - multimodals
+  - clustering
+license: MIT
+language: Python
+contact:
+  - linjing-lab
+category: ecosystem
