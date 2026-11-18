@@ -1,4 +1,4 @@
-# Package submissions may only touch `packages/`.
+# PRs adding a package may only touch `packages/` (editing existing packages alongside other changes is fine).
 # `pull_request_target` runs this file from `main`, so a PR can't edit the check away.
 # It never checks out PR code, so it's safe.
 name: PR scope
@@ -18,10 +18,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR: ${{ github.event.pull_request.number }}
         run: |
-          files=$(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/$PR/files" --jq '.[].filename')
+          files=$(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/$PR/files" --jq '.[] | "\(.status) \(.filename)"')
           echo "$files"
-          if grep -q '^packages/' <<<"$files" && grep -qv '^packages/' <<<"$files"; then
-            echo "::error::PRs that add or change packages may only touch files in packages/. Please split out the other changes:"
-            grep -v '^packages/' <<<"$files"
+          if grep -qE '^added packages/[^/]+/meta\.yaml$' <<<"$files" && grep -qv ' packages/' <<<"$files"; then
+            echo "::error::PRs that add a package may only touch files in packages/. Please split out the other changes:"
+            grep -v ' packages/' <<<"$files"
             exit 1
           fi
