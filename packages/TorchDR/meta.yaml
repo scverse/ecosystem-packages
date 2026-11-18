@@ -1,0 +1,23 @@
+name: TorchDR
+description: |
+  TorchDR is a high-performance dimensionality reduction library built on PyTorch. It
+  provides GPU and multi-GPU implementations of methods including UMAP, t-SNE, PACMAP,
+  PHATE, and PCA through a scikit-learn-compatible API.
+project_home: https://github.com/TorchDR/TorchDR
+documentation_home: https://torchdr.github.io/dev/
+tutorials_home: https://torchdr.github.io/dev/auto_examples/index.html
+install:
+  pypi: torchdr
+primary_category: Infrastructure
+tags:
+  - scRNA-seq
+  - dimensionality reduction
+  - visualization
+  - optimal transport
+  - GPU acceleration
+license: BSD-3-Clause
+language: Python
+contact:
+  - huguesva
+test_command: pip install ".[test]" && pytest
+category: ecosystem
