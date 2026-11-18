@@ -16,7 +16,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v7
       - name: Update template repo registry
-        run: uvx --from ./scripts register-template-repos template-repos.yml
+        run: uvx --overrides overrides.txt --from ./scripts register-template-repos template-repos.yml
         env:
           GITHUB_TOKEN: "${{ secrets.BOT_GH_TOKEN }}"
           FORCE_COLOR: "1"
