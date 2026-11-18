@@ -1,0 +1,27 @@
+# Package submissions may only touch `packages/`.
+# `pull_request_target` runs this file from `main`, so a PR can't edit the check away.
+# It never checks out PR code, so it's safe.
+name: PR scope
+
+on:
+  pull_request_target:
+
+permissions:
+  pull-requests: read
+
+jobs:
+  scope:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Don’t mix package submissions with other changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          files=$(gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/$PR/files" --jq '.[].filename')
+          echo "$files"
+          if grep -q '^packages/' <<<"$files" && grep -qv '^packages/' <<<"$files"; then
+            echo "::error::PRs that add or change packages may only touch files in packages/. Please split out the other changes:"
+            grep -v '^packages/' <<<"$files"
+            exit 1
+          fi
