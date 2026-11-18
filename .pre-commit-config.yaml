@@ -21,6 +21,10 @@ repos:
     rev: v3.9.10
     hooks:
       - id: prettier
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.32.0
+    hooks:
+      - id: zizmor
   # package metadata
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.39.0

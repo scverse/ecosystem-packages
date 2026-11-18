@@ -395,15 +395,16 @@ def check_image(img_path: Path) -> None:
 
 
 class DomainBasedRateLimiterRepository(AbstractRateLimiterRepository):
-    """Apply different rate limits based on the domain being requested."""
+    """Apply separate rate limits per domain, shared across subdomains (e.g. all of `*.readthedocs.io`)."""
 
     @override
     def get_identifier(self, request: httpx2.Request) -> str:
-        return request.url.host
+        # shortcut: last two labels, so `*.co.uk`-style hosts would share one limit; fine for the hosts we check
+        return ".".join(request.url.host.rsplit(".", 2)[-2:])
 
     @override
     def create(self, request: httpx2.Request) -> AiolimiterAsyncLimiter:
-        return AiolimiterAsyncLimiter.create(Rate.create(magnitude=25))
+        return AiolimiterAsyncLimiter.create(Rate.create(magnitude=10))
 
 
 def core_ranks(

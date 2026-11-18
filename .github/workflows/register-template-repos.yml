@@ -6,22 +6,25 @@ on:
     - cron: "0 5 1,15 * *"
   workflow_dispatch:
 
+# Everything uses BOT_GH_TOKEN, so GITHUB_TOKEN needs nothing
+permissions: {}
+
 jobs:
   register-template-repos:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1 # zizmor: ignore[artipacked] add-and-commit pushes with these credentials
         with:
           token: ${{ secrets.BOT_GH_TOKEN }}
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v7.6.0
       - name: Update template repo registry
         run: uvx --overrides overrides.txt --from ./scripts register-template-repos template-repos.yml
         env:
           GITHUB_TOKEN: "${{ secrets.BOT_GH_TOKEN }}"
           FORCE_COLOR: "1"
           COLUMNS: "150"
-      - uses: EndBug/add-and-commit@v11
+      - uses: EndBug/add-and-commit@v11.1.1
         with:
           add: ./template-repos.yml
           author_name: scverse-bot
