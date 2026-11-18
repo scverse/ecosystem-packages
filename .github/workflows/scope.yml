@@ -1,0 +1,31 @@
+# PRs adding a package may only touch `packages/` (editing existing packages alongside other changes is fine).
+# `pull_request_target` runs this file from `main`, so a PR can't edit the check away.
+# It never checks out PR code (paths-filter reads the file list from the API), so it's safe.
+name: PR scope
+
+on:
+  pull_request_target: # zizmor: ignore[dangerous-triggers] see above
+
+permissions:
+  pull-requests: read
+
+jobs:
+  scope:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/paths-filter@v4.0.3
+        id: changes
+        with:
+          list-files: shell
+          filters: |
+            new_package:
+              - added: "packages/*/meta.yaml"
+            other:
+              - "!packages/**"
+      - name: Don’t mix package submissions with other changes
+        if: steps.changes.outputs.new_package == 'true' && steps.changes.outputs.other == 'true'
+        env:
+          OTHER_FILES: ${{ steps.changes.outputs.other_files }}
+        run: |
+          echo "::error::PRs that add a package may only touch files in packages/. Please split out the other changes: $OTHER_FILES"
+          exit 1

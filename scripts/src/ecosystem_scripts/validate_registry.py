@@ -16,11 +16,12 @@ from pathlib import Path
 from textwrap import dedent
 from typing import TYPE_CHECKING, Literal, cast, override
 
-import httpx
+import httpx2
 import jsonschema
 import yaml
-from httpx_limiter import AbstractRateLimiterRepository, AsyncMultiRateLimitedTransport, Rate
+from httpx_limiter import Rate
 from httpx_limiter.aiolimiter import AiolimiterAsyncLimiter
+from httpx_limiter.httpx2 import AbstractRateLimiterRepository, AsyncMultiRateLimitedTransport
 from httpx_retries import Retry, RetryTransport
 from PIL import Image
 
@@ -52,7 +53,7 @@ RE_RTD = re.compile(
 class HTTPValidator[E = str]:
     """Validate HTTP URLs."""
 
-    client: httpx.AsyncClient
+    client: httpx2.AsyncClient
     _: KW_ONLY
     validated: set[E] = field(default_factory=set)
 
@@ -91,7 +92,7 @@ class LinkChecker(HTTPValidator):
             msg = f"{self.name}:{context}: URL {url} is not reachable: {e}"
             raise ValidationError(msg) from e
 
-        if response.status_code != httpx.codes.OK:
+        if response.status_code != httpx2.codes.OK:
             msg = f"{self.name}:{context}: URL {url} is not reachable (error {response.status_code}). "
             raise ValidationError(msg)
 
@@ -143,7 +144,7 @@ class InventoryChecker(HTTPValidator):
             except Exception as e:
                 log.debug(f"inventory:{context}: {url} is not reachable: {e}")
                 continue
-            if response.status_code == httpx.codes.OK:
+            if response.status_code == httpx2.codes.OK:
                 # `/page/` redirects to whichever version the project currently serves, so follow it.
                 # Any other URL is kept as written, or a redirect stub could downgrade it to http://.
                 resolved = str(response.url) if url.endswith("/page/objects.inv") else url
@@ -191,7 +192,7 @@ class GitHubUserValidator(HTTPValidator):
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r}: {e}"
             raise ValidationError(msg) from e
 
-        if response.status_code != httpx.codes.OK:
+        if response.status_code != httpx2.codes.OK:
             msg = f"{context}: Failed to validate GitHub users {unvalidated!r} (error {response.status_code})"
             raise ValidationError(msg)
 
@@ -230,10 +231,10 @@ class PyPIValidator(HTTPValidator):
             msg = f"{context}: Failed to validate PyPI package {package_name!r}: {e}"
             raise ValidationError(msg) from e
 
-        if response.status_code == httpx.codes.NOT_FOUND:
+        if response.status_code == httpx2.codes.NOT_FOUND:
             msg = f"{context}: PyPI package {package_name!r} does not exist"
             raise ValidationError(msg)
-        if response.status_code != httpx.codes.OK:
+        if response.status_code != httpx2.codes.OK:
             msg = f"{context}: Failed to validate PyPI package {package_name!r} (error {response.status_code})"
             raise ValidationError(msg)
 
@@ -274,10 +275,10 @@ class CondaValidator(HTTPValidator):
             msg = f"{context}: Failed to validate Conda package '{package_spec}': {e}"
             raise ValidationError(msg) from e
 
-        if response.status_code == httpx.codes.NOT_FOUND:
+        if response.status_code == httpx2.codes.NOT_FOUND:
             msg = f"{context}: Conda package '{package_spec}' does not exist"
             raise ValidationError(msg)
-        if response.status_code != httpx.codes.OK:
+        if response.status_code != httpx2.codes.OK:
             msg = f"{context}: Failed to validate Conda package '{package_spec}' (error {response.status_code})"
             raise ValidationError(msg)
 
@@ -311,10 +312,10 @@ class CRANValidator(HTTPValidator):
             msg = f"{context}: Failed to validate CRAN package '{package_name}': {e}"
             raise ValidationError(msg) from e
 
-        if response.status_code == httpx.codes.NOT_FOUND:
+        if response.status_code == httpx2.codes.NOT_FOUND:
             msg = f"{context}: CRAN package '{package_name}' does not exist"
             raise ValidationError(msg)
-        if response.status_code != httpx.codes.OK:
+        if response.status_code != httpx2.codes.OK:
             msg = f"{context}: Failed to validate CRAN package '{package_name}' (error {response.status_code})"
             raise ValidationError(msg)
 
@@ -364,10 +365,10 @@ class BioconductorValidator(HTTPValidator):
         """
         try:
             response = await self.client.get(BIOC_VIEWS_URLS[channel])
-        except httpx.HTTPError as e:
+        except httpx2.HTTPError as e:
             msg = f"{context}: Failed to fetch the Bioconductor {channel} package list: {e}"
             raise ValidationError(msg) from e
-        if response.status_code != httpx.codes.OK:
+        if response.status_code != httpx2.codes.OK:
             msg = f"{context}: Failed to fetch the Bioconductor {channel} package list (error {response.status_code})"
             raise ValidationError(msg)
         return dict(RE_BIOC_VERSION.findall(response.text))
@@ -394,15 +395,16 @@ def check_image(img_path: Path) -> None:
 
 
 class DomainBasedRateLimiterRepository(AbstractRateLimiterRepository):
-    """Apply different rate limits based on the domain being requested."""
+    """Apply separate rate limits per domain, shared across subdomains (e.g. all of `*.readthedocs.io`)."""
 
     @override
-    def get_identifier(self, request: httpx.Request) -> str:
-        return request.url.host
+    def get_identifier(self, request: httpx2.Request) -> str:
+        # shortcut: last two labels, so `*.co.uk`-style hosts would share one limit; fine for the hosts we check
+        return ".".join(request.url.host.rsplit(".", 2)[-2:])
 
     @override
-    def create(self, request: httpx.Request) -> AiolimiterAsyncLimiter:
-        return AiolimiterAsyncLimiter.create(Rate.create(magnitude=25))
+    def create(self, request: httpx2.Request) -> AiolimiterAsyncLimiter:
+        return AiolimiterAsyncLimiter.create(Rate.create(magnitude=10))
 
 
 def core_ranks(
@@ -434,13 +436,13 @@ class Checker:
         self.core_order_file = self.registry_dir.parent / "core-order.yml"
 
         # Create HTTP client with retry configuration using httpx_retries transport
-        transport: httpx.AsyncBaseTransport = AsyncMultiRateLimitedTransport.create(
+        transport: httpx2.AsyncBaseTransport = AsyncMultiRateLimitedTransport.create(
             repository=DomainBasedRateLimiterRepository()
         )
         transport = RetryTransport(transport, Retry(total=3, backoff_factor=2))
         # ReadTheDocs blocks requests with the default httpx user-agent; use a browser UA so
         # that link checks reflect what a human visitor would actually experience.
-        self.client = httpx.AsyncClient(
+        self.client = httpx2.AsyncClient(
             follow_redirects=True,
             timeout=30.0,
             transport=transport,

@@ -10,4 +10,4 @@ def setup_logging() -> None:
     basicConfig(level="INFO", handlers=[RichHandler()])
 
     # Suppress httpx INFO logs to reduce verbosity
-    getLogger("httpx").setLevel("WARNING")
+    getLogger("httpx2").setLevel("WARNING")
