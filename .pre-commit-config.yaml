@@ -52,16 +52,6 @@ repos:
         files: ^scripts/.*$
       - id: ruff-format
         files: ^scripts/.*$
-  - repo: local
-    hooks:
-      - id: mypy
-        name: mypy
-        entry: env -C scripts hatch check types
-        language: system
-        types: [python]
-        files: ^scripts/
-        require_serial: true
-        pass_filenames: false
   - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.30.6
     hooks:
@@ -74,3 +64,13 @@ repos:
           - --json-schema=scripts/src/ecosystem_scripts/schema.json
           - --python=scripts/src/ecosystem_scripts/schema.pyi
         files: ^scripts/.*/schema.json$
+  # needs to run after jsonschema-gentypes, which generates schema.pyi
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: env -C scripts hatch check types
+        language: system
+        files: ^scripts/
+        require_serial: true
+        pass_filenames: false
