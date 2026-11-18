@@ -52,6 +52,16 @@ repos:
         files: ^scripts/.*$
       - id: ruff-format
         files: ^scripts/.*$
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: env -C scripts hatch check types
+        language: system
+        types: [python]
+        files: ^scripts/
+        require_serial: true
+        pass_filenames: false
   - repo: https://github.com/tox-dev/pyproject-fmt
     rev: v2.30.6
     hooks:
@@ -64,19 +74,3 @@ repos:
           - --json-schema=scripts/src/ecosystem_scripts/schema.json
           - --python=scripts/src/ecosystem_scripts/schema.pyi
         files: ^scripts/.*/schema.json$
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.4.1
-    hooks:
-      - id: mypy
-        args: [--config-file=scripts/pyproject.toml, scripts]
-        pass_filenames: false
-        additional_dependencies:
-          - httpx
-          - httpx-limiter
-          - httpx-retries
-          - types-jsonschema
-          - pillow
-          - pygithub
-          - types-PyYAML
-          - rich
-        files: ^scripts/.*$
