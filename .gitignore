@@ -6,3 +6,4 @@ __pycache__/
 .venv
 schema.pyi
 *.lock
+!/.github/workflows/actions.lock
