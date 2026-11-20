@@ -6,7 +6,7 @@ description: |
   or drops that name from the marker measurements.
 project_home: https://github.com/leelieber2025/AnnoTuneAgent
 documentation_home: https://annotuneagent.readthedocs.io
-tutorials_home: https://annotuneagent.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://annotuneagent.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.5281/zenodo.24092828
 install:
