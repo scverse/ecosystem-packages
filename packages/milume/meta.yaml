@@ -1,0 +1,23 @@
+name: milume
+description: |
+  milume is a reactive anywidget for exploring spatial biology in Jupyter and
+  marimo notebooks. It layers images, cells, and transcripts in 3D, and works
+  with AnnData and SpatialData.
+project_home: https://github.com/ckmah/milume
+documentation_home: https://ckmah.github.io/milume/docs/
+tutorials_home: https://ckmah.github.io/milume/docs/get-started/tutorial-explore-cells-2d/
+install:
+  pypi: milume
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - visualization
+  - imaging
+license: MIT
+language: Python
+contact:
+  - ckmah
+logo: logo.svg
+test_command: |
+  npm ci --prefix frontend && npm run build --prefix frontend && uv sync --group dev && uv run pytest
+category: ecosystem
