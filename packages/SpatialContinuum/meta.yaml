@@ -1,0 +1,25 @@
+name: SpatialContinuum
+description: |
+  Biophysical reaction-diffusion transport solver, 3D perivascular sanctuary digital twin, and in silico Composite Resistance Index (CRI) cohort stratification engine for targeted lung oncology (RUO).
+project_home: https://github.com/Lukecele/spatial-continuum-oncology
+documentation_home: https://lukecele.github.io/spatial-continuum-oncology/
+tutorials_home: https://github.com/Lukecele/spatial-continuum-oncology/blob/main/demo_spatial_continuum.ipynb
+inventory: null
+publications:
+  - 10.21203/rs.3.rs-11530312/v1
+install:
+  pypi: spatial-continuum
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - visualization
+  - pipeline
+  - functional analysis
+  - interoperability
+license: MIT
+language: Python
+contact:
+  - Lukecele
+test_command: |
+  python -m unittest discover tests
+category: ecosystem
