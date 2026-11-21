@@ -17,6 +17,7 @@ license: MIT
 language: Python
 contact:
   - ckmah
+logo: logo.svg
 test_command: |
   npm ci --prefix frontend && npm run build --prefix frontend && uv sync --group dev && uv run pytest
 category: ecosystem
