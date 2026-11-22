@@ -11,10 +11,10 @@ workflows:
         - 'actions/checkout@v7.0.1'
         - 'actions/deploy-pages@v5.0.1'
         - 'actions/upload-pages-artifact@v5.0.0'
-        - 'astral-sh/setup-uv@v7.6.0'
+        - 'astral-sh/setup-uv@v10.3.3'
     '.github/workflows/register-template-repos.yml':
         - 'actions/checkout@v7.0.1'
-        - 'astral-sh/setup-uv@v7.6.0'
+        - 'astral-sh/setup-uv@v10.3.3'
         - 'endbug/add-and-commit@v11.1.1'
     '.github/workflows/scope.yml':
         - 'dorny/paths-filter@v4.0.3'
@@ -44,11 +44,6 @@ dependencies:
     'astral-sh/setup-uv@v10.3.3':
         ref: 'v10.3.3'
         commit: 'sha1-68559e99cc807c1eb7e9238fd43a15bba460eec2'
-        owner_id: 115962839
-        repo_id: 846733598
-    'astral-sh/setup-uv@v7.6.0':
-        ref: 'v7.6.0'
-        commit: 'sha1-37802adc94f370d6bfd71619e3f0bf239e1f3b78'
         owner_id: 115962839
         repo_id: 846733598
     'autofix-ci/action@v1.3.4':
