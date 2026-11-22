@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
-      - uses: astral-sh/setup-uv@v7.6.0
+      - uses: astral-sh/setup-uv@v10.3.3
       - name: Execute validation script and create output directory
         run: |
           uvx --overrides overrides.txt --from ./scripts validate-registry --registry-dir packages --outdir=build
