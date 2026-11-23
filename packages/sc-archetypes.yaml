@@ -1,0 +1,15 @@
+name: sc-archetypes
+description: sc-archetypes is a lightweight, scverse-compliant Python package designed to compute cellular archetype scores and map them to low-dimensional hexagonal coordinates directly within AnnData objects.
+project_home: https://github.com/SupaNautilus/sc-archetypes
+documentation_home: https://github.com/SupaNautilus/sc-archetypes
+tutorials_home: https://github.com/SupaNautilus/sc-archetypes
+install:
+pypi: sc-archetypes
+tags: archetype scoring, single-cell, anndata, scanpy, transcriptomics
+primary_category: Analysis
+language: Python
+license: BSD-3-Clause
+version: v0.1.0
+contact: SupaNautilus
+test_command: pip install . && pytest
+category: ecosystem
