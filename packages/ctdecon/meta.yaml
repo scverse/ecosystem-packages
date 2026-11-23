@@ -1,0 +1,19 @@
+name: ctdecon
+description: |
+  Reference-based cell type deconvolution in spatial transcriptomics.
+project_home: https://github.com/linjing-lab/ctdecon
+documentation_home: https://github.com/linjing-lab/ctdecon/blob/main/README.md
+tutorials_home: https://github.com/linjing-lab/ctdecon/blob/main/tutorial.ipynb
+publications:
+  - 10.1093/molecular-omics/aaiag023
+install:
+  pypi: ctdecon
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - deconvolution
+license: MIT
+language: Python
+contact:
+  - linjing-lab
+category: ecosystem
