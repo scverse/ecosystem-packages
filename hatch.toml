@@ -2,3 +2,5 @@
 python = "3.14"
 # this allows to e.g. `hatch run validate-registry` in the root directory
 workspace.members = ["scripts"]
+installer = "uv"
+env-vars.UV_OVERRIDE = "{root}/overrides.txt"

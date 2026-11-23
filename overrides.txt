@@ -1,0 +1,2 @@
+# httpx is unmaintained. Ban it; we use httpx2 (see scripts/src/ecosystem_scripts/__init__.py)
+httpx; sys_platform == 'never'

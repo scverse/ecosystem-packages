@@ -1,0 +1,29 @@
+name: GATAC
+description: |
+  GPU-accelerated single-cell ATAC-seq analysis built on RAPIDS. From raw fragment files
+  it builds tile, peak and gene activity matrices in AnnData, and runs quality control,
+  dimensionality reduction, clustering, peak calling, motif analysis and footprinting
+  on the GPU.
+project_home: https://github.com/scverse/gatac
+documentation_home: https://gatac.readthedocs.io/
+tutorials_home: https://gatac.readthedocs.io/page/tutorials/index.html
+install:
+  pypi: gatac
+primary_category: Epigenomics
+tags:
+  - ATAC-seq
+  - epigenomics
+  - preprocessing
+  - quality control
+  - dimensionality reduction
+  - clustering
+  - gene regulatory networks
+  - visualization
+  - GPU acceleration
+license: BSD-3-Clause
+language: Python
+contact:
+  - LouisFaure
+logo: logo.svg
+test_command: pip install --group test ".[rapids-cu12]" && pytest
+category: ecosystem
