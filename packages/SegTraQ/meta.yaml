@@ -1,0 +1,25 @@
+name: SegTraQ
+description: |
+  SegTraQ is a toolbox to assess the quality of cell segmentation in spatial transcriptomics data.
+  Metrics range from cell morphology and transcript coverage to expression purity and vertical overlap of cells.
+  Based on spatialdata, SegTraQ can be used to compare/benchmark segmentation methods, identify spurious samples, develop new segmentation methods, and more.
+project_home: https://github.com/LazDaria/SegTraQ
+documentation_home: https://lazdaria.github.io/SegTraQ
+tutorials_home: https://lazdaria.github.io/SegTraQ
+install:
+  pypi: segtraq
+primary_category: Spatial
+tags:
+  - spatial transcriptomics
+  - quality control
+  - segmentation
+  - benchmarking
+license: MIT
+language: Python
+contact:
+  - LazDaria
+  - MeyerBender
+  - mjemons
+test_command: pip install ".[test]"
+logo: logo.svg
+category: ecosystem
