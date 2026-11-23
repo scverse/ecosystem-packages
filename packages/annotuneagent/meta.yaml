@@ -1,0 +1,28 @@
+name: AnnoTuneAgent
+description: |
+  AnnoTuneAgent annotates clustered scRNA-seq. prepare runs QC and Leiden on an
+  AnnData object. run scores each cluster against a marker dictionary and asks a
+  local name model to copy a dictionary name. A check rule then keeps, replaces,
+  or drops that name from the marker measurements.
+project_home: https://github.com/leelieber2025/AnnoTuneAgent
+documentation_home: https://annotuneagent.readthedocs.io
+tutorials_home: https://annotuneagent.readthedocs.io/page/tutorials/index.html
+publications:
+  - 10.5281/zenodo.24092828
+install:
+  pypi: annotuneagent
+  conda: bioconda::annotuneagent
+primary_category: scRNA-seq
+tags:
+  - scRNA-seq
+  - preprocessing
+  - quality control
+  - cell-type annotation
+  - clustering
+  - large language models
+license: Apache-2.0
+language: Python
+contact:
+  - leelieber2025
+test_command: pip install -e ".[dev]" && pytest -q
+category: ecosystem
