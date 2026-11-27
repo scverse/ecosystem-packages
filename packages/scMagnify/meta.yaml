@@ -5,7 +5,7 @@ description: |
   nonlinear Granger causality and tensor decomposition.
 project_home: https://github.com/LiHongCSBLab/scMagnify
 documentation_home: https://scmagnify.readthedocs.io/
-tutorials_home: https://scmagnify.readthedocs.io/en/latest/tutorials/index.html
+tutorials_home: https://scmagnify.readthedocs.io/page/tutorials/index.html
 publications:
   - 10.1038/s41467-026-78441-9
 install:
